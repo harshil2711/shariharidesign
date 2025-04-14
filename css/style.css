@@ -245,6 +245,7 @@
     position: relative;
     overflow: hidden;
     z-index: 1;
+    margin-top: 80px;
 }
 
 .owl-prev,
@@ -404,6 +405,7 @@
     background-repeat: no-repeat;
     background-size: cover;
     padding: 60px 0 60px 0;
+    margin-top: 80px;
 }
 
 .bg-breadcrumb .breadcrumb-item a {
