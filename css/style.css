@@ -17,7 +17,7 @@
 
 .back-to-top {
     position: fixed;
-    right: 30px;
+    left: 30px;
     bottom: 30px;
     display: flex;
     width: 45px;
@@ -949,6 +949,45 @@
 .footer .footer-item-post .footer-btn a:hover {
     color: var(--bs-dark);
 }
+/* Whatsapp chat */
+.whatsapp-rectangle {
+    position: fixed;
+    bottom: 60px;
+    right: 20px;
+    z-index: 100;
+    background-color: #25D366;
+    color: white;
+    text-decoration: none;
+    font-family: Arial, sans-serif;
+    font-size: 16px;
+    padding: 10px 16px;
+    border-radius: 30px;
+    display: flex;
+    align-items: center;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.25);
+    transition: background-color 0.3s ease;
+  }
+  
+  .whatsapp-rectangle:hover {
+    background-color: #1ebe5d;
+    color: white;
+  }
+  
+  .whatsapp-rectangle img {
+    width: 28px;
+    height: 28px;
+    margin-right: 10px;
+  }
+  
+  /* Optional: Blinking animation */
+  .whatsapp-rectangle {
+    animation: blink 1.5s infinite;
+  }
+  
+  @keyframes blink {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0.6; }
+  }
 /*** Footer End ***/
 
 /*** copyright Start ***/
