@@ -952,7 +952,7 @@
 /* Whatsapp chat */
 .whatsapp-rectangle {
     position: fixed;
-    bottom: 60px;
+    bottom: 40px;
     right: 20px;
     z-index: 100;
     background-color: #25D366;
