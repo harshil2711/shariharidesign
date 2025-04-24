@@ -478,6 +478,17 @@
         left: 65%;
     }
 }
+
+.mobile-break {
+    display: none;
+}
+
+@media (max-width: 768px) {
+    .mobile-break {
+        display: block;
+    }
+}
+
 /*** Header Carousel End ***/
 
 /*** Single Page Hero Header Start ***/
