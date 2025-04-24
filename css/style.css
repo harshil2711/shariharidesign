@@ -133,6 +133,10 @@
     transition: 0.5s !important;
 }
 
+.owl-nav {
+    display: none !important;
+  }
+
 .navbar .navbar-nav .nav-item.nav-link,
 .navbar .navbar-nav .nav-link {
     color: var(--bs-dark) !important;
@@ -313,7 +317,7 @@
     position: relative;
     overflow: hidden;
     z-index: 1;
-    margin-top: 80px;
+    margin-top: 0;
 }
 
 .owl-prev,
@@ -367,7 +371,10 @@
     border: 100px solid rgba(68, 210, 246, 0.2);
     animation: RotateMoveCircle 10s linear infinite;
     background: transparent;
-    z-index: 2 !important;
+    z-index: 1 !important;
+}
+.header-carousel {
+    padding-top: 80px; /* Adjust height to match navbar height */
 }
 
 @keyframes RotateMoveCircle {
@@ -389,7 +396,7 @@
     transform: rotate(-30deg);
     background: rgba(68, 210, 246, 0.2);
     animation: RotateMoveRight 5s linear infinite;
-    z-index: 2 !important;
+    z-index: 1 !important;
 }
 
 @keyframes RotateMoveRight {
@@ -438,19 +445,28 @@
     transform: translateX(-50%);
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: flex-start;
     z-index: 9;
+    align-items: flex-start;
+    padding-top: 250px;
+
+}
+.lifted-caption {
+    margin-top: 20px; /* or whatever amount looks good */
 }
 
 @media (max-width: 992px) {
     .header-carousel .header-carousel-item .carousel-caption {
         width: 100% !important;
         margin-left: 0 !important;
-        padding: 0 10px;
+        padding-top: 120px;
     }
     .header-carousel-item img {
         height: 700px;
         object-fit: cover;
+    }
+    .carousel-caption-inner {
+        margin-top: 0 !important;
     }
 
     .owl-prev,
