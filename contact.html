@@ -166,7 +166,9 @@
                                     class="fa fa-home text-white"></i></div>
                             <div class="ms-4">
                                 <h4>Addresses</h4>
-                                <p class="mb-0">123 ranking Street, New York, USA</p>
+                                <p class="mb-0">Shree Hari Solutions, Opp. Hotel Fortune Landmark,
+                                    Ashram Road,
+                                    Ahmedabad 380013, Gujarat, India</p>
                             </div>
                         </div>
                         <div class="d-flex align-items-center mb-4">
@@ -174,7 +176,7 @@
                                     class="fa fa-phone-alt text-white"></i></div>
                             <div class="ms-4">
                                 <h4>Mobile</h4>
-                                <p class="mb-0">+012 345 67890</p>
+                                <p class="mb-0"><a href="tel:+919998595357">+91 99985 95357</a></p>
                             </div>
                         </div>
                         <div class="d-flex align-items-center mb-4">
@@ -182,7 +184,8 @@
                                     class="fa fa-envelope-open text-white"></i></div>
                             <div class="ms-4">
                                 <h4>Email</h4>
-                                <p class="mb-0">info@example.com</p>
+                                <p class="mb-0"><a
+                                        href="mailto:info@shreeharisolutions.in">info@shreeharisolutions.in</a></p>
                             </div>
                         </div>
                     </div>
@@ -192,19 +195,27 @@
                         <div class="row g-3">
                             <div class="col-lg-12 col-xl-6">
                                 <div class="form-floating">
-                                    <input type="text" class="form-control" id="fname" name="fname" placeholder="First Name" required>
+                                    <input type="text" class="form-control" id="fname" name="fname"
+                                        placeholder="First Name" required>
                                     <label for="fname">First Name *</label>
                                 </div>
                             </div>
                             <div class="col-lg-12 col-xl-6">
                                 <div class="form-floating">
-                                    <input type="text" class="form-control" id="lname" name="lname" placeholder="Last Name" required>
+                                    <input type="text" class="form-control" id="lname" name="lname"
+                                        placeholder="Last Name" required>
                                     <label for="lname">Last Name *</label>
                                 </div>
                             </div>
                             <div class="col-lg-12">
                                 <div class="form-floating">
-                                    <input type="email" class="form-control" id="email" name="email" placeholder="Your Email" required pattern="[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$" onchange="validateEmail(this)" oninvalid="this.setCustomValidity('Please enter a valid email address (e.g., name@example.com)')" oninput="this.setCustomValidity('')" title="Please enter a valid email address (e.g., john@example.com)">
+                                    <input type="email" class="form-control" id="email" name="email"
+                                        placeholder="Your Email" required
+                                        pattern="[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$"
+                                        onchange="validateEmail(this)"
+                                        oninvalid="this.setCustomValidity('Please enter a valid email address (e.g., name@example.com)')"
+                                        oninput="this.setCustomValidity('')"
+                                        title="Please enter a valid email address (e.g., john@example.com)">
                                     <label for="email">Your Email *</label>
                                     <script>
                                         function validateEmail(input) {
@@ -212,7 +223,7 @@
                                             const parts = email.split('@');
                                             if (parts.length === 2) {
                                                 const domainParts = parts[1].split('.');
-                                                if (domainParts.length < 2 || domainParts[domainParts.length-1].length < 2) {
+                                                if (domainParts.length < 2 || domainParts[domainParts.length - 1].length < 2) {
                                                     input.setCustomValidity('Please enter a valid email with a proper domain (e.g., name@example.com)');
                                                 } else {
                                                     input.setCustomValidity('');
@@ -226,25 +237,30 @@
                             </div>
                             <div class="col-lg-12 col-xl-6">
                                 <div class="form-floating">
-                                    <input type="tel" class="form-control" id="phone" name="phone" placeholder="Phone" required pattern="[0-9]{10}" title="Please enter a valid 10-digit phone number" onkeypress="return event.charCode >= 48 && event.charCode <= 57" maxlength="10">
+                                    <input type="tel" class="form-control" id="phone" name="phone" placeholder="Phone"
+                                        required pattern="[0-9]{10}" title="Please enter a valid 10-digit phone number"
+                                        onkeypress="return event.charCode >= 48 && event.charCode <= 57" maxlength="10">
                                     <label for="phone">Your Phone (10 digits) *</label>
                                 </div>
                             </div>
                             <div class="col-lg-12 col-xl-6">
                                 <div class="form-floating">
-                                    <input type="text" class="form-control" id="companyname" name="companyname" placeholder="Company Name">
+                                    <input type="text" class="form-control" id="companyname" name="companyname"
+                                        placeholder="Company Name">
                                     <label for="companyname">Company Name</label>
                                 </div>
                             </div>
                             <div class="col-12 col-xl-6">
                                 <div class="form-floating">
-                                    <input type="text" class="form-control" id="Industry" name="Industry" placeholder="Industry">
+                                    <input type="text" class="form-control" id="Industry" name="Industry"
+                                        placeholder="Industry">
                                     <label for="Industry">Industry</label>
                                 </div>
                             </div>
                             <div class="col-12 col-xl-6">
                                 <div class="form-floating">
-                                    <input type="text" class="form-control" id="JobTitle" name="JobTitle" placeholder="Job Title">
+                                    <input type="text" class="form-control" id="JobTitle" name="JobTitle"
+                                        placeholder="Job Title">
                                     <label for="JobTitle">Job Title</label>
                                 </div>
                             </div>
@@ -252,7 +268,8 @@
                                 <div class="form-floating">
                                     <select class="form-select" id="service" name="service" required>
                                         <option value="" selected disabled>Select a service</option>
-                                        <option value="Mechanical Engineering Services">Mechanical Engineering Services</option>
+                                        <option value="Mechanical Engineering Services">Mechanical Engineering Services
+                                        </option>
                                         <option value="IT Services">IT Services</option>
                                         <option value="Energy">Energy</option>
                                         <option value="EV Solution">EV Solution</option>
@@ -262,13 +279,13 @@
                                         <option value="Data storage/management">Data storage/management</option>
                                         <option value="Other">Other</option>
                                     </select>
-                                    <label for="service">Service  *</label>
+                                    <label for="service">Service *</label>
                                 </div>
                             </div>
                             <div class="col-12">
                                 <div class="form-floating">
-                                    <textarea class="form-control" placeholder="Leave a message here" id="message" name="message"
-                                        style="height: 160px"></textarea>
+                                    <textarea class="form-control" placeholder="Leave a message here" id="message"
+                                        name="message" style="height: 160px"></textarea>
                                     <label for="message">Message</label>
                                 </div>
                             </div>
@@ -280,13 +297,16 @@
                                 <script src="https://www.google.com/recaptcha/api.js" async defer></script>
                             </div> -->
                             <div class="col-12">
-                                <div id="successMessage" class="alert alert-success alert-dismissible fade show" role="alert" style="display: none;">
-                                    <strong>Thank you!</strong> Your message has been sent successfully. We'll get back to you soon.
-                                    <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                                <div id="successMessage" class="alert alert-success alert-dismissible fade show"
+                                    role="alert" style="display: none;">
+                                    <strong>Thank you!</strong> Your message has been sent successfully. We'll get back
+                                    to you soon.
+                                    <button type="button" class="btn-close" data-bs-dismiss="alert"
+                                        aria-label="Close"></button>
                                 </div>
                                 <script>
                                     // Show success message when redirected from form submission
-                                    document.addEventListener('DOMContentLoaded', function() {
+                                    document.addEventListener('DOMContentLoaded', function () {
                                         // Check if URL contains success parameter
                                         const urlParams = new URLSearchParams(window.location.search);
                                         if (urlParams.has('success') || window.location.href.indexOf('?success') > -1) {
@@ -294,18 +314,18 @@
                                             if (successMessage) {
                                                 // Show the success message
                                                 successMessage.style.display = 'block';
-                                                
+
                                                 // Move success message above first name and last name
                                                 const formStart = document.querySelector('form .row');
                                                 if (formStart) {
                                                     formStart.prepend(successMessage);
                                                 }
-                                                
+
                                                 // Scroll to the message to ensure it's visible
                                                 successMessage.scrollIntoView({ behavior: 'smooth', block: 'center' });
-                                                
+
                                                 // Auto-hide success message after 5 seconds
-                                                setTimeout(function() {
+                                                setTimeout(function () {
                                                     try {
                                                         const bsAlert = new bootstrap.Alert(successMessage);
                                                         bsAlert.close();
@@ -316,21 +336,21 @@
                                                 }, 5000);
                                             }
                                         }
-                                        
+
                                         // Also check for success in localStorage (in case query params are lost)
                                         if (localStorage.getItem('formSubmitSuccess') === 'true') {
                                             const successMessage = document.getElementById('successMessage');
                                             if (successMessage) {
                                                 successMessage.style.display = 'block';
                                                 localStorage.removeItem('formSubmitSuccess');
-                                                
+
                                                 // Move success message above first name and last name
                                                 const formStart = document.querySelector('form .row');
                                                 if (formStart) {
                                                     formStart.prepend(successMessage);
                                                 }
-                                                
-                                                setTimeout(function() {
+
+                                                setTimeout(function () {
                                                     try {
                                                         const bsAlert = new bootstrap.Alert(successMessage);
                                                         bsAlert.close();
@@ -341,49 +361,53 @@
                                             }
                                         }
                                     });
-                                    
+
                                     // Add event listener to the form to set localStorage before submission
-                                    document.querySelector('form').addEventListener('submit', function() {
+                                    document.querySelector('form').addEventListener('submit', function () {
                                         localStorage.setItem('formSubmitSuccess', 'true');
                                     });
                                 </script>
                             </div>
-                                <div id="errorMessage" class="alert alert-danger alert-dismissible fade" role="alert" style="display: none;">
-                                    <strong>Error!</strong> There was a problem submitting your form. Please try again later.
-                                    <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
-                                </div>
-                                <button type="submit" class="btn btn-primary w-100 py-3" id="submitBtn">Send Message</button>
-                                
-                                <!-- Hidden inputs for FormSubmit.co configuration -->
-                                <input type="hidden" name="_subject" value="New contact form submission">
-                                <input type="hidden" name="_captcha" value="false">
-                                <input type="hidden" name="_next" value="http://127.0.0.1:5500/contact.html">
+                            <div id="errorMessage" class="alert alert-danger alert-dismissible fade" role="alert"
+                                style="display: none;">
+                                <strong>Error!</strong> There was a problem submitting your form. Please try again
+                                later.
+                                <button type="button" class="btn-close" data-bs-dismiss="alert"
+                                    aria-label="Close"></button>
                             </div>
+                            <button type="submit" class="btn btn-primary w-100 py-3" id="submitBtn">Send
+                                Message</button>
+
+                            <!-- Hidden inputs for FormSubmit.co configuration -->
+                            <input type="hidden" name="_subject" value="New contact form submission">
+                            <input type="hidden" name="_captcha" value="false">
+                            <input type="hidden" name="_next" value="http://127.0.0.1:5500/contact.html">
                         </div>
-                    </form>
                 </div>
-                <!-- Added margin-top to create space between form and map -->
-                <div class="col-12 wow fadeInUp mt-5" data-wow-delay="0.1s">
-                    <div class="rounded h-100">
-                        <iframe class="rounded-top w-100" style="height: 500px; margin-bottom: -6px;"
-                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d387191.33750346623!2d-73.97968099999999!3d40.6974881!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c24fa5d33f083b%3A0xc80b8f06e177fe62!2sNew%20York%2C%20NY%2C%20USA!5e0!3m2!1sen!2sbd!4v1694259649153!5m2!1sen!2sbd"
-                            loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-                        <div class="d-flex align-items-center justify-content-center bg-primary rounded-bottom p-4">
-                            <div class="d-flex">
-                                <a class="btn btn-dark btn-lg-square rounded-circle me-2" href=""><i
-                                        class="fab fa-facebook-f"></i></a>
-                                <a class="btn btn-dark btn-lg-square rounded-circle mx-2" href=""><i
-                                        class="fab fa-twitter"></i></a>
-                                <a class="btn btn-dark btn-lg-square rounded-circle mx-2" href=""><i
-                                        class="fab fa-instagram"></i></a>
-                                <a class="btn btn-dark btn-lg-square rounded-circle mx-2" href=""><i
-                                        class="fab fa-linkedin-in"></i></a>
-                            </div>
+                </form>
+            </div>
+            <!-- Added margin-top to create space between form and map -->
+            <div class="col-12 wow fadeInUp mt-5" data-wow-delay="0.1s">
+                <div class="rounded h-100">
+                    <iframe class="rounded-top w-100" style="height: 500px; margin-bottom: -6px;"
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3671.3449866722685!2d72.56793727509267!3d23.047810479156013!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x395e8462541582e5%3A0xbe36eea56ab931c!2sFortune%20Landmark%20Ahmedabad%20-%20Member%20ITC%20Hotels&#39;%20Group!5e0!3m2!1sen!2sbd!4v1748460558057!5m2!1sen!2sbd"
+                        loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                    <div class="d-flex align-items-center justify-content-center bg-primary rounded-bottom p-4">
+                        <div class="d-flex">
+                            <a class="btn btn-dark btn-lg-square rounded-circle me-2" href=""><i
+                                    class="fab fa-facebook-f"></i></a>
+                            <a class="btn btn-dark btn-lg-square rounded-circle mx-2" href=""><i
+                                    class="fab fa-twitter"></i></a>
+                            <a class="btn btn-dark btn-lg-square rounded-circle mx-2" href=""><i
+                                    class="fab fa-instagram"></i></a>
+                            <a class="btn btn-dark btn-lg-square rounded-circle mx-2" href=""><i
+                                    class="fab fa-linkedin-in"></i></a>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
+    </div>
     </div>
     <!-- Contact End -->
     <!-- WhatsApp chat button start -->
@@ -395,66 +419,46 @@
     <!-- WhatsApp chat button end -->
 
     <!-- Footer Start -->
-    <div class="container-fluid footer py-5 wow fadeIn" data-wow-delay="0.2s">
-        <div class="container py-5">
-            <div class="row g-5">
-                <div class="col-md-6 col-lg-6 col-xl-3">
-                    <div class="footer-item d-flex flex-column">
-                        <div class="footer-item">
-                            <h4 class="text-white mb-4">Newsletter</h4>
-                            <p class="mb-3">Dolor amet sit justo amet elitr clita ipsum elitr est.Lorem ipsum dolor sit
-                                amet, consectetur adipiscing elit consectetur adipiscing elit.</p>
-                            <div class="position-relative mx-auto rounded-pill">
-                                <input class="form-control rounded-pill w-100 py-3 ps-4 pe-5" type="text"
-                                    placeholder="Enter your email">
-                                <button type="button"
-                                    class="btn btn-primary rounded-pill position-absolute top-0 end-0 py-2 mt-2 me-2">SignUp</button>
-                            </div>
+    <div class="container-fluid footer wow fadeIn" data-wow-delay="0.2s">
+        <div class="container py-4">
+            <div class="row g-5 justify-content-center">
+                <div class="col-md-4 col-lg-4 col-xl-4">
+                    <div class="footer-item p-3">
+                        <h4 class="text-white mb-3 text-center text-md-start">About us</h4>
+                        <p class="mb-0 text-center text-md-start">We are dedicated to delivering excellence on every
+                            project, no matter where in the world it may be. We look forward to working with you.</p>
+                    </div>
+                </div>
+                <div class="col-md-4 col-lg-4 col-xl-4">
+                    <div class="footer-item p-3">
+                        <h4 class="text-white mb-3 text-center text-md-start">Explore</h4>
+                        <div class="d-flex flex-column text-center text-md-start">
+                            <span class="mb-2"><i class="fas fa-angle-right me-2"></i> <a href="#">Home</a></span>
+                            <span class="mb-2"><i class="fas fa-angle-right me-2"></i> <a href="#">Services</a></span>
+                            <span class="mb-2"><i class="fas fa-angle-right me-2"></i> <a href="#">About Us</a></span>
+                            <span class="mb-2"><i class="fas fa-angle-right me-2"></i> <a href="#">Latest
+                                    Projects</a></span>
+                            <span class="mb-2"><i class="fas fa-angle-right me-2"></i> <a href="blog.html">Our
+                                    Blogs</a></span>
+                            <span class="mb-2"><i class="fas fa-angle-right me-2"></i> <a href="#">Our Team</a></span>
+                            <span class="mb-2"><i class="fas fa-angle-right me-2"></i> <a href="#">Contact Us</a></span>
                         </div>
                     </div>
                 </div>
-                <div class="col-md-6 col-lg-6 col-xl-3">
-                    <div class="footer-item d-flex flex-column">
-                        <h4 class="text-white mb-4">Explore</h4>
-                        <a href="#"><i class="fas fa-angle-right me-2"></i> Home</a>
-                        <a href="#"><i class="fas fa-angle-right me-2"></i> Services</a>
-                        <a href="#"><i class="fas fa-angle-right me-2"></i> About Us</a>
-                        <a href="#"><i class="fas fa-angle-right me-2"></i> Latest Projects</a>
-                        <a href="#"><i class="fas fa-angle-right me-2"></i> testimonial</a>
-                        <a href="#"><i class="fas fa-angle-right me-2"></i> Our Team</a>
-                        <a href="#"><i class="fas fa-angle-right me-2"></i> Contact Us</a>
-                    </div>
-                </div>
-                <div class="col-md-6 col-lg-6 col-xl-3">
-                    <div class="footer-item d-flex flex-column">
-                        <h4 class="text-white mb-4">Contact Info</h4>
-                        <a href=""><i class="fa fa-map-marker-alt me-2"></i> 123 Street, New York, USA</a>
-                        <a href=""><i class="fas fa-envelope me-2"></i> info@example.com</a>
-                        <a href=""><i class="fas fa-envelope me-2"></i> info@example.com</a>
-                        <a href=""><i class="fas fa-phone me-2"></i> +012 345 67890</a>
-                        <a href="" class="mb-3"><i class="fas fa-print me-2"></i> +012 345 67890</a>
-                        <div class="d-flex align-items-center">
+                <div class="col-md-4 col-lg-4 col-xl-4">
+                    <div class="footer-item d-flex flex-column text-center text-md-start p-3">
+                        <h4 class="text-white mb-3">Contact Info</h4>
+                        <a class="mb-2" href=""><i class="fa fa-map-marker-alt me-2"></i> Opp. Hotel Fortune Landmark,
+                            Ashram Road,
+                            Ahmedabad 380013, Gujarat, India</a>
+                        <a class="mb-2" href="mailto:info@shreeharisolutions.in"><i class="fas fa-envelope me-2"></i>
+                            info@shreeharisolutions.in</a>
+                        <a class="mb-2" href="tel:+919998595357"><i class="fas fa-phone me-2"></i> +91 99985 95357</a>
+                        <div class="d-flex align-items-center justify-content-center justify-content-md-start mt-2">
                             <a class="btn btn-light btn-md-square me-2" href=""><i class="fab fa-facebook-f"></i></a>
                             <a class="btn btn-light btn-md-square me-2" href=""><i class="fab fa-twitter"></i></a>
                             <a class="btn btn-light btn-md-square me-2" href=""><i class="fab fa-instagram"></i></a>
                             <a class="btn btn-light btn-md-square me-0" href=""><i class="fab fa-linkedin-in"></i></a>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-6 col-lg-6 col-xl-3">
-                    <div class="footer-item-post d-flex flex-column">
-                        <h4 class="text-white mb-4">Popular Post</h4>
-                        <div class="d-flex flex-column mb-3">
-                            <p class="text-uppercase text-primary mb-2">Investment</p>
-                            <a href="#" class="text-body">Revisiting Your Investment & Distribution Goals</a>
-                        </div>
-                        <div class="d-flex flex-column mb-3">
-                            <p class="text-uppercase text-primary mb-2">Business</p>
-                            <a href="#" class="text-body">Dimensional Fund Advisors Interview with Director</a>
-                        </div>
-                        <div class="footer-btn text-start">
-                            <a href="#" class="btn btn-light rounded-pill px-4">View All Post <i
-                                    class="fa fa-arrow-right ms-1"></i></a>
                         </div>
                     </div>
                 </div>
@@ -469,21 +473,15 @@
         <div class="container">
             <div class="row g-4 align-items-center">
                 <div class="col-md-6 text-center text-md-start mb-md-0">
-                    <span class="text-body"><a href="#" class="border-bottom text-primary"><i
-                                class="fas fa-copyright text-light me-2"></i>Your Site Name</a>, All right
-                        reserved.</span>
-                </div>
-                <div class="col-md-6 text-center text-md-end text-body">
-                    <!--/*** This template is free as long as you keep the below author’s credit link/attribution link/backlink. ***/-->
-                    <!--/*** If you'd like to use the template without the below author’s credit link/attribution link/backlink, ***/-->
-                    <!--/*** you can purchase the Credit Removal License from "https://htmlcodex.com/credit-removal". ***/-->
-                    Designed By <a class="border-bottom text-primary" href="https://htmlcodex.com">HTML Codex</a>
-                    Distributed By <a class="border-bottom text-primary" href="https://themewagon.com">ThemeWagon</a>
+                    <span class="text-body"><a href="index.html" class="border-bottom text-primary"><i
+                                class="fas fa-copyright text-light me-2"></i>shreeharisolutions</a>, All right
+                        reserved 2025.</span>
                 </div>
             </div>
         </div>
     </div>
     <!-- Copyright End -->
+
 
 
     <!-- Back to Top -->
