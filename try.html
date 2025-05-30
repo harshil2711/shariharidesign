@@ -1,133 +1,787 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Responsive Navbar</title>
+    <meta charset="utf-8">
+    <title>Investa - Investment Website Template</title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta content="" name="keywords">
+    <meta content="" name="description">
 
-  <!-- Bootstrap 5 CSS -->
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
-  <!-- Optional: Font Awesome for menu icon -->
-  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet" />
+    <!-- Google Web Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500;600;700&family=Roboto:wght@400;500;700&display=swap"
+        rel="stylesheet">
 
-  <style>
-/* Mobile layout adjustments */
-@media (max-width: 991px) {
-  .navbar .container {
-    flex-wrap: nowrap !important;
-    justify-content: space-between !important;
-    align-items: center;
-  }
+    <!-- Icon Font Stylesheet -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
 
-  .navbar-toggler {
-    z-index: 10;
-    margin-left: auto;
-    border: none;
-    background: var(--bs-primary);
-    color: white;
-    padding: 6px 10px;
-    font-size: 1.25rem;
-  }
+    <!-- Libraries Stylesheet -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+    <link href="lib/animate/animate.min.css" rel="stylesheet">
+    <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+    <link href="lib/lightbox/css/lightbox.min.css" rel="stylesheet">
 
-  .navbar-brand {
-    display: flex;
-    align-items: center;
-    max-width: 75%;
-    overflow: hidden;
-    flex-shrink: 1;
-  }
 
-  .navbar-brand img {
-    height: 40px;
-    width: auto;
-    margin-right: 10px;
-    flex-shrink: 0;
-  }
+    <!-- Customized Bootstrap Stylesheet -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
 
-  .navbar-brand h1 {
-    font-size: 1rem;
-    white-space: nowrap;
-    overflow: hidden;
-    text-overflow: ellipsis;
-    margin: 0;
-  }
+    <!-- Template Stylesheet -->
+    <link href="css/style.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: "Inter", sans-serif;
+            font-weight: 400;
+            font-optical-sizing: auto;
+            line-height: 1.6;
+            color: #333;
+            font-style: normal;
+        }
 
-  .navbar-nav {
-    margin-top: 15px;
-  }
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6 {
+            font-weight: 600;
+            line-height: 1.2;
+        }
 
-  /* Ensure dropdown menu appears properly */
-  .navbar-nav .dropdown-menu {
-    position: absolute;
-    display: none;
-    visibility: hidden;
-    opacity: 0;
-    transition: opacity 0.3s ease;
-  }
+        .text-primary {
+            font-weight: 500;
+        }
 
-  .navbar-nav .dropdown:hover .dropdown-menu {
-    display: block;
-    visibility: visible;
-    opacity: 1;
-  }
-}
+        .btn {
+            font-weight: 500;
+            letter-spacing: 0.5px;
+        }
+    </style>
 
-  </style>
 </head>
 
 <body>
-    <nav class="navbar navbar-expand-lg navbar-light bg-white py-3 px-4">
+
+    <!-- Spinner Start -->
+    <div id="spinner"
+        class="show bg-white position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center">
+        <div class="spinner-border text-primary" style="width: 3rem; height: 3rem;" role="status">
+            <span class="sr-only">Loading...</span>
+        </div>
+    </div>
+    <!-- Spinner End -->
+
+
+    <!-- Topbar Start -->
+    <div class="container-fluid topbar px-0 d-none d-lg-block">
+        <div class="container px-0" style="display: none;">
+            <div class="row gx-0 align-items-center" style="height: 45px;">
+                <div class="col-lg-8 text-center text-lg-start mb-lg-0">
+                    <div class="d-flex flex-wrap">
+                        <a href="#" class="text-muted me-4"><i class="fas fa-map-marker-alt text-primary me-2"></i>Find
+                            A Location</a>
+                        <a href="#" class="text-muted me-4"><i
+                                class="fas fa-phone-alt text-primary me-2"></i>+01234567890</a>
+                        <a href="#" class="text-muted me-0"><i
+                                class="fas fa-envelope text-primary me-2"></i>Example@gmail.com</a>
+                    </div>
+                </div>
+                <div class="col-lg-4 text-center text-lg-end">
+                    <div class="d-flex align-items-center justify-content-end">
+                        <a href="#" class="btn btn-primary btn-square rounded-circle nav-fill me-3"><i
+                                class="fab fa-facebook-f text-white"></i></a>
+                        <a href="#" class="btn btn-primary btn-square rounded-circle nav-fill me-3"><i
+                                class="fab fa-twitter text-white"></i></a>
+                        <a href="#" class="btn btn-primary btn-square rounded-circle nav-fill me-3"><i
+                                class="fab fa-instagram text-white"></i></a>
+                        <a href="#" class="btn btn-primary btn-square rounded-circle nav-fill me-0"><i
+                                class="fab fa-linkedin-in text-white"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Topbar End -->
+
+
+    <!-- Navbar & Hero Start -->
+    <div class="container-fluid fixed-top px-0">
+        <div class="position-absolute bg-dark" style="left: 0; top: 0; width: 100%; height: 100%;">
+        </div>
+        <div class="px-0">
+            <nav class="navbar navbar-expand-lg navbar-dark bg-white py-3 px-4">
+                <a href="index.html" class="navbar-brand d-flex align-items-center p-0">
+                    <img src="img/logo.png" alt="Logo" height="50" class="me-2">
+                    <h1 class="text-primary m-0 fs-4">SHREE HARI SOLUTIONS</h1>
+                </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
+                    <span class="fa fa-bars"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarCollapse">
+                    <div class="navbar-nav ms-auto py-0">
+                        <a href="index.html" class="nav-item nav-link">Home</a>
+                        <a href="about.html" class="nav-item nav-link">About</a>
+                        <a href="service.html" class="nav-item nav-link active">Services</a>
+                        <a href="project.html" class="nav-item nav-link">Projects</a>
+                        <div class="nav-item dropdown">
+                            <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Pages</a>
+                            <div class="dropdown-menu m-0">
+                                <a href="blog.html" class="dropdown-item">Our Blog</a>
+                                <a href="team.html" class="dropdown-item">Our Team</a>
+                                <a href="testimonial.html" class="dropdown-item">Testimonial</a>
+                                <a href="faqs.html" class="dropdown-item">FAQs</a>
+                                <a href="404.html" class="dropdown-item">404 Page</a>
+                            </div>
+                        </div>
+                        <a href="contact.html" class="nav-item nav-link">Contact</a>
+                    </div>
+                    <div class="d-flex align-items-center flex-nowrap pt-xl-0">
+                        <button class="btn btn-primary btn-md-square mx-2" data-bs-toggle="modal"
+                            data-bs-target="#searchModal" style="display: none;"><i class="fas fa-search"></i></button>
+                        <a href="#"
+                            class="btn btn-primary rounded-pill text-white py-2 px-4 ms-2 flex-wrap flex-sm-shrink-0"
+                            style="display: none;">Start Investa</a>
+                    </div>
+                </div>
+            </nav>
+        </div>
+    </div>
+    <!-- Navbar & Hero End -->
+
+    <!-- Modal Search Start -->
+    <div class="modal fade" id="searchModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-fullscreen">
+            <div class="modal-content rounded-0">
+                <div class="modal-header">
+                    <h4 class="modal-title mb-0" id="exampleModalLabel">Search by keyword</h4>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body d-flex align-items-center">
+                    <div class="input-group w-75 mx-auto d-flex">
+                        <input type="search" class="form-control p-3" placeholder="keywords"
+                            aria-describedby="search-icon-1">
+                        <span id="search-icon-1" class="input-group-text p-3"><i class="fa fa-search"></i></span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Modal Search End -->
+
+    <!-- Header Start -->
+    <div class="container-fluid bg-breadcrumb">
+        <div class="bg-breadcrumb-single"></div>
+        <div class="container text-center py-5" style="max-width: 900px;">
+            <h4 class="text-white display-4 mb-4 wow fadeInDown" data-wow-delay="0.1s">Our Services</h4>
+            <!-- <ol class="breadcrumb justify-content-center mb-0 wow fadeInDown" data-wow-delay="0.3s">
+                    <li class="breadcrumb-item"><a href="index.html">Home</a></li>
+                    <li class="breadcrumb-item"><a href="#">Pages</a></li>
+                    <li class="breadcrumb-item active text-primary">Service</li>
+                </ol>     -->
+        </div>
+    </div>
+    <!-- Header End -->
+
+    <!-- Services Start -->
+    <div class="container-fluid service py-2">
+        <div class="container py-5">
+            <div class="text-center mx-auto pb-5 wow fadeInUp" data-wow-delay="0.1s" style="max-width: 800px;">
+                <h1 class="text-primary">Our Services</h1>
+                <!-- <h1 class="display-4"> Offering the Best Consulting & Investa Services</h1> -->
+            </div>
+            <div class="row g-4 justify-content-center text-center">
+                <div class="col-md-6 col-lg-4 col-xl-3 wow fadeInUp" data-wow-delay="0.1s">
+                    <div class="service-item bg-light rounded h-100">
+                        <div class="service-img">
+                            <img src="img/mechanical.png" class="img-fluid w-100 rounded-top" alt="">
+                        </div>
+                        <div class="service-content p-4">
+                            <div class="service-content-inner text-start">
+                                <a href="#" class="h4 mb-4 d-inline-flex">MECHANICAL ENGINEERING SERVICES</a>
+                                <!-- <p class="mb-4">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Earum nobis
+                                    est sapiente natus officiis maxime
+                                </p> -->
+                                <div>
+                                    <a class="btn btn-light rounded-pill py-2 px-4" href="ai.html"
+                                        class="nav-item nav-link">Read More</a>
+                                </div>
+                                <!--<a href="about.html" class="nav-item nav-link">Read More</a>-->
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4 col-xl-3 wow fadeInUp" data-wow-delay="0.1s">
+                    <div class="service-item bg-light rounded h-100">
+                        <div class="service-img">
+                            <img src="img/IT.png" class="img-fluid w-100 rounded-top" alt="">
+                        </div>
+                        <div class="service-content p-4">
+                            <div class="service-content-inner text-start">
+                                <a href="#" class="h4 mb-4 d-inline-flex">IT SERVICES</a>
+                                <!-- <p class="mb-4">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Earum nobis
+                                    est sapiente natus officiis maxime
+                                </p> -->
+                                <div style="margin-top: 60px;">
+                                    <a class="btn btn-light rounded-pill py-2 px-4" href="ai.html"
+                                        class="nav-item nav-link">Read More</a>
+                                </div>
+                                <!--<a href="about.html" class="nav-item nav-link">Read More</a>-->
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4 col-xl-3 wow fadeInUp" data-wow-delay="0.5s">
+                    <div class="service-item bg-light rounded h-100">
+                        <div class="service-img">
+                            <img src="img/energy.png" class="img-fluid w-100 rounded-top" alt="">
+                        </div>
+                        <div class="service-content p-4">
+                            <div class="service-content-inner text-start">
+                                <a href="#" class="h4 mb-4 d-inline-flex">ENERGY</a>
+                                <!-- <p class="mb-4">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Earum nobis
+                                    est sapiente natus officiis maxime
+                                </p> -->
+                                <div style="margin-top: 60px;">
+                                    <a class="btn btn-light rounded-pill py-2 px-4" href="ai.html"
+                                        class="nav-item nav-link">Read More</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4 col-xl-3 wow fadeInUp" data-wow-delay="0.7s">
+                    <div class="service-item bg-light rounded h-100">
+                        <div class="service-img">
+                            <img src="img/EV SOLUTION.png" class="img-fluid w-100 rounded-top" alt="">
+                        </div>
+                        <div class="service-content p-4">
+                            <div class="service-content-inner text-start">
+                                <a href="#" class="h4 mb-4 d-inline-flex">EV SOLUTION
+                                </a>
+                                <!-- <p class="mb-4">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Earum nobis
+                                    est sapiente natus officiis maxime
+                                </p> -->
+                                <div style="margin-top: 60px;">
+                                    <a class="btn btn-light rounded-pill py-2 px-4" href="ai.html"
+                                        class="nav-item nav-link">Read More</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row g-4 justify-content-center text-center mt-2">
+                <div class="col-md-6 col-lg-4 col-xl-3 wow fadeInUp" data-wow-delay="0.1s">
+                    <div class="service-item bg-light rounded h-100">
+                        <div class="service-img">
+                            <img src="img/B2B SERVICE.png" class="img-fluid w-100 rounded-top" alt="">
+                        </div>
+                        <div class="service-content p-4">
+                            <div class="service-content-inner text-start">
+                                <a href="#" class="h4 mb-4 d-inline-flex">B2B BUSINESS</a>
+                                <!-- <p class="mb-4">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Earum nobis
+                                    est sapiente natus officiis maxime
+                                </p> -->
+                                <div style="margin-top: 60px;">
+                                    <a class="btn btn-light rounded-pill py-2 px-4" href="ai.html"
+                                        class="nav-item nav-link">Read More</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4 col-xl-3 wow fadeInUp" data-wow-delay="0.1s">
+                    <div class="service-item bg-light rounded h-100">
+                        <div class="service-img">
+                            <img src="img/CREATIVE SERVICES.png" class="img-fluid w-100 rounded-top" alt="">
+                        </div>
+                        <div class="service-content p-4">
+                            <div class="service-content-inner text-start">
+                                <a href="#" class="h4 mb-4 d-inline-flex">CREATIVE SERVICES</a>
+                                <!-- <p class="mb-4">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Earum nobis
+                                    est sapiente natus officiis maxime
+                                </p> -->
+                                <div style="margin-top: 60px;">
+                                    <a class="btn btn-light rounded-pill py-2 px-4" href="ai.html"
+                                        class="nav-item nav-link">Read More</a>
+                                </div>
+                                <!--<a href="about.html" class="nav-item nav-link">Read More</a>-->
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4 col-xl-3 wow fadeInUp" data-wow-delay="0.5s">
+                    <div class="service-item bg-light rounded h-100">
+                        <div class="service-img">
+                            <img src="img/AIDATAANALYTICS.png" class="img-fluid w-100 rounded-top" alt="">
+                        </div>
+                        <div class="service-content p-4">
+                            <div class="service-content-inner text-start">
+                                <a href="#" class="h4 mb-4 d-inline-flex">AI/DATA ANALYTICS</a>
+                                <!-- <p class="mb-4">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Earum nobis
+                                    est sapiente natus officiis maxime
+                                </p> -->
+                                <div style="margin-top: 60px;">
+                                    <a class="btn btn-light rounded-pill py-2 px-4" href="ai.html"
+                                        class="nav-item nav-link">Read More</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4 col-xl-3 wow fadeInUp" data-wow-delay="0.7s">
+                    <div class="service-item bg-light rounded h-100">
+                        <div class="service-img">
+                            <img src="img/DATA STORAGE.png" class="img-fluid w-100 rounded-top" alt="">
+                        </div>
+                        <div class="service-content p-4">
+                            <div class="service-content-inner text-start">
+                                <a href="#" class="h4 mb-4 d-inline-flex">DATA STORAGE & MANAGE</a>
+                                <!-- <p class="mb-4">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Earum nobis
+                                    est sapiente natus officiis maxime
+                                </p> -->
+                                <div style="margin-top: 32px;">
+                                    <a class="btn btn-light rounded-pill py-2 px-4" href="ai.html"
+                                        class="nav-item nav-link">Read More</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row mt-4">
+                <div class="col-12 text-center">
+                    <a class="btn btn-primary rounded-pill py-3 px-5 wow fadeInUp" data-wow-delay="0.1s"
+                        href="#">Services More</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Services End -->
+
+
+    <!-- Testimonial Start -->
+    <div class="container-fluid testimonial bg-light py-5">
+        <div class="container py-5">
+            <div class="row g-4 align-items-center">
+                <div class="col-xl-4 wow fadeInLeft" data-wow-delay="0.1s">
+                    <div class="h-100 rounded">
+                        <h4 class="text-primary">Our Feedbacks </h4>
+                        <h1 class="display-4 mb-4">Clients are Talking</h1>
+                        <p class="mb-4">Lorem ipsum dolor sit amet consectetur adipisicing elit. Harum atque soluta unde
+                            itaque. Consequatur quam odit blanditiis harum veritatis porro.</p>
+                        <a class="btn btn-primary rounded-pill text-white py-3 px-5" href="#">Read All Reviews <i
+                                class="fas fa-arrow-right ms-2"></i></a>
+                    </div>
+                </div>
+                <div class="col-xl-8">
+                    <div class="testimonial-carousel owl-carousel wow fadeInUp" data-wow-delay="0.1s">
+                        <div class="testimonial-item bg-white rounded p-4 wow fadeInUp" data-wow-delay="0.3s">
+                            <div class="d-flex">
+                                <div><i class="fas fa-quote-left fa-3x text-dark me-3"></i></div>
+                                <p class="mt-4">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Magnam eos
+                                    impedit eveniet dolorem culpa ullam incidunt vero quo recusandae nemo? Molestiae
+                                    doloribus iure,
+                                </p>
+                            </div>
+                            <div class="d-flex justify-content-end">
+                                <div class="my-auto text-end">
+                                    <h5>Person Name</h5>
+                                    <p class="mb-0">Profession</p>
+                                </div>
+                                <div class="bg-white rounded-circle ms-3">
+                                    <img src="img/testimonial-1.jpg" class="rounded-circle p-2"
+                                        style="width: 80px; height: 80px; border: 1px solid; border-color: var(--bs-primary);"
+                                        alt="">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="testimonial-item bg-white rounded p-4 wow fadeInUp" data-wow-delay="0.5s">
+                            <div class="d-flex">
+                                <div><i class="fas fa-quote-left fa-3x text-dark me-3"></i></div>
+                                <p class="mt-4">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Magnam eos
+                                    impedit eveniet dolorem culpa ullam incidunt vero quo recusandae nemo? Molestiae
+                                    doloribus iure,
+                                </p>
+                            </div>
+                            <div class="d-flex justify-content-end">
+                                <div class="my-auto text-end">
+                                    <h5>Person Name</h5>
+                                    <p class="mb-0">Profession</p>
+                                </div>
+                                <div class="bg-white rounded-circle ms-3">
+                                    <img src="img/testimonial-2.jpg" class="rounded-circle p-2"
+                                        style="width: 80px; height: 80px; border: 1px solid; border-color: var(--bs-primary);"
+                                        alt="">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="testimonial-item bg-white rounded p-4 wow fadeInUp" data-wow-delay="0.7s">
+                            <div class="d-flex">
+                                <div><i class="fas fa-quote-left fa-3x text-dark me-3"></i></div>
+                                <p class="mt-4">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Magnam eos
+                                    impedit eveniet dolorem culpa ullam incidunt vero quo recusandae nemo? Molestiae
+                                    doloribus iure,
+                                </p>
+                            </div>
+                            <div class="d-flex justify-content-end">
+                                <div class="my-auto text-end">
+                                    <h5>Person Name</h5>
+                                    <p class="mb-0">Profession</p>
+                                </div>
+                                <div class="bg-white rounded-circle ms-3">
+                                    <img src="img/testimonial-3.jpg" class="rounded-circle p-2"
+                                        style="width: 80px; height: 80px; border: 1px solid; border-color: var(--bs-primary);"
+                                        alt="">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Testimonial End -->
+
+
+    <!-- FAQ Start -->
+    <div class="container-fluid faq py-5">
+        <div class="container py-5">
+            <div class="row g-5 align-items-center">
+                <div class="col-lg-6 wow fadeInLeft" data-wow-delay="0.1s">
+                    <div class="pb-5">
+                        <h4 class="text-primary">FAQs</h4>
+                        <h1 class="display-4">Get the Answers to Common Questions</h1>
+                    </div>
+                    <div class="accordion bg-light rounded p-4" id="accordionExample">
+                        <div class="accordion-item border-0 mb-4">
+                            <h2 class="accordion-header" id="headingOne">
+                                <button class="accordion-button text-dark fs-5 fw-bold rounded-top" type="button"
+                                    data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true"
+                                    aria-controls="collapseTOne">
+                                    What Does a Financial Advisor Do?
+                                </button>
+                            </h2>
+                            <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne"
+                                data-bs-parent="#accordionExample">
+                                <div class="accordion-body my-2">
+                                    <h5>Dolor sit amet consectetur adipisicing elit.</h5>
+                                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ad nemo impedit,
+                                        sapiente quis illo quia nulla atque maxime fuga minima ipsa quae cum
+                                        consequatur, sit, delectus exercitationem odit officiis maiores! Neque, quidem
+                                        corrupti modi architecto eos saepe incidunt dignissimos rerum.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="accordion-item border-0 mb-4">
+                            <h2 class="accordion-header" id="headingTwo">
+                                <button class="accordion-button collapsed text-dark fs-5 fw-bold rounded-top"
+                                    type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo"
+                                    aria-expanded="false" aria-controls="collapseTwo">
+                                    What industries do you specialize in?
+                                </button>
+                            </h2>
+                            <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo"
+                                data-bs-parent="#accordionExample">
+                                <div class="accordion-body my-2">
+                                    <h5>Dolor sit amet consectetur adipisicing elit.</h5>
+                                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ad nemo impedit,
+                                        sapiente quis illo quia nulla atque maxime fuga minima ipsa quae cum
+                                        consequatur, sit, delectus exercitationem odit officiis maiores! Neque, quidem
+                                        corrupti modi architecto eos saepe incidunt dignissimos rerum.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="accordion-item border-0 mb-4">
+                            <h2 class="accordion-header" id="headingThree">
+                                <button class="accordion-button collapsed text-dark fs-5 fw-bold rounded-top"
+                                    type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree"
+                                    aria-expanded="false" aria-controls="collapseThree">
+                                    Can you guarantee for growth?
+                                </button>
+                            </h2>
+                            <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree"
+                                data-bs-parent="#accordionExample">
+                                <div class="accordion-body my-2">
+                                    <h5>Dolor sit amet consectetur adipisicing elit.</h5>
+                                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ad nemo impedit,
+                                        sapiente quis illo quia nulla atque maxime fuga minima ipsa quae cum
+                                        consequatur, sit, delectus exercitationem odit officiis maiores! Neque, quidem
+                                        corrupti modi architecto eos saepe incidunt dignissimos rerum.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="accordion-item border-0 mb-0">
+                            <h2 class="accordion-header" id="headingFour">
+                                <button class="accordion-button collapsed text-dark fs-5 fw-bold rounded-top"
+                                    type="button" data-bs-toggle="collapse" data-bs-target="#collapseFour"
+                                    aria-expanded="false" aria-controls="collapseFour">
+                                    What makes your business plans so special?
+                                </button>
+                            </h2>
+                            <div id="collapseFour" class="accordion-collapse collapse" aria-labelledby="headingFour"
+                                data-bs-parent="#accordionExample">
+                                <div class="accordion-body my-2">
+                                    <h5>Dolor sit amet consectetur adipisicing elit.</h5>
+                                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ad nemo impedit,
+                                        sapiente quis illo quia nulla atque maxime fuga minima ipsa quae cum
+                                        consequatur, sit, delectus exercitationem odit officiis maiores! Neque, quidem
+                                        corrupti modi architecto eos saepe incidunt dignissimos rerum.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6 wow fadeInRight" data-wow-delay="0.3s">
+                    <div class="faq-img RotateMoveRight rounded">
+                        <img src="img/faq-img.jpg" class="img-fluid rounded w-100" alt="Image">
+                        <a class="faq-btn btn btn-primary rounded-pill text-white py-3 px-5" href="#">Read More Q & A <i
+                                class="fas fa-arrow-right ms-2"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- FAQ End -->
+    <!-- Who We Are Start -->
+    <div class="container-fluid py-5 wow fadeInUp" data-wow-delay="0.1s" style="background-color: #f8f9fa;">
+        <div class="container py-5">
+            <div class="row g-5 align-items-center">
+                <div class="col-lg-6 order-lg-2">
+                    <div class="section-title text-center text-lg-start mb-5">
+                        <h1 class="display-4 text-dark mb-4">Who We Are</h1>
+                        <div class="border-top border-primary w-50 mx-auto mx-lg-0 my-4"></div>
+                    </div>
+                    <p class="text-muted mb-5">We are a team of dedicated professionals committed to delivering innovative solutions and exceptional service to our clients. With years of experience in our field, we combine expertise with passion to help businesses grow and succeed.</p>
+                    
+                    <div class="row g-4">
+                        <div class="col-md-6">
+                            <div class="bg-white rounded p-4 text-center h-100 shadow-sm">
+                                <div class="icon-box bg-white border border-primary rounded-circle mx-auto mb-4" style="width: 80px; height: 80px; line-height: 80px;">
+                                    <i class="fa fa-users fa-2x text-primary"></i>
+                                </div>
+                                <h4 class="text-dark mb-3">Expert Team</h4>
+                                <p class="text-muted mb-0">Highly skilled professionals with diverse expertise.</p>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="bg-white rounded p-4 text-center h-100 shadow-sm">
+                                <div class="icon-box bg-white border border-primary rounded-circle mx-auto mb-4" style="width: 80px; height: 80px; line-height: 80px;">
+                                    <i class="fa fa-lightbulb fa-2x text-primary"></i>
+                                </div>
+                                <h4 class="text-dark mb-3">Innovative Solutions</h4>
+                                <p class="text-muted mb-0">Cutting-edge solutions tailored to your needs.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6 order-lg-1">
+                    <div class="position-relative rounded overflow-hidden shadow-lg">
+                        <img class="img-fluid w-100 rounded" src="img/team.jpg" alt="Our Team">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Who We Are End -->
+
+    <!-- Why Choose Us Start -->
+    <div class="container-fluid py-5 wow fadeInUp" data-wow-delay="0.1s" style="background-color: #f8f9fa;">
+        <div class="container py-5">
+            <div class="section-title text-center mb-5">
+                <h1 class="display-4 text-dark mb-4">Why Choose <span style="color: #0d6efd;">Hari Design Solution</span></h1>
+                <div class="border-top border-primary w-25 mx-auto my-4"></div>
+            </div>
+            <div class="row g-4 justify-content-center">
+                <div class="col-lg-3 col-md-6">
+                    <div class="card border-0 shadow-sm h-100 text-center p-4">
+                        <div class="icon-box bg-primary rounded-circle mx-auto mb-4" style="width: 80px; height: 80px; line-height: 80px;">
+                            <i class="fas fa-user-tie fa-2x text-white"></i>
+                        </div>
+                        <h4 class="text-dark mb-3">Client First</h4>
+                        <p class="text-muted">At Shree Hari Solution, "Client First" is more than a principle—it’s the foundation of everything we do. We believe that true innovation begins with understanding our clients’ needs, goals, and challenges. Our focus is always on delivering real value to our clients—and through them, to their customers. Your success is our success, and we’re committed to walking every step of the journey with you. </p>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <div class="card border-0 shadow-sm h-100 text-center p-4">
+                        <div class="icon-box bg-primary rounded-circle mx-auto mb-4" style="width: 80px; height: 80px; line-height: 80px;">
+                            <i class="fas fa-lightbulb fa-2x text-white"></i>
+                        </div>
+                        <h4 class="text-dark mb-3">Strong Expertise</h4>
+                        <p class="text-muted">At Shree Hari Solution, our strength lies in deep technical expertise and a passion for excellence. With years of experience in difference services , we blend creativity with precision to deliver reliable, scalable, and future-ready solutions. From startups to enterprises, our clients trust us to bring their ideas to life—with quality, speed, and the insight that only true experts can provide.</p>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <div class="card border-0 shadow-sm h-100 text-center p-4">
+                        <div class="icon-box bg-primary rounded-circle mx-auto mb-4" style="width: 80px; height: 80px; line-height: 80px;">
+                            <i class="fas fa-clock fa-2x text-white"></i>
+                        </div>
+                        <h4 class="text-dark mb-3">Results Oriented</h4>
+                        <p class="text-muted">At Shree Hari Solution, we don’t just deliver projects—we deliver outcomes. Every line of code, every feature we build, is aligned with your business goals. Our results-oriented approach ensures that we focus on what truly matters: measurable success, increased efficiency, and tangible value. With us, it’s not just about finishing the job—it’s about moving your business forward.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Why Choose Us End -->
+
+    <!-- Our Values Start -->
+    <div class="container-fluid py-5 wow fadeInUp" data-wow-delay="0.1s">
+        <div class="container py-5">
+            <div class="section-title text-center mb-5">
+                <h1 class="display-4 text-dark mb-4">Our <span style="color: #0d6efd;">Core Values</span></h1>
+                <div class="border-top border-primary w-25 mx-auto my-4"></div>
+            </div>
+            <div class="row g-4 justify-content-center">
+                <div class="col-lg-4 col-md-6">
+                    <div class="card border-0 shadow-sm h-100 text-center p-4">
+                        <div class="icon-box bg-primary rounded-circle mx-auto mb-4" style="width: 80px; height: 80px; line-height: 80px;">
+                            <i class="fas fa-users fa-2x text-white"></i>
+                        </div>
+                        <h4 class="text-dark mb-3">Integrity</h4>
+                        <p class="text-muted">At Shree Hari Solution, integrity guides everything we do. We prioritize honesty, transparency, and ethical practices in all our interactions. Our clients rely on us to deliver on our promises with sincerity and respect, building trust that lasts beyond the project.</p>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6">
+                    <div class="card border-0 shadow-sm h-100 text-center p-4">
+                        <div class="icon-box bg-primary rounded-circle mx-auto mb-4" style="width: 80px; height: 80px; line-height: 80px;">
+                            <i class="fas fa-lightbulb fa-2x text-white"></i>
+                        </div>
+                        <h4 class="text-dark mb-3">Innovation</h4>
+                        <p class="text-muted">At Shree Hari Solution, innovation isn’t just about new technology—it’s about creating smarter, faster, and more meaningful ways to solve real problems. We stay ahead of the curve to ensure our clients do too, blending forward-thinking strategy with cutting-edge development. From concept to execution, our innovative mindset drives everything we build—transforming ideas into impact.</p>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6">
+                  <div class="card border-0 shadow-sm h-100 text-center p-4">
+                      <div class="icon-box bg-primary rounded-circle mx-auto mb-4" style="width: 80px; height: 80px; line-height: 80px;">
+                          <i class="fas fa-handshake fa-2x text-white"></i>
+                      </div>
+                      <h4 class="text-dark mb-3">Commitment</h4>
+                      <p class="text-muted">At Shree Hari Solution, commitment means standing by our clients at every stage of their journey. We’re dedicated to exceeding expectations—not just meeting deadlines. From first consultation to final deployment and beyond, our team is fully invested in your success. We don’t just promise excellence—we commit to it, every single day.</p>
+                  </div>
+                </div>
+                <div class="col-lg-4 col-md-6">
+                  <div class="card border-0 shadow-sm h-100 text-center p-4">
+                      <div class="icon-box bg-primary rounded-circle mx-auto mb-4" style="width: 80px; height: 80px; line-height: 80px;">
+                          <i class="fas fa-check-circle fa-2x text-white"></i>
+                      </div>
+                      <h4 class="text-dark mb-3">Proactive</h4>
+                      <p class="text-muted">At Shree Hari Solution, we take initiative—not just instructions. We proactively identify risks, suggest improvements, and stay ahead of challenges to keep your project on track and aligned with your goals. With our team, you’re not just getting a service provider—you’re gaining a partner who’s always thinking one step ahead for your success.</p>
+                  </div>
+              </div>
+                <div class="col-lg-4 col-md-6">
+                    <div class="card border-0 shadow-sm h-100 text-center p-4">
+                        <div class="icon-box bg-primary rounded-circle mx-auto mb-4" style="width: 80px; height: 80px; line-height: 80px;">
+                            <i class="fas fa-users fa-2x text-white"></i>
+                        </div>
+                        <h4 class="text-dark mb-3">Collaboration</h4>
+                        <p class="text-muted">We work as partners with our clients, fostering open communication and teamwork. Together, we achieve more than we could individually.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Our Values End -->
+
+    
+    <!-- WhatsApp chat button start -->
+    <a href="https://wa.me/+919998595357?text=Hello, I am contacting you from your https://www.shreeharisolutions.in Website."
+        class="whatsapp-rectangle" target="_blank">
+        <img src="https://img.icons8.com/color/48/000000/whatsapp--v1.png" alt="WhatsApp" />
+        <span>Chat with us</span>
+    </a>
+    <!-- WhatsApp chat button end -->
+
+    <!-- Footer Start -->
+    <div class="container-fluid footer wow fadeIn" data-wow-delay="0.2s">
+        <div class="container py-4">
+            <div class="row g-5 justify-content-center">
+                <div class="col-md-4 col-lg-4 col-xl-4">
+                    <div class="footer-item p-3">
+                        <h4 class="text-white mb-3 text-center text-md-start">About us</h4>
+                        <p class="mb-0 text-center text-md-start">We are dedicated to delivering excellence on every
+                            project, no matter where in the world it may be. We look forward to working with you.</p>
+                    </div>
+                </div>
+                <div class="col-md-4 col-lg-4 col-xl-4">
+                    <div class="footer-item p-3">
+                        <h4 class="text-white mb-3 text-center text-md-start">Explore</h4>
+                        <div class="d-flex flex-column text-center text-md-start">
+                            <span class="mb-2"><i class="fas fa-angle-right me-2"></i> <a href="#">Home</a></span>
+                            <span class="mb-2"><i class="fas fa-angle-right me-2"></i> <a href="#">Services</a></span>
+                            <span class="mb-2"><i class="fas fa-angle-right me-2"></i> <a href="#">About Us</a></span>
+                            <span class="mb-2"><i class="fas fa-angle-right me-2"></i> <a href="#">Latest
+                                    Projects</a></span>
+                            <span class="mb-2"><i class="fas fa-angle-right me-2"></i> <a href="blog.html">Our
+                                    Blogs</a></span>
+                            <span class="mb-2"><i class="fas fa-angle-right me-2"></i> <a href="#">Our Team</a></span>
+                            <span class="mb-2"><i class="fas fa-angle-right me-2"></i> <a href="#">Contact Us</a></span>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 col-lg-4 col-xl-4">
+                    <div class="footer-item d-flex flex-column text-center text-md-start p-3">
+                        <h4 class="text-white mb-3">Contact Info</h4>
+                        <a class="mb-2" href=""><i class="fa fa-map-marker-alt me-2"></i> Opp. Hotel Fortune Landmark,
+                            Ashram Road,
+                            Ahmedabad 380013, Gujarat, India</a>
+                        <a class="mb-2" href="mailto:info@shreeharisolutions.in"><i class="fas fa-envelope me-2"></i>
+                            info@shreeharisolutions.in</a>
+                        <a class="mb-2" href="tel:+919998595357"><i class="fas fa-phone me-2"></i> +91 99985 95357</a>
+                        <div class="d-flex align-items-center justify-content-center justify-content-md-start mt-2">
+                            <a class="btn btn-light btn-md-square me-2" href=""><i class="fab fa-facebook-f"></i></a>
+                            <a class="btn btn-light btn-md-square me-2" href=""><i class="fab fa-twitter"></i></a>
+                            <a class="btn btn-light btn-md-square me-2" href=""><i class="fab fa-instagram"></i></a>
+                            <a class="btn btn-light btn-md-square me-0" href=""><i class="fab fa-linkedin-in"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Footer End -->
+
+
+    <!-- Copyright Start -->
+    <div class="container-fluid copyright py-4">
         <div class="container">
-          <!-- Logo + Brand Name -->
-          <a href="index.html" class="navbar-brand d-flex align-items-center">
-            <img src="img/logo.png" alt="Logo" height="40" class="me-2"> <!-- Adjust logo size -->
-            <h1 class="text-primary m-0 fs-5">SHREE HARI SOLUTIONS</h1>
-          </a>
-      
-          <!-- Hamburger Button (only visible on small screens) -->
-          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
-            <i class="fas fa-bars"></i> <!-- Font Awesome hamburger icon -->
-          </button>
+            <div class="row g-4 align-items-center">
+                <div class="col-md-6 text-center text-md-start mb-md-0">
+                    <span class="text-body"><a href="index.html" class="border-bottom text-primary"><i
+                                class="fas fa-copyright text-light me-2"></i>shreeharisolutions</a>, All right
+                        reserved 2025.</span>
+                </div>
+            </div>
         </div>
-      
-        <!-- Navbar items and dropdown -->
-        <div class="collapse navbar-collapse" id="navbarCollapse">
-          <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
-            <li class="nav-item">
-              <a href="index.html" class="nav-link active">Home</a>
-            </li>
-            <li class="nav-item">
-              <a href="about.html" class="nav-link">About</a>
-            </li>
-            <li class="nav-item">
-              <a href="service.html" class="nav-link">Services</a>
-            </li>
-            <li class="nav-item">
-              <a href="project.html" class="nav-link">Projects</a>
-            </li>
-      
-            <!-- Dropdown Menu -->
-            <li class="nav-item dropdown">
-              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                Pages
-              </a>
-              <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                <li><a class="dropdown-item" href="blog.html">Our Blog</a></li>
-                <li><a class="dropdown-item" href="team.html">Our Team</a></li>
-                <li><a class="dropdown-item" href="testimonial.html">Testimonial</a></li>
-                <li><a class="dropdown-item" href="faqs.html">FAQs</a></li>
-                <li><a class="dropdown-item" href="404.html">404 Page</a></li>
-              </ul>
-            </li>
-      
-            <li class="nav-item">
-              <a href="contact.html" class="nav-link">Contact</a>
-            </li>
-          </ul>
-        </div>
-      </nav>
-      
-  <!-- Bootstrap JS -->
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    </div>
+    <!-- Copyright End -->
+
+
+    <!-- Back to Top -->
+    <a href="#" class="btn btn-primary btn-lg-square back-to-top"><i class="fa fa-arrow-up"></i></a>
+
+
+    <!-- JavaScript Libraries -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="lib/wow/wow.min.js"></script>
+    <script src="lib/easing/easing.min.js"></script>
+    <script src="lib/waypoints/waypoints.min.js"></script>
+    <script src="lib/counterup/counterup.min.js"></script>
+    <script src="lib/owlcarousel/owl.carousel.min.js"></script>
+    <script src="lib/lightbox/js/lightbox.min.js"></script>
+
+
+    <!-- Template Javascript -->
+    <script src="js/main.js"></script>
 </body>
+
 </html>
