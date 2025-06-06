@@ -31,6 +31,7 @@
 
     <!-- Template Stylesheet -->
     <link href="css/style.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -42,7 +43,7 @@
             font-weight: 400;
             font-optical-sizing: auto;
             line-height: 1.6;
-            color: #333;
+            /* color: #333; */
             font-style: normal;
         }
 
@@ -129,12 +130,12 @@
                     <div class="navbar-nav ms-auto py-0">
                         <a href="index.html" class="nav-item nav-link">Home</a>
                         <a href="about.html" class="nav-item nav-link">About</a>
-                        <a href="service.html" class="nav-item nav-link active">Services</a>
+                        <a href="service.html" class="nav-item nav-link">Services</a>
                         <a href="project.html" class="nav-item nav-link">Projects</a>
-                        <div class="nav-item dropdown">
-                            <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Pages</a>
+                        <div class="nav-item dropdown active">
+                            <a href="#" class="nav-link dropdown-toggle active" data-bs-toggle="dropdown">Pages</a>
                             <div class="dropdown-menu m-0">
-                                <a href="blog.html" class="dropdown-item">Our Blog</a>
+                                <a href="blog.html" class="dropdown-item active">Our Blog</a>
                                 <a href="team.html" class="dropdown-item">Our Team</a>
                                 <a href="testimonial.html" class="dropdown-item">Testimonial</a>
                                 <a href="faqs.html" class="dropdown-item">FAQs</a>
@@ -177,171 +178,140 @@
     <!-- Modal Search End -->
 
     <!-- Header Start -->
-    <div class="container-fluid bg-breadcrumb">
+    <div class="container-fluid bg-breadcrumb"
+        style="background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(img/aboutus.png); background-position: center center; background-repeat: no-repeat; background-size: cover;">
         <div class="bg-breadcrumb-single"></div>
         <div class="container text-center py-5" style="max-width: 900px;">
-            <h4 class="text-white display-4 mb-4 wow fadeInDown" data-wow-delay="0.1s">Our Services</h4>
-            <!-- <ol class="breadcrumb justify-content-center mb-0 wow fadeInDown" data-wow-delay="0.3s">
-                    <li class="breadcrumb-item"><a href="index.html">Home</a></li>
-                    <li class="breadcrumb-item"><a href="#">Pages</a></li>
-                    <li class="breadcrumb-item active text-primary">Service</li>
-                </ol>     -->
+            <h4 class="text-white display-4 mb-4 wow fadeInDown" data-wow-delay="0.1s">Blogs</h4>
         </div>
     </div>
     <!-- Header End -->
 
-    
-    <!-- FAQ Start -->
-    <div class="container-fluid faq py-5">
+    <!-- Blog Start -->
+    <div class="container-fluid blog py-5">
         <div class="container py-5">
-            <div class="row g-5 align-items-center">
-                <div class="col-lg-6 wow fadeInLeft" data-wow-delay="0.1s">
-                    <div class="pb-5">
-                        <h4 class="text-primary">FAQs</h4>
-                        <h1 class="display-4">Get the Answers to Common Questions</h1>
-                    </div>
-                    <div class="accordion bg-light rounded p-4" id="accordionExample">
-                        <div class="accordion-item border-0 mb-4">
-                            <h2 class="accordion-header" id="headingOne">
-                                <button class="accordion-button text-dark fs-5 fw-bold rounded-top" type="button"
-                                    data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true"
-                                    aria-controls="collapseTOne">
-                                    What Does a Financial Advisor Do?
-                                </button>
-                            </h2>
-                            <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne"
-                                data-bs-parent="#accordionExample">
-                                <div class="accordion-body my-2">
-                                    <h5>Dolor sit amet consectetur adipisicing elit.</h5>
-                                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ad nemo impedit,
-                                        sapiente quis illo quia nulla atque maxime fuga minima ipsa quae cum
-                                        consequatur, sit, delectus exercitationem odit officiis maiores! Neque, quidem
-                                        corrupti modi architecto eos saepe incidunt dignissimos rerum.</p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="accordion-item border-0 mb-4">
-                            <h2 class="accordion-header" id="headingTwo">
-                                <button class="accordion-button collapsed text-dark fs-5 fw-bold rounded-top"
-                                    type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo"
-                                    aria-expanded="false" aria-controls="collapseTwo">
-                                    What industries do you specialize in?
-                                </button>
-                            </h2>
-                            <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo"
-                                data-bs-parent="#accordionExample">
-                                <div class="accordion-body my-2">
-                                    <h5>Dolor sit amet consectetur adipisicing elit.</h5>
-                                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ad nemo impedit,
-                                        sapiente quis illo quia nulla atque maxime fuga minima ipsa quae cum
-                                        consequatur, sit, delectus exercitationem odit officiis maiores! Neque, quidem
-                                        corrupti modi architecto eos saepe incidunt dignissimos rerum.</p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="accordion-item border-0 mb-4">
-                            <h2 class="accordion-header" id="headingThree">
-                                <button class="accordion-button collapsed text-dark fs-5 fw-bold rounded-top"
-                                    type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree"
-                                    aria-expanded="false" aria-controls="collapseThree">
-                                    Can you guarantee for growth?
-                                </button>
-                            </h2>
-                            <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree"
-                                data-bs-parent="#accordionExample">
-                                <div class="accordion-body my-2">
-                                    <h5>Dolor sit amet consectetur adipisicing elit.</h5>
-                                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ad nemo impedit,
-                                        sapiente quis illo quia nulla atque maxime fuga minima ipsa quae cum
-                                        consequatur, sit, delectus exercitationem odit officiis maiores! Neque, quidem
-                                        corrupti modi architecto eos saepe incidunt dignissimos rerum.</p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="accordion-item border-0 mb-0">
-                            <h2 class="accordion-header" id="headingFour">
-                                <button class="accordion-button collapsed text-dark fs-5 fw-bold rounded-top"
-                                    type="button" data-bs-toggle="collapse" data-bs-target="#collapseFour"
-                                    aria-expanded="false" aria-controls="collapseFour">
-                                    What makes your business plans so special?
-                                </button>
-                            </h2>
-                            <div id="collapseFour" class="accordion-collapse collapse" aria-labelledby="headingFour"
-                                data-bs-parent="#accordionExample">
-                                <div class="accordion-body my-2">
-                                    <h5>Dolor sit amet consectetur adipisicing elit.</h5>
-                                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ad nemo impedit,
-                                        sapiente quis illo quia nulla atque maxime fuga minima ipsa quae cum
-                                        consequatur, sit, delectus exercitationem odit officiis maiores! Neque, quidem
-                                        corrupti modi architecto eos saepe incidunt dignissimos rerum.</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-6 wow fadeInRight" data-wow-delay="0.3s">
-                    <div class="faq-img RotateMoveRight rounded">
-                        <img src="img/faq-img.jpg" class="img-fluid rounded w-100" alt="Image">
-                        <a class="faq-btn btn btn-primary rounded-pill text-white py-3 px-5" href="#">Read More Q & A <i
-                                class="fas fa-arrow-right ms-2"></i></a>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <!-- FAQ End -->
-   
+            <div class="row g-5">
+                <div class="col-lg-8">
+                    <!-- Blog Detail Start -->
+                    <div class="blog-item rounded">
+                        <div class="blog-img rounded">
+                            <img src="img/B33.png" class="img-fluid w-100 rounded" alt="Blog Image">
+                            <div class="mb-3"></div>
 
-    
-    <!-- Project Start -->
-    <div class="container-fluid py-5 wow fadeInUp" data-wow-delay="0.1s">
-        <div class="container py-5">
-            <div class="section-title text-center mb-5">
-                <h1 class="display-4 text-dark mb-4">Our <span style="color: #0d6efd;">Projects</span></h1>
-                <div class="border-top border-primary w-25 mx-auto my-4"></div>
-            </div>
-            <div class="row g-4 justify-content-center">
-                <div class="col-md-6 col-lg-4 wow fadeInUp" data-wow-delay="0.1s">
-                    <div class="project-item bg-light rounded h-100">
-                        <div class="project-img">
-                            <img src="img/project-1.jpg" class="img-fluid w-100 rounded-top" alt="Project 1">
                         </div>
-                        <div class="project-content p-4">
-                            <h4 class="text-dark mb-3">Mechanical Engineering</h4>
-                            <p class="text-muted">Innovative mechanical solutions for industrial applications</p>
-                            <a href="#" class="btn btn-primary rounded-pill py-2 px-4">View Details</a>
+                        <div class="blog-content rounded-bottom bg-light p-4">
+                            <h3 class="mb-4">How Can IOT Enhance Your Business Operations?</h3>
+                            <p>In today’s fast-paced digital economy, businesses are under constant pressure to
+                                innovate, operate efficiently, and deliver better value to customers. One of the most
+                                transformative technologies making this possible is the Internet of Things (IoT). IoT
+                                refers to the network of physical devices—ranging from machinery and vehicles to office
+                                equipment and appliances—embedded with sensors and software that allow them to connect
+                                and exchange data over the internet. This interconnected ecosystem is helping businesses
+                                across industries streamline operations, reduce costs, and gain valuable insights that
+                                drive smarter decisions.</p>
+
+                            <p>One of the most significant benefits of IoT is real-time monitoring. By using sensors and
+                                connected devices, businesses can monitor operations, equipment, and environments in
+                                real time. This immediate visibility allows for faster response to issues, better
+                                quality control, and more informed decision-making. For example, manufacturers use IoT
+                                to track machine performance and identify wear or defects before they cause breakdowns.
+                                This naturally leads into another major benefit—predictive maintenance. Traditional
+                                maintenance models rely on fixed schedules or reactive approaches, often resulting in
+                                unnecessary downtime or unexpected failures. IoT changes that by using data to predict
+                                when a machine or component is likely to fail, allowing businesses to perform
+                                maintenance only when it's needed. This proactive strategy helps reduce downtime, extend
+                                asset life, and save on repair costs.
+                            </p>
+
+                            <p>IoT also revolutionizes asset and inventory management. With the help of GPS trackers,
+                                RFID tags, and smart shelves, companies can monitor inventory levels and asset locations
+                                in real time. This not only reduces the risk of loss or theft but also helps optimize
+                                stock levels and improve supply chain efficiency. Retailers, for instance, can
+                                automatically restock shelves based on actual demand, while logistics companies can
+                                track fleet movements and ensure timely deliveries.
+                            </p>
+
+                            <p>Another area where IoT delivers immense value is process automation. IoT-enabled systems
+                                can automate a wide range of tasks—such as adjusting lighting and climate controls based
+                                on occupancy, or automatically rerouting deliveries based on traffic conditions. This
+                                level of automation increases productivity, reduces human error, and cuts operational
+                                costs. It also creates room for innovation by freeing up human workers to focus on
+                                strategic and creative tasks.</p>
+
+                            <p>Moreover, IoT has a direct impact on customer experience. Connected devices can gather
+                                insights into customer preferences and usage patterns, allowing businesses to
+                                personalize their offerings. For example, hotels can offer guests customized room
+                                settings through IoT-enabled apps, while retailers can provide tailored promotions based
+                                on shopping behavior. This personalized approach not only enhances satisfaction but also
+                                builds customer loyalty.</p>
+
+                            <p>Workplace safety and compliance are also significantly enhanced through IoT technologies.
+                                Wearables and environmental sensors can detect unsafe conditions, monitor worker health,
+                                and send real-time alerts in case of emergencies. This is particularly valuable in
+                                high-risk industries like construction, mining, or manufacturing, where timely
+                                intervention can prevent serious accidents.
+                            </p>
+
+                            <p>Finally, IoT serves as a powerful tool for data-driven innovation. The continuous flow of
+                                data from connected devices provides businesses with deep insights into operational
+                                performance, consumer behavior, and market trends. When analyzed effectively, this data
+                                becomes the foundation for strategic decisions, process improvements, and new product
+                                development. Businesses that harness the full potential of IoT can uncover hidden
+                                inefficiencies, predict customer needs, and adapt quickly to changing market demands.
+                            </p>
+                            <p>In conclusion, IoT is no longer a futuristic concept—it’s a practical, accessible
+                                technology that can significantly enhance business operations across all sectors. From
+                                real-time monitoring and predictive maintenance to automation and customer
+                                personalization, the advantages are clear and compelling. Companies that invest in IoT
+                                now are positioning themselves for greater agility, efficiency, and long-term success in
+                                a connected world.</p>
+
+
                         </div>
                     </div>
+                    <!-- Blog Detail End -->
                 </div>
-                <div class="col-md-6 col-lg-4 wow fadeInUp" data-wow-delay="0.3s">
-                    <div class="project-item bg-light rounded h-100">
-                        <div class="project-img">
-                            <img src="img/project-2.jpg" class="img-fluid w-100 rounded-top" alt="Project 2">
-                        </div>
-                        <div class="project-content p-4">
-                            <h4 class="text-dark mb-3">IT Solutions</h4>
-                            <p class="text-muted">Cutting-edge technology implementations for businesses</p>
-                            <a href="#" class="btn btn-primary rounded-pill py-2 px-4">View Details</a>
+
+                <!-- Sidebar Start -->
+                <div class="col-lg-4">
+                    <!-- Recent Posts Start -->
+                    <div class="mb-5">
+                        <h4 class="mb-4">Recent Posts</h4>
+                        <div class="bg-light rounded p-4">
+                            <div class="d-flex mb-3">
+                                <img src="img/B1.png" class="img-fluid rounded"
+                                    style="width: 100px; height: 100px; object-fit: cover;" alt="">
+                                <div class="ms-3">
+                                    <h6><a href="blog1.html" class="text-dark">Industry 4.0</a></h6>
+                                    <small class="text-muted">May 15, 2025</small>
+                                </div>
+                            </div>
+                            <div class="d-flex mb-3">
+                                <img src="img/B2.png" class="img-fluid rounded"
+                                    style="width: 100px; height: 100px; object-fit: cover;" alt="">
+                                <div class="ms-3">
+                                    <h6><a href="blog2.html" class="text-dark">Future is Automation</a></h6>
+                                    <small class="text-muted">April 28, 2025</small>
+                                </div>
+                            </div>
+                            <div class="d-flex">
+                                <img src="img/B3.png" class="img-fluid rounded"
+                                    style="width: 100px; height: 100px; object-fit: cover;" alt="">
+                                <div class="ms-3">
+                                    <h6><a href="blog3.html" class="text-dark">How Can IoT Enhance Your Business
+                                            Operations?</a></h6>
+                                    <small class="text-muted">February 15, 2025</small>
+                                </div>
+                            </div>
                         </div>
                     </div>
+                    <!-- Recent Posts End -->
                 </div>
-                <div class="col-md-6 col-lg-4 wow fadeInUp" data-wow-delay="0.5s">
-                    <div class="project-item bg-light rounded h-100">
-                        <div class="project-img">
-                            <img src="img/project-3.jpg" class="img-fluid w-100 rounded-top" alt="Project 3">
-                        </div>
-                        <div class="project-content p-4">
-                            <h4 class="text-dark mb-3">Energy Solutions</h4>
-                            <p class="text-muted">Sustainable energy projects for a greener future</p>
-                            <a href="#" class="btn btn-primary rounded-pill py-2 px-4">View Details</a>
-                        </div>
-                    </div>
-                </div>
+                <!-- Sidebar End -->
             </div>
         </div>
     </div>
-    <!-- Project End -->
-    
+    <!-- Blog End -->
     <!-- WhatsApp chat button start -->
     <a href="https://wa.me/+919998595357?text=Hello, I am contacting you from your https://www.shreeharisolutions.in Website."
         class="whatsapp-rectangle" target="_blank">

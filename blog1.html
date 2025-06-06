@@ -31,6 +31,7 @@
 
     <!-- Template Stylesheet -->
     <link href="css/style.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -129,12 +130,12 @@
                     <div class="navbar-nav ms-auto py-0">
                         <a href="index.html" class="nav-item nav-link">Home</a>
                         <a href="about.html" class="nav-item nav-link">About</a>
-                        <a href="service.html" class="nav-item nav-link active">Services</a>
+                        <a href="service.html" class="nav-item nav-link">Services</a>
                         <a href="project.html" class="nav-item nav-link">Projects</a>
-                        <div class="nav-item dropdown">
-                            <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Pages</a>
+                        <div class="nav-item dropdown active">
+                            <a href="#" class="nav-link dropdown-toggle active" data-bs-toggle="dropdown">Pages</a>
                             <div class="dropdown-menu m-0">
-                                <a href="blog.html" class="dropdown-item">Our Blog</a>
+                                <a href="blog.html" class="dropdown-item active">Our Blog</a>
                                 <a href="team.html" class="dropdown-item">Our Team</a>
                                 <a href="testimonial.html" class="dropdown-item">Testimonial</a>
                                 <a href="faqs.html" class="dropdown-item">FAQs</a>
@@ -177,171 +178,115 @@
     <!-- Modal Search End -->
 
     <!-- Header Start -->
-    <div class="container-fluid bg-breadcrumb">
+    <div class="container-fluid bg-breadcrumb"
+        style="background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(img/aboutus.png); background-position: center center; background-repeat: no-repeat; background-size: cover;">
         <div class="bg-breadcrumb-single"></div>
         <div class="container text-center py-5" style="max-width: 900px;">
-            <h4 class="text-white display-4 mb-4 wow fadeInDown" data-wow-delay="0.1s">Our Services</h4>
-            <!-- <ol class="breadcrumb justify-content-center mb-0 wow fadeInDown" data-wow-delay="0.3s">
-                    <li class="breadcrumb-item"><a href="index.html">Home</a></li>
-                    <li class="breadcrumb-item"><a href="#">Pages</a></li>
-                    <li class="breadcrumb-item active text-primary">Service</li>
-                </ol>     -->
+            <h4 class="text-white display-4 mb-4 wow fadeInDown" data-wow-delay="0.1s">Blogs</h4>
         </div>
     </div>
     <!-- Header End -->
 
-    
-    <!-- FAQ Start -->
-    <div class="container-fluid faq py-5">
+    <!-- Blog Start -->
+    <div class="container-fluid blog py-5">
         <div class="container py-5">
-            <div class="row g-5 align-items-center">
-                <div class="col-lg-6 wow fadeInLeft" data-wow-delay="0.1s">
-                    <div class="pb-5">
-                        <h4 class="text-primary">FAQs</h4>
-                        <h1 class="display-4">Get the Answers to Common Questions</h1>
-                    </div>
-                    <div class="accordion bg-light rounded p-4" id="accordionExample">
-                        <div class="accordion-item border-0 mb-4">
-                            <h2 class="accordion-header" id="headingOne">
-                                <button class="accordion-button text-dark fs-5 fw-bold rounded-top" type="button"
-                                    data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true"
-                                    aria-controls="collapseTOne">
-                                    What Does a Financial Advisor Do?
-                                </button>
-                            </h2>
-                            <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne"
-                                data-bs-parent="#accordionExample">
-                                <div class="accordion-body my-2">
-                                    <h5>Dolor sit amet consectetur adipisicing elit.</h5>
-                                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ad nemo impedit,
-                                        sapiente quis illo quia nulla atque maxime fuga minima ipsa quae cum
-                                        consequatur, sit, delectus exercitationem odit officiis maiores! Neque, quidem
-                                        corrupti modi architecto eos saepe incidunt dignissimos rerum.</p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="accordion-item border-0 mb-4">
-                            <h2 class="accordion-header" id="headingTwo">
-                                <button class="accordion-button collapsed text-dark fs-5 fw-bold rounded-top"
-                                    type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo"
-                                    aria-expanded="false" aria-controls="collapseTwo">
-                                    What industries do you specialize in?
-                                </button>
-                            </h2>
-                            <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo"
-                                data-bs-parent="#accordionExample">
-                                <div class="accordion-body my-2">
-                                    <h5>Dolor sit amet consectetur adipisicing elit.</h5>
-                                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ad nemo impedit,
-                                        sapiente quis illo quia nulla atque maxime fuga minima ipsa quae cum
-                                        consequatur, sit, delectus exercitationem odit officiis maiores! Neque, quidem
-                                        corrupti modi architecto eos saepe incidunt dignissimos rerum.</p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="accordion-item border-0 mb-4">
-                            <h2 class="accordion-header" id="headingThree">
-                                <button class="accordion-button collapsed text-dark fs-5 fw-bold rounded-top"
-                                    type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree"
-                                    aria-expanded="false" aria-controls="collapseThree">
-                                    Can you guarantee for growth?
-                                </button>
-                            </h2>
-                            <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree"
-                                data-bs-parent="#accordionExample">
-                                <div class="accordion-body my-2">
-                                    <h5>Dolor sit amet consectetur adipisicing elit.</h5>
-                                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ad nemo impedit,
-                                        sapiente quis illo quia nulla atque maxime fuga minima ipsa quae cum
-                                        consequatur, sit, delectus exercitationem odit officiis maiores! Neque, quidem
-                                        corrupti modi architecto eos saepe incidunt dignissimos rerum.</p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="accordion-item border-0 mb-0">
-                            <h2 class="accordion-header" id="headingFour">
-                                <button class="accordion-button collapsed text-dark fs-5 fw-bold rounded-top"
-                                    type="button" data-bs-toggle="collapse" data-bs-target="#collapseFour"
-                                    aria-expanded="false" aria-controls="collapseFour">
-                                    What makes your business plans so special?
-                                </button>
-                            </h2>
-                            <div id="collapseFour" class="accordion-collapse collapse" aria-labelledby="headingFour"
-                                data-bs-parent="#accordionExample">
-                                <div class="accordion-body my-2">
-                                    <h5>Dolor sit amet consectetur adipisicing elit.</h5>
-                                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ad nemo impedit,
-                                        sapiente quis illo quia nulla atque maxime fuga minima ipsa quae cum
-                                        consequatur, sit, delectus exercitationem odit officiis maiores! Neque, quidem
-                                        corrupti modi architecto eos saepe incidunt dignissimos rerum.</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-6 wow fadeInRight" data-wow-delay="0.3s">
-                    <div class="faq-img RotateMoveRight rounded">
-                        <img src="img/faq-img.jpg" class="img-fluid rounded w-100" alt="Image">
-                        <a class="faq-btn btn btn-primary rounded-pill text-white py-3 px-5" href="#">Read More Q & A <i
-                                class="fas fa-arrow-right ms-2"></i></a>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <!-- FAQ End -->
-   
+            <div class="row g-5">
+                <div class="col-lg-8">
+                    <!-- Blog Detail Start -->
+                    <div class="blog-item rounded">
+                        <div class="blog-img rounded-top">
+                            <img src="img/B11.png" class="img-fluid w-100 rounded" alt="Blog Image">
+                            <div class="mb-3"></div>
 
-    
-    <!-- Project Start -->
-    <div class="container-fluid py-5 wow fadeInUp" data-wow-delay="0.1s">
-        <div class="container py-5">
-            <div class="section-title text-center mb-5">
-                <h1 class="display-4 text-dark mb-4">Our <span style="color: #0d6efd;">Projects</span></h1>
-                <div class="border-top border-primary w-25 mx-auto my-4"></div>
-            </div>
-            <div class="row g-4 justify-content-center">
-                <div class="col-md-6 col-lg-4 wow fadeInUp" data-wow-delay="0.1s">
-                    <div class="project-item bg-light rounded h-100">
-                        <div class="project-img">
-                            <img src="img/project-1.jpg" class="img-fluid w-100 rounded-top" alt="Project 1">
                         </div>
-                        <div class="project-content p-4">
-                            <h4 class="text-dark mb-3">Mechanical Engineering</h4>
-                            <p class="text-muted">Innovative mechanical solutions for industrial applications</p>
-                            <a href="#" class="btn btn-primary rounded-pill py-2 px-4">View Details</a>
+                        <div class="blog-content rounded-bottom bg-light p-4">
+                            <h3 class="mb-4"> Industry 4.0</h3>
+                            <p>Industry 4.0, also known as the Fourth Industrial Revolution, is a term used to describe
+                                the integration of digital technology into traditional manufacturing processes. This
+                                revolution has transformed the way businesses operate, and has created new opportunities
+                                for companies to improve efficiency, reduce costs, and increase productivity.</p>
+
+                            <p>The term Industry 4.0 was first introduced in 2011 by the German government as part of
+                                its high-tech strategy. It was coined to describe the fourth industrial revolution,
+                                which is characterized by the integration of advanced technologies, such as robotics,
+                                artificial intelligence (AI), and the Internet of Things (IoT), into the manufacturing
+                                process.
+                            </p>
+
+                            <p>Industry 4.0 has the potential to transform traditional manufacturing processes by making
+                                them more efficient, more flexible, and more intelligent. It is expected to create new
+                                opportunities for businesses, and to bring significant benefits to the economy.
+                            </p>
+
+                            <p>One of the key benefits of Industry 4.0 is increased efficiency. By incorporating digital
+                                technology into manufacturing processes, businesses can reduce the time and cost of
+                                production, and improve product quality. This is achieved through the use of advanced
+                                sensors and data analytics, which enable companies to monitor and optimize production
+                                processes in real-time.</p>
+
+                            <p>Another important benefit of Industry 4.0 is increased flexibility. Digital technologies
+                                allow businesses to adapt quickly to changing market conditions, and to customize
+                                products to meet the specific needs of customers. This can help businesses to stay
+                                competitive in a rapidly changing market, and to respond more quickly to customer
+                                demand.</p>
+
+                            <p>Industry 4.0 also has the potential to create new business models and revenue streams. By
+                                leveraging digital technologies, businesses can develop new products and services, and
+                                enter new markets. This can help businesses to diversify their revenue streams and to
+                                reduce their dependence on traditional manufacturing processes.
+                            </p>
+
+                            <p>However, the adoption of Industry 4.0 is not without challenges. One of the main
+                                challenges is the need for skilled workers who can operate and maintain advanced digital
+                                systems. This requires businesses to invest in training and development.
+                            </p>
+
+
                         </div>
                     </div>
+                    <!-- Blog Detail End -->
                 </div>
-                <div class="col-md-6 col-lg-4 wow fadeInUp" data-wow-delay="0.3s">
-                    <div class="project-item bg-light rounded h-100">
-                        <div class="project-img">
-                            <img src="img/project-2.jpg" class="img-fluid w-100 rounded-top" alt="Project 2">
-                        </div>
-                        <div class="project-content p-4">
-                            <h4 class="text-dark mb-3">IT Solutions</h4>
-                            <p class="text-muted">Cutting-edge technology implementations for businesses</p>
-                            <a href="#" class="btn btn-primary rounded-pill py-2 px-4">View Details</a>
+
+                <!-- Sidebar Start -->
+                <div class="col-lg-4">
+                    <!-- Recent Posts Start -->
+                    <div class="mb-5">
+                        <h4 class="mb-4">Recent Posts</h4>
+                        <div class="bg-light rounded p-4">
+                            <div class="d-flex mb-3">
+                                <img src="img/B1.png" class="img-fluid rounded"
+                                    style="width: 100px; height: 100px; object-fit: cover;" alt="">
+                                <div class="ms-3">
+                                    <h6><a href="blog1.html" class="text-dark">Industry 4.0</a></h6>
+                                    <small class="text-muted">May 15, 2025</small>
+                                </div>
+                            </div>
+                            <div class="d-flex mb-3">
+                                <img src="img/B2.png" class="img-fluid rounded"
+                                    style="width: 100px; height: 100px; object-fit: cover;" alt="">
+                                <div class="ms-3">
+                                    <h6><a href="blog2.html" class="text-dark">Future is Automation</a></h6>
+                                    <small class="text-muted">April 28, 2025</small>
+                                </div>
+                            </div>
+                            <div class="d-flex">
+                                <img src="img/B3.png" class="img-fluid rounded"
+                                    style="width: 100px; height: 100px; object-fit: cover;" alt="">
+                                <div class="ms-3">
+                                    <h6><a href="blog3.html" class="text-dark">How Can IoT Enhance Your Business
+                                            Operations?</a></h6>
+                                    <small class="text-muted">February 15, 2025</small>
+                                </div>
+                            </div>
                         </div>
                     </div>
+                    <!-- Recent Posts End -->
                 </div>
-                <div class="col-md-6 col-lg-4 wow fadeInUp" data-wow-delay="0.5s">
-                    <div class="project-item bg-light rounded h-100">
-                        <div class="project-img">
-                            <img src="img/project-3.jpg" class="img-fluid w-100 rounded-top" alt="Project 3">
-                        </div>
-                        <div class="project-content p-4">
-                            <h4 class="text-dark mb-3">Energy Solutions</h4>
-                            <p class="text-muted">Sustainable energy projects for a greener future</p>
-                            <a href="#" class="btn btn-primary rounded-pill py-2 px-4">View Details</a>
-                        </div>
-                    </div>
-                </div>
+                <!-- Sidebar End -->
             </div>
         </div>
     </div>
-    <!-- Project End -->
-    
+    <!-- Blog End -->
     <!-- WhatsApp chat button start -->
     <a href="https://wa.me/+919998595357?text=Hello, I am contacting you from your https://www.shreeharisolutions.in Website."
         class="whatsapp-rectangle" target="_blank">
@@ -357,14 +302,14 @@
                 <div class="col-md-4 col-lg-4 col-xl-4">
                     <div class="footer-item p-3">
                         <h4 class="text-white mb-3 text-center text-md-start">About us</h4>
-                        <p class="mb-0 text-center text-md-start">We are dedicated to delivering excellence on every
+                        <p class="mb-0 text-center text-md-start" style="color: gray;">We are dedicated to delivering excellence on every
                             project, no matter where in the world it may be. We look forward to working with you.</p>
                     </div>
                 </div>
                 <div class="col-md-4 col-lg-4 col-xl-4">
                     <div class="footer-item p-3">
                         <h4 class="text-white mb-3 text-center text-md-start">Explore</h4>
-                        <div class="d-flex flex-column text-center text-md-start">
+                        <div class="d-flex flex-column text-center text-md-start" style="color: gray;">
                             <span class="mb-2"><i class="fas fa-angle-right me-2"></i> <a href="#">Home</a></span>
                             <span class="mb-2"><i class="fas fa-angle-right me-2"></i> <a href="#">Services</a></span>
                             <span class="mb-2"><i class="fas fa-angle-right me-2"></i> <a href="#">About Us</a></span>
@@ -380,12 +325,12 @@
                 <div class="col-md-4 col-lg-4 col-xl-4">
                     <div class="footer-item d-flex flex-column text-center text-md-start p-3">
                         <h4 class="text-white mb-3">Contact Info</h4>
-                        <a class="mb-2" href=""><i class="fa fa-map-marker-alt me-2"></i> Opp. Hotel Fortune Landmark,
+                        <a class="mb-2" href="" style="color: gray;"><i class="fa fa-map-marker-alt me-2" style="color: gray;"></i> Opp. Hotel Fortune Landmark,
                             Ashram Road,
                             Ahmedabad 380013, Gujarat, India</a>
-                        <a class="mb-2" href="mailto:info@shreeharisolutions.in"><i class="fas fa-envelope me-2"></i>
+                        <a class="mb-2" href="mailto:info@shreeharisolutions.in" style="color: gray;"><i class="fas fa-envelope me-2"></i>
                             info@shreeharisolutions.in</a>
-                        <a class="mb-2" href="tel:+919998595357"><i class="fas fa-phone me-2"></i> +91 99985 95357</a>
+                        <a class="mb-2" href="tel:+919998595357" style="color: gray;"><i class="fas fa-phone me-2"></i> +91 99985 95357</a>
                         <div class="d-flex align-items-center justify-content-center justify-content-md-start mt-2">
                             <a class="btn btn-light btn-md-square me-2" href=""><i class="fab fa-facebook-f"></i></a>
                             <a class="btn btn-light btn-md-square me-2" href=""><i class="fab fa-twitter"></i></a>

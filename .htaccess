@@ -1,0 +1,6 @@
+RewriteEngine On
+
+# Rewrite clean URLs to actual HTML files
+RewriteRule ^about-us$ about.html [L]
+RewriteRule ^contact$ contact.html [L]
+RewriteRule ^services$ services.html [L]
