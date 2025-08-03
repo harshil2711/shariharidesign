@@ -1,0 +1,359 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>Investa - Investment Website Template</title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta content="" name="keywords">
+    <meta content="" name="description">
+
+    <!-- Google Web Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500;600;700&family=Roboto:wght@400;500;700&display=swap"
+        rel="stylesheet">
+
+    <!-- Icon Font Stylesheet -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
+
+    <!-- Libraries Stylesheet -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+    <link href="lib/animate/animate.min.css" rel="stylesheet">
+    <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+    <link href="lib/lightbox/css/lightbox.min.css" rel="stylesheet">
+
+
+    <!-- Customized Bootstrap Stylesheet -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Template Stylesheet -->
+    <link href="css/style.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
+        rel="stylesheet">
+    <style>
+        body {
+            font-family: "Inter", sans-serif;
+            font-weight: 400;
+            font-optical-sizing: auto;
+            line-height: 1.6;
+            color: #333;
+            font-style: normal;
+        }
+
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6 {
+            font-weight: 600;
+            line-height: 1.2;
+        }
+
+        .text-primary {
+            font-weight: 500;
+        }
+
+        .btn {
+            font-weight: 500;
+            letter-spacing: 0.5px;
+        }
+    </style>
+
+</head>
+
+<body>
+
+    <!-- Spinner Start -->
+    <div id="spinner"
+        class="show bg-white position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center">
+        <div class="spinner-border text-primary" style="width: 3rem; height: 3rem;" role="status">
+            <span class="sr-only">Loading...</span>
+        </div>
+    </div>
+    <!-- Spinner End -->
+
+
+    <!-- Topbar Start -->
+    <div class="container-fluid topbar px-0 d-none d-lg-block">
+        <div class="container px-0" style="display: none;">
+            <div class="row gx-0 align-items-center" style="height: 45px;">
+                <div class="col-lg-8 text-center text-lg-start mb-lg-0">
+                    <div class="d-flex flex-wrap">
+                        <a href="#" class="text-muted me-4"><i class="fas fa-map-marker-alt text-primary me-2"></i>Find
+                            A Location</a>
+                        <a href="#" class="text-muted me-4"><i
+                                class="fas fa-phone-alt text-primary me-2"></i>+01234567890</a>
+                        <a href="#" class="text-muted me-0"><i
+                                class="fas fa-envelope text-primary me-2"></i>Example@gmail.com</a>
+                    </div>
+                </div>
+                <div class="col-lg-4 text-center text-lg-end">
+                    <div class="d-flex align-items-center justify-content-end">
+                        <a href="#" class="btn btn-primary btn-square rounded-circle nav-fill me-3"><i
+                                class="fab fa-facebook-f text-white"></i></a>
+                        <a href="#" class="btn btn-primary btn-square rounded-circle nav-fill me-3"><i
+                                class="fab fa-twitter text-white"></i></a>
+                        <a href="#" class="btn btn-primary btn-square rounded-circle nav-fill me-3"><i
+                                class="fab fa-instagram text-white"></i></a>
+                        <a href="#" class="btn btn-primary btn-square rounded-circle nav-fill me-0"><i
+                                class="fab fa-linkedin-in text-white"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Topbar End -->
+
+
+    <!-- Navbar & Hero Start -->
+    <div class="container-fluid fixed-top px-0">
+        <div class="position-absolute bg-dark" style="left: 0; top: 0; width: 100%; height: 100%;">
+        </div>
+        <div class="px-0">
+            <nav class="navbar navbar-expand-lg navbar-dark bg-white py-3 px-4">
+                <a href="index.html" class="navbar-brand d-flex align-items-center p-0">
+                    <img src="img/logo.png" alt="Logo" height="50" class="me-2">
+                    <h1 class="text-primary m-0 fs-4">SHREE HARI SOLUTIONS</h1>
+                </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
+                    <span class="fa fa-bars"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarCollapse">
+                    <div class="navbar-nav ms-auto py-0">
+                        <a href="index.html" class="nav-item nav-link">Home</a>
+                        <a href="about.html" class="nav-item nav-link">About</a>
+                        <a href="service.html" class="nav-item nav-link">Services</a>
+                        <a href="project.html" class="nav-item nav-link">Projects</a>
+                        <div class="nav-item dropdown">
+                            <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Pages</a>
+                            <div class="dropdown-menu m-0">
+                                <a href="blog.html" class="dropdown-item">Our Blog</a>
+                                <a href="team.html" class="dropdown-item">Our Team</a>
+                                <a href="testimonial.html" class="dropdown-item">Testimonial</a>
+                                <a href="faqs.html" class="dropdown-item">FAQs</a>
+                                <a href="404.html" class="dropdown-item">404 Page</a>
+                            </div>
+                        </div>
+                        <a href="contact.html" class="nav-item nav-link">Contact</a>
+                    </div>
+                    <div class="d-flex align-items-center flex-nowrap pt-xl-0">
+                        <button class="btn btn-primary btn-md-square mx-2" data-bs-toggle="modal"
+                            data-bs-target="#searchModal" style="display: none;"><i class="fas fa-search"></i></button>
+                        <a href="#"
+                            class="btn btn-primary rounded-pill text-white py-2 px-4 ms-2 flex-wrap flex-sm-shrink-0"
+                            style="display: none;">Start Investa</a>
+                    </div>
+                </div>
+            </nav>
+        </div>
+    </div>
+    <!-- Navbar & Hero End -->
+
+
+    <!-- Header Start -->
+    <div class="container-fluid bg-breadcrumb"
+        style="background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(img/aboutus.png); background-position: center center; background-repeat: no-repeat; background-size: cover;">
+        <div class="bg-breadcrumb-single"></div>
+        <div class="container text-center py-5" style="max-width: 900px;">
+            <h4 class="text-white display-4 mb-4 wow fadeInDown" data-wow-delay="0.1s">Tooling and fixture development</h4>
+        </div>
+    </div>
+    <!-- Header End -->
+
+    <div class="container py-5">
+        <div class="row mb-4">
+            <div class="col-12 text-start">
+                <h3 class="h5 mb-3" style="color: #0d6efd;">TOOLING AND FIXTURE DEVELOPMENT SERVICES</h3>
+                <p class="lead text-start" style="font-weight: 400; font-size: 16px;">
+                    At <b>Shree Hari Solution,</b> we offer comprehensive <b>Tooling and Fixture Design and Development Services</b> to support efficient and precise manufacturing processes. Our expertise lies in delivering <b>customized tools and fixtures</b> designed specifically for your operations—ensuring accuracy, consistency, and improved production efficiency.
+                </p>
+                <p>
+                    With a deep understanding of manufacturing challenges, our team adopts an <b>innovative and practical approach</b> to develop solutions that are both robust and simple to operate. The right tooling selection for each specific operation allows us to enhance product quality while minimizing production time and costs.
+                </p>
+            </div>
+        </div>
+
+        <div class="row mb-4">
+            <div class="col-12">
+                <h3 class="h5 mb-3" style="color: #0d6efd;">Our Capabilities</h3>
+                <ul class="list-group list-group-flush mb-3" style="list-style-type: none; padding-left: 0;">
+                    <li class="mb-2" style="list-style-type: none;">
+                        <i class="bi bi-check-circle-fill text-success me-2"></i>
+                        Fully Equipped Infrastructure to handle both simple and complex assembly fixtures
+                    </li>
+                    <li class="mb-2" style="list-style-type: none;">
+                        <i class="bi bi-check-circle-fill text-success me-2"></i>
+                        Experienced Engineering Team with expertise in managing intricate projects with precision and flexibility
+                    </li>
+                    <li class="mb-2" style="list-style-type: none;">
+                        <i class="bi bi-check-circle-fill text-success me-2"></i>
+                        Early Project Involvement to minimize errors, reduce lead times, and optimize productivity
+                    </li>
+                    <li class="mb-2" style="list-style-type: none;">
+                        <i class="bi bi-check-circle-fill text-success me-2"></i>
+                        In-depth Knowledge of Components and Equipment for tailored, application-specific solutions
+                    </li>
+                </ul>
+                <p>
+                    Our engineers actively collaborate with your team right from the project’s inception—ensuring seamless integration of tooling and fixture designs into the manufacturing process.
+                </p>
+            </div>
+        </div>
+
+        <div class="row mb-4">
+            <div class="col-12">
+                <h3 class="h5 mb-3" style="color: #0d6efd;">What We Offer</h3>
+                <ul class="list-group list-group-flush mb-3" style="list-style-type: none; padding-left: 0;">
+                    <li class="mb-2" style="list-style-type: none;">
+                        <i class="bi bi-check-circle-fill text-success me-2"></i>
+                        Design and development of simple to highly complex tools and fixtures
+                    </li>
+                    <li class="mb-2" style="list-style-type: none;">
+                        <i class="bi bi-check-circle-fill text-success me-2"></i>
+                        Precision-built assemblies developed as per client specifications
+                    </li>
+                    <li class="mb-2" style="list-style-type: none;">
+                        <i class="bi bi-check-circle-fill text-success me-2"></i>
+                        Detailed tooling and fixture prints, assembly drawings, and 3D models for complete visualization and understanding
+                    </li>
+                    <li class="mb-2" style="list-style-type: none;">
+                        <i class="bi bi-check-circle-fill text-success me-2"></i>
+                        Rapid delivery with a commitment to quality and accuracy
+                    </li>
+                </ul>
+            </div>
+        </div>
+  
+
+        <div class="row mb-4">
+            <div class="col-12 text-start">
+                <h3 class="h5 mb-3" style="color: #0d6efd;">Why Choose Shree Hari Solution?</h3>
+                <p>
+                    With years of industry experience, we are committed to providing clients with end-to-end technical support—helping you achieve greater productivity, optimized workflows, and maximum return on investment.
+                </p>
+                <p>
+                    Partner with us for innovative tooling and fixture solutions that align perfectly with your manufacturing requirements and help drive operational efficiency.
+                </p>
+            </div>
+        </div>
+
+       
+
+
+       
+        
+    </div>
+
+    <!-- Optionally, include Bootstrap Icons for checkmarks -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+
+    <!-- WhatsApp chat button start -->
+    <a href="https://wa.me/+919998595357?text=Hello, I am contacting you from your https://www.shreeharisolutions.in Website."
+        class="whatsapp-rectangle" target="_blank">
+        <img src="https://img.icons8.com/color/48/000000/whatsapp--v1.png" alt="WhatsApp" />
+        <span>Chat with us</span>
+    </a>
+    <!-- WhatsApp chat button end -->
+    <!-- Footer Start -->
+    <div class="container-fluid footer wow fadeIn" data-wow-delay="0.2s">
+        <div class="container py-4">
+            <div class="row g-5 justify-content-center">
+                <div class="col-md-4 col-lg-4 col-xl-4">
+                    <div class="footer-item p-3">
+                        <h4 class="text-white mb-3 text-center text-md-start">About us</h4>
+                        <p class="mb-0 text-center text-md-start" style="color: gray;">We are dedicated to delivering
+                            excellence on every
+                            project, no matter where in the world it may be. We look forward to working with you.</p>
+                    </div>
+                </div>
+                <div class="col-md-4 col-lg-4 col-xl-4">
+                    <div class="footer-item p-3">
+                        <h4 class="text-white mb-3 text-center text-md-start">Explore</h4>
+                        <div class="d-flex flex-column text-center text-md-start" style="color: gray;">
+                            <span class="mb-2"><i class="fas fa-angle-right me-2"></i> <a
+                                    href="index.html">Home</a></span>
+                            <span class="mb-2"><i class="fas fa-angle-right me-2"></i> <a
+                                    href="service.html">Services</a></span>
+                            <span class="mb-2"><i class="fas fa-angle-right me-2"></i> <a href="about.html">About
+                                    Us</a></span>
+                            <span class="mb-2"><i class="fas fa-angle-right me-2"></i> <a href="project.html">Latest
+                                    Projects</a></span>
+                            <span class="mb-2"><i class="fas fa-angle-right me-2"></i> <a href="blog.html">Our
+                                    Blogs</a></span>
+                            <span class="mb-2"><i class="fas fa-angle-right me-2"></i> <a href="#">Our Team</a></span>
+                            <span class="mb-2"><i class="fas fa-angle-right me-2"></i> <a href="contact.html">Contact
+                                    Us</a></span>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 col-lg-4 col-xl-4">
+                    <div class="footer-item d-flex flex-column text-center text-md-start p-3">
+                        <h4 class="text-white mb-3">Contact Info</h4>
+                        <a class="mb-2" href="" style="color: gray;"><i class="fa fa-map-marker-alt me-2"></i>Shree Hari
+                            Solutions, Opp. Hotel Fortune Landmark,
+                            Ashram Road,
+                            Ahmedabad 380013, Gujarat, India</a>
+                        <a class="mb-2" href="mailto:info@shreeharisolutions.in" style="color: gray;"><i
+                                class="fas fa-envelope me-2"></i>
+                            info@shreeharisolutions.in</a>
+                        <a class="mb-2" href="tel:+919998595357" style="color: gray;"><i class="fas fa-phone me-2"></i>
+                            +91 99985 95357</a>
+                        <div class="d-flex align-items-center justify-content-center justify-content-md-start mt-2">
+                            <a class="btn btn-light btn-md-square me-2" href=""><i class="fab fa-facebook-f"></i></a>
+                            <a class="btn btn-light btn-md-square me-2" href=""><i class="fab fa-twitter"></i></a>
+                            <a class="btn btn-light btn-md-square me-2" href=""><i class="fab fa-instagram"></i></a>
+                            <a class="btn btn-light btn-md-square me-0" href=""><i class="fab fa-linkedin-in"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Footer End -->
+
+
+    <!-- Copyright Start -->
+    <div class="container-fluid copyright py-4">
+        <div class="container">
+            <div class="row g-4 align-items-center">
+                <div class="col-md-6 text-center text-md-start mb-md-0">
+                    <span class="text-body"><a href="index.html" class="border-bottom text-primary"><i
+                                class="fas fa-copyright text-light me-2"></i>shreeharisolutions</a>, All right
+                        reserved 2025.</span>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Copyright End -->
+
+
+    <!-- Back to Top -->
+    <a href="#" class="btn btn-primary btn-lg-square back-to-top"><i class="fa fa-arrow-up"></i></a>
+
+
+    <!-- JavaScript Libraries -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+    <!-- <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script> -->
+    <script src="lib/wow/wow.min.js"></script>
+    <script src="lib/easing/easing.min.js"></script>
+    <script src="lib/waypoints/waypoints.min.js"></script>
+    <script src="lib/counterup/counterup.min.js"></script>
+    <script src="lib/owlcarousel/owl.carousel.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="lib/lightbox/js/lightbox.min.js"></script>
+
+
+    <!-- Template Javascript -->
+    <script src="js/main.js"></script>
+</body>
+
+</html>
