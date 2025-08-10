@@ -11,9 +11,7 @@
     <!-- Google Web Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link
-        href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;600;700&display=swap"
-        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;600;700&display=swap" rel="stylesheet">
 
     <!-- Icon Font Stylesheet -->
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css" />
@@ -35,7 +33,9 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
+        rel="stylesheet">
     <style>
         body {
             font-family: "Inter", sans-serif;
@@ -114,65 +114,109 @@
 
     <!-- Navbar & Hero Start -->
     <div class="container-fluid fixed-top px-0">
-        <div class="position-absolute bg-dark" style="left: 0; top: 0; width: 100%; height: 100%;">
-        </div>
+        <!-- overlay — keep if you want a tint, but let it sit behind content -->
+        <div class="header-overlay"></div>
+      
         <div class="px-0">
-            <nav class="navbar navbar-expand-lg navbar-dark bg-white py-3 px-4">
-                <a href="index.html" class="navbar-brand d-flex align-items-center p-0">
-                    <img src="img/logo.png" alt="Logo" height="50" class="me-2">
-                    <h1 class="text-primary m-0 fs-4">SHREE HARI GROUP</h1>
+          <nav class="navbar navbar-expand-lg navbar-dark bg-light py-3 px-4">
+            <div class="container-fluid d-flex flex-column flex-lg-row justify-content-between align-items-center">
+      
+              <!-- Logo -->
+              <div class="ps-5 pe-5">
+                <a href="index.html" class="navbar-brand d-flex align-items-center p-0 mb-3 mb-lg-0">
+                  <img src="img/logo.png" alt="Logo" height="50" class="me-2">
+                  <h1 class="text-primary m-0 fs-4">SHREE HARI GROUP</h1>
                 </a>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
-                    <span class="fa fa-bars"></span>
-                </button>
-                <div class="collapse navbar-collapse" id="navbarCollapse">
-                    <div class="navbar-nav ms-auto py-0">
-                        <a href="index.html" class="nav-item nav-link active">Home</a>
-                        <a href="about.html" class="nav-item nav-link">About</a>
-                        <a href="service.html" class="nav-item nav-link">Services</a>
-                        <a href="project.html" class="nav-item nav-link">Projects</a>
-                        <a href="contact.html" class="nav-item nav-link">Contact</a>
+              </div>
+      
+              <!-- Mobile toggle -->
+              <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
+                <span class="fa fa-bars"></span>
+              </button>
+      
+              <!-- Nav links -->
+              <div class="collapse navbar-collapse mx-auto" id="navbarCollapse">
+                <div class="navbar-nav py-0 px-4 w-100 d-flex align-items-center">
+      
+                  <!-- Center nav area -->
+                  <div class="d-flex flex-column flex-lg-row align-items-center justify-content-center gap-3 flex-grow-1">
+                    <a href="about.html" class="nav-item nav-link position-relative mx-3">About<div class="nav-underline"></div></a>
+      
+                    <!-- Services dropdown -->
+                    <div class="dropdown nav-item position-static mx-3">
+                      <a href="service.html" class="nav-link dropdown-toggle d-flex align-items-center"
+                         data-bs-toggle="dropdown" data-bs-auto-close="outside">
+                        <span class="me-2">Services</span>
+                        <div class="nav-underline"></div>
+                      </a>
+      
+                      <!-- use container-fluid here so it doesn't have Bootstrap's max-width -->
+                      <div class="dropdown-menu bg-white border-0 rounded-0 rounded-bottom m-0 p-0 w-100" style="margin-top: 0 !important;">
+                        <div class="container-fluid py-4">
+                          <div class="row">
+                            <div class="col-md-3">
+                              <h6 class="text-dark mb-3">Construction Services</h6>
+                              <a class="dropdown-item" href="#">Residential Construction</a>
+                              <a class="dropdown-item" href="#">Commercial Building</a>
+                              <a class="dropdown-item" href="#">Infrastructure Development</a>
+                            </div>
+                            <div class="col-md-3">
+                              <h6 class="text-dark mb-3">Design Services</h6>
+                              <a class="dropdown-item" href="#">Architectural Design</a>
+                              <a class="dropdown-item" href="#">Interior Design</a>
+                              <a class="dropdown-item" href="#">Project Planning</a>
+                            </div>
+                            <div class="col-md-3">
+                              <h6 class="text-dark mb-3">Consulting Services</h6>
+                              <a class="dropdown-item" href="#">Project Management</a>
+                              <a class="dropdown-item" href="#">Quality Assurance</a>
+                              <a class="dropdown-item" href="#">Technical Consultation</a>
+                            </div>
+                            <div class="col-md-3">
+                              <h6 class="text-dark mb-3">Support Services</h6>
+                              <a class="dropdown-item" href="#">24/7 Support</a>
+                              <a class="dropdown-item" href="#">Maintenance</a>
+                              <a class="dropdown-item" href="#">Emergency Services</a>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
                     </div>
-                    <div class="d-flex align-items-center flex-nowrap pt-xl-0">
-                        <button class="btn btn-primary btn-md-square mx-2" data-bs-toggle="modal"
-                            data-bs-target="#searchModal" style="display: none;"><i class="fas fa-search"></i></button>
-                        <a href="#"
-                            class="btn btn-primary rounded-pill text-white py-2 px-4 ms-2 flex-wrap flex-sm-shrink-0"
-                            style="display: none;">Start Investa</a>
-                    </div>
+      
+                    <a href="project.html" class="nav-item nav-link position-relative mx-3">Projects<div class="nav-underline"></div></a>
+                    <a href="blog.html" class="nav-item nav-link position-relative mx-3">Blog<div class="nav-underline"></div></a>
+                  </div>
                 </div>
-            </nav>
+              </div>
+      
+              <!-- Button -->
+              <div class="me-5">
+                <a href="contact.html" class="btn btn-warning rounded-pill py-2 px-4 me-lg-4 d-flex align-items-center">
+                  <span>Let's Connect</span>
+                  <i class="fas fa-arrow-right ms-3"></i>
+                </a>
+              </div>
+      
+            </div>
+          </nav>
         </div>
-    </div>
+      </div>
+      
+    
     <style>
+
+        
         @media (max-width: 768px) {
+            .navbar-nav {
+                text-align: center;
+            }
+
             .navbar-nav .nav-link {
-                margin-right: 80px;
-                /* Adjust this value to reduce spacing */
+                margin: 0 10px;
             }
         }
     </style>
     <!-- Navbar & Hero End -->
-
-    <!-- Modal Search Start -->
-    <div class="modal fade" id="searchModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-        <div class="modal-dialog modal-fullscreen">
-            <div class="modal-content rounded-0">
-                <div class="modal-header">
-                    <h4 class="modal-title mb-0" id="exampleModalLabel">Search by keyword</h4>
-                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                </div>
-                <div class="modal-body d-flex align-items-center">
-                    <div class="input-group w-75 mx-auto d-flex">
-                        <input type="search" class="form-control p-3" placeholder="keywords"
-                            aria-describedby="search-icon-1">
-                        <span id="search-icon-1" class="input-group-text p-3"><i class="fa fa-search"></i></span>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <!-- Modal Search End -->
 
     <!-- Carousel Start -->
     <div class="header-carousel owl-carousel">
@@ -232,18 +276,22 @@
         <div class="container py-5">
             <div class="row g-4 justify-content-center">
                 <div class="col-md-6 col-lg-4 col-xl-3 text-center wow fadeIn" data-wow-delay="0.1s">
-                    <div class="counter-item bg-white rounded p-4 shadow-lg position-relative overflow-hidden" style="border-top: 4px solid #0d6efd; transition: all 0.3s ease;">
+                    <div class="counter-item bg-white rounded p-4 shadow-lg position-relative overflow-hidden"
+                        style="border-top: 4px solid #0d6efd; transition: all 0.3s ease;">
                         <div class="counter-icon-bg">
-                            <img src="img/project.png" alt="Projects" class="img-fluid" style="width: 100px; opacity: 0.05;">
+                            <img src="img/project.png" alt="Projects" class="img-fluid"
+                                style="width: 100px; opacity: 0.05;">
                         </div>
                         <p class="display-4 text-dark mb-1"><span data-toggle="counter-up">35</span>+</p>
                         <h4 class="text-primary">Projects</h4>
                     </div>
                 </div>
                 <div class="col-md-6 col-lg-4 col-xl-3 text-center wow fadeIn" data-wow-delay="0.3s">
-                    <div class="counter-item bg-white rounded p-4 shadow-lg position-relative overflow-hidden" style="border-top: 4px solid #0d6efd; transition: all 0.3s ease;">
+                    <div class="counter-item bg-white rounded p-4 shadow-lg position-relative overflow-hidden"
+                        style="border-top: 4px solid #0d6efd; transition: all 0.3s ease;">
                         <div class="counter-icon-bg">
-                            <img src="img/experience-icon.png" alt="Experience" class="img-fluid" style="width: 100px; opacity: 0.05;">
+                            <img src="img/experience-icon.png" alt="Experience" class="img-fluid"
+                                style="width: 100px; opacity: 0.05;">
                         </div>
                         <!-- <img src="img/exp.png" alt="Experience" class="img-fluid mb-3" style="width: 100px;"> -->
                         <p class="display-4 text-dark mb-1"><span data-toggle="counter-up">4</span>+</p>
@@ -251,9 +299,11 @@
                     </div>
                 </div>
                 <div class="col-md-6 col-lg-4 col-xl-3 text-center wow fadeIn" data-wow-delay="0.5s">
-                    <div class="counter-item bg-white rounded p-4 shadow-lg position-relative overflow-hidden" style="border-top: 4px solid #0d6efd; transition: all 0.3s ease;">
+                    <div class="counter-item bg-white rounded p-4 shadow-lg position-relative overflow-hidden"
+                        style="border-top: 4px solid #0d6efd; transition: all 0.3s ease;">
                         <div class="counter-icon-bg">
-                            <img src="img/clients-icon.png" alt="Clients" class="img-fluid" style="width: 100px; opacity: 0.05;">
+                            <img src="img/clients-icon.png" alt="Clients" class="img-fluid"
+                                style="width: 100px; opacity: 0.05;">
                         </div>
                         <!-- <img src="img/client.png" alt="Clients" class="img-fluid mb-3" style="width: 100px;"> -->
                         <p class="display-4 text-dark mb-1"><span data-toggle="counter-up">15</span>+</p>
@@ -266,8 +316,9 @@
     <style>
         .counter-item:hover {
             transform: translateY(-10px);
-            box-shadow: 0 15px 30px rgba(0,0,0,0.1) !important;
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1) !important;
         }
+
         .counter-icon-bg {
             position: absolute;
             right: -20px;
@@ -276,6 +327,7 @@
             color: rgba(13, 110, 253, 0.05);
             z-index: 0;
         }
+
         .counter-icon-bg i {
             line-height: 1;
         }
@@ -284,28 +336,107 @@
 
     <!-- Services Start -->
     <div class="container-fluid py-5 wow fadeInUp" data-wow-delay="0.1s"">
-        <div class="container py-2">
-            <div class="section-title text-center mb-5">
-                <h1 class="display-4 text-dark mb-4"><span style="color: #0d6efd;">Services</span> We Offer</h1>
-                <div class="border-top border-primary w-25 mx-auto my-4"></div>
+        <div class=" container py-2">
+        <div class="section-title text-center mb-5">
+            <h1 class="display-4 text-dark mb-4"><span style="color: #0d6efd;">Services</span> We Offer</h1>
+            <div class="border-top border-primary w-25 mx-auto my-4"></div>
+        </div>
+        <div class="row g-4 justify-content-center text-center">
+            <div class="col-md-6 col-lg-4 col-xl-3 wow fadeInUp" data-wow-delay="0.1s">
+                <div class="service-item bg-light rounded h-100">
+                    <div class="service-img">
+                        <img src="img/mechanical.png" class="img-fluid w-100 rounded-top" alt="">
+                    </div>
+                    <div class="service-content p-4">
+                        <div class="service-content-inner text-start">
+                            <a href="mechanical.html" class="h4 mb-4 d-inline-flex">MECHANICAL ENGINEERING SERVICES</a>
+                            <!-- <p class="mb-4">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Earum nobis
+                                    est sapiente natus officiis maxime
+                                </p> -->
+                            <div>
+                                <a class="btn btn-light rounded-pill py-2 px-4" href="mechanical.html"
+                                    class="nav-item nav-link">Read More</a>
+                            </div>
+                            <!--<a href="about.html" class="nav-item nav-link">Read More</a>-->
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6 col-lg-4 col-xl-3 wow fadeInUp" data-wow-delay="0.1s">
+                <div class="service-item bg-light rounded h-100">
+                    <div class="service-img">
+                        <img src="img/IT.png" class="img-fluid w-100 rounded-top" alt="">
+                    </div>
+                    <div class="service-content p-4">
+                        <div class="service-content-inner text-start">
+                            <a href="#" class="h4 mb-4 d-inline-flex">IT SERVICES</a>
+                            <!-- <p class="mb-4">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Earum nobis
+                                    est sapiente natus officiis maxime
+                                </p> -->
+                            <div style="margin-top: 60px;">
+                                <a class="btn btn-light rounded-pill py-2 px-4" href="ai.html"
+                                    class="nav-item nav-link">Read More</a>
+                            </div>
+                            <!--<a href="about.html" class="nav-item nav-link">Read More</a>-->
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6 col-lg-4 col-xl-3 wow fadeInUp" data-wow-delay="0.5s">
+                <div class="service-item bg-light rounded h-100">
+                    <div class="service-img">
+                        <img src="img/energy.png" class="img-fluid w-100 rounded-top" alt="">
+                    </div>
+                    <div class="service-content p-4">
+                        <div class="service-content-inner text-start">
+                            <a href="#" class="h4 mb-4 d-inline-flex">ENERGY</a>
+                            <!-- <p class="mb-4">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Earum nobis
+                                    est sapiente natus officiis maxime
+                                </p> -->
+                            <div style="margin-top: 60px;">
+                                <a class="btn btn-light rounded-pill py-2 px-4" href="ai.html"
+                                    class="nav-item nav-link">Read More</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6 col-lg-4 col-xl-3 wow fadeInUp" data-wow-delay="0.7s">
+                <div class="service-item bg-light rounded h-100">
+                    <div class="service-img">
+                        <img src="img/EV SOLUTION.png" class="img-fluid w-100 rounded-top" alt="">
+                    </div>
+                    <div class="service-content p-4">
+                        <div class="service-content-inner text-start">
+                            <a href="#" class="h4 mb-4 d-inline-flex">EV SOLUTION
+                            </a>
+                            <!-- <p class="mb-4">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Earum nobis
+                                    est sapiente natus officiis maxime
+                                </p> -->
+                            <div style="margin-top: 60px;">
+                                <a class="btn btn-light rounded-pill py-2 px-4" href="ai.html"
+                                    class="nav-item nav-link">Read More</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
             <div class="row g-4 justify-content-center text-center">
                 <div class="col-md-6 col-lg-4 col-xl-3 wow fadeInUp" data-wow-delay="0.1s">
                     <div class="service-item bg-light rounded h-100">
                         <div class="service-img">
-                            <img src="img/mechanical.png" class="img-fluid w-100 rounded-top" alt="">
+                            <img src="img/B2B SERVICE.png" class="img-fluid w-100 rounded-top" alt="">
                         </div>
                         <div class="service-content p-4">
                             <div class="service-content-inner text-start">
-                                <a href="mechanical.html" class="h4 mb-4 d-inline-flex">MECHANICAL ENGINEERING SERVICES</a>
+                                <a href="#" class="h4 mb-4 d-inline-flex">B2B BUSINESS</a>
                                 <!-- <p class="mb-4">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Earum nobis
                                     est sapiente natus officiis maxime
                                 </p> -->
-                                <div>
-                                    <a class="btn btn-light rounded-pill py-2 px-4" href="mechanical.html"
+                                <div style="margin-top: 60px;">
+                                    <a class="btn btn-light rounded-pill py-2 px-4" href="ai.html"
                                         class="nav-item nav-link">Read More</a>
                                 </div>
-                                <!--<a href="about.html" class="nav-item nav-link">Read More</a>-->
                             </div>
                         </div>
                     </div>
@@ -313,11 +444,11 @@
                 <div class="col-md-6 col-lg-4 col-xl-3 wow fadeInUp" data-wow-delay="0.1s">
                     <div class="service-item bg-light rounded h-100">
                         <div class="service-img">
-                            <img src="img/IT.png" class="img-fluid w-100 rounded-top" alt="">
+                            <img src="img/CREATIVE SERVICES.png" class="img-fluid w-100 rounded-top" alt="">
                         </div>
                         <div class="service-content p-4">
                             <div class="service-content-inner text-start">
-                                <a href="#" class="h4 mb-4 d-inline-flex">IT SERVICES</a>
+                                <a href="#" class="h4 mb-4 d-inline-flex">CREATIVE SERVICES</a>
                                 <!-- <p class="mb-4">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Earum nobis
                                     est sapiente natus officiis maxime
                                 </p> -->
@@ -333,11 +464,11 @@
                 <div class="col-md-6 col-lg-4 col-xl-3 wow fadeInUp" data-wow-delay="0.5s">
                     <div class="service-item bg-light rounded h-100">
                         <div class="service-img">
-                            <img src="img/energy.png" class="img-fluid w-100 rounded-top" alt="">
+                            <img src="img/AIDATAANALYTICS.png" class="img-fluid w-100 rounded-top" alt="">
                         </div>
                         <div class="service-content p-4">
                             <div class="service-content-inner text-start">
-                                <a href="#" class="h4 mb-4 d-inline-flex">ENERGY</a>
+                                <a href="#" class="h4 mb-4 d-inline-flex">AI/DATA ANALYTICS</a>
                                 <!-- <p class="mb-4">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Earum nobis
                                     est sapiente natus officiis maxime
                                 </p> -->
@@ -352,16 +483,15 @@
                 <div class="col-md-6 col-lg-4 col-xl-3 wow fadeInUp" data-wow-delay="0.7s">
                     <div class="service-item bg-light rounded h-100">
                         <div class="service-img">
-                            <img src="img/EV SOLUTION.png" class="img-fluid w-100 rounded-top" alt="">
+                            <img src="img/DATA STORAGE.png" class="img-fluid w-100 rounded-top" alt="">
                         </div>
                         <div class="service-content p-4">
                             <div class="service-content-inner text-start">
-                                <a href="#" class="h4 mb-4 d-inline-flex">EV SOLUTION
-                                </a>
+                                <a href="#" class="h4 mb-4 d-inline-flex">DATA STORAGE & MANAGE</a>
                                 <!-- <p class="mb-4">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Earum nobis
                                     est sapiente natus officiis maxime
                                 </p> -->
-                                <div style="margin-top: 60px;">
+                                <div style="margin-top: 32px;">
                                     <a class="btn btn-light rounded-pill py-2 px-4" href="ai.html"
                                         class="nav-item nav-link">Read More</a>
                                 </div>
@@ -369,227 +499,154 @@
                         </div>
                     </div>
                 </div>
-                <div class="row g-4 justify-content-center text-center">
-                    <div class="col-md-6 col-lg-4 col-xl-3 wow fadeInUp" data-wow-delay="0.1s">
-                        <div class="service-item bg-light rounded h-100">
-                            <div class="service-img">
-                                <img src="img/B2B SERVICE.png" class="img-fluid w-100 rounded-top" alt="">
-                            </div>
-                            <div class="service-content p-4">
-                                <div class="service-content-inner text-start">
-                                    <a href="#" class="h4 mb-4 d-inline-flex">B2B BUSINESS</a>
-                                    <!-- <p class="mb-4">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Earum nobis
-                                    est sapiente natus officiis maxime
-                                </p> -->
-                                    <div style="margin-top: 60px;">
-                                        <a class="btn btn-light rounded-pill py-2 px-4" href="ai.html"
-                                            class="nav-item nav-link">Read More</a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-6 col-lg-4 col-xl-3 wow fadeInUp" data-wow-delay="0.1s">
-                        <div class="service-item bg-light rounded h-100">
-                            <div class="service-img">
-                                <img src="img/CREATIVE SERVICES.png" class="img-fluid w-100 rounded-top" alt="">
-                            </div>
-                            <div class="service-content p-4">
-                                <div class="service-content-inner text-start">
-                                    <a href="#" class="h4 mb-4 d-inline-flex">CREATIVE SERVICES</a>
-                                    <!-- <p class="mb-4">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Earum nobis
-                                    est sapiente natus officiis maxime
-                                </p> -->
-                                    <div style="margin-top: 60px;">
-                                        <a class="btn btn-light rounded-pill py-2 px-4" href="ai.html"
-                                            class="nav-item nav-link">Read More</a>
-                                    </div>
-                                    <!--<a href="about.html" class="nav-item nav-link">Read More</a>-->
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-6 col-lg-4 col-xl-3 wow fadeInUp" data-wow-delay="0.5s">
-                        <div class="service-item bg-light rounded h-100">
-                            <div class="service-img">
-                                <img src="img/AIDATAANALYTICS.png" class="img-fluid w-100 rounded-top" alt="">
-                            </div>
-                            <div class="service-content p-4">
-                                <div class="service-content-inner text-start">
-                                    <a href="#" class="h4 mb-4 d-inline-flex">AI/DATA ANALYTICS</a>
-                                    <!-- <p class="mb-4">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Earum nobis
-                                    est sapiente natus officiis maxime
-                                </p> -->
-                                    <div style="margin-top: 60px;">
-                                        <a class="btn btn-light rounded-pill py-2 px-4" href="ai.html"
-                                            class="nav-item nav-link">Read More</a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-6 col-lg-4 col-xl-3 wow fadeInUp" data-wow-delay="0.7s">
-                        <div class="service-item bg-light rounded h-100">
-                            <div class="service-img">
-                                <img src="img/DATA STORAGE.png" class="img-fluid w-100 rounded-top" alt="">
-                            </div>
-                            <div class="service-content p-4">
-                                <div class="service-content-inner text-start">
-                                    <a href="#" class="h4 mb-4 d-inline-flex">DATA STORAGE & MANAGE</a>
-                                    <!-- <p class="mb-4">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Earum nobis
-                                    est sapiente natus officiis maxime
-                                </p> -->
-                                    <div style="margin-top: 32px;">
-                                        <a class="btn btn-light rounded-pill py-2 px-4" href="ai.html"
-                                            class="nav-item nav-link">Read More</a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="row mt-4">
-                    </div>
+                <div class="row mt-4">
                 </div>
             </div>
         </div>
-        <!-- Services End -->
+    </div>
+    <!-- Services End -->
 
-        <!-- Clients Start -->
-        <div class="container-fluid py-5 wow fadeInUp bg-light" data-wow-delay="0.1s"">
-            <div class="container py-2">
-                <div class="section-title text-center mb-5">
-                    <h1 class="display-4 text-dark mb-4">Our <span style="color: #0d6efd;">Clients</span></h1>
-                    <div class="border-top border-primary w-25 mx-auto my-4"></div>
-                </div>
-
-                <div class="client-slider owl-carousel wow fadeInUp" data-wow-delay="0.3s">
-                    <div class="client-logo">
-                        <img src="img/C1.png" class="img-fluid grayscale" alt="Client Logo" data-bs-toggle="tooltip"
-                            title="Client Name">
-                    </div>
-                    <div class="client-logo">
-                        <img src="img/C2.png" class="img-fluid grayscale" alt="Client Logo" data-bs-toggle="tooltip"
-                            title="Client Name">
-                    </div>
-                    <div class="client-logo">
-                        <img src="img/C3.png" class="img-fluid grayscale" alt="Client Logo" data-bs-toggle="tooltip"
-                            title="Client Name">
-                    </div>
-                    <div class="client-logo">
-                        <img src="img/C4.png" class="img-fluid grayscale" alt="Client Logo" data-bs-toggle="tooltip"
-                            title="Client Name">
-                    </div>
-                    <div class="client-logo">
-                        <img src="img/C5.png" class="img-fluid grayscale" alt="Client Logo" data-bs-toggle="tooltip"
-                            title="Client Name">
-                    </div>
-                    <div class="client-logo">
-                        <img src="img/C6.png" class="img-fluid grayscale" alt="Client Logo" data-bs-toggle="tooltip"
-                            title="Client Name">
-                    </div>
-                    <div class="client-logo">
-                        <img src="img/C7.png" class="img-fluid grayscale" alt="Client Logo" data-bs-toggle="tooltip"
-                            title="Client Name">
-                    </div>
-                    <div class="client-logo">
-                        <img src="img/C8.png" class="img-fluid grayscale" alt="Client Logo" data-bs-toggle="tooltip"
-                            title="Client Name">
-                    </div>
-                    <div class="client-logo">
-                        <img src="img/C9.jpeg" class="img-fluid grayscale" alt="Client Logo" data-bs-toggle="tooltip"
-                            title="Client Name">
-                    </div>
-                </div>
-            </div>
+    <!-- Clients Start -->
+    <div class="container-fluid py-5 wow fadeInUp bg-light" data-wow-delay="0.1s"">
+            <div class=" container py-2">
+        <div class="section-title text-center mb-5">
+            <h1 class="display-4 text-dark mb-4">Our <span style="color: #0d6efd;">Clients</span></h1>
+            <div class="border-top border-primary w-25 mx-auto my-4"></div>
         </div>
 
-        <style>
-            .client-slider {
-                margin: 0 -15px;
-            }
+        <div class="client-slider owl-carousel wow fadeInUp" data-wow-delay="0.3s">
+            <div class="client-logo">
+                <img src="img/C1.png" class="img-fluid grayscale" alt="Client Logo" data-bs-toggle="tooltip"
+                    title="Client Name">
+            </div>
+            <div class="client-logo">
+                <img src="img/C2.png" class="img-fluid grayscale" alt="Client Logo" data-bs-toggle="tooltip"
+                    title="Client Name">
+            </div>
+            <div class="client-logo">
+                <img src="img/C3.png" class="img-fluid grayscale" alt="Client Logo" data-bs-toggle="tooltip"
+                    title="Client Name">
+            </div>
+            <div class="client-logo">
+                <img src="img/C4.png" class="img-fluid grayscale" alt="Client Logo" data-bs-toggle="tooltip"
+                    title="Client Name">
+            </div>
+            <div class="client-logo">
+                <img src="img/C5.png" class="img-fluid grayscale" alt="Client Logo" data-bs-toggle="tooltip"
+                    title="Client Name">
+            </div>
+            <div class="client-logo">
+                <img src="img/C6.png" class="img-fluid grayscale" alt="Client Logo" data-bs-toggle="tooltip"
+                    title="Client Name">
+            </div>
+            <div class="client-logo">
+                <img src="img/C7.png" class="img-fluid grayscale" alt="Client Logo" data-bs-toggle="tooltip"
+                    title="Client Name">
+            </div>
+            <div class="client-logo">
+                <img src="img/C8.png" class="img-fluid grayscale" alt="Client Logo" data-bs-toggle="tooltip"
+                    title="Client Name">
+            </div>
+            <div class="client-logo">
+                <img src="img/C9.jpeg" class="img-fluid grayscale" alt="Client Logo" data-bs-toggle="tooltip"
+                    title="Client Name">
+            </div>
+        </div>
+    </div>
+    </div>
 
-            .client-logo {
-                padding: 0 15px;
-                text-align: center;
-                transition: all 0.3s ease;
-                min-height: 200px;
-                display: flex;
-                align-items: center;
-                justify-content: center;
-            }
+    <style>
+        .client-slider {
+            margin: 0 -15px;
+        }
 
-            .client-logo img {
-                max-height: 200px;
-                width: auto;
-                opacity: 0.7;
-                transition: all 0.3s ease;
-            }
-        </style>
+        .client-logo {
+            padding: 0 15px;
+            text-align: center;
+            transition: all 0.3s ease;
+            min-height: 200px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
 
-        <script>
-            // Initialize Owl Carousel for client slider
-            document.addEventListener('DOMContentLoaded', function () {
-                $('.client-slider').owlCarousel({
-                    loop: true,
-                    margin: 30,
-                    nav: false,
-                    dots: false,
-                    autoplay: true,
-                    autoplayTimeout: 3000,
-                    autoplayHoverPause: true,
-                    responsive: {
-                        0: { items: 2 },
-                        576: { items: 3 },
-                        768: { items: 4 },
-                        992: { items: 5 },
-                        1200: { items: 6 }
-                    }
-                });
+        .client-logo img {
+            max-height: 200px;
+            width: auto;
+            opacity: 0.7;
+            transition: all 0.3s ease;
+        }
+    </style>
 
-                // Initialize tooltips
-                $('[data-bs-toggle="tooltip"]').tooltip();
+    <script>
+        // Initialize Owl Carousel for client slider
+        document.addEventListener('DOMContentLoaded', function () {
+            $('.client-slider').owlCarousel({
+                loop: true,
+                margin: 30,
+                nav: false,
+                dots: false,
+                autoplay: true,
+                autoplayTimeout: 3000,
+                autoplayHoverPause: true,
+                responsive: {
+                    0: { items: 2 },
+                    576: { items: 3 },
+                    768: { items: 4 },
+                    992: { items: 5 },
+                    1200: { items: 6 }
+                }
             });
-        </script>
-        <!-- Clients End -->
+
+            // Initialize tooltips
+            $('[data-bs-toggle="tooltip"]').tooltip();
+        });
+    </script>
+    <!-- Clients End -->
     <!-- Our Businesses Start -->
     <div class="container-fluid py-5 wow fadeInUp" data-wow-delay="0.1s"">
-        <div class="container py-2">
-            <div class="section-title text-center mb-5">
-                <h1 class="display-4 text-dark mb-4">Our <span style="color: #0d6efd;">Business Divisions</span></h1>
-                <div class="border-top border-primary w-25 mx-auto my-4"></div>
-                <p class="lead text-muted">Specialized solutions driving innovation across industries</p>
-            </div>
-            <div class="row g-4 justify-content-center">
-                <div class="col-lg-6">
-                    <div class="business-card bg-white rounded shadow-lg p-5 h-100 position-relative overflow-hidden">
-                        <div class="icon-bg">
-                            <i class="fas fa-industry"></i>
-                        </div>
-                        <div class="position-relative z-index-1">
-                            <h3 class="text-center text-dark mb-4">Buyquick</h3>
-                            <p class="text-muted text-center mb-4">End-to-end automation solutions that transform manufacturing processes with cutting-edge robotics, PLC systems, and smart control technologies.</p>
-                            <div class="text-center mt-4">
-                                <a href="#" class="btn btn-primary rounded-pill px-4 py-2">Explore Solutions <i class="fas fa-arrow-right ms-2"></i></a>
-                            </div>
+        <div class=" container py-2">
+        <div class="section-title text-center mb-5">
+            <h1 class="display-4 text-dark mb-4">Our <span style="color: #0d6efd;">Business Divisions</span></h1>
+            <div class="border-top border-primary w-25 mx-auto my-4"></div>
+            <p class="lead text-muted">Specialized solutions driving innovation across industries</p>
+        </div>
+        <div class="row g-4 justify-content-center">
+            <div class="col-lg-6">
+                <div class="business-card bg-white rounded shadow-lg p-5 h-100 position-relative overflow-hidden">
+                    <div class="icon-bg">
+                        <i class="fas fa-industry"></i>
+                    </div>
+                    <div class="position-relative z-index-1">
+                        <h3 class="text-center text-dark mb-4">Buyquick</h3>
+                        <p class="text-muted text-center mb-4">End-to-end automation solutions that transform
+                            manufacturing processes with cutting-edge robotics, PLC systems, and smart control
+                            technologies.</p>
+                        <div class="text-center mt-4">
+                            <a href="#" class="btn btn-primary rounded-pill px-4 py-2">Explore Solutions <i
+                                    class="fas fa-arrow-right ms-2"></i></a>
                         </div>
                     </div>
                 </div>
-                <div class="col-lg-6">
-                    <div class="business-card bg-white rounded shadow-lg p-5 h-100 position-relative overflow-hidden">
-                        <div class="icon-bg">
-                            <i class="fas fa-network-wired"></i>
-                        </div>
-                        <div class="position-relative z-index-1">
-                            <h3 class="text-center text-dark mb-4">SHS DS</h3>
-                            <p class="text-muted text-center mb-4">Intelligent connected systems that collect, analyze and act on data to optimize operations, reduce costs and enable predictive maintenance.</p>
-                            <div class="text-center mt-4">
-                                <a href="#" class="btn btn-primary rounded-pill px-4 py-2">Discover IoT <i class="fas fa-arrow-right ms-2"></i></a>
-                            </div>
+            </div>
+            <div class="col-lg-6">
+                <div class="business-card bg-white rounded shadow-lg p-5 h-100 position-relative overflow-hidden">
+                    <div class="icon-bg">
+                        <i class="fas fa-network-wired"></i>
+                    </div>
+                    <div class="position-relative z-index-1">
+                        <h3 class="text-center text-dark mb-4">SHS DS</h3>
+                        <p class="text-muted text-center mb-4">Intelligent connected systems that collect, analyze and
+                            act on data to optimize operations, reduce costs and enable predictive maintenance.</p>
+                        <div class="text-center mt-4">
+                            <a href="#" class="btn btn-primary rounded-pill px-4 py-2">Discover IoT <i
+                                    class="fas fa-arrow-right ms-2"></i></a>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
+    </div>
     </div>
 
     <style>
@@ -597,11 +654,13 @@
             transition: all 0.3s ease;
             border: 1px solid rgba(13, 110, 253, 0.1);
         }
+
         .business-card:hover {
             transform: translateY(-5px);
-            box-shadow: 0 10px 30px rgba(0,0,0,0.1) !important;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1) !important;
             border-color: rgba(13, 110, 253, 0.3);
         }
+
         .icon-bg {
             position: absolute;
             right: -30px;
@@ -610,6 +669,7 @@
             color: rgba(13, 110, 253, 0.05);
             z-index: 0;
         }
+
         .icon-bg i {
             line-height: 1;
         }
@@ -621,58 +681,80 @@
 
 
 
-    
-     <!-- Our Values Start -->
+
+    <!-- Our Values Start -->
     <div class="container-fluid py-5 wow fadeInUp" data-wow-delay="0.1s">
         <div class="container py-2">
             <div class="section-title text-center mb-5">
-                <h1 class="display-4 text-dark mb-4">Our <span style="color: #0d6efd;">Commitment </span>to <span style="color: #0d6efd;">Excellence</span></h1>
+                <h1 class="display-4 text-dark mb-4">Our <span style="color: #0d6efd;">Commitment </span>to <span
+                        style="color: #0d6efd;">Excellence</span></h1>
                 <div class="border-top border-primary w-25 mx-auto my-4"></div>
             </div>
             <div class="row g-4 justify-content-center">
                 <div class="col-lg-4 col-md-6">
                     <div class="card border-0 shadow-sm h-100 text-center p-4 bg-white">
-                        <div class="icon-box bg-primary rounded-circle mx-auto mb-4" style="width: 80px; height: 80px; line-height: 80px;">
+                        <div class="icon-box bg-primary rounded-circle mx-auto mb-4"
+                            style="width: 80px; height: 80px; line-height: 80px;">
                             <i class="fas fa-users fa-2x text-white"></i>
                         </div>
                         <h4 class="text-dark mb-3">Integrity</h4>
-                        <p class="text-muted">At Shree hari group, integrity guides everything we do. We prioritize honesty, transparency, and ethical practices in all our interactions. Our clients rely on us to deliver on our promises with sincerity and respect, building trust that lasts beyond the project.</p>
+                        <p class="text-muted">At Shree hari group, integrity guides everything we do. We prioritize
+                            honesty, transparency, and ethical practices in all our interactions. Our clients rely on us
+                            to deliver on our promises with sincerity and respect, building trust that lasts beyond the
+                            project.</p>
                     </div>
-                </div>  
+                </div>
                 <div class="col-lg-4 col-md-6">
                     <div class="card border-0 shadow-sm h-100 text-center p-4 bg-white">
-                        <div class="icon-box bg-primary rounded-circle mx-auto mb-4" style="width: 80px; height: 80px; line-height: 80px;">
+                        <div class="icon-box bg-primary rounded-circle mx-auto mb-4"
+                            style="width: 80px; height: 80px; line-height: 80px;">
                             <i class="fas fa-lightbulb fa-2x text-white"></i>
                         </div>
                         <h4 class="text-dark mb-3">Innovation</h4>
-                        <p class="text-muted">At Shree hari group, innovation isn't just about new technology—it's about creating smarter, faster, and more meaningful ways to solve real problems. We stay ahead of the curve to ensure our clients do too, blending forward-thinking strategy with cutting-edge development. From concept to execution, our innovative mindset drives everything we build—transforming ideas into impact.</p>
+                        <p class="text-muted">At Shree hari group, innovation isn't just about new technology—it's about
+                            creating smarter, faster, and more meaningful ways to solve real problems. We stay ahead of
+                            the curve to ensure our clients do too, blending forward-thinking strategy with cutting-edge
+                            development. From concept to execution, our innovative mindset drives everything we
+                            build—transforming ideas into impact.</p>
                     </div>
                 </div>
                 <div class="col-lg-4 col-md-6">
-                  <div class="card border-0 shadow-sm h-100 text-center p-4 bg-white">
-                      <div class="icon-box bg-primary rounded-circle mx-auto mb-4" style="width: 80px; height: 80px; line-height: 80px;">
-                          <i class="fas fa-handshake fa-2x text-white"></i>
-                      </div>
-                      <h4 class="text-dark mb-3">Commitment</h4>
-                      <p class="text-muted">At Shree hari group, commitment means standing by our clients at every stage of their journey. We're dedicated to exceeding expectations—not just meeting deadlines. From first consultation to final deployment and beyond, our team is fully invested in your success. We don't just promise excellence—we commit to it, every single day.</p>
-                  </div>
+                    <div class="card border-0 shadow-sm h-100 text-center p-4 bg-white">
+                        <div class="icon-box bg-primary rounded-circle mx-auto mb-4"
+                            style="width: 80px; height: 80px; line-height: 80px;">
+                            <i class="fas fa-handshake fa-2x text-white"></i>
+                        </div>
+                        <h4 class="text-dark mb-3">Commitment</h4>
+                        <p class="text-muted">At Shree hari group, commitment means standing by our clients at every
+                            stage of their journey. We're dedicated to exceeding expectations—not just meeting
+                            deadlines. From first consultation to final deployment and beyond, our team is fully
+                            invested in your success. We don't just promise excellence—we commit to it, every single
+                            day.</p>
+                    </div>
                 </div>
                 <div class="col-lg-4 col-md-6">
-                  <div class="card border-0 shadow-sm h-100 text-center p-4 bg-white">
-                      <div class="icon-box bg-primary rounded-circle mx-auto mb-4" style="width: 80px; height: 80px; line-height: 80px;">
-                          <i class="fas fa-check-circle fa-2x text-white"></i>
-                      </div>
-                      <h4 class="text-dark mb-3">Proactive</h4>
-                      <p class="text-muted">At Shree hari group, we take initiative—not just instructions. We proactively identify risks, suggest improvements, and stay ahead of challenges to keep your project on track and aligned with your goals. With our team, you're not just getting a service provider—you're gaining a partner who's always thinking one step ahead for your success.</p>
-                  </div>
-              </div>
+                    <div class="card border-0 shadow-sm h-100 text-center p-4 bg-white">
+                        <div class="icon-box bg-primary rounded-circle mx-auto mb-4"
+                            style="width: 80px; height: 80px; line-height: 80px;">
+                            <i class="fas fa-check-circle fa-2x text-white"></i>
+                        </div>
+                        <h4 class="text-dark mb-3">Proactive</h4>
+                        <p class="text-muted">At Shree hari group, we take initiative—not just instructions. We
+                            proactively identify risks, suggest improvements, and stay ahead of challenges to keep your
+                            project on track and aligned with your goals. With our team, you're not just getting a
+                            service provider—you're gaining a partner who's always thinking one step ahead for your
+                            success.</p>
+                    </div>
+                </div>
                 <div class="col-lg-4 col-md-6">
                     <div class="card border-0 shadow-sm h-100 text-center p-4 bg-white">
-                        <div class="icon-box bg-primary rounded-circle mx-auto mb-4" style="width: 80px; height: 80px; line-height: 80px;">
+                        <div class="icon-box bg-primary rounded-circle mx-auto mb-4"
+                            style="width: 80px; height: 80px; line-height: 80px;">
                             <i class="fas fa-users fa-2x text-white"></i>
                         </div>
                         <h4 class="text-dark mb-3">Collaboration</h4>
-                        <p class="text-muted">We work as partners with our clients, fostering open communication and teamwork. Together, we achieve more than we could individually.</p>
+                        <p class="text-muted">We work as partners with our clients, fostering open communication and
+                            teamwork. Together, we achieve more than we could individually.</p>
                     </div>
                 </div>
             </div>
@@ -740,247 +822,245 @@
     <!-- Blog End -->
 
 
-        <!-- Contact Start -->
-        <div class="container-fluid contact py-5">
-            <div class="container py-5">
-                <div class="row g-5">
-                    <div class="col-lg-6 wow fadeInLeft" data-wow-delay="0.1s">
-                        <div class="contact-item">
-                            <div class="pb-5">
-                                <h4 class="display-6 text-dark mb-1">Contact Us</h4>
-                                <h1 class="display-4 mb-4"><span style="color: #0d6efd;">Get In Touch With Us</span></h1>
+    <!-- Contact Start -->
+    <div class="container-fluid contact py-5">
+        <div class="container py-5">
+            <div class="row g-5">
+                <div class="col-lg-6 wow fadeInLeft" data-wow-delay="0.1s">
+                    <div class="contact-item">
+                        <div class="pb-5">
+                            <h4 class="display-6 text-dark mb-1">Contact Us</h4>
+                            <h1 class="display-4 mb-4"><span style="color: #0d6efd;">Get In Touch With Us</span></h1>
+                        </div>
+                        <div class="d-flex align-items-center mb-4">
+                            <div class="bg-primary btn-lg-square rounded-circle p-4"><i
+                                    class="fa fa-home text-white"></i></div>
+                            <div class="ms-4">
+                                <h4>Addresses</h4>
+                                <p class="mb-0">Shree hari group, Opp. Hotel Fortune Landmark,
+                                    Ashram Road,
+                                    Ahmedabad 380013, Gujarat, India</p>
                             </div>
-                            <div class="d-flex align-items-center mb-4">
-                                <div class="bg-primary btn-lg-square rounded-circle p-4"><i
-                                        class="fa fa-home text-white"></i></div>
-                                <div class="ms-4">
-                                    <h4>Addresses</h4>
-                                    <p class="mb-0">Shree hari group, Opp. Hotel Fortune Landmark,
-                                        Ashram Road,
-                                        Ahmedabad 380013, Gujarat, India</p>
-                                </div>
+                        </div>
+                        <div class="d-flex align-items-center mb-4">
+                            <div class="bg-primary btn-lg-square rounded-circle p-2"><i
+                                    class="fa fa-phone-alt text-white"></i></div>
+                            <div class="ms-4">
+                                <h4>Mobile</h4>
+                                <p class="mb-0"><a href="tel:+919998595357">+91 99985 95357</a></p>
                             </div>
-                            <div class="d-flex align-items-center mb-4">
-                                <div class="bg-primary btn-lg-square rounded-circle p-2"><i
-                                        class="fa fa-phone-alt text-white"></i></div>
-                                <div class="ms-4">
-                                    <h4>Mobile</h4>
-                                    <p class="mb-0"><a href="tel:+919998595357">+91 99985 95357</a></p>
-                                </div>
-                            </div>
-                            <div class="d-flex align-items-center mb-4">
-                                <div class="bg-primary btn-lg-square rounded-circle p-2"><i
-                                        class="fa fa-envelope-open text-white"></i></div>
-                                <div class="ms-4">
-                                    <h4>Email</h4>
-                                    <p class="mb-0"><a
-                                            href="mailto:info@shreeharisolutions.in">info@shreeharisolutions.in</a></p>
-                                </div>
+                        </div>
+                        <div class="d-flex align-items-center mb-4">
+                            <div class="bg-primary btn-lg-square rounded-circle p-2"><i
+                                    class="fa fa-envelope-open text-white"></i></div>
+                            <div class="ms-4">
+                                <h4>Email</h4>
+                                <p class="mb-0"><a
+                                        href="mailto:info@shreeharisolutions.in">info@shreeharisolutions.in</a></p>
                             </div>
                         </div>
                     </div>
-                    <div class="col-lg-6 wow fadeInRight" data-wow-delay="0.3s">
-                        <form id="contactForm" action="https://formsubmit.co/cp.harshil@gmail.com" method="POST">
-                            <div class="row g-3">
-                                <div class="col-lg-12 col-xl-6">
-                                    <div class="form-floating">
-                                        <input type="text" class="form-control" id="fname" name="fname"
-                                            placeholder="First Name" required>
-                                        <label for="fname">First Name *</label>
-                                    </div>
+                </div>
+                <div class="col-lg-6 wow fadeInRight" data-wow-delay="0.3s">
+                    <form id="contactForm" action="https://formsubmit.co/cp.harshil@gmail.com" method="POST">
+                        <div class="row g-3">
+                            <div class="col-lg-12 col-xl-6">
+                                <div class="form-floating">
+                                    <input type="text" class="form-control" id="fname" name="fname"
+                                        placeholder="First Name" required>
+                                    <label for="fname">First Name *</label>
                                 </div>
-                                <div class="col-lg-12 col-xl-6">
-                                    <div class="form-floating">
-                                        <input type="text" class="form-control" id="lname" name="lname"
-                                            placeholder="Last Name" required>
-                                        <label for="lname">Last Name *</label>
-                                    </div>
+                            </div>
+                            <div class="col-lg-12 col-xl-6">
+                                <div class="form-floating">
+                                    <input type="text" class="form-control" id="lname" name="lname"
+                                        placeholder="Last Name" required>
+                                    <label for="lname">Last Name *</label>
                                 </div>
-                                <div class="col-lg-12">
-                                    <div class="form-floating">
-                                        <input type="email" class="form-control" id="email" name="email"
-                                            placeholder="Your Email" required
-                                            pattern="[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$"
-                                            onchange="validateEmail(this)"
-                                            oninvalid="this.setCustomValidity('Please enter a valid email address (e.g., name@example.com)')"
-                                            oninput="this.setCustomValidity('')"
-                                            title="Please enter a valid email address (e.g., john@example.com)">
-                                        <label for="email">Your Email *</label>
-                                        <script>
-                                            function validateEmail(input) {
-                                                const email = input.value;
-                                                const parts = email.split('@');
-                                                if (parts.length === 2) {
-                                                    const domainParts = parts[1].split('.');
-                                                    if (domainParts.length < 2 || domainParts[domainParts.length - 1].length < 2) {
-                                                        input.setCustomValidity('Please enter a valid email with a proper domain (e.g., name@example.com)');
-                                                    } else {
-                                                        input.setCustomValidity('');
-                                                    }
+                            </div>
+                            <div class="col-lg-12">
+                                <div class="form-floating">
+                                    <input type="email" class="form-control" id="email" name="email"
+                                        placeholder="Your Email" required
+                                        pattern="[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$"
+                                        onchange="validateEmail(this)"
+                                        oninvalid="this.setCustomValidity('Please enter a valid email address (e.g., name@example.com)')"
+                                        oninput="this.setCustomValidity('')"
+                                        title="Please enter a valid email address (e.g., john@example.com)">
+                                    <label for="email">Your Email *</label>
+                                    <script>
+                                        function validateEmail(input) {
+                                            const email = input.value;
+                                            const parts = email.split('@');
+                                            if (parts.length === 2) {
+                                                const domainParts = parts[1].split('.');
+                                                if (domainParts.length < 2 || domainParts[domainParts.length - 1].length < 2) {
+                                                    input.setCustomValidity('Please enter a valid email with a proper domain (e.g., name@example.com)');
                                                 } else {
-                                                    input.setCustomValidity('Please enter a valid email address (e.g., name@example.com)');
+                                                    input.setCustomValidity('');
                                                 }
+                                            } else {
+                                                input.setCustomValidity('Please enter a valid email address (e.g., name@example.com)');
                                             }
-                                        </script>
-                                    </div>
+                                        }
+                                    </script>
                                 </div>
-                                <div class="col-lg-12 col-xl-6">
-                                    <div class="form-floating">
-                                        <input type="tel" class="form-control" id="phone" name="phone"
-                                            placeholder="Phone" required pattern="[0-9]{10}"
-                                            title="Please enter a valid 10-digit phone number"
-                                            onkeypress="return event.charCode >= 48 && event.charCode <= 57"
-                                            maxlength="10">
-                                        <label for="phone">Your Phone (10 digits) *</label>
-                                    </div>
+                            </div>
+                            <div class="col-lg-12 col-xl-6">
+                                <div class="form-floating">
+                                    <input type="tel" class="form-control" id="phone" name="phone" placeholder="Phone"
+                                        required pattern="[0-9]{10}" title="Please enter a valid 10-digit phone number"
+                                        onkeypress="return event.charCode >= 48 && event.charCode <= 57" maxlength="10">
+                                    <label for="phone">Your Phone (10 digits) *</label>
                                 </div>
-                                <div class="col-lg-12 col-xl-6">
-                                    <div class="form-floating">
-                                        <input type="text" class="form-control" id="companyname" name="companyname"
-                                            placeholder="Company Name">
-                                        <label for="companyname">Company Name</label>
-                                    </div>
+                            </div>
+                            <div class="col-lg-12 col-xl-6">
+                                <div class="form-floating">
+                                    <input type="text" class="form-control" id="companyname" name="companyname"
+                                        placeholder="Company Name">
+                                    <label for="companyname">Company Name</label>
                                 </div>
-                                <div class="col-12 col-xl-6">
-                                    <div class="form-floating">
-                                        <input type="text" class="form-control" id="Industry" name="Industry"
-                                            placeholder="Industry">
-                                        <label for="Industry">Industry</label>
-                                    </div>
+                            </div>
+                            <div class="col-12 col-xl-6">
+                                <div class="form-floating">
+                                    <input type="text" class="form-control" id="Industry" name="Industry"
+                                        placeholder="Industry">
+                                    <label for="Industry">Industry</label>
                                 </div>
-                                <div class="col-12 col-xl-6">
-                                    <div class="form-floating">
-                                        <input type="text" class="form-control" id="JobTitle" name="JobTitle"
-                                            placeholder="Job Title">
-                                        <label for="JobTitle">Job Title</label>
-                                    </div>
+                            </div>
+                            <div class="col-12 col-xl-6">
+                                <div class="form-floating">
+                                    <input type="text" class="form-control" id="JobTitle" name="JobTitle"
+                                        placeholder="Job Title">
+                                    <label for="JobTitle">Job Title</label>
                                 </div>
-                                <div class="col-12">
-                                    <div class="form-floating">
-                                        <select class="form-select" id="service" name="service" required>
-                                            <option value="" selected disabled>Select a service</option>
-                                            <option value="Mechanical Engineering Services">Mechanical Engineering
-                                                Services</option>
-                                            <option value="IT Services">IT Services</option>
-                                            <option value="Energy">Energy</option>
-                                            <option value="EV Solution">EV Solution</option>
-                                            <option value="B2B Business">B2B Business</option>
-                                            <option value="Creative Services">Creative Services</option>
-                                            <option value="AI/Data analytics">AI/Data analytics</option>
-                                            <option value="Data storage/management">Data storage/management</option>
-                                            <option value="Other">Other</option>
-                                        </select>
-                                        <label for="service">Service *</label>
-                                    </div>
+                            </div>
+                            <div class="col-12">
+                                <div class="form-floating">
+                                    <select class="form-select" id="service" name="service" required>
+                                        <option value="" selected disabled>Select a service</option>
+                                        <option value="Mechanical Engineering Services">Mechanical Engineering
+                                            Services</option>
+                                        <option value="IT Services">IT Services</option>
+                                        <option value="Energy">Energy</option>
+                                        <option value="EV Solution">EV Solution</option>
+                                        <option value="B2B Business">B2B Business</option>
+                                        <option value="Creative Services">Creative Services</option>
+                                        <option value="AI/Data analytics">AI/Data analytics</option>
+                                        <option value="Data storage/management">Data storage/management</option>
+                                        <option value="Other">Other</option>
+                                    </select>
+                                    <label for="service">Service *</label>
                                 </div>
-                                <div class="col-12">
-                                    <div class="form-floating">
-                                        <textarea class="form-control" placeholder="Leave a message here" id="message"
-                                            name="message" style="height: 160px"></textarea>
-                                        <label for="message">Message</label>
-                                    </div>
+                            </div>
+                            <div class="col-12">
+                                <div class="form-floating">
+                                    <textarea class="form-control" placeholder="Leave a message here" id="message"
+                                        name="message" style="height: 160px"></textarea>
+                                    <label for="message">Message</label>
                                 </div>
-                                <!-- <div class="col-12 mb-3">
+                            </div>
+                            <!-- <div class="col-12 mb-3">
                                 <div class="g-recaptcha" data-sitekey="6LcXXXXXXXXXXXXXXXXXXXXX"></div>
                                 <small class="form-text text-muted">Please complete the captcha to verify you're not a robot.</small>
                             </div>
                             <div class="col-12">
                                 <script src="https://www.google.com/recaptcha/api.js" async defer></script>
                             </div> -->
-                                <div class="col-12">
-                                    <div id="successMessage" class="alert alert-success alert-dismissible fade show"
-                                        role="alert" style="display: none;">
-                                        <strong>Thank you!</strong> Your message has been sent successfully. We'll get
-                                        back to you soon.
-                                        <button type="button" class="btn-close" data-bs-dismiss="alert"
-                                            aria-label="Close"></button>
-                                    </div>
-                                    <script>
-                                        // Show success message when redirected from form submission
-                                        document.addEventListener('DOMContentLoaded', function () {
-                                            // Check if URL contains success parameter
-                                            const urlParams = new URLSearchParams(window.location.search);
-                                            if (urlParams.has('success') || window.location.href.indexOf('?success') > -1) {
-                                                const successMessage = document.getElementById('successMessage');
-                                                if (successMessage) {
-                                                    // Show the success message
-                                                    successMessage.style.display = 'block';
-
-                                                    // Move success message above first name and last name
-                                                    const formStart = document.querySelector('form .row');
-                                                    if (formStart) {
-                                                        formStart.prepend(successMessage);
-                                                    }
-
-                                                    // Scroll to the message to ensure it's visible
-                                                    successMessage.scrollIntoView({ behavior: 'smooth', block: 'center' });
-
-                                                    // Auto-hide success message after 5 seconds
-                                                    setTimeout(function () {
-                                                        try {
-                                                            const bsAlert = new bootstrap.Alert(successMessage);
-                                                            bsAlert.close();
-                                                        } catch (e) {
-                                                            // Fallback if bootstrap Alert isn't available
-                                                            successMessage.style.display = 'none';
-                                                        }
-                                                    }, 10000);
-                                                }
-                                            }
-
-                                            // Also check for success in localStorage (in case query params are lost)
-                                            if (localStorage.getItem('formSubmitSuccess') === 'true') {
-                                                const successMessage = document.getElementById('successMessage');
-                                                if (successMessage) {
-                                                    successMessage.style.display = 'block';
-                                                    localStorage.removeItem('formSubmitSuccess');
-
-                                                    // Move success message above first name and last name
-                                                    const formStart = document.querySelector('form .row');
-                                                    if (formStart) {
-                                                        formStart.prepend(successMessage);
-                                                    }
-
-                                                    setTimeout(function () {
-                                                        try {
-                                                            const bsAlert = new bootstrap.Alert(successMessage);
-                                                            bsAlert.close();
-                                                        } catch (e) {
-                                                            successMessage.style.display = 'none';
-                                                        }
-                                                    }, 10000);
-                                                }
-                                            }
-                                        });
-
-                                        // Add event listener to the form to set localStorage before submission
-                                        document.querySelector('form').addEventListener('submit', function () {
-                                            localStorage.setItem('formSubmitSuccess', 'true');
-                                        });
-                                    </script>
-                                </div>
-                                <div id="errorMessage" class="alert alert-danger alert-dismissible fade" role="alert"
-                                    style="display: none;">
-                                    <strong>Error!</strong> There was a problem submitting your form. Please try again
-                                    later.
+                            <div class="col-12">
+                                <div id="successMessage" class="alert alert-success alert-dismissible fade show"
+                                    role="alert" style="display: none;">
+                                    <strong>Thank you!</strong> Your message has been sent successfully. We'll get
+                                    back to you soon.
                                     <button type="button" class="btn-close" data-bs-dismiss="alert"
                                         aria-label="Close"></button>
                                 </div>
-                                <button type="submit" class="btn btn-primary w-100 py-3" id="submitBtn">Send
-                                    Message</button>
+                                <script>
+                                    // Show success message when redirected from form submission
+                                    document.addEventListener('DOMContentLoaded', function () {
+                                        // Check if URL contains success parameter
+                                        const urlParams = new URLSearchParams(window.location.search);
+                                        if (urlParams.has('success') || window.location.href.indexOf('?success') > -1) {
+                                            const successMessage = document.getElementById('successMessage');
+                                            if (successMessage) {
+                                                // Show the success message
+                                                successMessage.style.display = 'block';
 
-                                <!-- Hidden inputs for FormSubmit.co configuration -->
-                                <input type="hidden" name="_subject" value="New contact form submission">
-                                <input type="hidden" name="_captcha" value="false">
-                                <input type="hidden" name="_next" value="http://127.0.0.1:5500/index.html">
+                                                // Move success message above first name and last name
+                                                const formStart = document.querySelector('form .row');
+                                                if (formStart) {
+                                                    formStart.prepend(successMessage);
+                                                }
+
+                                                // Scroll to the message to ensure it's visible
+                                                successMessage.scrollIntoView({ behavior: 'smooth', block: 'center' });
+
+                                                // Auto-hide success message after 5 seconds
+                                                setTimeout(function () {
+                                                    try {
+                                                        const bsAlert = new bootstrap.Alert(successMessage);
+                                                        bsAlert.close();
+                                                    } catch (e) {
+                                                        // Fallback if bootstrap Alert isn't available
+                                                        successMessage.style.display = 'none';
+                                                    }
+                                                }, 10000);
+                                            }
+                                        }
+
+                                        // Also check for success in localStorage (in case query params are lost)
+                                        if (localStorage.getItem('formSubmitSuccess') === 'true') {
+                                            const successMessage = document.getElementById('successMessage');
+                                            if (successMessage) {
+                                                successMessage.style.display = 'block';
+                                                localStorage.removeItem('formSubmitSuccess');
+
+                                                // Move success message above first name and last name
+                                                const formStart = document.querySelector('form .row');
+                                                if (formStart) {
+                                                    formStart.prepend(successMessage);
+                                                }
+
+                                                setTimeout(function () {
+                                                    try {
+                                                        const bsAlert = new bootstrap.Alert(successMessage);
+                                                        bsAlert.close();
+                                                    } catch (e) {
+                                                        successMessage.style.display = 'none';
+                                                    }
+                                                }, 10000);
+                                            }
+                                        }
+                                    });
+
+                                    // Add event listener to the form to set localStorage before submission
+                                    document.querySelector('form').addEventListener('submit', function () {
+                                        localStorage.setItem('formSubmitSuccess', 'true');
+                                    });
+                                </script>
                             </div>
-                    </div>
-                    </form>
-                </div>
-                <!-- Added margin-top to create space between form and map -->
+                            <div id="errorMessage" class="alert alert-danger alert-dismissible fade" role="alert"
+                                style="display: none;">
+                                <strong>Error!</strong> There was a problem submitting your form. Please try again
+                                later.
+                                <button type="button" class="btn-close" data-bs-dismiss="alert"
+                                    aria-label="Close"></button>
+                            </div>
+                            <button type="submit" class="btn btn-primary w-100 py-3" id="submitBtn">Send
+                                Message</button>
 
+                            <!-- Hidden inputs for FormSubmit.co configuration -->
+                            <input type="hidden" name="_subject" value="New contact form submission">
+                            <input type="hidden" name="_captcha" value="false">
+                            <input type="hidden" name="_next" value="http://127.0.0.1:5500/index.html">
+                        </div>
+                </div>
+                </form>
             </div>
+            <!-- Added margin-top to create space between form and map -->
+
         </div>
+    </div>
     </div>
     <!-- Contact End -->
 
@@ -998,7 +1078,8 @@
                 <div class="col-md-4 col-lg-4 col-xl-4">
                     <div class="footer-item p-3">
                         <h4 class="text-white mb-3 text-center text-md-start">About us</h4>
-                        <p class="mb-0 text-center text-md-start" style="color: gray;">We are dedicated to delivering excellence on every
+                        <p class="mb-0 text-center text-md-start" style="color: gray;">We are dedicated to delivering
+                            excellence on every
                             project, no matter where in the world it may be. We look forward to working with you.</p>
                     </div>
                 </div>
@@ -1006,27 +1087,34 @@
                     <div class="footer-item p-3">
                         <h4 class="text-white mb-3 text-center text-md-start">Explore</h4>
                         <div class="d-flex flex-column text-center text-md-start" style="color: gray;">
-                            <span class="mb-2"><i class="fas fa-angle-right me-2"></i> <a href="index.html">Home</a></span>
-                            <span class="mb-2"><i class="fas fa-angle-right me-2"></i> <a href="service.html">Services</a></span>
-                            <span class="mb-2"><i class="fas fa-angle-right me-2"></i> <a href="about.html">About Us</a></span>
+                            <span class="mb-2"><i class="fas fa-angle-right me-2"></i> <a
+                                    href="index.html">Home</a></span>
+                            <span class="mb-2"><i class="fas fa-angle-right me-2"></i> <a
+                                    href="service.html">Services</a></span>
+                            <span class="mb-2"><i class="fas fa-angle-right me-2"></i> <a href="about.html">About
+                                    Us</a></span>
                             <span class="mb-2"><i class="fas fa-angle-right me-2"></i> <a href="project.html">Latest
                                     Projects</a></span>
                             <span class="mb-2"><i class="fas fa-angle-right me-2"></i> <a href="blog.html">Our
                                     Blogs</a></span>
                             <span class="mb-2"><i class="fas fa-angle-right me-2"></i> <a href="#">Our Team</a></span>
-                            <span class="mb-2"><i class="fas fa-angle-right me-2"></i> <a href="contact.html">Contact Us</a></span>
+                            <span class="mb-2"><i class="fas fa-angle-right me-2"></i> <a href="contact.html">Contact
+                                    Us</a></span>
                         </div>
                     </div>
                 </div>
                 <div class="col-md-4 col-lg-4 col-xl-4">
                     <div class="footer-item d-flex flex-column text-center text-md-start p-3">
                         <h4 class="text-white mb-3">Contact Info</h4>
-                        <a class="mb-2" href="" style="color: gray;"><i class="fa fa-map-marker-alt me-2"></i>Shree hari group, Opp. Hotel Fortune Landmark,
+                        <a class="mb-2" href="" style="color: gray;"><i class="fa fa-map-marker-alt me-2"></i>Shree hari
+                            group, Opp. Hotel Fortune Landmark,
                             Ashram Road,
                             Ahmedabad 380013, Gujarat, India</a>
-                        <a class="mb-2" href="mailto:info@shreeharisolutions.in" style="color: gray;"><i class="fas fa-envelope me-2"></i>
+                        <a class="mb-2" href="mailto:info@shreeharisolutions.in" style="color: gray;"><i
+                                class="fas fa-envelope me-2"></i>
                             info@shreeharisolutions.in</a>
-                        <a class="mb-2" href="tel:+919998595357" style="color: gray;"><i class="fas fa-phone me-2"></i> +91 99985 95357</a>
+                        <a class="mb-2" href="tel:+919998595357" style="color: gray;"><i class="fas fa-phone me-2"></i>
+                            +91 99985 95357</a>
                         <div class="d-flex align-items-center justify-content-center justify-content-md-start mt-2">
                             <a class="btn btn-light btn-md-square me-2" href=""><i class="fab fa-facebook-f"></i></a>
                             <a class="btn btn-light btn-md-square me-2" href=""><i class="fab fa-twitter"></i></a>
