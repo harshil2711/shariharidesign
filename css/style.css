@@ -228,6 +228,7 @@
     z-index: 999;
     box-shadow: 0 5px 15px rgba(0,0,0,0.1);
     border-top: 2px solid var(--bs-primary);
+    display: none; /* Hide by default, show on hover */
 }
 .navbar .dropdown-menu .container-fluid {
     padding-top: 1rem;
@@ -244,284 +245,26 @@
     margin-top: 0 !important;
     border-top: 1px solid rgba(0,0,0,0.1);
 }
+
+/* --- Dropdown on Hover for Desktop --- */
+@media (min-width: 992px) {
+    .navbar .dropdown:hover > .dropdown-menu,
+    .navbar .dropdown:focus-within > .dropdown-menu {
+        display: block !important;
+        animation: fadeInDropdown 0.2s;
+    }
+    .navbar .dropdown-menu {
+        pointer-events: auto;
+    }
+}
+
+/* Optional: Fade in animation for dropdown */
+@keyframes fadeInDropdown {
+    from { opacity: 0; transform: translateY(10px);}
+    to { opacity: 1; transform: translateY(0);}
+}
 /*** Navbar Customization End ***/
 
-/* --- Mobile Hamburger/Expander Fix --- */
-
-/* --- Mobile Hamburger/Expander Fix --- */
-
-/* Ensure toggler icon is always visible and styled */
-.navbar-toggler {
-  display: flex !important;
-  align-items: center;
-  justify-content: center;
-  position: absolute;
-  right: 16px;
-  top: 16px;
-  width: 48px;
-  height: 48px;
-  z-index: 1102;
-  border: none;
-  background: #ffb200 !important;
-  color: #fff !important;
-  font-size: 2rem;
-  border-radius: 50%;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.07);
-  padding: 0;
-  cursor: pointer;
-  transition: background 0.2s;
-}
-.navbar-toggler:focus {
-  outline: 2px solid var(--bs-primary);
-  outline-offset: 2px;
-}
-
-/* Hamburger icon styles (FontAwesome or SVG) */
-.navbar-toggler .fa,
-.navbar-toggler .fa-bars,
-.navbar-toggler .fas {
-  font-family: "Font Awesome 5 Free", "FontAwesome";
-  font-style: normal;
-  font-weight: 900;
-  text-decoration: inherit;
-  line-height: 1;
-  font-size: 2rem;
-  display: inline-block;
-  vertical-align: middle;
-}
-.navbar-toggler svg.fa-bars {
-  width: 2em;
-  height: 2em;
-  vertical-align: middle;
-  fill: currentColor;
-  display: inline-block;
-}
-.navbar-toggler .fa-bars:before,
-.navbar-toggler .fas.fa-bars:before {
-  content: "\f0c9";
-}
-
-/* --- Responsive Navbar Styles --- */
-@media (max-width: 991px) {
-  .navbar {
-    position: relative;
-    z-index: 1050;
-  }
-  .navbar .container {
-    display: flex;
-    align-items: center;
-    justify-content: flex-start;
-    flex-wrap: nowrap !important;
-    padding-right: 0;
-    padding-left: 0;
-    position: relative;
-  }
-  .navbar-brand {
-    display: flex;
-    align-items: center;
-    max-width: 100%;
-    flex-shrink: 1;
-    z-index: 1101;
-  }
-  .navbar-brand img {
-    height: 40px;
-    width: auto;
-    margin-right: 10px;
-    flex-shrink: 0;
-  }
-@media (max-width: 991px) {
-
-  /* Hide nav links by default on mobile */
-  .navbar-nav,
-  .navbar .nav-item,
-  .navbar .nav-link {
-    display: none !important;
-  }
-
-  /* Show nav links inside the side panel when open */
-  .mobile-side-menu.open .navbar-nav,
-  .mobile-side-menu.open .nav-item,
-  .mobile-side-menu.open .nav-link {
-    display: block !important;
-  }
-
-  /* Side panel styles */
-  .mobile-side-menu {
-    position: fixed;
-    top: 0;
-    right: -320px;
-    width: 300px;
-    height: 100vh;
-    background: #fff;
-    box-shadow: -2px 0 16px rgba(0,0,0,0.15);
-    z-index: 1100;
-    transition: right 0.35s cubic-bezier(.77,0,.18,1);
-    display: flex;
-    flex-direction: column;
-    padding: 2rem 1.5rem 1.5rem 1.5rem;
-    overflow-y: auto;
-  }
-  .mobile-side-menu.open {
-    right: 0;
-  }
-  .mobile-side-menu .close-btn {
-    align-self: flex-end;
-    font-size: 2rem;
-    background: none;
-    border: none;
-    color: var(--bs-primary);
-    margin-bottom: 1.5rem;
-    cursor: pointer;
-  }
-  .mobile-side-menu .navbar-nav,
-  .mobile-side-menu .nav-item,
-  .mobile-side-menu .nav-link {
-    display: block !important;
-    margin: 0;
-    padding: 0;
-    background: none;
-    color: var(--bs-dark);
-    font-size: 1.1rem;
-    font-weight: 500;
-    border: none;
-    box-shadow: none;
-  }
-  .mobile-side-menu .nav-item {
-    margin-bottom: 1.25rem;
-  }
-  .mobile-side-menu .dropdown-menu {
-    position: static !important;
-    box-shadow: none;
-    background: none;
-    border: none;
-    margin: 0;
-    padding: 0 0 0 1rem;
-    display: block !important;
-    visibility: visible !important;
-    opacity: 1 !important;
-    transition: none;
-  }
-  .mobile-side-menu .dropdown-toggle::after {
-    display: none;
-  }
-  .mobile-side-menu .dropdown .nav-link {
-    font-weight: 600;
-  }
-  .mobile-side-menu .dropdown-menu a {
-    font-size: 1rem;
-    color: var(--bs-dark);
-    padding: 0.5rem 0;
-    background: none;
-  }
-  .mobile-side-menu .dropdown-menu a:hover {
-    color: var(--bs-primary);
-    background: none;
-  }
-  /* Lets Connect button inside side menu, always at the bottom */
-  .mobile-side-menu .lets-connect-btn {
-    margin-top: auto;
-    width: 100%;
-    display: block;
-    background: var(--bs-primary);
-    color: var(--bs-white);
-    font-size: 1.1rem;
-    font-weight: 600;
-    border: none;
-    border-radius: 6px;
-    padding: 0.75rem 0;
-    text-align: center;
-    text-decoration: none;
-    box-shadow: 0 2px 8px rgba(0,0,0,0.07);
-    transition: background 0.2s, color 0.2s;
-    cursor: pointer;
-    position: sticky;
-    bottom: 0;
-    left: 0;
-  }
-  .mobile-side-menu .lets-connect-btn:hover,
-  .mobile-side-menu .lets-connect-btn:focus {
-    background: var(--bs-dark);
-    color: var(--bs-white);
-    text-decoration: none;
-  }
-  /* Overlay for side menu */
-  .mobile-side-menu-overlay {
-    display: none;
-    position: fixed;
-    z-index: 1099;
-    top: 0;
-    left: 0;
-    width: 100vw;
-    height: 100vh;
-    background: rgba(0,0,0,0.35);
-    transition: opacity 0.3s;
-    opacity: 0;
-  }
-  .mobile-side-menu-overlay.open {
-    display: block;
-    opacity: 1;
-  }
-  /* Ensure toggler is always visible and clickable */
-  .navbar-toggler {
-    visibility: visible !important;
-    opacity: 1 !important;
-    pointer-events: auto !important;
-    z-index: 1102 !important;
-  }
-  /* Hide default Bootstrap collapse menu */
-  .navbar-collapse {
-    display: none !important;
-  }
-  .mobile-side-menu.open ~ .navbar-toggler {
-    display: flex !important;
-  }
-}
-
-/* Desktop: show nav as normal */
-@media (min-width: 992px) {
-  .navbar-toggler,
-  .mobile-side-menu,
-  .mobile-side-menu-overlay {
-    display: none !important;
-  }
-  .navbar-nav,
-  .navbar .nav-item,
-  .navbar .nav-link {
-    display: flex !important;
-  }
-}
-
-/* Keep dropdown hover/animation for desktop */
-@media (min-width: 1200px) {
-  .navbar .nav-item .dropdown-menu {
-    display: block;
-    visibility: hidden;
-    top: 100%;
-    transform: rotateX(-75deg);
-    transform-origin: 0% 0%;
-    border: 0;
-    border-radius: 10px;
-    margin-top: 20px !important;
-    transition: .5s;
-    opacity: 0;
-    z-index: 9;
-  }
-  .navbar .nav-item:hover .dropdown-menu {
-    transform: rotateX(0deg);
-    visibility: visible;
-    background: var(--bs-light) !important;
-    margin-top: 20px !important;
-    transition: .5s;
-    opacity: 1;
-  }
-}
-
-/* Dropdown hover for desktop */
-.dropdown .dropdown-menu a:hover {
-  background: var(--bs-primary) !important;
-  color: var(--bs-white);
-}
-/* Remove old mobile dropdown styles */
 /*** Navbar End ***/
 
 /*** Carousel Header Start ***/
