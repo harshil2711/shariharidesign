@@ -275,47 +275,318 @@
 }
 /*** Navbar Customization End ***/
 
-/* For mobile navbar button */
-  /* --- Mobile Navbar Toggler Fix --- */
-  @media (min-width: 992px) {
-    .navbar .dropdown:hover > .dropdown-menu {
-      display: block !important;
-      animation: fadeInDropdown 0.2s;
-    }
+/* --- Navbar Toggler & Side Offcanvas for Mobile --- */
+
+/* Ensure the navbar brand (logo) and toggler are in one line on mobile */
+.navbar {
+  position: relative;
+  z-index: 2;
+}
+
+/* Mobile: logo and toggler inline, toggler on right */
+@media (max-width: 991.98px) {
+  .navbar .navbar-header,
+  .navbar .navbar-brand-and-toggler {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
   }
-
-  @keyframes fadeInDropdown {
-    from { opacity: 0; transform: translateY(10px);}
-    to { opacity: 1; transform: translateY(0);}
+  .navbar .navbar-brand {
+    margin-bottom: 0;
+    margin-right: 0.5rem;
   }
-
-  /* --- Ensure hamburger icon is visible --- */
-  .navbar-toggler-icon {
-    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba(0,0,0,0.9)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e") !important;
+  .navbar .navbar-toggler {
+    margin-left: auto;
+    position: relative;
+    z-index: 3000;
+    pointer-events: auto;
+    display: block;
   }
+  /* Side offcanvas menu for mobile */
+  .mobile-offcanvas {
+    position: fixed;
+    top: 0;
+    right: -300px;
+    width: 280px;
+    height: 100vh;
+    background: #fff;
+    box-shadow: -2px 0 16px rgba(0,0,0,0.08);
+    z-index: 4100;
+    transition: right 0.3s cubic-bezier(.4,0,.2,1);
+    overflow-y: auto;
+    display: block;
+    padding: 2rem 1.5rem 1.5rem 1.5rem;
+  }
+  .mobile-offcanvas.open {
+    right: 0;
+  }
+  /* Overlay for offcanvas */
+  .mobile-offcanvas-backdrop {
+    position: fixed;
+    inset: 0;
+    background: rgba(0,0,0,0.3);
+    z-index: 4099;
+    opacity: 1;
+    transition: opacity 0.3s;
+    display: none;
+  }
+  .mobile-offcanvas-backdrop.show {
+    display: block;
+  }
+  /* Hide default collapse menu on mobile if using offcanvas */
+  .navbar-collapse {
+    display: none !important;
+  }
+}
 
+/* Hamburger icon always visible */
+.navbar-toggler-icon {
+  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba(0,0,0,0.9)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e") !important;
+}
 
-
-  /* Overlay must not catch clicks */
+/* Overlay must not catch clicks */
 .header-overlay {
   position: absolute;
   inset: 0;
-  z-index: 0;            /* behind */
-  pointer-events: none;  /* <-- critical */
+  z-index: 0;
+  pointer-events: none;
 }
 
-/* Navbar above overlay */
-.navbar { position: relative; z-index: 2; }
-
-/* Ensure toggler clickable above everything */
-.navbar .navbar-toggler { position: relative; z-index: 3; }
-
 /* Offcanvas on top of header/overlay if your site uses high z-index */
-.offcanvas { z-index: 2000; }
+.offcanvas { z-index: 4000; }
 
-/* Force hamburger icon visible */
+
+
+/* ===== Offcanvas Base ===== */
+.offcanvas {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 1045;
+  display: flex;
+  flex-direction: column;
+  width: 100vw;
+  max-width: 100vw;
+  height: 100vh;
+  max-height: 100vh;
+  visibility: hidden;
+  background-color: #fff;
+  background-clip: padding-box;
+  outline: 0;
+  transition: transform .3s ease-in-out;
+  color: #212529;
+  overflow-y: auto;
+  padding: 1rem;
+}
+
+/* Show state */
+.offcanvas.show {
+  visibility: visible;
+  transform: none;
+}
+
+/* ===== Offcanvas Positions ===== */
+.offcanvas-start,
+.offcanvas-end {
+  top: 0;
+  left: 0;
+  right: 0;
+  width: 100vw;
+  max-width: 100vw;
+  height: 100vh;
+  max-height: 100vh;
+  border: none;
+  transform: translateX(-100%);
+}
+.offcanvas-end {
+  transform: translateX(100%);
+}
+.offcanvas.show.offcanvas-start,
+.offcanvas.show.offcanvas-end {
+  transform: none;
+}
+
+.offcanvas-top {
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 100vh;
+  max-height: 100vh;
+  border: none;
+  transform: translateY(-100%);
+}
+.offcanvas.show.offcanvas-top {
+  transform: none;
+}
+
+.offcanvas-bottom {
+  left: 0;
+  right: 0;
+  height: 100vh;
+  max-height: 100vh;
+  border: none;
+  transform: translateY(100%);
+}
+.offcanvas.show.offcanvas-bottom {
+  transform: none;
+}
+
+/* ===== Offcanvas Header ===== */
+.offcanvas-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: .75rem 1rem;
+  border-bottom: 1px solid #dee2e6;
+}
+
+.offcanvas-title {
+  margin-bottom: 0;
+  line-height: 1.5;
+  font-size: 1.25rem;
+}
+
+/* Close button */
+.btn-close {
+  box-sizing: content-box;
+  width: 1em;
+  height: 1em;
+  padding: .25em .25em;
+  color: #000;
+  background: transparent url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3E%3Cpath d='M2.146 2.146a.5.5 0 0 1 .708 0L8 7.293l5.146-5.147a.5.5 0 0 1 .708.708L8.707 8l5.147 5.146a.5.5 0 0 1-.708.708L8 8.707l-5.146 5.147a.5.5 0 0 1-.708-.708L7.293 8 2.146 2.854a.5.5 0 0 1 0-.708z'/%3E%3C/svg%3E") center/1em auto no-repeat;
+  border: 0;
+  border-radius: .375rem;
+  opacity: .5;
+}
+
+.btn-close:hover {
+  opacity: .75;
+}
+
+/* ===== Navbar Toggler Icon ===== */
+.navbar-toggler {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 44px;
+  height: 44px;
+  padding: 0;
+  background: none !important;
+  border: none !important;
+  border-radius: 0 !important;
+  box-shadow: none !important;
+  position: relative;
+  z-index: 2;
+}
+
+.navbar-toggler:focus,
+.navbar-toggler:hover {
+  background: none !important;
+  outline: none !important;
+  box-shadow: none !important;
+  border: none !important;
+}
+
+/* Custom hamburger icon with three lines */
 .navbar-toggler-icon {
-  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba(0,0,0,0.9)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e") !important;
+  display: flex !important;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 28px;
+  height: 28px;
+  background: none !important;
+  box-shadow: none !important;
+  position: relative;
+  border: none !important;
+  padding: 0 !important;
+}
+
+.navbar-toggler-icon span,
+.navbar-toggler-icon .bar {
+  display: block;
+  width: 24px;
+  height: 3px;
+  background: #000;
+  border-radius: 2px;
+  margin: 4px 0;
+  opacity: 1;
+  transition: none;
+  border: none !important;
+}
+
+/* If using default Bootstrap, forcibly remove background image */
+/* Use a custom SVG hamburger icon for the navbar toggler */
+.navbar-toggler .navbar-toggler-icon,
+.navbar-toggler-icon {
+  /* Custom SVG hamburger with a yellow circle background and black bars, reduced size */
+  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' width='32' height='32' viewBox='0 0 32 32'%3e%3clinearGradient id='a' x1='8.044' x2='23.261' y1='.044' y2='15.261' gradientUnits='userSpaceOnUse'%3e%3cstop offset='.237' stop-color='%233bc9f3'/%3e%3cstop offset='.85' stop-color='%231591d8'/%3e%3c/linearGradient%3e%3cpath fill='url(%23a)' d='M29,10H3c-0.73,0-1.32-0.59-1.32-1.32v-1.36C1.68,6.59,2.27,6,3,6h26c0.73,0,1.32,0.59,1.32,1.32v1.36C30.32,9.41,29.73,10,29,10z'/%3e%3clinearGradient id='b' x1='8.044' x2='23.261' y1='8.044' y2='23.261' gradientUnits='userSpaceOnUse'%3e%3cstop offset='.237' stop-color='%233bc9f3'/%3e%3cstop offset='.85' stop-color='%231591d8'/%3e%3c/linearGradient%3e%3cpath fill='url(%23b)' d='M29,18H3c-0.73,0-1.32-0.59-1.32-1.32v-1.36C1.68,14.59,2.27,14,3,14h26c0.73,0,1.32,0.59,1.32,1.32v1.36C30.32,17.41,29.73,18,29,18z'/%3e%3clinearGradient id='c' x1='8.044' x2='23.261' y1='16.044' y2='31.261' gradientUnits='userSpaceOnUse'%3e%3cstop offset='.237' stop-color='%233bc9f3'/%3e%3cstop offset='.85' stop-color='%231591d8'/%3e%3c/linearGradient%3e%3cpath fill='url(%23c)' d='M29,26H3c-0.73,0-1.32-0.59-1.32-1.32v-1.36C1.68,22.59,2.27,22,3,22h26c0.73,0,1.32,0.59,1.32,1.32v1.36C30.32,25.41,29.73,26,29,26z'/%3e%3c/svg%3e") !important;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 20px 20px;
+  border: none !important;
+  box-shadow: none !important;
+  background-color: transparent !important;
+  width: 32px;
+  height: 32px;
+  display: inline-block;
+  padding: 0;
+}
+
+/* Remove any border lines from toggler and icon */
+.navbar-toggler,
+.navbar-toggler-icon,
+.navbar-toggler-icon span,
+.navbar-toggler-icon .bar {
+  border: none !important;
+  box-shadow: none !important;
+  background: none !important;
+}
+
+/* Make sure offcanvas covers whole page on mobile */
+@media (max-width: 991.98px) {
+  .offcanvas,
+  .offcanvas-start,
+  .offcanvas-end,
+  .offcanvas-top,
+  .offcanvas-bottom {
+    top: 0 !important;
+    left: 0 !important;
+    right: 0 !important;
+    width: 100vw !important;
+    max-width: 100vw !important;
+    height: 100vh !important;
+    max-height: 100vh !important;
+    border: none !important;
+    border-radius: 0 !important;
+    box-shadow: none !important;
+  }
+}
+
+
+/* --- Desktop dropdown on hover, but only for desktop --- */
+@media (min-width: 992px) {
+  .navbar .dropdown:hover > .dropdown-menu {
+    display: block !important;
+    animation: fadeInDropdown 0.2s;
+  }
+  /* Hide mobile offcanvas on desktop */
+  .mobile-offcanvas,
+  .mobile-offcanvas-backdrop {
+    display: none !important;
+  }
+  .navbar-collapse {
+    display: flex !important;
+  }
+}
+
+/* Fade in animation for dropdown */
+@keyframes fadeInDropdown {
+  from { opacity: 0; transform: translateY(10px);}
+  to { opacity: 1; transform: translateY(0);}
 }
 
 /* Keep your existing desktop hover dropdown code */
@@ -323,8 +594,6 @@
   .navbar .dropdown-menu { display:block; opacity:0; visibility:hidden; transform:translateY(10px); transition:all .2s; }
   .navbar .dropdown:hover > .dropdown-menu { opacity:1; visibility:visible; transform:translateY(0); }
 }
-
-
 /*** Navbar End ***/
 
 /*** Carousel Header Start ***/

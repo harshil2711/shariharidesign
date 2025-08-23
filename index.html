@@ -33,6 +33,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    
     <link
         href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
         rel="stylesheet">
@@ -115,24 +116,34 @@
     <!-- Navbar & Hero Start -->
     <div class="container-fluid fixed-top px-0">
         <div class="header-overlay"></div>
-
+        <!-- Desktop & Mobile Navbar Header -->
         <div class="px-0">
-            <nav class="navbar navbar-expand-lg navbar-dark bg-light py-3 px-4">
+            <nav class="navbar navbar-expand-lg navbar-light bg-light py-3 px-4">
                 <div class="container-fluid d-flex flex-column flex-lg-row justify-content-between align-items-center">
+                    <!-- Mobile: Logo and toggler in one line, only visible on mobile -->
+                    <div class="w-100 d-flex d-lg-none align-items-center justify-content-between navbar-brand-and-toggler mb-3">
+                        <a href="index.html" class="navbar-brand d-flex align-items-center p-0">
+                            <img src="img/logo.png" alt="Logo" height="50" class="me-2">
+                            <h1 class="text-primary m-0 fs-4">SHREE HARI GROUP</h1>
+                        </a>
+                        <!-- Offcanvas toggler button for mobile -->
+                        <button class="navbar-toggler ms-auto d-lg-none" 
+                        type="button"
+                        data-bs-toggle="offcanvas" 
+                        data-bs-target="#offcanvasNav"
+                        aria-controls="offcanvasNav"
+                        aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                    </div>
 
-                    <!-- Logo -->
-                    <div class="ps-5 pe-5">
+                    <!-- Desktop: Logo (visible only on lg and up) -->
+                    <div class="ps-5 pe-5 d-none d-lg-block">
                         <a href="index.html" class="navbar-brand d-flex align-items-center p-0 mb-3 mb-lg-0">
                             <img src="img/logo.png" alt="Logo" height="50" class="me-2">
                             <h1 class="text-primary m-0 fs-4">SHREE HARI GROUP</h1>
                         </a>
                     </div>
-
-                    <!-- Toggler -->
-                    <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas"
-                        data-bs-target="#offcanvasNav" aria-controls="offcanvasNav" aria-label="Toggle navigation">
-                        <span class="navbar-toggler-icon"></span>
-                    </button>
 
                     <!-- Desktop Menu -->
                     <div class="collapse navbar-collapse d-none d-lg-block" id="navbarDesktop">
@@ -145,7 +156,7 @@
                                 <!-- Services dropdown -->
                                 <div class="dropdown nav-item position-static mx-3">
                                     <a href="service.html" class="nav-link dropdown-toggle d-flex align-items-center"
-                                        data-bs-toggle="dropdown" data-bs-auto-close="outside">
+                                        data-bs-toggle="dropdown" data-bs-auto-close="outside" tabindex="0">
                                         <span class="me-2">Services</span>
                                         <div class="nav-underline"></div>
                                     </a>
@@ -235,35 +246,269 @@
     </div>
 
     <!-- Offcanvas Mobile Menu -->
-    <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNav" aria-labelledby="offcanvasNavLabel">
-        <div class="offcanvas-header">
-          <h5 id="offcanvasNavLabel">Menu</h5>
-          <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+    <div class="offcanvas offcanvas-end custom-offcanvas-menu" tabindex="-1" id="offcanvasNav" aria-labelledby="offcanvasNavLabel">
+        <div class="offcanvas-header border-0 pb-0">
+            <button type="button" class="btn-close ms-auto" data-bs-dismiss="offcanvas" aria-label="Close" style="width: 2em; height: 2em; font-size: 1.5em;"></button>
         </div>
-        <div class="offcanvas-body">
-          <a href="about.html" class="nav-link">About</a>
-          <a href="service.html" class="nav-link">Services</a>
-          <a href="project.html" class="nav-link">Projects</a>
-          <a href="blog.html" class="nav-link">Blog</a>
-          <a href="contact.html" class="btn btn-warning rounded-pill mt-3">Let's Connect</a>
+        <div class="offcanvas-body px-0 pt-0">
+            <ul class="mobile-menu-list list-unstyled mb-0">
+                <li class="mobile-menu-item">
+                    <a href="about.html" class="mobile-menu-link w-100 d-flex align-items-center">About</a>
+                </li>
+                <li class="mobile-menu-item">
+                    <button class="mobile-menu-link d-flex justify-content-between align-items-center w-100" type="button" aria-expanded="false" aria-controls="servicesMenu" onclick="toggleMobileMenu('servicesMenu', this)">
+                        <span>Services</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </button>
+                    <ul class="mobile-submenu" id="servicesMenu" style="display: none; list-style-type: none; padding-left: 0;">
+                        <li>
+                            <button class="mobile-submenu-link d-flex justify-content-between align-items-center w-100" type="button" aria-expanded="false" aria-controls="constructionSubmenu" onclick="toggleMobileMenu('constructionSubmenu', this)">
+                                <span>Construction Services</span>
+                                <i class="fas fa-chevron-down"></i>
+                            </button>
+                            <ul class="mobile-submenu" id="constructionSubmenu" style="display: none; list-style-type: none; padding-left: 0;">
+                                <li>
+                                    <a class="mobile-submenu-link" href="#">Residential Construction</a>
+                                </li>
+                                <li>
+                                    <a class="mobile-submenu-link" href="#">
+                                        <img src="https://www.budventure.technology/public/frontend/images/menu_icon/NodeJS.png"
+                                            alt="Commercial Building Icon"
+                                            style="height:18px; width:auto; margin-right:6px; vertical-align:middle;">
+                                        Commercial Building
+                                    </a>
+                                </li>
+                                <li>
+                                    <a class="mobile-submenu-link" href="#">Infrastructure Development</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li>
+                            <button class="mobile-submenu-link d-flex justify-content-between align-items-center w-100" type="button" aria-expanded="false" aria-controls="designSubmenu" onclick="toggleMobileMenu('designSubmenu', this)">
+                                <span>Design Services</span>
+                                <i class="fas fa-chevron-down"></i>
+                            </button>
+                            <ul class="mobile-submenu" id="designSubmenu" style="display: none; list-style-type: none; padding-left: 0;">
+                                <li>
+                                    <a class="mobile-submenu-link" href="#">Architectural Design</a>
+                                </li>
+                                <li>
+                                    <a class="mobile-submenu-link" href="#">Interior Design</a>
+                                </li>
+                                <li>
+                                    <a class="mobile-submenu-link" href="#">Project Planning</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li>
+                            <button class="mobile-submenu-link d-flex justify-content-between align-items-center w-100" type="button" aria-expanded="false" aria-controls="consultingSubmenu" onclick="toggleMobileMenu('consultingSubmenu', this)">
+                                <span>Consulting Services</span>
+                                <i class="fas fa-chevron-down"></i>
+                            </button>
+                            <ul class="mobile-submenu" id="consultingSubmenu" style="display: none; list-style-type: none; padding-left: 0;">
+                                <li>
+                                    <a class="mobile-submenu-link" href="#">Project Management</a>
+                                </li>
+                                <li>
+                                    <a class="mobile-submenu-link" href="#">Quality Assurance</a>
+                                </li>
+                                <li>
+                                    <a class="mobile-submenu-link" href="#">Technical Consultation</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li>
+                            <button class="mobile-submenu-link d-flex justify-content-between align-items-center w-100" type="button" aria-expanded="false" aria-controls="supportSubmenu" onclick="toggleMobileMenu('supportSubmenu', this)">
+                                <span>Support Services</span>
+                                <i class="fas fa-chevron-down"></i>
+                            </button>
+                            <ul class="mobile-submenu" id="supportSubmenu" style="display: none; list-style-type: none; padding-left: 0;">
+                                <li>
+                                    <a class="mobile-submenu-link" href="#">24/7 Support</a>
+                                </li>
+                                <li>
+                                    <a class="mobile-submenu-link" href="#">Maintenance</a>
+                                </li>
+                                <li>
+                                    <a class="mobile-submenu-link" href="#">Emergency Services</a>
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
+                </li>
+                <script>
+                // Enhanced JS for toggling mobile submenu and arrow icon
+                function toggleMobileMenu(id, btn) {
+                    var submenu = document.getElementById(id);
+                    var isOpen = submenu.style.display === 'block';
+                    // Close all sibling submenus
+                    var parent = btn.parentElement.parentElement;
+                    if (parent) {
+                        Array.from(parent.children).forEach(function(li) {
+                            var ul = li.querySelector('ul.mobile-submenu');
+                            var button = li.querySelector('button[aria-controls]');
+                            if (ul && ul !== submenu) {
+                                ul.style.display = 'none';
+                                if (button) {
+                                    button.setAttribute('aria-expanded', 'false');
+                                    var icon = button.querySelector('i.fas');
+                                    if (icon) {
+                                        icon.classList.remove('fa-chevron-up');
+                                        icon.classList.add('fa-chevron-down');
+                                    }
+                                }
+                            }
+                        });
+                    }
+                    submenu.style.display = isOpen ? 'none' : 'block';
+                    btn.setAttribute('aria-expanded', !isOpen);
+
+                    // Change arrow icon
+                    var icon = btn.querySelector('i.fas');
+                    if (icon) {
+                        if (!isOpen) {
+                            icon.classList.remove('fa-chevron-down');
+                            icon.classList.add('fa-chevron-up');
+                        } else {
+                            icon.classList.remove('fa-chevron-up');
+                            icon.classList.add('fa-chevron-down');
+                        }
+                    }
+                }
+                </script>
+                <style>
+                /* Remove background and font changes for mobile submenu */
+                .mobile-submenu,
+                .mobile-menu-link,
+                .mobile-submenu-link {
+                    background: none !important;
+                    font-family: inherit !important;
+                    color: inherit !important;
+                    box-shadow: none !important;
+                }
+                .mobile-menu-link:active,
+                .mobile-menu-link:focus,
+                .mobile-menu-link:hover,
+                .mobile-submenu-link:active,
+                .mobile-submenu-link:focus,
+                .mobile-submenu-link:hover {
+                    background: none !important;
+                    color: inherit !important;
+                }
+                .mobile-submenu {
+                    padding-left: 0;
+                    margin-left: 1.5rem;
+                    border: none;
+                    list-style-type: none;
+                }
+                .mobile-submenu-link {
+                    border: none;
+                    background: none;
+                    width: 100%;
+                    text-align: left;
+                    padding: 0.5rem 0;
+                }
+                /* Remove bullet points from all nested submenus */
+                .mobile-submenu li {
+                    list-style-type: none;
+                }
+                </style>
+                <li class="mobile-menu-item">
+                    <a href="project.html" class="mobile-menu-link w-100 d-flex align-items-center">Projects</a>
+                </li>
+                <li class="mobile-menu-item">
+                    <a href="blog.html" class="mobile-menu-link w-100 d-flex align-items-center">Blog</a>
+                </li>
+                <li class="mobile-menu-item">
+                    <a href="contact.html" class="mobile-menu-link w-100 d-flex align-items-center">
+                        <span>Let's Connect</span>
+                        <i class="fas fa-arrow-right ms-3"></i>
+                    </a>
+                </li>
+            </ul>
+            <div class="mobile-contact-box mt-4 px-4 py-3">
+                <div class="d-flex align-items-center mb-2">
+                    <div class="contact-icon bg-warning text-white rounded-circle d-flex align-items-center justify-content-center me-2" style="width:32px;height:32px;">
+                        <i class="fas fa-map-marker-alt"></i>
+                    </div>
+                    <div class="contact-info">
+                        <div class="contact-label">Contact</div>
+                        <div class="contact-detail small">303, Vedanta, Opp Ushmanpura Garden, Ashram Road, Ahmedabad, Gujarat</div>
+                    </div>
+                </div>
+                <div class="d-flex align-items-center">
+                    <div class="contact-icon bg-warning text-white rounded-circle d-flex align-items-center justify-content-center me-2" style="width:32px;height:32px;">
+                        <i class="fas fa-envelope"></i>
+                    </div>
+                    <div class="contact-info">
+                        <div class="contact-detail small">info@budventure.technology</div>
+                    </div>
+                </div>
+            </div>
         </div>
-      </div>
-
-
-      <script>
-        document.addEventListener('DOMContentLoaded', function () {
-          const btn = document.querySelector('[data-bs-toggle="offcanvas"][data-bs-target="#offcanvasNav"]');
-          if (btn) {
-            btn.addEventListener('click', function () {
-              const el = document.getElementById('offcanvasNav');
-              const oc = bootstrap.Offcanvas.getOrCreateInstance(el);
-              oc.toggle();
-            });
-          }
-        });
-      </script>
-
-      
+    </div>
+    <style>
+        .custom-offcanvas-menu {
+            max-width: 340px;
+            background: #fff;
+            border-radius: 0 0 0 0;
+            box-shadow: 0 0 24px 0 rgba(0,0,0,0.08);
+        }
+        .mobile-menu-list {
+            padding: 0;
+            margin: 0;
+        }
+        .mobile-menu-item {
+            border-bottom: 1px solid #f1f1f1;
+        }
+        .mobile-menu-link {
+            background: none;
+            border: none;
+            color: #222;
+            font-size: 1.05rem;
+            padding: 1rem 1.5rem;
+            text-align: left;
+            width: 100%;
+            transition: background 0.15s;
+            outline: none;
+        }
+        .mobile-menu-link:focus,
+        .mobile-menu-link:hover {
+            background: #f8f9fa;
+            color: #0d6efd;
+        }
+        .mobile-submenu {
+            padding-left: 0;
+            background: #f8f9fa;
+        }
+        .mobile-submenu-link {
+            display: block;
+            padding: 0.75rem 2.5rem;
+            color: #222;
+            text-decoration: none;
+            font-size: 1rem;
+            transition: background 0.15s, color 0.15s;
+        }
+        .mobile-submenu-link:focus,
+        .mobile-submenu-link:hover {
+            background: #e9ecef;
+            color: #0d6efd;
+        }
+        .mobile-contact-box {
+            background: #f8f9fa;
+            border-radius: 8px;
+        }
+        .contact-icon {
+            font-size: 1.1rem;
+        }
+        .contact-label {
+            font-weight: 600;
+            font-size: 1rem;
+        }
+        .contact-detail {
+            color: #555;
+        }
+    </style>
 
     <!-- Carousel Start -->
     <div class="header-carousel owl-carousel">
@@ -628,26 +873,43 @@
     <script>
         // Initialize Owl Carousel for client slider
         document.addEventListener('DOMContentLoaded', function () {
-            $('.client-slider').owlCarousel({
-                loop: true,
-                margin: 30,
-                nav: false,
-                dots: false,
-                autoplay: true,
-                autoplayTimeout: 3000,
-                autoplayHoverPause: true,
-                responsive: {
-                    0: { items: 2 },
-                    576: { items: 3 },
-                    768: { items: 4 },
-                    992: { items: 5 },
-                    1200: { items: 6 }
-                }
-            });
+            // Ensure jQuery and Owl Carousel are loaded
+            if (typeof $ !== 'undefined' && typeof $.fn.owlCarousel === 'function') {
+                $('.client-slider').owlCarousel({
+                    loop: true,
+                    margin: 30,
+                    nav: false,
+                    dots: false,
+                    autoplay: true,
+                    autoplayTimeout: 3000,
+                    autoplayHoverPause: true,
+                    responsive: {
+                        0: { items: 2 },
+                        576: { items: 3 },
+                        768: { items: 4 },
+                        992: { items: 5 },
+                        1200: { items: 6 }
+                    }
+                });
+            } else {
+                console.warn('jQuery or Owl Carousel is not loaded.');
+            }
 
-            // Initialize tooltips
-            $('[data-bs-toggle="tooltip"]').tooltip();
+            // Initialize tooltips if Bootstrap's tooltip plugin is loaded
+            if (typeof $ !== 'undefined' && typeof $.fn.tooltip === 'function') {
+                $('[data-bs-toggle="tooltip"]').tooltip();
+            } else if (typeof bootstrap !== 'undefined' && typeof bootstrap.Tooltip === 'function') {
+                // For Bootstrap 5 with no jQuery
+                var tooltipTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="tooltip"]'));
+                tooltipTriggerList.forEach(function (tooltipTriggerEl) {
+                    new bootstrap.Tooltip(tooltipTriggerEl);
+                });
+            } else {
+                // Tooltip plugin not available
+                // console.warn('Bootstrap Tooltip plugin is not loaded.');
+            }
         });
+    </script>
     </script>
     <!-- Clients End -->
     <!-- Our Businesses Start -->
