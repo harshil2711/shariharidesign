@@ -28,7 +28,27 @@
             $('.sticky-top .container').addClass('shadow-sm').css('max-width', '100%');
         }
     });
-
+    document.addEventListener("DOMContentLoaded", function () {
+        function toggleDropdownBehavior() {
+          if (window.innerWidth >= 992) {
+            // Desktop → remove Bootstrap click toggle
+            document.querySelectorAll('.navbar .dropdown-toggle').forEach(function (dd) {
+              dd.removeAttribute('data-bs-toggle');
+            });
+          } else {
+            // Mobile → restore Bootstrap click toggle
+            document.querySelectorAll('.navbar .dropdown-toggle').forEach(function (dd) {
+              dd.setAttribute('data-bs-toggle', 'dropdown');
+            });
+          }
+        }
+      
+        // Run on load
+        toggleDropdownBehavior();
+      
+        // Re-run on resize
+        window.addEventListener('resize', toggleDropdownBehavior);
+      });
 
     // Hero Header carousel
     $(".header-carousel").owlCarousel({

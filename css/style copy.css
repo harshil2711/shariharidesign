@@ -275,56 +275,6 @@
 }
 /*** Navbar Customization End ***/
 
-/* For mobile navbar button */
-  /* --- Mobile Navbar Toggler Fix --- */
-  @media (min-width: 992px) {
-    .navbar .dropdown:hover > .dropdown-menu {
-      display: block !important;
-      animation: fadeInDropdown 0.2s;
-    }
-  }
-
-  @keyframes fadeInDropdown {
-    from { opacity: 0; transform: translateY(10px);}
-    to { opacity: 1; transform: translateY(0);}
-  }
-
-  /* --- Ensure hamburger icon is visible --- */
-  .navbar-toggler-icon {
-    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba(0,0,0,0.9)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e") !important;
-  }
-
-
-
-  /* Overlay must not catch clicks */
-.header-overlay {
-  position: absolute;
-  inset: 0;
-  z-index: 0;            /* behind */
-  pointer-events: none;  /* <-- critical */
-}
-
-/* Navbar above overlay */
-.navbar { position: relative; z-index: 2; }
-
-/* Ensure toggler clickable above everything */
-.navbar .navbar-toggler { position: relative; z-index: 3; }
-
-/* Offcanvas on top of header/overlay if your site uses high z-index */
-.offcanvas { z-index: 2000; }
-
-/* Force hamburger icon visible */
-.navbar-toggler-icon {
-  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba(0,0,0,0.9)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e") !important;
-}
-
-/* Keep your existing desktop hover dropdown code */
-@media (min-width: 992px) {
-  .navbar .dropdown-menu { display:block; opacity:0; visibility:hidden; transform:translateY(10px); transition:all .2s; }
-  .navbar .dropdown:hover > .dropdown-menu { opacity:1; visibility:visible; transform:translateY(0); }
-}
-
-
 /*** Navbar End ***/
 
 /*** Carousel Header Start ***/
