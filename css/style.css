@@ -247,7 +247,7 @@
     border-top: 1px solid rgba(0,0,0,0.1);
 }
 
-/* --- Dropdown on Hover for Desktop --- */
+/* --- Dropdown on Hover for Desktop -------- */
 @media (min-width: 992px) {
     /* Show dropdown on hover and keep it open when hovering over dropdown-menu */
     .navbar .dropdown-menu {
