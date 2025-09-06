@@ -228,153 +228,234 @@
         style="background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(img/aboutus.png); background-position: center center; background-repeat: no-repeat; background-size: cover;">
         <div class="bg-breadcrumb-single"></div>
         <div class="container text-center py-5" style="max-width: 900px;">
-            <h4 class="text-white display-4 mb-4 wow fadeInDown" data-wow-delay="0.1s">3D Printing</h4>
+            <h4 class="text-white display-4 mb-4 wow fadeInDown" data-wow-delay="0.1s">UI/UX services</h4>
         </div>
     </div>
     <!-- Header End -->
-
-    <div class="container py-5">
-        <div class="row mb-4">
-            <div class="col-12 text-start">
-                <h3 class="h5 mb-3" style="color: #0d6efd;">3D Printing &amp; Rapid Prototyping</h3>
-                <p class="lead text-start" style="font-weight: 400; font-size: 16px;">
-                    In addition to our solid modeling expertise, we now have the capability to offer rapid prototyping and 3D printing to our clients.<br>
-                    3D printing is the ultimate just-in-time method of manufacturing. Shifting from the 2D world to physical parts accelerates product development and lowers cost. 3D parts that you can touch and feel improve design communication, so you can make better decisions faster.
-                </p>
-            </div>
+    <!-- UI/UX Services Page Unique Design Start -->
+    <section class="uiux-hero-section" style="background: linear-gradient(120deg, #f8fafc 60%, #ffe0e9 100%); min-height: 420px; border-bottom-left-radius: 3rem; border-bottom-right-radius: 3rem; display: flex; align-items: center; justify-content: center; position: relative;">
+        <div class="container py-5">
+            <div class="row align-items-center">
+                <div class="col-lg-6 text-center text-lg-start mb-4 mb-lg-0">
+                    <h1 class="display-3 fw-bold mb-3" style="color: #e83e8c; font-family: 'Inter', sans-serif;">UI/UX Design Services</h1>
+                    <p class="lead mb-4" style="color: #444; max-width: 500px;">
+                        Elevate your digital presence with stunning, user-centric interfaces. We blend creativity and usability to craft experiences that delight and convert.
+                    </p>
+                    <a href="contact.html" class="btn btn-lg btn-pink rounded-pill px-5 py-3 shadow" style="background: #e83e8c; color: #fff; font-weight: 600;">
+                        Let's Design Your Vision <i class="fas fa-arrow-right ms-2"></i>
+                    </a>
+                </div>
+                <div class="col-lg-6 text-center">
+                    <!-- Lottie Animation for Mobile App Development -->
+                    <lottie-player
+                        src="https://assets1.lottiefiles.com/packages/lf20_jcikwtux.json" 
+                        background="transparent"
+                        speed="1"
+                        style="max-width: 420px; width: 100%; height: 350px;"
+                        loop
+                        autoplay
+                        class="floating-hero-img"
+                        id="mobileapp-lottie-animation"
+                    ></lottie-player>
+                    <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
+                </div>
+                
         </div>
+    </section>
 
-       
-    </div>
-
-    <!-- All Mechanical Services Section -->
-    <section class="py-5">
+    <!-- UI/UX Process Timeline Section -->
+    <section class="uiux-process-section py-5" style="background: #fff;">
         <div class="container">
-            <h2 class="mb-4" style="font-weight:700;">All Mechanical Services</h2>
-            <div class="row row-cols-1 row-cols-md-2 g-4">
-                <!-- Service 1 -->
-                <div class="col">
-                    <div class="d-flex align-items-center p-3 bg-white rounded shadow-sm h-100">
-                        <div class="me-3" style="font-size:2rem;">
-                            <i class="fa fa-cube"></i>
-                        </div>
-                        <div>
-                            <div class="fw-semibold">Modelling and Drafting</div>
-                            <a href="2D 3D.html" class="small text-primary text-decoration-none">More info</a>
-                        </div>
+            <h2 class="fw-bold text-center mb-5" style="color: #e83e8c;">Our UI/UX Design Process</h2>
+            <div class="row justify-content-center align-items-center g-4 uiux-timeline">
+                <div class="col-md-2 col-6 text-center">
+                    <div class="uiux-timeline-step">
+                        <div class="uiux-timeline-icon mb-3"><i class="fas fa-search"></i></div>
+                        <h6 class="fw-bold mb-2">Research</h6>
+                        <p class="small text-muted mb-0">Understanding your users, goals, and market.</p>
                     </div>
                 </div>
-                <!-- Service 2 -->
-                <div class="col">
-                    <div class="d-flex align-items-center p-3 bg-white rounded shadow-sm h-100">
-                        <div class="me-3" style="font-size:2rem;">
-                            <i class="bi bi-file-earmark-code"></i>
-                        </div>
-                        <div>
-                            <div class="fw-semibold">CAD Conversion and Migration</div>
-                            <a href="Cadconversation.html" class="small text-primary text-decoration-none">More info</a>
-                        </div>
+                <div class="col-md-1 d-none d-md-block text-center">
+                    <i class="fas fa-arrow-right uiux-timeline-arrow"></i>
+                </div>
+                <div class="col-md-2 col-6 text-center">
+                    <div class="uiux-timeline-step">
+                        <div class="uiux-timeline-icon mb-3"><i class="fas fa-pencil-ruler"></i></div>
+                        <h6 class="fw-bold mb-2">Wireframing</h6>
+                        <p class="small text-muted mb-0">Blueprinting layouts & user flows.</p>
                     </div>
                 </div>
-                <!-- Service 3 -->
-                <div class="col">
-                    <div class="d-flex align-items-center p-3 bg-white rounded shadow-sm h-100">
-                        <div class="me-3" style="font-size:2rem;">
-                            <i class="bi bi-gear"></i>
-                        </div>
-                        <div>
-                            <div class="fw-semibold">Machine Design &amp; Development</div>
-                            <a href="machinedesign.html" class="small text-primary text-decoration-none">More info</a>
-                        </div>
+                <div class="col-md-1 d-none d-md-block text-center">
+                    <i class="fas fa-arrow-right uiux-timeline-arrow"></i>
+                </div>
+                <div class="col-md-2 col-6 text-center">
+                    <div class="uiux-timeline-step">
+                        <div class="uiux-timeline-icon mb-3"><i class="fas fa-palette"></i></div>
+                        <h6 class="fw-bold mb-2">Visual Design</h6>
+                        <p class="small text-muted mb-0">Crafting beautiful, on-brand interfaces.</p>
                     </div>
                 </div>
-                <!-- Service 4 -->
-                <div class="col">
-                    <div class="d-flex align-items-center p-3 bg-white rounded shadow-sm h-100">
-                        <div class="me-3" style="font-size:2rem;">
-                            <i class="bi bi-arrow-repeat"></i>
-                        </div>
-                        <div>
-                            <div class="fw-semibold">Reverse Engineering</div>
-                            <a href="reverseeng.html" class="small text-primary text-decoration-none">More info</a>
-                        </div>
+                <div class="col-md-1 d-none d-md-block text-center">
+                    <i class="fas fa-arrow-right uiux-timeline-arrow"></i>
+                </div>
+                <div class="col-md-2 col-6 text-center">
+                    <div class="uiux-timeline-step">
+                        <div class="uiux-timeline-icon mb-3"><i class="fas fa-vial"></i></div>
+                        <h6 class="fw-bold mb-2">Prototyping & Testing</h6>
+                        <p class="small text-muted mb-0">Interactive demos & user feedback.</p>
                     </div>
                 </div>
-                <!-- Service 5 -->
-                <div class="col">
-                    <div class="d-flex align-items-center p-3 bg-white rounded shadow-sm h-100">
-                        <div class="me-3" style="font-size:2rem;">
-                            <i class="fas fa-chart-line"></i>
-                        </div>
-                        <div>
-                            <div class="fw-semibold">Advanced Simulation and Design Optimization</div>
-                            <a href="advancesimulation.html" class="small text-primary text-decoration-none">More info</a>
-                        </div>
-                    </div>
+                <div class="col-md-1 d-none d-md-block text-center">
+                    <i class="fas fa-arrow-right uiux-timeline-arrow"></i>
                 </div>
-                <!-- Service 6 -->
-                <div class="col">
-                    <div class="d-flex align-items-center p-3 bg-white rounded shadow-sm h-100">
-                        <div class="me-3" style="font-size:2rem;">
-                            <i class="bi bi-tools"></i>
-                        </div>
-                        <div>
-                            <div class="fw-semibold">Tooling and Fixture Development</div>
-                            <a href="toolingandfixture.html" class="small text-primary text-decoration-none">More info</a>
-                        </div>
-                    </div>
-                </div>
-                <!-- Service 7 -->
-                <div class="col">
-                    <div class="d-flex align-items-center p-3 bg-white rounded shadow-sm h-100">
-                        <div class="me-3" style="font-size:2rem;">
-                            <i class="bi bi-diagram-3"></i>
-                        </div>
-                        <div>
-                            <div class="fw-semibold">Piping Design &amp; Drafting</div>
-                            <a href="pipedrafting.html" class="small text-primary text-decoration-none">More info</a>
-                        </div>
-                    </div>
-                </div>
-                <!-- Service 8 -->
-                <div class="col">
-                    <div class="d-flex align-items-center p-3 bg-white rounded shadow-sm h-100">
-                        <div class="me-3" style="font-size:2rem;">
-                            <i class="bi bi-wind"></i>
-                        </div>
-                        <div>
-                            <div class="fw-semibold">HVAC Design and Engineering</div>
-                            <a href="hvacdesign.html" class="small text-primary text-decoration-none">More info</a>
-                        </div>
-                    </div>
-                </div>
-                <!-- Service 9 -->
-                <div class="col">
-                    <div class="d-flex align-items-center p-3 bg-white rounded shadow-sm h-100">
-                        <div class="me-3" style="font-size:2rem;">
-                            <i class="bi bi-cpu"></i>
-                        </div>
-                        <div>
-                            <div class="fw-semibold">Smart Manufacturing &amp; IIoT</div>
-                            <a href="smartmanufacturing.html" class="small text-primary text-decoration-none">More info</a>
-                        </div>
-                    </div>
-                </div>
-                <!-- Service 10 -->
-                <div class="col">
-                    <div class="d-flex align-items-center p-3 bg-white rounded shadow-sm h-100">
-                        <div class="me-3" style="font-size:2rem;">
-                            <i class="bi bi-printer"></i>
-                        </div>
-                        <div>
-                            <div class="fw-semibold">3D Printing &amp; Rapid Prototyping</div>
-                            <a href="3dprinting.html" class="small text-primary text-decoration-none">More info</a>
-                        </div>
+                <div class="col-md-2 col-6 text-center">
+                    <div class="uiux-timeline-step">
+                        <div class="uiux-timeline-icon mb-3"><i class="fas fa-rocket"></i></div>
+                        <h6 class="fw-bold mb-2">Delivery</h6>
+                        <p class="small text-muted mb-0">Hand-off & launch support.</p>
                     </div>
                 </div>
             </div>
         </div>
     </section>
+
+    <!-- UI/UX Services Features Section -->
+    <section class="uiux-features-section py-5" style="background: linear-gradient(120deg, #ffe0e9 60%, #f8fafc 100%);">
+        <div class="container">
+            <h2 class="fw-bold text-center mb-5" style="color: #e83e8c;">What We Offer</h2>
+            <div class="row g-4 justify-content-center">
+                <div class="col-md-4">
+                    <div class="uiux-feature-card h-100 text-center p-4">
+                        <div class="mb-3">
+                            <i class="fas fa-mobile-alt fa-2x" style="color: #e83e8c;"></i>
+                        </div>
+                        <h5 class="fw-bold mb-2">Mobile App UI/UX</h5>
+                        <p class="text-muted mb-0">Intuitive, modern interfaces for iOS & Android apps that keep users engaged.</p>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="uiux-feature-card h-100 text-center p-4">
+                        <div class="mb-3">
+                            <i class="fas fa-desktop fa-2x" style="color: #6610f2;"></i>
+                        </div>
+                        <h5 class="fw-bold mb-2">Web UI/UX</h5>
+                        <p class="text-muted mb-0">Responsive, accessible, and visually stunning web experiences for all devices.</p>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="uiux-feature-card h-100 text-center p-4">
+                        <div class="mb-3">
+                            <i class="fas fa-cubes fa-2x" style="color: #20c997;"></i>
+                        </div>
+                        <h5 class="fw-bold mb-2">Branding & Design Systems</h5>
+                        <p class="text-muted mb-0">Consistent branding, iconography, and reusable design systems for scale.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- UI/UX Testimonials Section -->
+    <!-- (Removed duplicate UI/UX Process Highlights Section as it already exists above) -->
+
+    <!-- UI/UX CTA Section -->
+    <section class="uiux-cta-section py-5" style="background: linear-gradient(120deg, #e83e8c 60%); border-radius: 2rem; margin: 3rem auto; max-width: 900px; box-shadow: 0 8px 32px rgba(232,62,140,0.10);">
+        <div class="container text-center text-white">
+            <h2 class="fw-bold mb-3">Ready to Create Exceptional Experiences?</h2>
+            <p class="lead mb-4">Let’s collaborate to design products your users will love.</p>
+            <a href="contact.html" class="btn btn-success btn-lg rounded-pill px-5 py-3 fw-bold" style="background: #030303a8; border: none; color: #fff;">
+                Get in Touch <i class="fas fa-arrow-right ms-2"></i>
+            </a>
+        </div>
+    </section>
+
+    <!-- Custom Styles for UI/UX Page -->
+    <style>
+        .btn-pink {
+            background: #e83e8c;
+            color: #fff;
+            border: none;
+        }
+        .btn-pink:hover, .btn-pink:focus {
+            background: #c2185b;
+            color: #fff;
+        }
+        .uiux-timeline {
+            display: flex;
+            flex-wrap: wrap;
+            align-items: stretch;
+            justify-content: center;
+            gap: 1.5rem 0;
+        }
+        .uiux-timeline-step {
+            background: #fff;
+            border-radius: 1.5rem;
+            padding: 1.5rem 1rem;
+            min-width: 160px;
+            box-shadow: 0 2px 12px rgba(232,62,140,0.07);
+            margin: 0 auto;
+        }
+        .uiux-timeline-icon {
+            font-size: 2rem;
+            color: #e83e8c;
+            background: #ffe0e9;
+            border-radius: 50%;
+            width: 48px;
+            height: 48px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto;
+        }
+        .uiux-timeline-arrow {
+            font-size: 2rem;
+            color: #e83e8c;
+            margin-top: 2.5rem;
+        }
+        .uiux-feature-card {
+            border-radius: 1.5rem;
+            background: linear-gradient(135deg, #fff 80%, #ffe0e9 100%);
+            box-shadow: 0 2px 12px rgba(232,62,140,0.07);
+            transition: box-shadow 0.3s, transform 0.3s;
+        }
+        .uiux-feature-card:hover {
+            box-shadow: 0 8px 32px rgba(232,62,140,0.12), 0 1.5px 8px rgba(232,62,140,0.10);
+            transform: translateY(-8px) scale(1.03);
+            z-index: 2;
+        }
+        .uiux-testimonial-card {
+            border-radius: 1.5rem;
+            background: #f8fafc;
+            box-shadow: 0 2px 12px rgba(102,16,242,0.07);
+            min-height: 220px;
+        }
+        @media (max-width: 991.98px) {
+            .uiux-hero-section {
+                min-height: 320px;
+                border-bottom-left-radius: 1.5rem;
+                border-bottom-right-radius: 1.5rem;
+            }
+            .uiux-timeline {
+                flex-direction: column;
+                gap: 0.5rem;
+            }
+            .uiux-timeline-arrow {
+                display: none !important;
+            }
+        }
+        @media (max-width: 767.98px) {
+            .uiux-hero-section {
+                border-bottom-left-radius: 1rem;
+                border-bottom-right-radius: 1rem;
+                padding-bottom: 2rem;
+            }
+            .uiux-feature-card, .uiux-testimonial-card {
+                min-height: unset;
+            }
+        }
+    </style>
+    <!-- UI/UX Services Page Unique Design End -->
+
 
     <!-- Optionally, include Bootstrap Icons for checkmarks -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">

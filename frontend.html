@@ -228,152 +228,216 @@
         style="background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(img/aboutus.png); background-position: center center; background-repeat: no-repeat; background-size: cover;">
         <div class="bg-breadcrumb-single"></div>
         <div class="container text-center py-5" style="max-width: 900px;">
-            <h4 class="text-white display-4 mb-4 wow fadeInDown" data-wow-delay="0.1s">3D Printing</h4>
+            <h4 class="text-white display-4 mb-4 wow fadeInDown" data-wow-delay="0.1s">Frontend Development Services</h4>
         </div>
     </div>
     <!-- Header End -->
 
-    <div class="container py-5">
-        <div class="row mb-4">
-            <div class="col-12 text-start">
-                <h3 class="h5 mb-3" style="color: #0d6efd;">3D Printing &amp; Rapid Prototyping</h3>
-                <p class="lead text-start" style="font-weight: 400; font-size: 16px;">
-                    In addition to our solid modeling expertise, we now have the capability to offer rapid prototyping and 3D printing to our clients.<br>
-                    3D printing is the ultimate just-in-time method of manufacturing. Shifting from the 2D world to physical parts accelerates product development and lowers cost. 3D parts that you can touch and feel improve design communication, so you can make better decisions faster.
-                </p>
-            </div>
-        </div>
+    <!-- Frontend Development Services - Creative Page -->
 
-       
-    </div>
-
-    <!-- All Mechanical Services Section -->
-    <section class="py-5">
+    <section class="py-5 bg-light position-relative overflow-hidden">
         <div class="container">
-            <h2 class="mb-4" style="font-weight:700;">All Mechanical Services</h2>
-            <div class="row row-cols-1 row-cols-md-2 g-4">
-                <!-- Service 1 -->
-                <div class="col">
-                    <div class="d-flex align-items-center p-3 bg-white rounded shadow-sm h-100">
-                        <div class="me-3" style="font-size:2rem;">
-                            <i class="fa fa-cube"></i>
+            <div class="row align-items-center mb-5">
+                <div class="col-lg-7 mb-4 mb-lg-0">
+                    <h1 class="display-4 mb-3 wow fadeInDown" data-wow-delay="0.1s" style="color: #76aed6; font-weight: 600;">
+                        Creative Frontend Development Services
+                    </h1>
+                    <p class="lead text-muted wow fadeIn" data-wow-delay="0.2s" style="font-size: 1.2rem;">
+                        Transform your ideas into stunning, interactive, and high-performing digital experiences. Our frontend team crafts pixel-perfect, responsive, and accessible interfaces that delight users and drive business growth.
+                    </p>
+                    <ul class="list-unstyled mt-4">
+                        <li class="mb-2 wow fadeInLeft" data-wow-delay="0.3s"><i class="bi bi-check-circle-fill text-primary me-2"></i> Modern UI/UX Design</li>
+                        <li class="mb-2 wow fadeInLeft" data-wow-delay="0.4s"><i class="bi bi-check-circle-fill text-primary me-2"></i> Responsive Web Development</li>
+                        <li class="mb-2 wow fadeInLeft" data-wow-delay="0.5s"><i class="bi bi-check-circle-fill text-primary me-2"></i> React, Angular, Vue.js, Svelte</li>
+                        <li class="mb-2 wow fadeInLeft" data-wow-delay="0.6s"><i class="bi bi-check-circle-fill text-primary me-2"></i> Animation & Micro-interactions</li>
+                        <li class="mb-2 wow fadeInLeft" data-wow-delay="0.7s"><i class="bi bi-check-circle-fill text-primary me-2"></i> Accessibility & Performance Optimization</li>
+                    </ul>
+                    <a href="contact.html" class="btn btn-primary btn-lg rounded-pill mt-4 px-5 py-2 shadow wow fadeInUp" data-wow-delay="0.8s">
+                        Get Started <i class="fas fa-arrow-right ms-2"></i>
+                    </a>
+                </div>
+                <div class="col-lg-5 text-center wow fadeInRight" data-wow-delay="0.3s">
+                    <!-- Lottie Animation for Frontend Development (from another source) -->
+                    <lottie-player
+                        src="https://assets2.lottiefiles.com/packages/lf20_yr6zz3wv.json"
+                        background="transparent"
+                        speed="1"
+                        style="max-height: 350px; width: 100%;"
+                        loop
+                        autoplay
+                        class="floating-hero-img"
+                        id="frontend-lottie-animation"
+                    ></lottie-player>
+                    <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
+                </div>
+            
+            </div>
+        </div>
+        <style>
+            .text-gradient {
+                background: linear-gradient(90deg, #0d6efd 40%, #6610f2 100%);
+                -webkit-background-clip: text;
+                -webkit-text-fill-color: transparent;
+                background-clip: text;
+                color: transparent;
+            }
+            .floating-hero-img {
+                animation: floatY 3s ease-in-out infinite;
+            }
+            @keyframes floatY {
+                0%, 100% { transform: translateY(0);}
+                50% { transform: translateY(-18px);}
+            }
+        </style>
+    </section>
+
+    <!-- Our Frontend Services Grid -->
+    <section class="py-5 bg-white">
+        <div class="container">
+            <h2 class="text-center fw-bold mb-5 wow fadeInUp" data-wow-delay="0.1s" style="color: #0d6efd;">Our Frontend Expertise</h2>
+            <div class="row g-4">
+                <!-- Service Card 1 -->
+                <div class="col-md-6 col-lg-4">
+                    <div class="service-card-creative h-100 p-4 text-center shadow-sm wow fadeInUp" data-wow-delay="0.2s">
+                        <div class="service-icon mb-3 text-primary fs-1">
+                            <i class="bi bi-easel2"></i>
                         </div>
-                        <div>
-                            <div class="fw-semibold">Modelling and Drafting</div>
-                            <a href="2D 3D.html" class="small text-primary text-decoration-none">More info</a>
-                        </div>
+                        <h5 class="fw-semibold mb-2">UI/UX Design</h5>
+                        <p class="text-muted mb-0">Intuitive, visually stunning interfaces using Figma, Adobe XD, and Sketch. We focus on user journeys and brand identity.</p>
                     </div>
                 </div>
-                <!-- Service 2 -->
-                <div class="col">
-                    <div class="d-flex align-items-center p-3 bg-white rounded shadow-sm h-100">
-                        <div class="me-3" style="font-size:2rem;">
-                            <i class="bi bi-file-earmark-code"></i>
+                <!-- Service Card 2 -->
+                <div class="col-md-6 col-lg-4">
+                    <div class="service-card-creative h-100 p-4 text-center shadow-sm wow fadeInUp" data-wow-delay="0.3s">
+                        <div class="service-icon mb-3 text-success fs-1">
+                            <i class="bi bi-phone"></i>
                         </div>
-                        <div>
-                            <div class="fw-semibold">CAD Conversion and Migration</div>
-                            <a href="Cadconversation.html" class="small text-primary text-decoration-none">More info</a>
-                        </div>
+                        <h5 class="fw-semibold mb-2">Responsive Web Apps</h5>
+                        <p class="text-muted mb-0">Seamless experiences across devices. Mobile-first, cross-browser, and lightning-fast web applications.</p>
                     </div>
                 </div>
-                <!-- Service 3 -->
-                <div class="col">
-                    <div class="d-flex align-items-center p-3 bg-white rounded shadow-sm h-100">
-                        <div class="me-3" style="font-size:2rem;">
-                            <i class="bi bi-gear"></i>
+                <!-- Service Card 3 -->
+                <div class="col-md-6 col-lg-4">
+                    <div class="service-card-creative h-100 p-4 text-center shadow-sm wow fadeInUp" data-wow-delay="0.4s">
+                        <div class="service-icon mb-3 text-danger fs-1">
+                            <i class="bi bi-code-slash"></i>
                         </div>
-                        <div>
-                            <div class="fw-semibold">Machine Design &amp; Development</div>
-                            <a href="machinedesign.html" class="small text-primary text-decoration-none">More info</a>
-                        </div>
+                        <h5 class="fw-semibold mb-2">React, Angular, Vue.js</h5>
+                        <p class="text-muted mb-0">Modern JavaScript frameworks for scalable, maintainable, and interactive web solutions.</p>
                     </div>
                 </div>
-                <!-- Service 4 -->
-                <div class="col">
-                    <div class="d-flex align-items-center p-3 bg-white rounded shadow-sm h-100">
-                        <div class="me-3" style="font-size:2rem;">
-                            <i class="bi bi-arrow-repeat"></i>
+                <!-- Service Card 4 -->
+                <div class="col-md-6 col-lg-4">
+                    <div class="service-card-creative h-100 p-4 text-center shadow-sm wow fadeInUp" data-wow-delay="0.5s">
+                        <div class="service-icon mb-3 text-info fs-1">
+                            <i class="bi bi-lightning-charge"></i>
                         </div>
-                        <div>
-                            <div class="fw-semibold">Reverse Engineering</div>
-                            <a href="reverseeng.html" class="small text-primary text-decoration-none">More info</a>
-                        </div>
+                        <h5 class="fw-semibold mb-2">Performance Optimization</h5>
+                        <p class="text-muted mb-0">Speed matters! We optimize for Core Web Vitals, accessibility, and SEO to ensure your site stands out.</p>
                     </div>
                 </div>
-                <!-- Service 5 -->
-                <div class="col">
-                    <div class="d-flex align-items-center p-3 bg-white rounded shadow-sm h-100">
-                        <div class="me-3" style="font-size:2rem;">
-                            <i class="fas fa-chart-line"></i>
+                <!-- Service Card 5 -->
+                <div class="col-md-6 col-lg-4">
+                    <div class="service-card-creative h-100 p-4 text-center shadow-sm wow fadeInUp" data-wow-delay="0.6s">
+                        <div class="service-icon mb-3 text-warning fs-1">
+                            <i class="bi bi-stars"></i>
                         </div>
-                        <div>
-                            <div class="fw-semibold">Advanced Simulation and Design Optimization</div>
-                            <a href="advancesimulation.html" class="small text-primary text-decoration-none">More info</a>
-                        </div>
+                        <h5 class="fw-semibold mb-2">Animations & Micro-interactions</h5>
+                        <p class="text-muted mb-0">Bring your UI to life with smooth animations, engaging transitions, and delightful micro-interactions.</p>
                     </div>
                 </div>
-                <!-- Service 6 -->
-                <div class="col">
-                    <div class="d-flex align-items-center p-3 bg-white rounded shadow-sm h-100">
-                        <div class="me-3" style="font-size:2rem;">
-                            <i class="bi bi-tools"></i>
+                <!-- Service Card 6 -->
+                <div class="col-md-6 col-lg-4">
+                    <div class="service-card-creative h-100 p-4 text-center shadow-sm wow fadeInUp" data-wow-delay="0.7s">
+                        <div class="service-icon mb-3 text-secondary fs-1">
+                            <i class="bi bi-universal-access"></i>
                         </div>
-                        <div>
-                            <div class="fw-semibold">Tooling and Fixture Development</div>
-                            <a href="toolingandfixture.html" class="small text-primary text-decoration-none">More info</a>
-                        </div>
-                    </div>
-                </div>
-                <!-- Service 7 -->
-                <div class="col">
-                    <div class="d-flex align-items-center p-3 bg-white rounded shadow-sm h-100">
-                        <div class="me-3" style="font-size:2rem;">
-                            <i class="bi bi-diagram-3"></i>
-                        </div>
-                        <div>
-                            <div class="fw-semibold">Piping Design &amp; Drafting</div>
-                            <a href="pipedrafting.html" class="small text-primary text-decoration-none">More info</a>
-                        </div>
-                    </div>
-                </div>
-                <!-- Service 8 -->
-                <div class="col">
-                    <div class="d-flex align-items-center p-3 bg-white rounded shadow-sm h-100">
-                        <div class="me-3" style="font-size:2rem;">
-                            <i class="bi bi-wind"></i>
-                        </div>
-                        <div>
-                            <div class="fw-semibold">HVAC Design and Engineering</div>
-                            <a href="hvacdesign.html" class="small text-primary text-decoration-none">More info</a>
-                        </div>
-                    </div>
-                </div>
-                <!-- Service 9 -->
-                <div class="col">
-                    <div class="d-flex align-items-center p-3 bg-white rounded shadow-sm h-100">
-                        <div class="me-3" style="font-size:2rem;">
-                            <i class="bi bi-cpu"></i>
-                        </div>
-                        <div>
-                            <div class="fw-semibold">Smart Manufacturing &amp; IIoT</div>
-                            <a href="smartmanufacturing.html" class="small text-primary text-decoration-none">More info</a>
-                        </div>
-                    </div>
-                </div>
-                <!-- Service 10 -->
-                <div class="col">
-                    <div class="d-flex align-items-center p-3 bg-white rounded shadow-sm h-100">
-                        <div class="me-3" style="font-size:2rem;">
-                            <i class="bi bi-printer"></i>
-                        </div>
-                        <div>
-                            <div class="fw-semibold">3D Printing &amp; Rapid Prototyping</div>
-                            <a href="3dprinting.html" class="small text-primary text-decoration-none">More info</a>
-                        </div>
+                        <h5 class="fw-semibold mb-2">Accessibility & Compliance</h5>
+                        <p class="text-muted mb-0">WCAG-compliant, accessible interfaces for everyone. We believe in inclusive digital experiences.</p>
                     </div>
                 </div>
             </div>
         </div>
+        <style>
+            .service-card-creative {
+                border-radius: 1.5rem;
+                background: linear-gradient(135deg, #f8f9fa 80%, #e9ecef 100%);
+                transition: box-shadow 0.3s, transform 0.3s;
+                border: 2px solid transparent;
+            }
+            .service-card-creative:hover {
+                box-shadow: 0 8px 32px rgba(13,110,253,0.12), 0 1.5px 8px rgba(13,110,253,0.10);
+                border-color: #0d6efd;
+                transform: translateY(-8px) scale(1.03);
+                z-index: 2;
+            }
+            .service-icon {
+                transition: color 0.2s;
+            }
+            .service-card-creative:hover .service-icon {
+                color: #0d6efd !important;
+            }
+        </style>
+    </section>
+
+    <!-- Technologies We Use -->
+    <section class="py-5" style="background: linear-gradient(135deg, #f8fafc 70%, #e3f2fd 100%);">
+        <div class="container">
+            <h2 class="text-center fw-bold mb-4 wow fadeInUp" data-wow-delay="0.1s" style="color: #0d6efd;">Technologies We Love</h2>
+            <div class="d-flex flex-wrap justify-content-center align-items-center gap-4">
+                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg" alt="HTML5" title="HTML5" style="height:48px; filter: brightness(1.1) saturate(0.9);">
+                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg" alt="CSS3" title="CSS3" style="height:48px; filter: brightness(1.1) saturate(0.9);">
+                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" alt="JavaScript" title="JavaScript" style="height:48px; filter: brightness(1.1) saturate(0.9);">
+                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/typescript/typescript-original.svg" alt="TypeScript" title="TypeScript" style="height:48px; filter: brightness(1.1) saturate(0.9);">
+                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg" alt="React" title="React" style="height:48px; filter: brightness(1.1) saturate(0.9);">
+                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nextjs/nextjs-original.svg" alt="Next.js" title="Next.js" style="height:48px; filter: brightness(1.1) saturate(0.9); background: #fff; border-radius: 8px;">
+                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/angularjs/angularjs-original.svg" alt="Angular" title="Angular" style="height:48px; filter: brightness(1.1) saturate(0.9);">
+                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/vuejs/vuejs-original.svg" alt="Vue.js" title="Vue.js" style="height:48px; filter: brightness(1.1) saturate(0.9);">
+                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nuxtjs/nuxtjs-original.svg" alt="Nuxt.js" title="Nuxt.js" style="height:48px; filter: brightness(1.1) saturate(0.9);">
+                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/svelte/svelte-original.svg" alt="Svelte" title="Svelte" style="height:48px; filter: brightness(1.1) saturate(0.9);">
+               
+                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/tailwindcss/tailwindcss-original.svg" alt="Tailwind CSS" title="Tailwind CSS" style="height:48px; filter: brightness(1.1) saturate(0.9); background: #fff; border-radius: 8px;">
+                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/bootstrap/bootstrap-original.svg" alt="Bootstrap" title="Bootstrap" style="height:48px; filter: brightness(1.1) saturate(0.9);">
+                <img src="https://raw.githubusercontent.com/mui/material-ui/master/docs/public/static/logo.svg" alt="Material UI" title="Material UI" style="height:48px; filter: brightness(1.1) saturate(0.9); background: #fff; border-radius: 8px;">
+                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/figma/figma-original.svg" alt="Figma" title="Figma" style="height:48px; filter: brightness(1.1) saturate(0.9);">
+                
+                <img src="https://vitejs.dev/logo.svg" alt="Vite" title="Vite" style="height:48px; filter: brightness(1.1) saturate(0.9); background: #fff; border-radius: 8px;">
+                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/webpack/webpack-original.svg" alt="Webpack" title="Webpack" style="height:48px; filter: brightness(1.1) saturate(0.9);">
+            </div>
+        </div>
+    </section>
+
+    <!-- Call to Action -->
+    <section class="py-5 text-center position-relative" style="background: linear-gradient(120deg, #e3f2fd 60%, #f8fafc 100%); color: #444;">
+        <div class="container">
+            <h2 class="display-5 fw-bold mb-3 wow fadeInDown" data-wow-delay="0.1s" style="color: #5e60ce;">Ready to Elevate Your Frontend?</h2>
+            <p class="lead mb-4 wow fadeIn" data-wow-delay="0.2s" style="color: #6c757d;">Let’s build something beautiful, fast, and user-friendly together. Our creative frontend team is just a click away.</p>
+            <a href="contact.html" class="btn btn-outline-primary btn-lg rounded-pill px-4 py-2 shadow wow fadeInUp cta-btn-consult" data-wow-delay="0.3s" style="background: #fff; color: #5e60ce; border: 2px solid #bdbdfc; white-space: nowrap;">
+                Request a Free Consult <i class="fas fa-arrow-right ms-2"></i>
+            </a>
+            <style>
+                .cta-btn-consult:hover, .cta-btn-consult:focus {
+                    background: #5e60ce !important;
+                    color: #fff !important;
+                    border-color: #5e60ce !important;
+                    box-shadow: 0 8px 32px rgba(94,96,206,0.15), 0 1.5px 8px rgba(94,96,206,0.10);
+                }
+                .cta-btn-consult:hover .fa-arrow-right, .cta-btn-consult:focus .fa-arrow-right {
+                    color: #fff !important;
+                }
+                @media (max-width: 576px) {
+                    .cta-btn-consult {
+                        font-size: 1rem;
+                        padding-left: 1.25rem !important;
+                        padding-right: 1.25rem !important;
+                        white-space: nowrap;
+                    }
+                }
+            </style>
+        </div>
+        <svg class="position-absolute bottom-0 start-0 w-100" height="40" viewBox="0 0 1440 40" fill="none" xmlns="http://www.w3.org/2000/svg" style="z-index:1;">
+            <path d="M0,0 C480,40 960,0 1440,40 L1440,40 L0,40 Z" fill="#f8fafc"/>
+        </svg>
     </section>
 
     <!-- Optionally, include Bootstrap Icons for checkmarks -->

@@ -1,0 +1,727 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>Investa - Investment Website Template</title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta content="" name="keywords">
+    <meta content="" name="description">
+
+    <!-- Google Web Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500;600;700&family=Roboto:wght@400;500;700&display=swap"
+        rel="stylesheet">
+
+    <!-- Icon Font Stylesheet -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
+
+    <!-- Libraries Stylesheet -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+    <link href="lib/animate/animate.min.css" rel="stylesheet">
+    <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+    <link href="lib/lightbox/css/lightbox.min.css" rel="stylesheet">
+
+
+    <!-- Customized Bootstrap Stylesheet -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Template Stylesheet -->
+    <link href="css/style.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
+        rel="stylesheet">
+    <style>
+        body {
+            font-family: "Inter", sans-serif;
+            font-weight: 400;
+            font-optical-sizing: auto;
+            line-height: 1.6;
+            color: #333;
+            font-style: normal;
+        }
+
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6 {
+            font-weight: 600;
+            line-height: 1.2;
+        }
+
+        .text-primary {
+            font-weight: 500;
+        }
+
+        .btn {
+            font-weight: 500;
+            letter-spacing: 0.5px;
+        }
+    </style>
+
+</head>
+
+<body>
+
+    <!-- Spinner Start -->
+    <div id="spinner"
+        class="show bg-white position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center">
+        <div class="spinner-border text-primary" style="width: 3rem; height: 3rem;" role="status">
+            <span class="sr-only">Loading...</span>
+        </div>
+    </div>
+    <!-- Spinner End -->
+
+
+
+    <!-- Navbar & Hero Start -->
+    <div class="container-fluid fixed-top px-0">
+        <!-- overlay — keep if you want a tint, but let it sit behind content -->
+        <div class="header-overlay"></div>
+
+        <div class="px-0">
+            <nav class="navbar navbar-expand-lg navbar-dark bg-light py-3 px-4">
+                <div class="container-fluid d-flex flex-column flex-lg-row justify-content-between align-items-center">
+
+                    <!-- Logo -->
+                    <div class="ps-5 pe-5">
+                        <a href="index.html" class="navbar-brand d-flex align-items-center p-0 mb-3 mb-lg-0">
+                            <img src="img/logo.png" alt="Logo" height="50" class="me-2">
+                            <h1 class="text-primary m-0 fs-4">SHREE HARI GROUP</h1>
+                        </a>
+                    </div>
+
+                    <!-- Mobile toggle -->
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#navbarCollapse">
+                        <span class="fa fa-bars"></span>
+                    </button>
+
+                    <!-- Nav links -->
+                    <div class="collapse navbar-collapse mx-auto" id="navbarCollapse">
+                        <div class="navbar-nav py-0 px-4 w-100 d-flex align-items-center">
+
+                            <!-- Center nav area -->
+                            <div
+                                class="d-flex flex-column flex-lg-row align-items-center justify-content-center gap-3 flex-grow-1">
+                                <a href="about.html" class="nav-item nav-link position-relative mx-3">About<div
+                                        class="nav-underline"></div></a>
+
+                                <!-- Services dropdown -->
+                                <div class="dropdown nav-item position-static mx-3">
+                                    <a href="service.html" class="nav-link dropdown-toggle d-flex align-items-center"
+                                        data-bs-toggle="dropdown" data-bs-auto-close="outside">
+                                        <span class="me-2">Services</span>
+                                        <div class="nav-underline"></div>
+                                    </a>
+
+                                    <!-- use container-fluid here so it doesn't have Bootstrap's max-width -->
+                                    <div class="dropdown-menu bg-white border-0 rounded-0 rounded-bottom m-0 p-0 w-100"
+                                        style="margin-top: 0 !important;">
+                                        <div class="container-fluid py-4">
+                                            <div class="row">
+                                                <div class="col-md-3">
+                                                    <h6 class="text-dark mb-3">Construction Services</h6>
+                                                    <a class="dropdown-item" href="#">Residential Construction</a>
+                                                    <a class="dropdown-item" href="#">
+                                                        <img src="https://www.budventure.technology/public/frontend/images/menu_icon/NodeJS.png" alt="Commercial Building Icon" style="height:18px; width:auto; margin-right:6px; vertical-align:middle;">
+                                                        Commercial Building
+                                                    </a>
+                                                    <a class="dropdown-item" href="#">Infrastructure Development</a>
+                                                </div>
+                                                <div class="col-md-3">
+                                                    <h6 class="text-dark mb-3">Design Services</h6>
+                                                    <a class="dropdown-item" href="#">Architectural Design</a>
+                                                    <a class="dropdown-item" href="#">Interior Design</a>
+                                                    <a class="dropdown-item" href="#">Project Planning</a>
+                                                </div>
+                                                <div class="col-md-3">
+                                                    <h6 class="text-dark mb-3">Consulting Services</h6>
+                                                    <a class="dropdown-item" href="#">Project Management</a>
+                                                    <a class="dropdown-item" href="#">Quality Assurance</a>
+                                                    <a class="dropdown-item" href="#">Technical Consultation</a>
+                                                </div>
+                                                <div class="col-md-3">
+                                                    <h6 class="text-dark mb-3">Support Services</h6>
+                                                    <a class="dropdown-item" href="#">24/7 Support</a>
+                                                    <a class="dropdown-item" href="#">Maintenance</a>
+                                                    <a class="dropdown-item" href="#">Emergency Services</a>
+                                                </div>
+                                                <div class="col-md-3">
+                                                    <h6 class="text-dark mb-3">Support Services</h6>
+                                                    <a class="dropdown-item" href="#">24/7 Support</a>
+                                                    <a class="dropdown-item" href="#">Maintenance</a>
+                                                    <a class="dropdown-item" href="#">Emergency Services</a>
+                                                </div>
+                                                <div class="col-md-3">
+                                                    <h6 class="text-dark mb-3">Support Services</h6>
+                                                    <a class="dropdown-item" href="#">24/7 Support</a>
+                                                    <a class="dropdown-item" href="#">Maintenance</a>
+                                                    <a class="dropdown-item" href="#">Emergency Services</a>
+                                                </div>
+                                                <div class="col-md-3">
+                                                    <h6 class="text-dark mb-3">Support Services</h6>
+                                                    <a class="dropdown-item" href="#">24/7 Support</a>
+                                                    <a class="dropdown-item" href="#">Maintenance</a>
+                                                    <a class="dropdown-item" href="#">Emergency Services</a>
+                                                </div>
+                                                <div class="col-md-3">
+                                                    <h6 class="text-dark mb-3">Support Services</h6>
+                                                    <a class="dropdown-item" href="#">24/7 Support</a>
+                                                    <a class="dropdown-item" href="#">Maintenance</a>
+                                                    <a class="dropdown-item" href="#">Emergency Services</a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <a href="project.html" class="nav-item nav-link position-relative mx-3">Projects<div
+                                        class="nav-underline"></div></a>
+                                <a href="blog.html" class="nav-item nav-link position-relative mx-3">Blog<div
+                                        class="nav-underline"></div></a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Button -->
+                    <div class="me-5">
+                        <a href="contact.html"
+                            class="btn btn-warning rounded-pill py-2 px-4 me-lg-4 d-flex align-items-center">
+                            <span>Let's Connect</span>
+                            <i class="fas fa-arrow-right ms-3"></i>
+                        </a>
+                    </div>
+
+                </div>
+            </nav>
+        </div>
+    </div>
+
+
+    <style>
+        @media (max-width: 768px) {
+            .navbar-nav {
+                text-align: center;
+            }
+
+            .navbar-nav .nav-link {
+                margin: 0 10px;
+            }
+        }
+    </style>
+    <!-- Navbar & Hero End -->
+
+
+
+    <!-- Header Start -->
+    <div class="container-fluid bg-breadcrumb"
+        style="background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(img/aboutus.png); background-position: center center; background-repeat: no-repeat; background-size: cover;">
+        <div class="bg-breadcrumb-single"></div>
+        <div class="container text-center py-5" style="max-width: 900px;">
+            <h4 class="text-white display-4 mb-4 wow fadeInDown" data-wow-delay="0.1s">eCommerce services</h4>
+        </div>
+    </div>
+    <!-- Header End -->
+
+    <!-- eCommerce Services Section Start (Unique Design) -->
+    <section class="ecommerce-alt-section py-0" style="background: #f8fafc;">
+        <div class="container-fluid py-5" style="background: #f4f8fd; border-bottom-left-radius: 3rem; border-bottom-right-radius: 3rem; box-shadow: 0 8px 32px rgba(13,110,253,0.10); min-height: 340px;">
+            <div class="container">
+                <div class="row align-items-center">
+                    <div class="col-lg-7 text-white py-5">
+                        <h1 class="fw-bolder mb-3" style="font-size:2.7rem; letter-spacing:1px;">Transform Your Business with<br>Modern eCommerce Solutions</h1>
+                        <p class="mb-4" style="font-size:1.2rem; max-width: 500px; color: #222;">
+                            We craft seamless, high-converting online shopping experiences. From custom storefronts to powerful integrations, our team delivers eCommerce that grows with you.
+                        </p>
+                        <a href="contact.html" class="btn btn-warning btn-lg px-5 py-3 shadow-sm rounded-3">
+                            Let's Build Your Store <i class="fas fa-shopping-cart ms-2"></i>
+                        </a>
+                    </div>
+                    <div class="col-lg-5 text-center d-none d-lg-block">
+                        <!-- Modern eCommerce Hero Illustration: Devices, Shopping, and Digital Payments -->
+                        <div class="position-relative" style="max-width: 420px; margin: 0 auto;">
+                            <!-- Devices and Shopping SVG -->
+                            <svg width="340" height="220" viewBox="0 0 340 220" fill="none" xmlns="http://www.w3.org/2000/svg" style="width:100%; height:220px;">
+                                <!-- Laptop -->
+                                <rect x="30" y="90" width="120" height="60" rx="12" fill="#fff" stroke="#0d6efd" stroke-width="3"/>
+                                <rect x="45" y="105" width="90" height="30" rx="6" fill="#e3f2fd"/>
+                                <rect x="60" y="120" width="60" height="10" rx="3" fill="#fff"/>
+                                <!-- Smartphone -->
+                                <rect x="170" y="60" width="40" height="80" rx="10" fill="#fff" stroke="#6610f2" stroke-width="3"/>
+                                <rect x="180" y="75" width="20" height="40" rx="4" fill="#f8fafc"/>
+                                <circle cx="190" cy="130" r="4" fill="#6610f2"/>
+                                <!-- Shopping Bag -->
+                                <rect x="230" y="110" width="50" height="50" rx="12" fill="#ffe082" stroke="#ffc107" stroke-width="2"/>
+                                <rect x="245" y="120" width="20" height="20" rx="4" fill="#fff"/>
+                                <rect x="255" y="135" width="10" height="10" rx="2" fill="#e3f2fd"/>
+                                <!-- Credit Card -->
+                                <rect x="90" y="30" width="90" height="36" rx="8" fill="#fff" stroke="#0d6efd" stroke-width="2"/>
+                                <rect x="105" y="45" width="60" height="8" rx="4" fill="#e3f2fd"/>
+                                <circle cx="100" cy="48" r="4" fill="#6610f2"/>
+                                <circle cx="170" cy="48" r="4" fill="#ffc107"/>
+                                <!-- Coins -->
+                                <circle cx="270" cy="60" r="14" fill="#fffde7" stroke="#ffc107" stroke-width="2"/>
+                                <text x="263" y="66" font-size="16" fill="#ffc107" font-family="Arial" font-weight="bold">&#8377;</text>
+                                <!-- Sparkle effect -->
+                                <g>
+                                    <circle cx="60" cy="60" r="3" fill="#0d6efd" opacity="0.7"/>
+                                    <circle cx="80" cy="40" r="2" fill="#6610f2" opacity="0.6"/>
+                                    <circle cx="120" cy="70" r="2.5" fill="#ffc107" opacity="0.7"/>
+                                </g>
+                            </svg>
+                            <!-- Animated floating credit card -->
+                            <i class="fas fa-credit-card" style="position:absolute; top:18px; right:38px; font-size:2.1rem; color:#0d6efd; animation: floatCard 2.2s ease-in-out infinite;"></i>
+                            <!-- Animated floating shopping basket -->
+                            <i class="fas fa-shopping-basket" style="position:absolute; bottom:18px; left:38px; font-size:2rem; color:#6610f2; animation: floatBasket 2.3s ease-in-out infinite;"></i>
+                            <!-- Animated floating coin -->
+                            <i class="fas fa-coins" style="position:absolute; top:60px; left:70px; font-size:1.7rem; color:#ffc107; animation: floatCoin 2.1s ease-in-out infinite;"></i>
+                        </div>
+                        <style>
+                            @keyframes floatCard {
+                                0%, 100% { transform: translateY(0);}
+                                50% { transform: translateY(-14px);}
+                            }
+                            @keyframes floatBasket {
+                                0%, 100% { transform: translateY(0);}
+                                50% { transform: translateY(12px);}
+                            }
+                            @keyframes floatCoin {
+                                0%, 100% { transform: translateY(0);}
+                                50% { transform: translateY(-10px);}
+                            }
+                        </style>
+                        <div class="mt-3">
+                            <span class="badge bg-gradient px-3 py-2 fs-6" style="border-radius: 1rem; background: linear-gradient(90deg, #ffe082 60%, #e3f2fd 100%); color: #333;">
+                                <i class="fas fa-star me-1 text-warning"></i> Next-Gen Shopping, Trusted Payments
+                            </span>
+                        </div>
+                    </div>
+            </div>
+        </div>
+
+        <div class="container py-5">
+            <!-- Unique Features Grid -->
+            <div class="row g-4 text-center mb-5">
+                <div class="col-12 mb-4">
+                    <h2 class="fw-bold" style="color:black; letter-spacing:1px;">What Makes Our eCommerce Different?</h2>
+                </div>
+                <div class="col-12 col-md-3 mb-4">
+                    <div class="ecom-feature-tile h-100 p-4">
+                        <span class="ecom-feature-icon mb-3"><i class="bi bi-lightbulb-fill"></i></span>
+                        <h5 class="fw-bold mb-2">Creative Storefronts</h5>
+                        <p class="mb-0">Visually stunning, brand-driven designs that stand out and convert.</p>
+                    </div>
+                </div>
+                <div class="col-12 col-md-3 mb-4">
+                    <div class="ecom-feature-tile h-100 p-4">
+                        <span class="ecom-feature-icon mb-3"><i class="bi bi-graph-up-arrow"></i></span>
+                        <h5 class="fw-bold mb-2">Growth-Ready Tech</h5>
+                        <p class="mb-0">Built for scale with modern stacks: Shopify, WooCommerce, Magento, and more.</p>
+                    </div>
+                </div>
+                <div class="col-12 col-md-3 mb-4">
+                    <div class="ecom-feature-tile h-100 p-4">
+                        <span class="ecom-feature-icon mb-3"><i class="bi bi-shield-lock-fill"></i></span>
+                        <h5 class="fw-bold mb-2">Secure & Reliable</h5>
+                        <p class="mb-0">PCI-compliant, fast, and robust for peace of mind and happy customers.</p>
+                    </div>
+                </div>
+                <div class="col-12 col-md-3 mb-4">
+                    <div class="ecom-feature-tile h-100 p-4">
+                        <span class="ecom-feature-icon mb-3"><i class="bi bi-people-fill"></i></span>
+                        <h5 class="fw-bold mb-2">Personal Support</h5>
+                        <p class="mb-0">From launch to growth, our experts are with you every step of the way.</p>
+                    </div>
+                </div>
+            </div>
+            <style>
+                /* Add spacing between feature tiles on desktop */
+                @media (min-width: 768px) {
+                    .ecom-feature-tile {
+                        margin-right: 16px;
+                    }
+                    .col-md-3:last-child .ecom-feature-tile {
+                        margin-right: 0;
+                    }
+                }
+            </style>
+
+            <!-- Process Timeline (Horizontal) -->
+            <div class="row mb-5">
+                <div class="col-12">
+                    <h3 class="fw-bold text-center mb-4" style="color: black;">How We Build Your eCommerce Success</h3>
+                    <div class="ecom-timeline d-flex flex-column flex-md-row justify-content-between align-items-center">
+                        <div class="ecom-timeline-step text-center mb-4 mb-md-0">
+                            <div class="ecom-timeline-icon"><i class="bi bi-search"></i></div>
+                            <div class="fw-bold mt-2">Discovery</div>
+                            <div class="small text-muted">Business goals & market research</div>
+                        </div>
+                        <div class="ecom-timeline-arrow d-none d-md-block"><i class="bi bi-arrow-right"></i></div>
+                        <div class="ecom-timeline-step text-center mb-4 mb-md-0">
+                            <div class="ecom-timeline-icon"><i class="bi bi-palette"></i></div>
+                            <div class="fw-bold mt-2">Design</div>
+                            <div class="small text-muted">UI/UX wireframes & prototyping</div>
+                        </div>
+                        <div class="ecom-timeline-arrow d-none d-md-block"><i class="bi bi-arrow-right"></i></div>
+                        <div class="ecom-timeline-step text-center mb-4 mb-md-0">
+                            <div class="ecom-timeline-icon"><i class="bi bi-code-slash"></i></div>
+                            <div class="fw-bold mt-2">Development</div>
+                            <div class="small text-muted">Platform setup & integrations</div>
+                        </div>
+                        <div class="ecom-timeline-arrow d-none d-md-block"><i class="bi bi-arrow-right"></i></div>
+                        <div class="ecom-timeline-step text-center">
+                            <div class="ecom-timeline-icon"><i class="bi bi-rocket-takeoff"></i></div>
+                            <div class="fw-bold mt-2">Launch & Grow</div>
+                            <div class="small text-muted">Go live & ongoing support</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Platform Cards (Horizontal Scroll on Mobile) -->
+            <div class="row mb-5">
+                <div class="col-12">
+                    <h3 class="fw-bold text-center mb-4" style="color:black;">Platforms & Technologies</h3>
+                    <div class="ecom-platforms-scroll d-flex flex-row flex-nowrap overflow-auto py-2 px-1 px-md-3 justify-content-start justify-content-md-center align-items-stretch" style="gap: 0;">
+                        <div class="ecom-platform-card mx-2 ms-md-0 ms-2 d-flex flex-column align-items-center flex-shrink-0" style="min-width: 110px;">
+                            <img src="https://cdn.worldvectorlogo.com/logos/woocommerce.svg" alt="WooCommerce" class="mb-2" style="height:40px; max-width:70px;">
+                            <div class="fw-bold small text-center">WooCommerce</div>
+                        </div>
+                        <div class="ecom-platform-card mx-2 d-flex flex-column align-items-center flex-shrink-0" style="min-width: 110px;">
+                            <img src="https://cdn.worldvectorlogo.com/logos/shopify.svg" alt="Shopify" class="mb-2" style="height:40px; max-width:70px;">
+                            <div class="fw-bold small text-center">Shopify</div>
+                        </div>
+                        <div class="ecom-platform-card mx-2 d-flex flex-column align-items-center flex-shrink-0" style="min-width: 110px;">
+                            <img src="https://upload.wikimedia.org/wikipedia/commons/5/55/Magento_Logo.svg" alt="Magento" class="mb-2" style="height:30px; max-width:70px;">
+                            <div class="fw-bold small text-center">Magento</div>
+                        </div>
+                        <div class="ecom-platform-card mx-2 d-flex flex-column align-items-center flex-shrink-0" style="min-width: 110px;">
+                            <img src="https://cdn.worldvectorlogo.com/logos/opencart.svg" alt="OpenCart" class="mb-2" style="height:25px; max-width:70px;">
+                            <div class="fw-bold small text-center">OpenCart</div>
+                        </div>
+                        <div class="ecom-platform-card mx-2 d-flex flex-column align-items-center flex-shrink-0" style="min-width: 110px;">
+                            <img src="https://cdn.worldvectorlogo.com/logos/prestashop.svg" alt="PrestaShop" class="mb-2" style="height:40px; max-width:70px;">
+                            <div class="fw-bold small text-center">PrestaShop</div>
+                        </div>
+                        <div class="ecom-platform-card mx-2 d-flex flex-column align-items-center flex-shrink-0" style="min-width: 110px;">
+                            <img src="https://logo.svgcdn.com/s/bigcommerce-dark.png" alt="BigCommerce" class="mb-2" style="height:40px; max-width:70px;">
+                            <div class="fw-bold small text-center">BigCommerce</div>
+                        </div>
+                        <div class="ecom-platform-card mx-2 d-flex flex-column align-items-center flex-shrink-0" style="min-width: 110px;">
+                            <img src="https://cdn.worldvectorlogo.com/logos/wix.svg" alt="Wix" class="mb-2" style="height:40px; max-width:70px;">
+                            <div class="fw-bold small text-center">Wix</div>
+                        </div>
+                        <div class="ecom-platform-card mx-2 me-md-0 me-2 d-flex flex-column align-items-center flex-shrink-0" style="min-width: 110px;">
+                            <img src="https://cdn.worldvectorlogo.com/logos/squarespace.svg" alt="Squarespace" class="mb-2" style="height:40px; max-width:70px;">
+                            <div class="fw-bold small text-center">Squarespace</div>
+                        </div>
+                    </div>
+                    <style>
+                        /* Responsive horizontal scroll for platform cards */
+                        .ecom-platforms-scroll {
+                            scrollbar-width: thin;
+                            scrollbar-color: #6610f2 #e3f2fd;
+                        }
+                        .ecom-platforms-scroll::-webkit-scrollbar {
+                            height: 6px;
+                        }
+                        .ecom-platforms-scroll::-webkit-scrollbar-thumb {
+                            background: #6610f2;
+                            border-radius: 3px;
+                        }
+                        .ecom-platforms-scroll::-webkit-scrollbar-track {
+                            background: #e3f2fd;
+                        }
+                        .ecom-platform-card {
+                            background: #fff;
+                            border-radius: 1rem;
+                            box-shadow: 0 2px 8px rgba(102,16,242,0.07);
+                            padding: 1rem 0.5rem 0.5rem 0.5rem;
+                            min-height: 90px;
+                            transition: transform 0.2s, box-shadow 0.2s;
+                            width: 100%;
+                            max-width: 120px;
+                        }
+                        .ecom-platform-card:hover {
+                            transform: translateY(-4px) scale(1.04);
+                            box-shadow: 0 8px 24px rgba(13,110,253,0.10);
+                        }
+                        @media (max-width: 575.98px) {
+                            .ecom-platform-card {
+                                min-width: 90px;
+                                max-width: 100px;
+                                padding: 0.75rem 0.25rem 0.25rem 0.25rem;
+                            }
+                            .ecom-platforms-scroll {
+                                padding-left: 0.25rem !important;
+                                padding-right: 0.25rem !important;
+                            }
+                        }
+                        @media (max-width: 400px) {
+                            .ecom-platform-card {
+                                min-width: 80px;
+                                max-width: 90px;
+                                font-size: 0.85rem;
+                            }
+                        }
+                    </style>
+                </div>
+            </div>
+
+            <!-- Unique Call to Action -->
+            <div class="row">
+                <div class="col-12 text-center">
+                    <div class="ecom-cta-box py-5 px-3 mx-auto">
+                        <h3 class="fw-bold mb-3" style="color:#fff;">Ready to Sell More Online?</h3>
+                        <p class="mb-4" style="color:#e3f2fd; font-size:1.15rem;">Get a free strategy session with our eCommerce experts. No obligation, just actionable advice.</p>
+                        <a href="contact.html" class="btn btn-lg btn-warning px-5 py-3 shadow-sm rounded-pill">
+                            Book My Free Consultation <i class="fas fa-arrow-right ms-2"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Unique eCommerce Section Styles -->
+    <style>
+        .ecommerce-alt-section {
+            background: linear-gradient(135deg, #f5f7fa 60%, #c3e0f7 100%);
+        }
+        .ecommerce-alt-hero {
+            background: linear-gradient(120deg, #0d6efd 60%, #6610f2 100%);
+            min-height: 340px;
+            border-bottom-left-radius: 3rem;
+            border-bottom-right-radius: 3rem;
+            box-shadow: 0 8px 32px rgba(13,110,253,0.10);
+        }
+        .ecommerce-alt-hero-text {
+            flex: 1;
+        }
+        .ecommerce-alt-hero-img {
+            flex: 1;
+            display: flex;
+            align-items: flex-end;
+            justify-content: center;
+        }
+        .ecom-feature-tile {
+            background: #fff;
+            border-radius: 1.25rem;
+            box-shadow: 0 2px 12px rgba(102,16,242,0.07);
+            transition: transform 0.2s, box-shadow 0.2s;
+            min-height: 220px;
+        }
+        .ecom-feature-tile:hover {
+            transform: translateY(-6px) scale(1.03);
+            box-shadow: 0 8px 32px rgba(13,110,253,0.10);
+        }
+        .ecom-feature-icon {
+            font-size: 2.5rem;
+            color: #6610f2;
+            display: inline-block;
+        }
+        .ecom-timeline {
+            gap: 1.5rem;
+        }
+        .ecom-timeline-step {
+            background: #fff;
+            border-radius: 1rem;
+            padding: 1.5rem 1rem;
+            min-width: 160px;
+            box-shadow: 0 2px 12px rgba(13,110,253,0.07);
+        }
+        .ecom-timeline-icon {
+            font-size: 2rem;
+            color: #0d6efd;
+            background: #e3f2fd;
+            border-radius: 50%;
+            width: 48px;
+            height: 48px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto;
+        }
+        .ecom-timeline-arrow {
+            font-size: 2rem;
+            color: #6610f2;
+        }
+        .ecom-platforms-scroll {
+            scrollbar-width: thin;
+            scrollbar-color: #6610f2 #e3f2fd;
+        }
+        .ecom-platform-card {
+            background: #fff;
+            border-radius: 1rem;
+            box-shadow: 0 2px 12px rgba(102,16,242,0.07);
+            min-width: 130px;
+            min-height: 110px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            transition: box-shadow 0.2s, transform 0.2s;
+        }
+        .ecom-platform-card:hover {
+            box-shadow: 0 8px 32px rgba(13,110,253,0.10);
+            transform: translateY(-4px) scale(1.04);
+        }
+        .ecom-cta-box {
+            background: linear-gradient(120deg, #866bb3 60%, #4271b8 100%);
+            border-radius: 2rem;
+            max-width: 600px;
+            box-shadow: 0 8px 32px rgba(13,110,253,0.10);
+        }
+        @media (max-width: 991.98px) {
+            .ecommerce-alt-hero {
+                flex-direction: column;
+                min-height: 420px;
+                border-bottom-left-radius: 2rem;
+                border-bottom-right-radius: 2rem;
+            }
+            .ecommerce-alt-hero-img {
+                margin-top: 2rem;
+            }
+        }
+        @media (max-width: 767.98px) {
+            .ecommerce-alt-hero {
+                border-bottom-left-radius: 1rem;
+                border-bottom-right-radius: 1rem;
+                padding-bottom: 2rem;
+            }
+            .ecom-feature-tile {
+                min-height: 180px;
+            }
+            .ecom-timeline {
+                flex-direction: column;
+                gap: 0.5rem;
+            }
+            .ecom-timeline-arrow {
+                display: none !important;
+            }
+            .ecom-platform-card {
+                min-width: 110px;
+                min-height: 90px;
+            }
+            .ecom-cta-box {
+                border-radius: 1rem;
+                padding: 2rem 1rem;
+            }
+        }
+    </style>
+    <!-- eCommerce Services Section End -->
+    
+    <!-- Optionally, include Bootstrap Icons for checkmarks -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+
+    <!-- WhatsApp chat button start -->
+    <a href="https://wa.me/+919998595357?text=Hello, I am contacting you from your https://www.shreeharisolutions.in Website."
+        class="whatsapp-rectangle" target="_blank">
+        <img src="https://img.icons8.com/color/48/000000/whatsapp--v1.png" alt="WhatsApp" />
+        <span>Chat with us</span>
+    </a>
+    <!-- WhatsApp chat button end -->
+    <!-- Footer Start -->
+
+<div class="container-fluid footer wow fadeIn" data-wow-delay="0.2s">
+    <div class="container py-4">
+        <div class="row text-center text-md-start">
+            
+            <!-- About Us -->
+            <div class="col-md-4 footer-item p-3">
+                <h4 class="text-white mb-3">About us</h4>
+                <p class="mb-0" style="color: gray;">
+                    At our core, we believe that every project deserves the highest standard of excellence, 
+                    regardless of its size or location. From planning to execution, we approach each 
+                    opportunity with care, innovation, and professionalism. Wherever you are, we look forward 
+                    to working with you and creating solutions that truly make a difference.
+                </p>
+            </div>
+
+            <!-- Explore -->
+            <div class="col-md-4 footer-item p-3">
+                <h4 class="text-white mb-3">Explore</h4>
+                <div class="d-flex flex-column" style="color: gray;">
+                    <span class="mb-2"><i class="fas fa-angle-right me-2"></i><a href="index.html">Home</a></span>
+                    <span class="mb-2"><i class="fas fa-angle-right me-2"></i><a href="service.html">Services</a></span>
+                    <span class="mb-2"><i class="fas fa-angle-right me-2"></i><a href="about.html">About Us</a></span>
+                    <span class="mb-2"><i class="fas fa-angle-right me-2"></i><a href="project.html">Latest Projects</a></span>
+                    <span class="mb-2"><i class="fas fa-angle-right me-2"></i><a href="blog.html">Our Blogs</a></span>
+                    <span class="mb-2"><i class="fas fa-angle-right me-2"></i><a href="#">Our Team</a></span>
+                    <span class="mb-2"><i class="fas fa-angle-right me-2"></i><a href="contact.html">Contact Us</a></span>
+                </div>
+            </div>
+
+            <!-- Contact Info -->
+            <div class="col-md-4 footer-item p-3">
+                <h4 class="text-white mb-3">Contact Info</h4>
+                <a class="mb-2 d-block" style="color: gray;">
+                    <i class="fa fa-map-marker-alt me-2"></i>
+                    Shree hari group, Opp. Hotel Fortune Landmark, Ashram Road, Ahmedabad 380013, Gujarat, India
+                </a>
+                <a class="mb-2 d-block" href="mailto:info@shreeharisolutions.in" style="color: gray;">
+                    <i class="fas fa-envelope me-2"></i> info@shreeharisolutions.in
+                </a>
+                <a class="mb-2 d-block" href="tel:+919998595357" style="color: gray;">
+                    <i class="fas fa-phone me-2"></i> +91 99985 95357
+                </a>
+                <div class="d-flex align-items-center justify-content-center justify-content-md-start mt-2">
+                    <a class="btn btn-light btn-md-square me-2" href="#"><i class="fab fa-facebook-f"></i></a>
+                    <a class="btn btn-light btn-md-square me-2" href="#"><i class="fab fa-twitter"></i></a>
+                    <a class="btn btn-light btn-md-square me-2" href="#"><i class="fab fa-instagram"></i></a>
+                    <a class="btn btn-light btn-md-square" href="#"><i class="fab fa-linkedin-in"></i></a>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>
+<!-- Footer End -->
+
+
+    <!-- Copyright Start -->
+    <div class="container-fluid copyright py-4">
+        <div class="container">
+            <div class="row g-4 align-items-center">
+                <div class="col-md-6 text-center text-md-start mb-md-0">
+                    <span class="text-body"><a href="index.html" class="border-bottom text-primary"><i
+                                class="fas fa-copyright text-light me-2"></i>shreeharisolutions</a>, All right
+                        reserved 2025.</span>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Copyright End -->
+
+
+    <!-- Back to Top -->
+    <a href="#" class="btn btn-primary btn-lg-square back-to-top"><i class="fa fa-arrow-up"></i></a>
+
+
+    <!-- JavaScript Libraries -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+    <!-- <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script> -->
+    <script src="lib/wow/wow.min.js"></script>
+    <script src="lib/easing/easing.min.js"></script>
+    <script src="lib/waypoints/waypoints.min.js"></script>
+    <script src="lib/counterup/counterup.min.js"></script>
+    <script src="lib/owlcarousel/owl.carousel.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="lib/lightbox/js/lightbox.min.js"></script>
+
+
+    <!-- Template Javascript -->
+    <script src="js/main.js"></script>
+</body>
+
+</html>
