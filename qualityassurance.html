@@ -1,0 +1,667 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>Investa - Investment Website Template</title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta content="" name="keywords">
+    <meta content="" name="description">
+
+    <!-- Google Web Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500;600;700&family=Roboto:wght@400;500;700&display=swap"
+        rel="stylesheet">
+
+    <!-- Icon Font Stylesheet -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
+
+    <!-- Libraries Stylesheet -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+    <link href="lib/animate/animate.min.css" rel="stylesheet">
+    <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+    <link href="lib/lightbox/css/lightbox.min.css" rel="stylesheet">
+
+
+    <!-- Customized Bootstrap Stylesheet -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Template Stylesheet -->
+    <link href="css/style.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
+        rel="stylesheet">
+    <style>
+        body {
+            font-family: "Inter", sans-serif;
+            font-weight: 400;
+            font-optical-sizing: auto;
+            line-height: 1.6;
+            color: #333;
+            font-style: normal;
+        }
+
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6 {
+            font-weight: 600;
+            line-height: 1.2;
+        }
+
+        .text-primary {
+            font-weight: 500;
+        }
+
+        .btn {
+            font-weight: 500;
+            letter-spacing: 0.5px;
+        }
+    </style>
+
+</head>
+
+<body>
+
+    <!-- Spinner Start -->
+    <div id="spinner"
+        class="show bg-white position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center">
+        <div class="spinner-border text-primary" style="width: 3rem; height: 3rem;" role="status">
+            <span class="sr-only">Loading...</span>
+        </div>
+    </div>
+    <!-- Spinner End -->
+
+
+
+    <!-- Navbar & Hero Start -->
+    <div class="container-fluid fixed-top px-0">
+        <!-- overlay — keep if you want a tint, but let it sit behind content -->
+        <div class="header-overlay"></div>
+
+        <div class="px-0">
+            <nav class="navbar navbar-expand-lg navbar-dark bg-light py-3 px-4">
+                <div class="container-fluid d-flex flex-column flex-lg-row justify-content-between align-items-center">
+
+                    <!-- Logo -->
+                    <div class="ps-5 pe-5">
+                        <a href="index.html" class="navbar-brand d-flex align-items-center p-0 mb-3 mb-lg-0">
+                            <img src="img/logo.png" alt="Logo" height="50" class="me-2">
+                            <h1 class="text-primary m-0 fs-4">SHREE HARI GROUP</h1>
+                        </a>
+                    </div>
+
+                    <!-- Mobile toggle -->
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#navbarCollapse">
+                        <span class="fa fa-bars"></span>
+                    </button>
+
+                    <!-- Nav links -->
+                    <div class="collapse navbar-collapse mx-auto" id="navbarCollapse">
+                        <div class="navbar-nav py-0 px-4 w-100 d-flex align-items-center">
+
+                            <!-- Center nav area -->
+                            <div
+                                class="d-flex flex-column flex-lg-row align-items-center justify-content-center gap-3 flex-grow-1">
+                                <a href="about.html" class="nav-item nav-link position-relative mx-3">About<div
+                                        class="nav-underline"></div></a>
+
+                                <!-- Services dropdown -->
+                                <div class="dropdown nav-item position-static mx-3">
+                                    <a href="service.html" class="nav-link dropdown-toggle d-flex align-items-center"
+                                        data-bs-toggle="dropdown" data-bs-auto-close="outside">
+                                        <span class="me-2">Services</span>
+                                        <div class="nav-underline"></div>
+                                    </a>
+
+                                    <!-- use container-fluid here so it doesn't have Bootstrap's max-width -->
+                                    <div class="dropdown-menu bg-white border-0 rounded-0 rounded-bottom m-0 p-0 w-100"
+                                        style="margin-top: 0 !important;">
+                                        <div class="container-fluid py-4">
+                                            <div class="row">
+                                                <div class="col-md-3">
+                                                    <h6 class="text-dark mb-3">Construction Services</h6>
+                                                    <a class="dropdown-item" href="#">Residential Construction</a>
+                                                    <a class="dropdown-item" href="#">
+                                                        <img src="https://www.budventure.technology/public/frontend/images/menu_icon/NodeJS.png" alt="Commercial Building Icon" style="height:18px; width:auto; margin-right:6px; vertical-align:middle;">
+                                                        Commercial Building
+                                                    </a>
+                                                    <a class="dropdown-item" href="#">Infrastructure Development</a>
+                                                </div>
+                                                <div class="col-md-3">
+                                                    <h6 class="text-dark mb-3">Design Services</h6>
+                                                    <a class="dropdown-item" href="#">Architectural Design</a>
+                                                    <a class="dropdown-item" href="#">Interior Design</a>
+                                                    <a class="dropdown-item" href="#">Project Planning</a>
+                                                </div>
+                                                <div class="col-md-3">
+                                                    <h6 class="text-dark mb-3">Consulting Services</h6>
+                                                    <a class="dropdown-item" href="#">Project Management</a>
+                                                    <a class="dropdown-item" href="#">Quality Assurance</a>
+                                                    <a class="dropdown-item" href="#">Technical Consultation</a>
+                                                </div>
+                                                <div class="col-md-3">
+                                                    <h6 class="text-dark mb-3">Support Services</h6>
+                                                    <a class="dropdown-item" href="#">24/7 Support</a>
+                                                    <a class="dropdown-item" href="#">Maintenance</a>
+                                                    <a class="dropdown-item" href="#">Emergency Services</a>
+                                                </div>
+                                                <div class="col-md-3">
+                                                    <h6 class="text-dark mb-3">Support Services</h6>
+                                                    <a class="dropdown-item" href="#">24/7 Support</a>
+                                                    <a class="dropdown-item" href="#">Maintenance</a>
+                                                    <a class="dropdown-item" href="#">Emergency Services</a>
+                                                </div>
+                                                <div class="col-md-3">
+                                                    <h6 class="text-dark mb-3">Support Services</h6>
+                                                    <a class="dropdown-item" href="#">24/7 Support</a>
+                                                    <a class="dropdown-item" href="#">Maintenance</a>
+                                                    <a class="dropdown-item" href="#">Emergency Services</a>
+                                                </div>
+                                                <div class="col-md-3">
+                                                    <h6 class="text-dark mb-3">Support Services</h6>
+                                                    <a class="dropdown-item" href="#">24/7 Support</a>
+                                                    <a class="dropdown-item" href="#">Maintenance</a>
+                                                    <a class="dropdown-item" href="#">Emergency Services</a>
+                                                </div>
+                                                <div class="col-md-3">
+                                                    <h6 class="text-dark mb-3">Support Services</h6>
+                                                    <a class="dropdown-item" href="#">24/7 Support</a>
+                                                    <a class="dropdown-item" href="#">Maintenance</a>
+                                                    <a class="dropdown-item" href="#">Emergency Services</a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <a href="project.html" class="nav-item nav-link position-relative mx-3">Projects<div
+                                        class="nav-underline"></div></a>
+                                <a href="blog.html" class="nav-item nav-link position-relative mx-3">Blog<div
+                                        class="nav-underline"></div></a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Button -->
+                    <div class="me-5">
+                        <a href="contact.html"
+                            class="btn btn-warning rounded-pill py-2 px-4 me-lg-4 d-flex align-items-center">
+                            <span>Let's Connect</span>
+                            <i class="fas fa-arrow-right ms-3"></i>
+                        </a>
+                    </div>
+
+                </div>
+            </nav>
+        </div>
+    </div>
+
+
+    <style>
+        @media (max-width: 768px) {
+            .navbar-nav {
+                text-align: center;
+            }
+
+            .navbar-nav .nav-link {
+                margin: 0 10px;
+            }
+        }
+    </style>
+    <!-- Navbar & Hero End -->
+
+
+
+    <!-- Header Start -->
+    <div class="container-fluid bg-breadcrumb"
+        style="background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(img/aboutus.png); background-position: center center; background-repeat: no-repeat; background-size: cover;">
+        <div class="bg-breadcrumb-single"></div>
+        <div class="container text-center py-5" style="max-width: 900px;">
+            <h4 class="text-white display-4 mb-4 wow fadeInDown" data-wow-delay="0.1s">Quality Assurance services</h4>
+        </div>
+    </div>
+    <!-- Header End -->
+
+    <section class="container-fluid py-5 position-relative" style="background: linear-gradient(120deg, #f8fafc 60%, #e0e7ff 100%); overflow: hidden;">
+        <!-- Decorative SVG Top Wave -->
+        <svg viewBox="0 0 1440 120" fill="none" xmlns="http://www.w3.org/2000/svg" style="position:absolute;top:0;left:0;width:100%;z-index:0;">
+            <path d="M0,80 C480,160 960,0 1440,80 L1440,0 L0,0 Z" fill="#6366f1" fill-opacity="0.08"/>
+        </svg>
+        <div class="container position-relative" style="z-index:2;">
+            <div class="row mb-5">
+                <div class="col-12 text-center">
+                    <span class="badge bg-gradient-primary text-white px-4 py-2 mb-3 wow fadeInDown" data-wow-delay="0.05s" style="font-size:1.1rem; letter-spacing:2px; background: linear-gradient(90deg, #6366f1 60%, #06b6d4 100%); border-radius: 2rem;">QA Excellence</span>
+                    <h2 class="mb-3 display-5 fw-bold wow fadeInUp" data-wow-delay="0.1s" style="color:#1e293b;">
+                        Elevate Your Software with <span style="color:#6366f1;">Creative Quality Assurance</span>
+                    </h2>
+                    <label for="qa-intro" class="visually-hidden">Quality Assurance Introduction</label>
+                    <p id="qa-intro" class="lead text-muted wow fadeInUp" data-wow-delay="0.2s">
+                        <span style="font-size:1.2em;">We blend <span style="color:#06b6d4;">innovation</span> and <span style="color:#6366f1;">precision</span> to deliver flawless digital experiences.</span><br>
+                        From manual expertise to cutting-edge automation, our QA services ensure your product shines in every user’s hands.
+                    </p>
+                </div>
+            </div>
+            <div class="row g-4 justify-content-center">
+                <!-- Manual Testing Section (with animated content loading) -->
+                <section class="py-5" id="manual-testing" style="background: linear-gradient(135deg, #f1f5f9 80%, #e0e7ff 100%); border-radius: 2rem; margin-bottom: 2.5rem;">
+                    <div class="container">
+                        <div class="row align-items-center">
+                            <div class="col-lg-5 text-center mb-4 mb-lg-0">
+                                <span class="d-inline-block bg-white shadow rounded-circle p-4 mb-3 wow fadeInDown" data-wow-delay="0.1s" style="width:100px; height:100px; display:flex; align-items:center; justify-content:center;">
+                                    <i class="bi bi-person-check fa-3x text-primary" style="border-radius:50%; background:#f1f5f9; width:70px; height:70px; display:flex; align-items:center; justify-content:center;"></i>
+                                </span>
+                                <h3 class="fw-bold wow fadeInUp" data-wow-delay="0.15s" style="color:#1e293b;">Manual Testing</h3>
+                            </div>
+                            <div class="col-lg-7">
+                                <p class="lead text-muted mb-4 wow fadeIn" data-wow-delay="0.2s">
+                                    <span class="fw-semibold" style="color:#6366f1;">Human insight</span> meets <span class="fw-semibold" style="color:#06b6d4;">meticulous execution</span>. Our QA engineers explore every corner of your app, ensuring a seamless, bug-free experience for your users.
+                                </p>
+                                <ul class="list-unstyled text-start mx-auto" style="max-width: 420px;">
+                                    <li class="mb-2 wow fadeInLeft" data-wow-delay="0.25s">
+                                        <i class="bi bi-check-circle text-primary me-2"></i>
+                                        <strong>Functional Testing:</strong> Verifies each function of the software operates in conformance with requirements.
+                                    </li>
+                                    <li class="mb-2 wow fadeInLeft" data-wow-delay="0.3s">
+                                        <i class="bi bi-search text-info me-2"></i>
+                                        <strong>Exploratory Testing:</strong> Testers actively explore the application to identify defects without predefined test cases.
+                                    </li>
+                                    <li class="mb-2 wow fadeInLeft" data-wow-delay="0.35s">
+                                        <i class="bi bi-bug text-danger me-2"></i>
+                                        <strong>Usability Testing:</strong> Ensures the product is user-friendly and intuitive for end-users.
+                                    </li>
+                                    <li class="mb-2 wow fadeInLeft" data-wow-delay="0.4s">
+                                        <i class="bi bi-clipboard-check text-success me-2"></i>
+                                        <strong>Ad-hoc Testing:</strong> Informal testing to find defects that might not be covered by formal test cases.
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Automation Testing Section with Animation -->
+                <section class="py-5 px-3 px-md-5" id="automation-testing" style="background: linear-gradient(135deg, #e0f2fe 80%, #f0fdfa 100%); border-radius: 2rem; margin-bottom: 2.5rem;">
+                    <div class="container">
+                        <div class="row align-items-center flex-lg-row-reverse">
+                            <!-- Icon and Title -->
+                            <div class="col-lg-5 d-flex flex-column align-items-center justify-content-center mb-4 mb-lg-0">
+                                <span class="d-inline-block bg-white shadow rounded-circle p-4 mb-3 wow fadeInDown" data-wow-delay="0.1s">
+                                    <i class="fas fa-robot fa-3x text-success"></i>
+                                </span>
+                                <h3 class="fw-bold wow fadeInUp" data-wow-delay="0.2s" style="color:#1e293b;">Automation Testing</h3>
+                            </div>
+                            <!-- Content -->
+                            <div class="col-lg-7 d-flex flex-column justify-content-center">
+                                <p class="lead text-muted mb-4 text-lg-start text-center wow fadeIn" data-wow-delay="0.25s">
+                                    <span class="fw-semibold" style="color:#06b6d4;">Speed</span> and <span class="fw-semibold" style="color:#6366f1;">accuracy</span> at scale. We build robust automated test suites for regression, integration, and smoke testing—accelerating your releases with confidence.
+                                </p>
+                                <div class="mb-3 wow fadeInLeft" data-wow-delay="0.3s">
+                                    <strong class="d-block mb-2" style="color:#1e293b;">Tools &amp; Frameworks We Use:</strong>
+                                    <div class="row g-2 justify-content-center justify-content-lg-start">
+                                        <div class="col-6 col-md-4 col-lg-6 d-flex align-items-center mb-2 wow fadeIn" data-wow-delay="0.35s">
+                                            <img src="https://upload.wikimedia.org/wikipedia/commons/d/d5/Selenium_Logo.png" alt="Selenium Logo" style="height:28px;vertical-align:middle;margin-right:8px;">
+                                            <span class="fw-semibold">Selenium</span>
+                                        </div>
+                                        <div class="col-6 col-md-4 col-lg-6 d-flex align-items-center mb-2 wow fadeIn" data-wow-delay="0.4s">
+                                            <img src="https://avatars.githubusercontent.com/u/8908513?s=200&v=4" alt="Cypress Logo" style="height:28px;vertical-align:middle;margin-right:8px;">
+                                            <span class="fw-semibold">Cypress</span>
+                                        </div>
+                                        <div class="col-6 col-md-4 col-lg-6 d-flex align-items-center mb-2 wow fadeIn" data-wow-delay="0.45s">
+                                            <img src="https://playwright.dev/img/playwright-logo.svg" alt="Playwright Logo" style="height:28px;vertical-align:middle;margin-right:8px;">
+                                            <span class="fw-semibold">Playwright</span>
+                                        </div>
+                                        <div class="col-6 col-md-4 col-lg-6 d-flex align-items-center mb-2 wow fadeIn" data-wow-delay="0.5s">
+                                            <img src="img/appium.png" alt="Appium Logo" style="height:28px;vertical-align:middle;margin-right:8px;">
+                                            <span class="fw-semibold">Appium</span>
+                                        </div>
+                                        <div class="col-6 col-md-4 col-lg-6 d-flex align-items-center mb-2 wow fadeIn" data-wow-delay="0.55s">
+                                            <img src="https://www.vectorlogo.zone/logos/getpostman/getpostman-icon.svg" alt="Postman Logo" style="height:28px;vertical-align:middle;margin-right:8px;">
+                                            <span class="fw-semibold">Postman</span>
+                                        </div>
+                                        <div class="col-6 col-md-4 col-lg-6 d-flex align-items-center mb-2 wow fadeIn" data-wow-delay="0.6s">
+                                            <img src="https://jestjs.io/img/opengraph.png" alt="Jest Logo" style="height:28px;vertical-align:middle;margin-right:8px;border-radius:4px;">
+                                            <span class="fw-semibold">Jest</span>
+                                        </div>
+                                        <div class="col-6 col-md-4 col-lg-6 d-flex align-items-center mb-2 wow fadeIn" data-wow-delay="0.65s">
+                                            <img src="https://junit.org/junit5/assets/img/junit5-logo.png" alt="JUnit Logo" style="height:28px;vertical-align:middle;margin-right:8px;">
+                                            <span class="fw-semibold">JUnit</span>
+                                        </div>
+                                        <div class="col-6 col-md-4 col-lg-6 d-flex align-items-center mb-2 wow fadeIn" data-wow-delay="0.7s">
+                                            <img src="img/testng.png" alt="TestNG Logo" style="height:28px;vertical-align:middle;margin-right:8px;">
+                                            <span class="fw-semibold">TestNG</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <ul class="list-unstyled text-start" style="max-width: 480px;">
+                                    <li class="d-flex align-items-start mb-3 wow fadeInLeft" data-wow-delay="0.75s">
+                                        <span class="me-3 flex-shrink-0" style="width: 32px; text-align: center;">
+                                            <i class="bi bi-arrow-repeat text-primary fs-5"></i>
+                                        </span>
+                                        <div>
+                                            <strong>Regression Testing:</strong>
+                                            <span class="text-muted">Automated scripts ensure new changes don’t break existing features.</span>
+                                        </div>
+                                    </li>
+                                    <li class="d-flex align-items-start mb-3 wow fadeInLeft" data-wow-delay="0.8s">
+                                        <span class="me-3 flex-shrink-0" style="width: 32px; text-align: center;">
+                                            <i class="bi bi-link-45deg text-info fs-5"></i>
+                                        </span>
+                                        <div>
+                                            <strong>Integration Testing:</strong>
+                                            <span class="text-muted">Validates the interaction between integrated modules or services.</span>
+                                        </div>
+                                    </li>
+                                    <li class="d-flex align-items-start mb-3 wow fadeInLeft" data-wow-delay="0.85s">
+                                        <span class="me-3 flex-shrink-0" style="width: 32px; text-align: center;">
+                                            <i class="bi bi-lightning text-warning fs-5"></i>
+                                        </span>
+                                        <div>
+                                            <strong>Smoke Testing:</strong>
+                                            <span class="text-muted">Quick checks to verify basic functionalities work after a build or deployment.</span>
+                                        </div>
+                                    </li>
+                                    <li class="d-flex align-items-start mb-3 wow fadeInLeft" data-wow-delay="0.9s">
+                                        <span class="me-3 flex-shrink-0" style="width: 32px; text-align: center;">
+                                            <i class="bi bi-gear text-success fs-5"></i>
+                                        </span>
+                                        <div>
+                                            <strong>API Automation:</strong>
+                                            <span class="text-muted">Automated validation of API endpoints for reliability and correctness.</span>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Specialized Testing Section -->
+                <section class="py-5" id="specialized-testing" style="background: linear-gradient(135deg, #fef9c3 80%, #fef3c7 100%); border-radius: 2rem;">
+                    <div class="container">
+                        <div class="row align-items-center">
+                            <div class="col-lg-5 text-center mb-4 mb-lg-0">
+                                <span class="d-inline-block bg-white shadow rounded-circle p-4 mb-3">
+                                    <i class="fas fa-vials fa-3x text-warning"></i>
+                                </span>
+                                <h3 class="fw-bold" style="color:#1e293b;">Specialized Testing Types</h3>
+                            </div>
+                            <div class="col-lg-7">
+                                <ul class="list-unstyled text-start mx-auto" style="max-width: 480px;">
+                                    <li class="mb-3 wow fadeInLeft" data-wow-delay="0.05s">
+                                        <i class="bi bi-activity text-success me-2"></i>
+                                        <strong>Performance Testing:</strong> Measures system responsiveness, stability, scalability, and speed under load and stress.
+                                    </li>
+                                    <li class="mb-3 wow fadeInLeft" data-wow-delay="0.1s">
+                                        <i class="bi bi-shield-lock text-danger me-2"></i>
+                                        <strong>Security Testing:</strong> Identifies vulnerabilities, threats, and risks to prevent data breaches and ensure compliance.
+                                    </li>
+                                    <li class="mb-3 wow fadeInLeft" data-wow-delay="0.15s">
+                                        <i class="bi bi-plug text-info me-2"></i>
+                                        <strong>API Testing:</strong> Validates API endpoints for reliability, performance, and integration with other systems.
+                                    </li>
+                                    <li class="mb-3 wow fadeInLeft" data-wow-delay="0.2s">
+                                        <i class="bi bi-phone text-primary me-2"></i>
+                                        <strong>Mobile Testing:</strong> Ensures seamless functionality and appearance across various devices, OS versions, and screen sizes.
+                                    </li>
+                                    <li class="mb-3 wow fadeInLeft" data-wow-delay="0.25s">
+                                        <i class="bi bi-globe text-warning me-2"></i>
+                                        <strong>Compatibility Testing:</strong> Checks application behavior across different browsers, operating systems, and hardware.
+                                    </li>
+                                    <li class="mb-3 wow fadeInLeft" data-wow-delay="0.3s">
+                                        <i class="bi bi-arrow-repeat text-secondary me-2"></i>
+                                        <strong>Regression Testing:</strong> Confirms that recent changes haven’t adversely affected existing features.
+                                    </li>
+                                    <li class="mb-3 wow fadeInLeft" data-wow-delay="0.35s">
+                                        <i class="bi bi-translate text-info me-2"></i>
+                                        <strong>Localization &amp; Internationalization Testing:</strong> Verifies correct language, formatting, and cultural adaptation for global users.
+                                    </li>
+                                    <li class="mb-3 wow fadeInLeft" data-wow-delay="0.4s">
+                                        <i class="bi bi-eye text-primary me-2"></i>
+                                        <strong>Accessibility Testing:</strong> Ensures your application is usable by people with disabilities, meeting WCAG standards.
+                                    </li>
+                                    <li class="mb-3 wow fadeInLeft" data-wow-delay="0.45s">
+                                        <i class="bi bi-database-check text-success me-2"></i>
+                                        <strong>Data Integrity Testing:</strong> Validates accuracy and consistency of data throughout the application lifecycle.
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            <!-- Animated Divider -->
+            <div class="row my-5">
+                <div class="col-12 text-center">
+                    <svg width="120" height="24" viewBox="0 0 120 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M0 12 Q30 0 60 12 Q90 24 120 12" stroke="#6366f1" stroke-width="3" fill="none" />
+                    </svg>
+                </div>
+            </div>
+            <!-- Why Choose Us -->
+            <div class="row justify-content-center">
+                <div class="col-lg-8">
+                    <div class="bg-white rounded-4 shadow-lg p-4 p-md-5 wow fadeInUp" data-wow-delay="0.1s" style="border-left: 8px solid #6366f1;">
+                        <h3 class="mb-4 fw-bold" style="color:#1e293b;">Why Partner With Us?</h3>
+                        <div class="row">
+                            <div class="col-md-6">
+                                <ul class="list-unstyled mb-0">
+                                    <li class="mb-3"><i class="bi bi-stars text-primary me-2"></i> <span class="fw-semibold">Seasoned QA experts</span> with deep domain knowledge</li>
+                                    <li class="mb-3"><i class="bi bi-lightbulb text-warning me-2"></i> <span class="fw-semibold">Creative, tailored strategies</span> for your business</li>
+                                    <li class="mb-3"><i class="bi bi-bar-chart-line text-success me-2"></i> <span class="fw-semibold">Actionable, visual reports</span> for every test cycle</li>
+                                </ul>
+                            </div>
+                            <div class="col-md-6">
+                                <ul class="list-unstyled mb-0">
+                                    <li class="mb-3"><i class="bi bi-people text-info me-2"></i> <span class="fw-semibold">Agile, collaborative approach</span> for rapid delivery</li>
+                                    <li class="mb-3"><i class="bi bi-shield-check text-danger me-2"></i> <span class="fw-semibold">Relentless focus</span> on quality &amp; security</li>
+                                    <li class="mb-3"><i class="bi bi-emoji-smile text-success me-2"></i> <span class="fw-semibold">Customer delight</span> is our top priority</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Call to Action with Animation -->
+            <div class="row mt-5">
+                <div class="col-12 text-center">
+                    <!-- Fixed CTA button: use <button> and JS for navigation for best compatibility -->
+                    <a
+                        href="contact.html"
+                        class="btn btn-gradient-primary btn-lg rounded-pill px-5 py-3 mt-3 mb-4 wow bounceIn d-inline-block cta-link"
+                        data-wow-delay="0.2s"
+                        style="background: linear-gradient(90deg, #6366f1 60%, #06b6d4 100%); color: #fff; font-size:1.25rem; box-shadow: 0 8px 24px rgba(99,102,241,0.15); border: none; cursor:pointer; text-decoration: none; display: inline-block;"
+                        tabindex="0"
+                        role="button"
+                        id="qa-cta-btn"
+                    >
+                        <i class="bi bi-chat-dots me-2"></i> Get a Free QA Consultation
+                    </a>
+                    <div class="mt-4 mb-5"></div>
+                </div>
+            </div>
+        </div>
+        <!-- Decorative SVG Bottom Wave -->
+        <svg viewBox="0 0 1440 120" fill="none" xmlns="http://www.w3.org/2000/svg" style="position:absolute;bottom:0;left:0;width:100%;z-index:0;">
+            <path d="M0,40 C480,120 960,0 1440,40 L1440,120 L0,120 Z" fill="#6366f1" fill-opacity="0.08"/>
+        </svg>
+    </section>
+    <style>
+        .btn-gradient-primary {
+            background: linear-gradient(90deg, #6366f1 60%, #06b6d4 100%) !important;
+            color: #fff !important;
+            border: none;
+            transition: box-shadow 0.2s, transform 0.2s;
+        }
+        .btn-gradient-primary:hover, .btn-gradient-primary:focus {
+            box-shadow: 0 12px 32px rgba(99,102,241,0.25);
+            transform: translateY(-2px) scale(1.03);
+            color: #fff !important;
+        }
+        .btn-gradient-primary.cta-link {
+            cursor: pointer;
+        }
+        .card {
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+        .card:hover {
+            transform: translateY(-8px) scale(1.03);
+            box-shadow: 0 12px 32px rgba(99,102,241,0.12);
+        }
+        .badge {
+            font-size: 0.95em;
+            letter-spacing: 1px;
+        }
+        @media (max-width: 767px) {
+            .display-5 { font-size: 2rem; }
+            .card-body.py-5 { padding-top:2rem !important; padding-bottom:2rem !important; }
+        }
+    </style>
+    <!--
+    The CTA button is not clickable if:
+    - There is an overlaying element (e.g., a positioned SVG or div with higher z-index) covering the button.
+    - The button is disabled or has pointer-events: none in CSS.
+    - JavaScript event handlers are preventing default navigation or propagation incorrectly.
+    - The <a> tag is missing an href or has href="#" and JS is not handling navigation.
+
+    In your code, the CTA button is a real <a> tag with a valid href, styled as a button.
+    However, the SVG decorative wave (with z-index:0) is placed after the button in the DOM, but if any parent or the SVG itself has a higher z-index than the button, it may cover the button and block clicks.
+
+    Solution:
+    1. Ensure the button's container has a higher z-index than the SVG.
+    2. Make sure the SVG has pointer-events: none; so it does not block mouse events.
+
+    Add this CSS (after your SVGs or in your style block):
+    -->
+    <style>
+        svg[xmlns="http://www.w3.org/2000/svg"] {
+            pointer-events: none;
+        }
+        /* Ensure CTA button is fully clickable */
+        .btn-gradient-primary.cta-link, 
+        .btn-gradient-primary.cta-link * {
+            pointer-events: auto !important;
+        }
+        /* If the button is inside a container, ensure its stacking context is above SVGs */
+        .cta-container, .btn-gradient-primary.cta-link {
+            position: relative;
+            z-index: 2;
+        }
+    </style>
+    <!--
+    This will ensure the SVG decorative waves do not block clicks on the CTA button.
+    No JavaScript is needed if the <a> tag has a valid href and is not disabled.
+    -->
+    <!-- Optionally, include Bootstrap Icons for checkmarks -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+
+    <!-- WhatsApp chat button start -->
+    <a href="https://wa.me/+919998595357?text=Hello, I am contacting you from your https://www.shreeharisolutions.in Website."
+        class="whatsapp-rectangle" target="_blank">
+        <img src="https://img.icons8.com/color/48/000000/whatsapp--v1.png" alt="WhatsApp" />
+        <span>Chat with us</span>
+    </a>
+    <!-- WhatsApp chat button end -->
+    <!-- Footer Start -->
+
+<div class="container-fluid footer wow fadeIn" data-wow-delay="0.2s">
+    <div class="container py-4">
+        <div class="row text-center text-md-start">
+            
+            <!-- About Us -->
+            <div class="col-md-4 footer-item p-3">
+                <h4 class="text-white mb-3">About us</h4>
+                <p class="mb-0" style="color: gray;">
+                    At our core, we believe that every project deserves the highest standard of excellence, 
+                    regardless of its size or location. From planning to execution, we approach each 
+                    opportunity with care, innovation, and professionalism. Wherever you are, we look forward 
+                    to working with you and creating solutions that truly make a difference.
+                </p>
+            </div>
+
+            <!-- Explore -->
+            <div class="col-md-4 footer-item p-3">
+                <h4 class="text-white mb-3">Explore</h4>
+                <div class="d-flex flex-column" style="color: gray;">
+                    <span class="mb-2"><i class="fas fa-angle-right me-2"></i><a href="index.html">Home</a></span>
+                    <span class="mb-2"><i class="fas fa-angle-right me-2"></i><a href="service.html">Services</a></span>
+                    <span class="mb-2"><i class="fas fa-angle-right me-2"></i><a href="about.html">About Us</a></span>
+                    <span class="mb-2"><i class="fas fa-angle-right me-2"></i><a href="project.html">Latest Projects</a></span>
+                    <span class="mb-2"><i class="fas fa-angle-right me-2"></i><a href="blog.html">Our Blogs</a></span>
+                    <span class="mb-2"><i class="fas fa-angle-right me-2"></i><a href="#">Our Team</a></span>
+                    <span class="mb-2"><i class="fas fa-angle-right me-2"></i><a href="contact.html">Contact Us</a></span>
+                </div>
+            </div>
+
+            <!-- Contact Info -->
+            <div class="col-md-4 footer-item p-3">
+                <h4 class="text-white mb-3">Contact Info</h4>
+                <a class="mb-2 d-block" style="color: gray;">
+                    <i class="fa fa-map-marker-alt me-2"></i>
+                    Shree hari group, Opp. Hotel Fortune Landmark, Ashram Road, Ahmedabad 380013, Gujarat, India
+                </a>
+                <a class="mb-2 d-block" href="mailto:info@shreeharisolutions.in" style="color: gray;">
+                    <i class="fas fa-envelope me-2"></i> info@shreeharisolutions.in
+                </a>
+                <a class="mb-2 d-block" href="tel:+919998595357" style="color: gray;">
+                    <i class="fas fa-phone me-2"></i> +91 99985 95357
+                </a>
+                <div class="d-flex align-items-center justify-content-center justify-content-md-start mt-2">
+                    <a class="btn btn-light btn-md-square me-2" href="#"><i class="fab fa-facebook-f"></i></a>
+                    <a class="btn btn-light btn-md-square me-2" href="#"><i class="fab fa-twitter"></i></a>
+                    <a class="btn btn-light btn-md-square me-2" href="#"><i class="fab fa-instagram"></i></a>
+                    <a class="btn btn-light btn-md-square" href="#"><i class="fab fa-linkedin-in"></i></a>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>
+<!-- Footer End -->
+
+
+    <!-- Copyright Start -->
+    <div class="container-fluid copyright py-4">
+        <div class="container">
+            <div class="row g-4 align-items-center">
+                <div class="col-md-6 text-center text-md-start mb-md-0">
+                    <span class="text-body"><a href="index.html" class="border-bottom text-primary"><i
+                                class="fas fa-copyright text-light me-2"></i>shreeharisolutions</a>, All right
+                        reserved 2025.</span>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Copyright End -->
+
+
+    <!-- Back to Top -->
+    <a href="#" class="btn btn-primary btn-lg-square back-to-top"><i class="fa fa-arrow-up"></i></a>
+
+
+    <!-- JavaScript Libraries -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+    <!-- <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script> -->
+    <script src="lib/wow/wow.min.js"></script>
+    <script src="lib/easing/easing.min.js"></script>
+    <script src="lib/waypoints/waypoints.min.js"></script>
+    <script src="lib/counterup/counterup.min.js"></script>
+    <script src="lib/owlcarousel/owl.carousel.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="lib/lightbox/js/lightbox.min.js"></script>
+
+
+    <!-- Template Javascript -->
+    <script src="js/main.js"></script>
+</body>
+
+</html>
