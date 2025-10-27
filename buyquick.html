@@ -222,163 +222,199 @@
     <!-- Navbar & Hero End -->
 
 
+    <style>
+        /* Prevent hero section from hiding behind fixed/sticky navbar */
+        .buyquick-hero-section {
+            /* ADJUST THIS IF NAVBAR HEIGHT CHANGES */
+            margin-top: 85px; /* Safe for typical navbar 60-70px, slightly more for shadow/border */
+        }
+        @media (max-width: 991.98px) {
+            .buyquick-hero-section {
+                margin-top: 74px; /* Smaller nav height on mobile */
+            }
+        }
+        @media (max-width: 575.98px) {
+            .buyquick-hero-section {
+                margin-top: 59px; /* For mobile nav */
+            }
+        }
+    </style>
 
-    <!-- Header Start -->
-    <div class="container-fluid bg-breadcrumb"
-        style="background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(img/aboutus.png); background-position: center center; background-repeat: no-repeat; background-size: cover;">
-        <div class="bg-breadcrumb-single"></div>
-        <div class="container text-center py-5" style="max-width: 900px;">
-            <h4 class="text-white display-4 mb-4 wow fadeInDown" data-wow-delay="0.1s">IT services</h4>
-        </div>
-    </div>
-    <!-- Header End -->
-    <!-- IT Services Section Start -->
-    <section class="py-5" style="background: #f4f7fa;">
-        <div class="container">
-            <h2 class="section-title text-center mb-3" style="font-weight: 700; color: #1a237e;">Our IT Services</h2>
-            <p class="text-center mb-5 lead" style="color: #444;">
-                Empower your business with our comprehensive suite of IT services, leveraging the latest technologies and creative solutions to drive digital transformation and growth.
+    <section class="buyquick-hero-section" style="background: linear-gradient(100deg, #f5faff 60%, #ffedae 100%); padding: 60px 0 40px 0; position: relative; overflow: hidden;">
+        <div class="container text-center" style="max-width: 800px;">
+            <img src="img/buyquick-logo.png" alt="BuyQuick Logo" style="width: 180px; margin-bottom: 28px;" onerror="this.style.display='none'">
+            <h1 class="display-5 fw-bold mb-3" style="color: #222;">BuyQuick: Next-Gen B2B Trade Platform</h1>
+            <p class="lead mb-4" style="color: #4a4a4a;">
+                At BuyQuick, we believe that online trade should be simple, fast, and reliable.<br>
+                We go beyond connecting buyers &amp; suppliers—we build trusted, technology-driven business partnerships.
             </p>
-            <div class="row g-4">
-                <!-- Frontend Development -->
-                <div class="col-md-6 col-lg-3">
-                    <div class="service-card shadow-sm rounded-4 p-4 h-100 bg-white text-center wow fadeInUp highlight-tile" data-wow-delay="0.1s">
-                        <div class="service-icon mb-3 text-primary fs-1">
-                            <i class="fas fa-laptop-code"></i>
-                        </div>
-                        <a href="frontend.html" class="text-decoration-none service-title-link">
-                            <h5 class="fw-semibold mb-2">Frontend Development</h5>
-                        </a>
-                        <p class="mb-0 text-muted" style="font-size: 15px;">
-                            Modern, responsive, and interactive web interfaces using React, Angular, Vue, and more for seamless user experiences.
-                        </p>
+            <a href="contact.html" class="btn btn-warning btn-lg rounded-pill shadow-sm px-5 py-3 mb-2" style="font-weight: 600;">
+                Get Started <i class="fas fa-arrow-right ms-2"></i>
+            </a>
+        </div>
+        <div class="position-absolute top-0 end-0 d-none d-md-block" style="width: 260px; opacity: 0.12; pointer-events:none;">
+            <img src="img/bg-pattern-2.svg" alt="" style="width:100%">
+        </div>
+    </section>
+
+    <section class="container py-5">
+        <div class="row align-items-center mb-5 gy-4 flex-column-reverse flex-md-row">
+            <div class="col-md-6">
+                <img src="https://images.unsplash.com/photo-1519389950473-47ba0277781c?auto=format&fit=crop&w=800&q=80"
+                     alt="BuyQuick Dashboard Example"
+                     class="w-100 rounded shadow-sm"
+                     style="min-height:260px;object-fit:cover;"
+                     onerror="this.style.background='#ececec';this.src='https://img.icons8.com/fluency/240/laptop-settings.png';">
+            </div>
+            <div class="col-md-6 mb-4 mb-md-0">
+                <h2 class="fw-bold mb-3" style="color:#30447c;">Empowering Growth with Smart Technology</h2>
+                <p class="mb-2" style="color:#444;">
+                    Our AI/ML-driven platform removes barriers and opens new growth horizons for your business.
+                    Whether you’re a supplier expanding reach or a buyer seeking the perfect product, BuyQuick makes every transaction smooth, transparent, and efficient.
+                </p>
+                <ul class="list-unstyled mt-3">
+                    <li class="mb-2"><i class="bi bi-check2-circle text-success me-2"></i> Personalized matches using AI &amp; ML</li>
+                    <li class="mb-2"><i class="bi bi-check2-circle text-success me-2"></i> Automate &amp; simplify negotiation processes</li>
+                    <li class="mb-2"><i class="bi bi-check2-circle text-success me-2"></i> Transparent and efficient trading journey</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="row mb-5">
+            <div class="col-12 text-center mb-4">
+                <h2 class="fw-bold" style="color:#30447c;">Powerful Features for Seamless Trade</h2>
+                <p class="lead" style="color: #555;">
+                    Designed to make trade smarter, faster, and better for every user.
+                </p>
+            </div>
+            <div class="col-lg-2 col-md-4 col-sm-6 mb-4">
+                <div class="feature-card p-4 h-100 shadow-sm rounded-3 bg-white text-center d-flex flex-column align-items-center justify-content-between">
+                    <div class="mb-3 d-flex justify-content-center flex-column align-items-center">
+                        
+                        <!-- Additional relevant image for Lead Manager -->
+                        <img src="https://img.icons8.com/fluency/48/briefcase-settings.png" 
+                             alt="Business Management Illustration" 
+                             style="width:34px;height:34px;object-fit:contain;" 
+                             class="mt-1">
+                    </div>
+                    <div>
+                        <h6 class="fw-bold mb-1" style="color:#2d3c5c;">Lead Manager</h6>
+                        <p class="mb-0 small" style="color:#575757;max-width:140px;">Organize, track, and manage all your business opportunities with ease.</p>
                     </div>
                 </div>
-                <!-- Backend Development -->
-                <div class="col-md-6 col-lg-3">
-                    <div class="service-card shadow-sm rounded-4 p-4 h-100 bg-white text-center wow fadeInUp highlight-tile" data-wow-delay="0.2s">
-                        <div class="service-icon mb-3 text-success fs-1">
-                            <i class="fas fa-server"></i>
-                        </div>
-                        <a href="backend.html" class="text-decoration-none service-title-link">
-                            <h5 class="fw-semibold mb-2">Backend Development</h5>
-                        </a>
-                        <p class="mb-0 text-muted" style="font-size: 15px;">
-                            Robust, scalable, and secure server-side solutions with Node.js, Python, PHP, .NET, and more to power your applications.
-                        </p>
+            </div>
+            <div class="col-lg-2 col-md-4 col-sm-6 mb-4">
+                <div class="feature-card p-4 h-100 shadow-sm rounded-3 bg-white text-center d-flex flex-column align-items-center justify-content-between">
+                    <div class="mb-3 d-flex justify-content-center flex-column align-items-center">
+                        <!-- Icon for Multi-Language & Voice -->
+                        <img src="https://img.icons8.com/fluency/48/language-skill.png" 
+                             alt="Multi-Language & Voice" 
+                             style="width:34px;height:34px;object-fit:contain;" 
+                             class="mt-1 mb-2">
+                    </div>
+                    <div>
+                        <h6 class="fw-bold mb-1" style="color:#2d3c5c;">Multi-Language &amp; Voice</h6>
+                        <p class="mb-0 small" style="color:#575757;max-width:140px;">Effortless, inclusive search—break language barriers with built-in voice assistants.</p>
                     </div>
                 </div>
-                <!-- Mobile App Development -->
-                <div class="col-md-6 col-lg-3">
-                    <div class="service-card shadow-sm rounded-4 p-4 h-100 bg-white text-center wow fadeInUp highlight-tile" data-wow-delay="0.3s">
-                        <div class="service-icon mb-3 text-warning fs-1">
-                            <i class="fas fa-mobile-alt"></i>
-                        </div>
-                        <a href="mobileapp.html" class="text-decoration-none service-title-link">
-                            <h5 class="fw-semibold mb-2">Mobile App Development</h5>
-                        </a>
-                        <p class="mb-0 text-muted" style="font-size: 15px;">
-                            Native and cross-platform mobile apps for iOS &amp; Android using Flutter, React Native, and Swift for maximum reach.
-                        </p>
+            </div>
+            <div class="col-lg-2 col-md-4 col-sm-6 mb-4">
+                <div class="feature-card p-4 h-100 shadow-sm rounded-3 bg-white text-center d-flex flex-column align-items-center justify-content-between">
+                    <div class="mb-3 d-flex justify-content-center flex-column align-items-center">
+                        <!-- Icon for Ratings & Reviews -->
+                        <img src="https://img.icons8.com/fluency/48/star.png"
+                             alt="Ratings & Reviews"
+                             style="width:34px;height:34px;object-fit:contain;"
+                             class="mt-1 mb-2">
+                    </div>
+                    <div>
+                        <h6 class="fw-bold mb-1" style="color:#2d3c5c;">Ratings &amp; Reviews</h6>
+                        <p class="mb-0 small" style="color:#575757;max-width:140px;">Build trust through transparent, community-driven feedback.</p>
                     </div>
                 </div>
-                <!-- eCommerce & CMS -->
-                <div class="col-md-6 col-lg-3">
-                    <div class="service-card shadow-sm rounded-4 p-4 h-100 bg-white text-center wow fadeInUp highlight-tile" data-wow-delay="0.4s">
-                        <div class="service-icon mb-3 text-danger fs-1">
-                            <i class="fas fa-shopping-cart"></i>
-                        </div>
-                        <a href="ecommerce.html" class="text-decoration-none service-title-link">
-                            <h5 class="fw-semibold mb-2">eCommerce &amp; CMS</h5>
-                        </a>
-                        <p class="mb-0 text-muted" style="font-size: 15px;">
-                            Custom eCommerce platforms and CMS solutions with Shopify, WooCommerce, Magento, WordPress, and more.
-                        </p>
+            </div>
+            <div class="col-lg-2 col-md-4 col-sm-6 mb-4">
+                <div class="feature-card p-4 h-100 shadow-sm rounded-3 bg-white text-center d-flex flex-column align-items-center justify-content-between">
+                    <div class="mb-3 d-flex justify-content-center flex-column align-items-center">
+                        <!-- Icon for Cloud Tools -->
+                        <img src="https://img.icons8.com/fluency/48/cloud-checked.png"
+                             alt="Cloud Tools"
+                             style="width:34px;height:34px;object-fit:contain;"
+                             class="mt-1 mb-2">
+                    </div>
+                    <div>
+                        <h6 class="fw-bold mb-1" style="color:#2d3c5c;">Cloud Tools</h6>
+                        <p class="mb-0 small" style="color:#575757;max-width:140px;">Access and manage your data anytime, anywhere—100% cloud-based.</p>
                     </div>
                 </div>
-                <!-- UI/UX Design -->
-                <div class="col-md-6 col-lg-3">
-                    <div class="service-card shadow-sm rounded-4 p-4 h-100 bg-white text-center wow fadeInUp highlight-tile" data-wow-delay="0.5s">
-                        <div class="service-icon mb-3 text-info fs-1">
-                            <i class="fas fa-pencil-ruler"></i>
-                        </div>
-                        <a href="uiux.html" class="text-decoration-none service-title-link">
-                            <h5 class="fw-semibold mb-2">UI/UX Design</h5>
-                        </a>
-                        <p class="mb-0 text-muted" style="font-size: 15px;">
-                            Intuitive and visually stunning designs focused on user engagement and brand identity using Figma, Adobe XD, and Sketch.
-                        </p>
+            </div>
+            <div class="col-lg-2 col-md-4 col-sm-6 mb-4">
+                <div class="feature-card p-4 h-100 shadow-sm rounded-3 bg-white text-center d-flex flex-column align-items-center justify-content-between">
+                    <div class="mb-3 d-flex justify-content-center flex-column align-items-center">
+                        <!-- Icon for AI Lead Generation -->
+                        <img src="https://img.icons8.com/fluency/48/artificial-intelligence.png"
+                             alt="AI Lead Generation"
+                             style="width:34px;height:34px;object-fit:contain;"
+                             class="mt-1 mb-2">
+                    </div>
+                    <div>
+                        <h6 class="fw-bold mb-1" style="color:#2d3c5c;">AI Lead Generation</h6>
+                        <p class="mb-0 small" style="color:#575757;max-width:140px;">Find new leads and expand your network with our advanced system.</p>
                     </div>
                 </div>
-                <!-- Digital Marketing -->
-                <div class="col-md-6 col-lg-3">
-                    <div class="service-card shadow-sm rounded-4 p-4 h-100 bg-white text-center wow fadeInUp highlight-tile" data-wow-delay="0.6s">
-                        <div class="service-icon mb-3 text-secondary fs-1">
-                            <i class="fas fa-bullhorn"></i>
-                        </div>
-                        <a href="digitalmarketing.html" class="text-decoration-none service-title-link">
-                            <h5 class="fw-semibold mb-2">Digital Marketing</h5>
-                        </a>
-                        <p class="mb-0 text-muted" style="font-size: 15px;">
-                            SEO, SEM, social media, and content marketing strategies to boost your online presence and drive business growth.
-                        </p>
+            </div>
+            <div class="col-lg-2 col-md-4 col-sm-6 mb-4">
+                <div class="feature-card p-4 h-100 shadow-sm rounded-3 bg-white text-center d-flex flex-column align-items-center justify-content-between">
+                    <div class="mb-3 d-flex justify-content-center flex-column align-items-center">
+                        <!-- Icon for And More... -->
+                        <img src="https://img.icons8.com/fluency/48/more.png"
+                             alt="And More"
+                             style="width:34px;height:34px;object-fit:contain;"
+                             class="mt-1 mb-2">
+                    </div>
+                    <div>
+                        <h6 class="fw-bold mb-1" style="color:#2d3c5c;">And More...</h6>
+                        <p class="mb-0 small" style="color:#575757;max-width:140px;">Every feature made to deliver a simpler, smarter, faster business journey.</p>
                     </div>
                 </div>
-                <!-- Cloud & DevOps -->
-                <div class="col-md-6 col-lg-3">
-                    <div class="service-card shadow-sm rounded-4 p-4 h-100 bg-white text-center wow fadeInUp highlight-tile" data-wow-delay="0.7s">
-                        <div class="service-icon mb-3 text-primary fs-1">
-                            <i class="fas fa-cloud"></i>
-                        </div>
-                        <a href="clouddevops.html" class="text-decoration-none service-title-link">
-                            <h5 class="fw-semibold mb-2">Cloud &amp; DevOps</h5>
-                        </a>
-                        <p class="mb-0 text-muted" style="font-size: 15px;">
-                            Scalable cloud solutions, CI/CD pipelines, and infrastructure automation with AWS, Azure, Docker, and Kubernetes.
-                        </p>
-                    </div>
-                </div>
-                
-                <!-- Quality Assurance -->
-                <div class="col-md-6 col-lg-3">
-                    <div class="service-card shadow-sm rounded-4 p-4 h-100 bg-white text-center wow fadeInUp highlight-tile" data-wow-delay="0.9s">
-                        <div class="service-icon mb-3 text-warning fs-1">
-                            <i class="fas fa-clipboard-check"></i>
-                        </div>
-                        <a href="qualityassurance.html" class="text-decoration-none service-title-link">
-                            <h5 class="fw-semibold mb-2">Quality Assurance</h5>
-                        </a>
-                        <p class="mb-0 text-muted" style="font-size: 15px;">
-                            Comprehensive testing services to ensure your software is reliable, secure, and performs flawlessly across all platforms.
-                        </p>
-                    </div>
-                </div>
-                <style>
-                    .highlight-tile {
-                        transition: box-shadow 0.3s, border-color 0.3s, transform 0.3s;
-                        border: 2px solid transparent;
-                    }
-                    .highlight-tile:hover {
-                        box-shadow: 0 8px 32px rgba(13,110,253,0.15), 0 1.5px 8px rgba(13,110,253,0.10);
-                        transform: translateY(-6px) scale(1.03);
-                        z-index: 2;
-                    }
-                    .service-title-link h5 {
-                        display: inline-block;
-                        transition: border-bottom 0.2s;
-                        border-bottom: 2px solid transparent;
-                    }
-                    .service-title-link:hover h5 {
-                        border-bottom: 2px solid #0d6efd;
-                    }
-                </style>
-                
             </div>
         </div>
     </section>
-    <!-- IT Services Section End -->
+    
+    <section class="buyquick-growth-partner bg-light py-5">
+        <div class="container">
+            <div class="row align-items-center gy-4">
+                <div class="col-md-7">
+                    <h2 class="fw-bold mb-3" style="color:#30447c;">BuyQuick: Your Growth Partner</h2>
+                    <p class="mb-4" style="color: #444;">
+                        We’re more than a marketplace—we’re committed to making business connections that matter.<br>
+                        Join BuyQuick to experience seamless, efficient, and meaningful B2B relationships driven by innovation.
+                    </p>
+                    <a href="contact.html" class="btn btn-primary rounded-pill px-4 py-2" style="font-weight:500">
+                        Join Now <i class="bi bi-rocket-takeoff ms-2"></i>
+                    </a>
+                </div>
+                <div class="col-md-5 text-center">
+                    <img src="img/buyquick-connection.svg" alt="BuyQuick Connections" class="img-fluid rounded shadow-sm" style="max-height:220px;" onerror="this.style.display='none'">
+                </div>
+            </div>
+        </div>
+    </section>
 
-
+    <style>
+        .buyquick-hero-section {
+            background-attachment: fixed;
+        }
+        .feature-card:hover {
+            transform: translateY(-6px) scale(1.04);
+            box-shadow: 0 8px 24px 0 rgba(44,62,80,0.09), 0 1.5px 5px 0 rgba(0,0,0,0.04);
+            transition: .2s cubic-bezier(.4,0,.2,1);
+        }
+        .feature-card {
+            transition: .2s cubic-bezier(.4,0,.2,1);
+        }
+    </style>
+    
     <!-- Optionally, include Bootstrap Icons for checkmarks -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
 
