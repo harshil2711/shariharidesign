@@ -414,6 +414,472 @@
     </div>
     </section>
 
+    <!-- Project gallery start -->
+
+    <section class="project-gallery-section py-5 bg-light">
+        <div class="container">
+            <h2 class="section-title text-center mb-4 display-5 fw-bold" style="color: #0d6efd;">At a Glimpse of Our Project</h2>
+            <div class="row g-4" id="projectGallery">
+                <!-- Project Card 1 -->
+                <div class="col-sm-6 col-lg-4">
+                    <div class="project-card card border-0 shadow-sm h-100 position-relative overflow-hidden">
+                        <div class="project-image-wrapper">
+                            <img src="img/P1.png" class="card-img-top project-img" alt="Project 1" loading="lazy" onerror="this.onerror=null;this.src='img/no-image.png';">
+                            <div class="project-overlay d-flex flex-column justify-content-center align-items-center">
+                                <button 
+                                    class="btn btn-primary btn-sm px-3" 
+                                    onclick="openImageModal('img/P1.png', 'Prview')"
+                                >View Larger</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Project Card 2 -->
+                <div class="col-sm-6 col-lg-4">
+                    <div class="project-card card border-0 shadow-sm h-100 position-relative overflow-hidden">
+                        <div class="project-image-wrapper">
+                            <img src="img/P2.png" class="card-img-top project-img" alt="Project 2" loading="lazy" onerror="this.onerror=null;this.src='img/no-image.png';">
+                            <div class="project-overlay d-flex flex-column justify-content-center align-items-center">
+                                <button 
+                                    class="btn btn-primary btn-sm px-3" 
+                                    onclick="openImageModal('img/p2.png', 'Prview')"
+                                >View Larger</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Project Card 3 -->
+                <div class="col-sm-6 col-lg-4">
+                    <div class="project-card card border-0 shadow-sm h-100 position-relative overflow-hidden">
+                        <div class="project-image-wrapper">
+                            <img src="img/P3.jpg" class="card-img-top project-img" alt="Project 3" loading="lazy" onerror="this.onerror=null;this.src='img/no-image.png';">
+                            <div class="project-overlay d-flex flex-column justify-content-center align-items-center">
+                                <button 
+                                    class="btn btn-primary btn-sm px-3" 
+                                    onclick="openImageModal('img/P3.jpg', 'Prview')"
+                                >View Larger</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Project Card 4 -->
+                <div class="col-sm-6 col-lg-4">
+                    <div class="project-card card border-0 shadow-sm h-100 position-relative overflow-hidden">
+                        <div class="project-image-wrapper">
+                            <img src="img/P4.jpg" class="card-img-top project-img" alt="Project 4" loading="lazy" onerror="this.onerror=null;this.src='img/no-image.png';">
+                            <div class="project-overlay d-flex flex-column justify-content-center align-items-center">
+                                <button 
+                                    class="btn btn-primary btn-sm px-3" 
+                                    onclick="openImageModal('img/P4.jpg', 'Prview')"
+                                >View Larger</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Project Card 5 -->
+                <div class="col-sm-6 col-lg-4">
+                    <div class="project-card card border-0 shadow-sm h-100 position-relative overflow-hidden">
+                        <div class="project-image-wrapper">
+                            <img src="img/P5.jpg" class="card-img-top project-img" alt="Project 5" loading="lazy" onerror="this.onerror=null;this.src='img/no-image.png';">
+                            <div class="project-overlay d-flex flex-column justify-content-center align-items-center">
+                                <button 
+                                    class="btn btn-primary btn-sm px-3" 
+                                    onclick="openImageModal('img/P5.jpg', 'Prview')"
+                                >View Larger</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Project Card 6 -->
+                <div class="col-sm-6 col-lg-4">
+                    <div class="project-card card border-0 shadow-sm h-100 position-relative overflow-hidden">
+                        <div class="project-image-wrapper">
+                            <img src="img/P6.jpg" class="card-img-top project-img" alt="Project 6" loading="lazy" onerror="this.onerror=null;this.src='img/no-image.png';">
+                            <div class="project-overlay d-flex flex-column justify-content-center align-items-center">
+                                <button 
+                                    class="btn btn-primary btn-sm px-3" 
+                                    onclick="openImageModal('img/p6.jpg', 'Prview')"
+                                >View Larger</button>
+                            </div>
+                        </div>
+                        <!-- card-body and h6 for project tile are removed as requested -->
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Modal: Large Image Viewer -->
+        <div class="modal fade" id="imageModal" tabindex="-1" aria-labelledby="imageModalLabel" aria-hidden="true">
+          <div class="modal-dialog modal-dialog-centered modal-lg">
+            <div class="modal-content" style="background: #222;">
+              <div class="modal-header border-0">
+                <h5 class="modal-title text-white" id="imageModalLabel"></h5>
+                <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close" style="filter:invert(1);opacity:.85"></button>
+              </div>
+              <div class="modal-body text-center position-relative" style="padding:0; overflow:hidden;">
+                <div class="zoom-controls position-absolute w-100 d-flex justify-content-end pe-3 pt-3" style="pointer-events: none;z-index:3;">
+                    <button 
+                        id="zoomInBtn" 
+                        class="btn btn-light btn-sm me-2"
+                        style="pointer-events:auto;"
+                        title="Zoom In"
+                        tabindex="0"
+                        type="button"
+                    >
+                        <span style="font-size:1.2rem;line-height:1">+</span>
+                    </button>
+                    <button 
+                        id="zoomOutBtn" 
+                        class="btn btn-light btn-sm"
+                        style="pointer-events:auto;"
+                        title="Zoom Out"
+                        tabindex="0"
+                        type="button"
+                    >
+                        <span style="font-size:1.2rem;line-height:1">&minus;</span>
+                    </button>
+                </div>
+                <!-- To allow translate to crop image rather than overflow, put img in a container div -->
+                <div id="modalImgContainer" style="display:flex;justify-content:center;align-items:center;overflow:hidden;width:100%;height:80vh;max-height:80vh;position:relative;">
+                  <img id="modalProjectImg" src="" alt="" style="max-width: 100%; max-height: 100%; border-radius: 0.5rem; margin-bottom: 0; transition: transform .18s cubic-bezier(.4,.08,.21,1); cursor: grab; display:block;" onerror="this.onerror=null;this.src='img/no-image.png';">
+                </div>
+                <!-- Add space at the bottom of modal image for larger windows -->
+                <div class="d-none d-lg-block" style="height:30px;"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <script>
+            // Function to open the modal with correct image and title, reset zoom and pan
+            function openImageModal(src, title) {
+                var modal = new bootstrap.Modal(document.getElementById('imageModal'));
+                var img = document.getElementById('modalProjectImg');
+                img.src = src;
+                img.alt = title;
+                document.getElementById('imageModalLabel').innerText = title;
+                // Reset zoom and pan to default when opened
+                img.style.transform = 'scale(1)';
+                img.setAttribute('data-zoom', '1');
+                img.setAttribute('data-pan-x', '0');
+                img.setAttribute('data-pan-y', '0');
+                img.style.cursor = 'grab';
+                modal.show();
+            }
+
+            // ZOOM BUTTONS AND PANNING LOGIC (DRAG TO MOVE)
+            document.addEventListener('DOMContentLoaded', function() {
+                var zoomInBtn = document.getElementById('zoomInBtn');
+                var zoomOutBtn = document.getElementById('zoomOutBtn');
+                var img = document.getElementById('modalProjectImg');
+                var imgContainer = document.getElementById('modalImgContainer');
+
+                // Initialize attributes if not set
+                if (!img.getAttribute('data-zoom')) img.setAttribute('data-zoom', '1');
+                if (!img.getAttribute('data-pan-x')) img.setAttribute('data-pan-x', '0');
+                if (!img.getAttribute('data-pan-y')) img.setAttribute('data-pan-y', '0');
+
+                var MIN_ZOOM = 1, MAX_ZOOM = 3, ZOOM_STEP = 0.2;
+
+                // Helper to update image transform with scaling and panning
+                function applyTransform() {
+                    var z = parseFloat(img.getAttribute('data-zoom') || '1');
+                    var x = parseFloat(img.getAttribute('data-pan-x') || '0');
+                    var y = parseFloat(img.getAttribute('data-pan-y') || '0');
+                    img.style.transform = 'scale(' + z + ') translate(' + x + 'px,' + y + 'px)';
+                    // Only enable hand cursor if zoomed in
+                    if (z > 1) img.style.cursor = 'grab';
+                    else img.style.cursor = 'auto';
+                }
+
+                function setZoom(z) {
+                    z = Math.max(MIN_ZOOM, Math.min(MAX_ZOOM, z));
+                    img.setAttribute('data-zoom', z.toFixed(2));
+                    // Reset pan if zooming to 1
+                    if (z <= MIN_ZOOM + 0.001) {
+                        img.setAttribute('data-pan-x', '0');
+                        img.setAttribute('data-pan-y', '0');
+                    } else {
+                        // If first time zooming in, keep pan positions
+                        var panX = parseFloat(img.getAttribute('data-pan-x')||'0');
+                        var panY = parseFloat(img.getAttribute('data-pan-y')||'0');
+                        // Clamp pan so image never gets dragged out of bounds
+                        clampPan(z, panX, panY);
+                    }
+                    zoomOutBtn.disabled = (z <= MIN_ZOOM + 0.001);
+                    zoomInBtn.disabled = (z >= MAX_ZOOM - 0.001);
+                    applyTransform();
+                }
+
+                // Clamp pan so image cannot be moved beyond its visible boundaries
+                // (no matter mouse, touch, or update, always clamp!)
+                function clampPan(zoom, panX, panY) {
+                    var bounds = getPanBounds(zoom);
+                    panX = Math.max(bounds.minX, Math.min(bounds.maxX, panX));
+                    panY = Math.max(bounds.minY, Math.min(bounds.maxY, panY));
+                    img.setAttribute('data-pan-x', panX);
+                    img.setAttribute('data-pan-y', panY);
+                    return {x: panX, y: panY};
+                }
+
+                // Calculate allowed pan at current zoom so image never exposes space outside itself in view
+                function getPanBounds(zoom) {
+                    // Work with rendered sizes as they are after current display/layout
+                    var container = imgContainer;
+                    var imgRect = img.getBoundingClientRect();
+                    var containerRect = container.getBoundingClientRect();
+
+                    // Rendered size of image at zoom = 1 (because getBoundingClientRect includes scale transforms)
+                    // We'll need the "natural" width and height of the image as displayed inside container at zoom=1
+                    var baseW = img.naturalWidth, baseH = img.naturalHeight;
+                    var aspectImg = baseW / baseH;
+                    var contW = containerRect.width;
+                    var contH = containerRect.height;
+                    // Fit image into container and determine how it scales at zoom=1
+                    var fittedW = contW, fittedH = contW / aspectImg;
+                    if (fittedH > contH) {
+                        fittedH = contH;
+                        fittedW = contH * aspectImg;
+                    }
+
+                    // At current zoom, the image size is fittedW*zoom, fittedH*zoom
+                    var zoomedW = fittedW * zoom;
+                    var zoomedH = fittedH * zoom;
+
+                    // The max pan is so that the container edge never shows space outside the image
+                    // Amount of img visible beyond the container is split equally for left/right and top/bottom
+                    var maxPanX = Math.max(0, (zoomedW - contW) / 2);
+                    var maxPanY = Math.max(0, (zoomedH - contH) / 2);
+                    return {
+                        minX: -maxPanX,
+                        maxX: maxPanX,
+                        minY: -maxPanY,
+                        maxY: maxPanY
+                    };
+                }
+
+                // Pan variables for dragging moves
+                var isPanning = false, startX, startY, panX0, panY0;
+
+                function handlePointerDown(e) {
+                    var z = parseFloat(img.getAttribute('data-zoom') || '1');
+                    if (z === 1) return; // Don't pan if not zoomed
+                    isPanning = true;
+                    img.style.cursor = 'grabbing';
+                    // support both mouse and touch
+                    if (e.type.startsWith('touch')) {
+                        startX = e.touches[0].clientX;
+                        startY = e.touches[0].clientY;
+                    } else {
+                        startX = e.clientX;
+                        startY = e.clientY;
+                        e.preventDefault();
+                    }
+                    panX0 = parseFloat(img.getAttribute('data-pan-x') || '0');
+                    panY0 = parseFloat(img.getAttribute('data-pan-y') || '0');
+                    document.addEventListener('mousemove', handlePointerMove);
+                    document.addEventListener('mouseup', handlePointerUp);
+                    document.addEventListener('touchmove', handlePointerMove, {passive:false});
+                    document.addEventListener('touchend', handlePointerUp);
+                    document.body.style.userSelect = 'none';
+                }
+
+                function handlePointerMove(e) {
+                    if (!isPanning) return;
+                    var z = parseFloat(img.getAttribute('data-zoom') || '1');
+                    var moveX, moveY;
+                    if (e.type.startsWith('touch')) {
+                        moveX = e.touches[0].clientX - startX;
+                        moveY = e.touches[0].clientY - startY;
+                        e.preventDefault();
+                    } else {
+                        moveX = e.clientX - startX;
+                        moveY = e.clientY - startY;
+                    }
+                    // Clamp pan so image cannot go outside the window
+                    var nextPanX = panX0 + moveX;
+                    var nextPanY = panY0 + moveY;
+                    var clamped = clampPan(z, nextPanX, nextPanY);
+                    applyTransform();
+                }
+
+                function handlePointerUp(e) {
+                    isPanning = false;
+                    document.body.style.userSelect = '';
+                    img.style.cursor = 'grab';
+                    document.removeEventListener('mousemove', handlePointerMove);
+                    document.removeEventListener('mouseup', handlePointerUp);
+                    document.removeEventListener('touchmove', handlePointerMove);
+                    document.removeEventListener('touchend', handlePointerUp);
+                }
+
+                if (zoomInBtn && zoomOutBtn && img) {
+                    zoomInBtn.addEventListener('click', function(e) {
+                        e.stopPropagation();
+                        var z = parseFloat(img.getAttribute('data-zoom') || '1');
+                        setZoom(z + ZOOM_STEP);
+                    });
+                    zoomOutBtn.addEventListener('click', function(e) {
+                        e.stopPropagation();
+                        var z = parseFloat(img.getAttribute('data-zoom') || '1');
+                        setZoom(z - ZOOM_STEP);
+                    });
+                    // Panning logic
+                    img.addEventListener('mousedown', handlePointerDown);
+                    img.addEventListener('touchstart', handlePointerDown, {passive:false});
+                    // Optional: double-click on image to reset zoom and pan
+                    img.addEventListener('dblclick', function() {
+                        setZoom(1);
+                    });
+                    // On zoom, recalculate pan and apply
+                    function resetZoomPan() {
+                        img.setAttribute('data-zoom', '1');
+                        img.setAttribute('data-pan-x', '0');
+                        img.setAttribute('data-pan-y', '0');
+                        applyTransform();
+                    }
+                    // When modal is shown, reset zoom and pan, also button states
+                    document.getElementById('imageModal').addEventListener('show.bs.modal', function() {
+                        setTimeout(function(){
+                            resetZoomPan();
+                            zoomOutBtn.disabled = true;
+                            zoomInBtn.disabled = false;
+                        }, 20);
+                    });
+
+                    // Also clamp pan after image loaded in case new image ratio, newly resized, etc.
+                    img.addEventListener('load', function() {
+                        var z = parseFloat(img.getAttribute('data-zoom') || '1');
+                        var panX = parseFloat(img.getAttribute('data-pan-x') || '0');
+                        var panY = parseFloat(img.getAttribute('data-pan-y') || '0');
+                        clampPan(z, panX, panY);
+                        applyTransform();
+                    });
+                    // And if user resizes window, also clamp
+                    window.addEventListener('resize', function(){
+                        var z = parseFloat(img.getAttribute('data-zoom') || '1');
+                        var panX = parseFloat(img.getAttribute('data-pan-x') || '0');
+                        var panY = parseFloat(img.getAttribute('data-pan-y') || '0');
+                        clampPan(z, panX, panY);
+                        applyTransform();
+                    });
+                }
+
+                // Initial transform
+                applyTransform();
+            });
+        </script>
+    </section>
+
+    <!-- Project Gallery Styles -->
+    <style>
+        .project-gallery-section {
+            background: linear-gradient(135deg, #f8fafc 60%, #e2e5ec 100%);
+        }
+        .project-card {
+            transition: transform 0.18s, box-shadow 0.18s;
+        }
+        .project-card:hover {
+            transform: translateY(-8px) scale(1.03);
+            box-shadow: 0 8px 24px 0 rgba(13,110,253,0.10), 0 1.5px 6px 0 rgba(0,0,0,0.08);
+        }
+        .project-image-wrapper {
+            position: relative;
+            overflow: hidden;
+            border-radius: 1rem 1rem 0 0;
+        }
+        .project-img {
+            width: 100%;
+            height: 220px;
+            object-fit: cover;
+            transition: transform 0.3s;
+            border-radius: 1rem 1rem 0 0;
+            background: #e0e0e0;
+            display: block;
+        }
+        .project-card:hover .project-img {
+            transform: scale(1.07);
+        }
+        .project-overlay {
+            position: absolute;
+            inset: 0;
+            background: rgba(13,110,253,.76);
+            opacity: 0;
+            transition: opacity 0.22s;
+            z-index: 2;
+            border-radius: 1rem 1rem 0 0;
+            text-align: center;
+        }
+        .project-card:hover .project-overlay,
+        .project-card:focus-within .project-overlay {
+            opacity: 1;
+        }
+        .project-overlay h5 {
+            font-weight: 600;
+            letter-spacing: 0.5px;
+            margin-bottom: 0; /* Remove space below the title */
+        }
+        .project-overlay .btn {
+            margin-top: .25rem;
+            font-size: 0.95rem;
+        }
+        /* Modal image responsive on large window */
+        #modalImgContainer {
+            width:100%;
+            height:80vh;
+            max-height:80vh;
+            display:flex;
+            align-items:center;
+            justify-content:center;
+            overflow:hidden; /* this is crucial: crop image and prevent drag overflow! */
+            position:relative;
+            background:#111;
+        }
+        #modalProjectImg {
+            max-width: 100%;
+            max-height: 100%;
+            width: auto;
+            height: auto;
+            margin:auto;
+            background: #111;
+            display:block;
+            will-change: transform;
+        }
+        .modal-content {
+            border-radius: 1rem;
+        }
+        /* Zoom buttons style */
+        .zoom-controls .btn {
+            background: rgba(255,255,255,0.97);
+            color: #0d6efd;
+            border: none;
+            font-weight: bold;
+            box-shadow: 0 1px 6px rgba(0,0,0,0.08);
+            padding: 0.35rem 0.6rem;
+            border-radius: 50px;
+            margin-right: 0;
+            margin-left: 0;
+            transition: background 0.15s;
+        }
+        .zoom-controls .btn:active {
+            background: #e2e6ea;
+        }
+        .zoom-controls .btn:disabled {
+            opacity: 0.55;
+            cursor: default !important;
+        }
+        /* Add extra space below modal image in larger windows */
+        @media (min-width: 992px) {
+            #imageModal .modal-body {
+                padding-bottom: 2rem !important;
+            }
+            #imageModal #modalProjectImg {
+                margin-bottom: 1.5rem !important;
+            }
+        }
+    </style>
+
+    <!-- Project gallery End -->
+
     <!-- Why Choose Us -->
     <section class="why-choose-section py-5">
         <div class="container">
