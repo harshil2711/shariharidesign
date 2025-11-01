@@ -67,46 +67,555 @@
         <!-- Topbar End -->
 
 
-        <!-- Navbar & Hero Start -->
-        <div class="container-fluid fixed-top px-0">
-            <div class="position-absolute bg-dark" style="left: 0; top: 0; width: 100%; height: 100%;">
-            </div>
-            <div class="px-0">
-                <nav class="navbar navbar-expand-lg navbar-dark bg-white py-3 px-4">
-                <a href="index.html" class="navbar-brand d-flex align-items-center p-0">
-                    <img src="img/logo.png" alt="Logo" height="50" class="me-2">
-                    <h1 class="text-primary m-0 fs-4">SHREE HARI SOLUTIONS</h1>
-                </a>
-                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
-                        <span class="fa fa-bars"></span>
-                    </button>
-                    <div class="collapse navbar-collapse" id="navbarCollapse">
-                        <div class="navbar-nav ms-auto py-0">
-                            <a href="index.html" class="nav-item nav-link">Home</a>
-                            <a href="about.html" class="nav-item nav-link">About</a>
-                            <a href="service.html" class="nav-item nav-link">Services</a>
-                            <a href="project.html" class="nav-item nav-link active">Projects</a>
-                            <div class="nav-item dropdown">
-                                <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Pages</a>
-                                <div class="dropdown-menu m-0">
-                                    <a href="blog.html" class="dropdown-item">Our Blog</a>
-                                    <a href="team.html" class="dropdown-item">Our Team</a>
-                                    <a href="testimonial.html" class="dropdown-item">Testimonial</a>
-                                    <a href="faqs.html" class="dropdown-item">FAQs</a>
-                                    <a href="404.html" class="dropdown-item">404 Page</a>
+            <!-- Navbar & Hero Start -->
+    <div class="container-fluid fixed-top px-0">
+        <div class="header-overlay"></div>
+        <!-- Desktop & Mobile Navbar Header -->
+        <div class="px-0">
+            <nav class="navbar navbar-expand-lg navbar-light bg-light py-3 px-4">
+                <div class="container-fluid d-flex flex-column flex-lg-row justify-content-between align-items-center">
+                    <!-- Mobile: Logo and toggler in one line, only visible on mobile -->
+                    <div class="w-100 d-flex d-lg-none align-items-center justify-content-between navbar-brand-and-toggler mb-3">
+                        <a href="index.html" class="navbar-brand d-flex align-items-center p-0">
+                            <img src="img/logo.png" alt="Logo" height="50" class="me-2">
+                            <h1 class="text-primary m-0 fs-4">SHREE HARI GROUP</h1>
+                        </a>
+                        <!-- Offcanvas toggler button for mobile -->
+                        <button class="navbar-toggler ms-auto d-lg-none" 
+                        type="button"
+                        data-bs-toggle="offcanvas" 
+                        data-bs-target="#offcanvasNav"
+                        aria-controls="offcanvasNav"
+                        aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                    </div>
+
+                    <!-- Desktop: Logo (visible only on lg and up) -->
+                    <div class="ps-5 pe-5 d-none d-lg-block">
+                        <a href="index.html" class="navbar-brand d-flex align-items-center p-0 mb-3 mb-lg-0">
+                            <img src="img/logo.png" alt="Logo" height="50" class="me-2">
+                            <h1 class="text-primary m-0 fs-4">SHREE HARI GROUP</h1>
+                        </a>
+                    </div>
+
+                    <!-- Desktop Menu -->
+                    <div class="collapse navbar-collapse d-none d-lg-block" id="navbarDesktop">
+                        <div class="navbar-nav py-0 px-4 w-100 d-flex align-items-center">
+                            <div
+                                class="d-flex flex-column flex-lg-row align-items-center justify-content-center gap-3 flex-grow-1">
+                                <a href="about.html" class="nav-item nav-link position-relative mx-3">About<div
+                                        class="nav-underline"></div></a>
+
+                                <!-- Services dropdown -->
+                                <div class="dropdown nav-item position-static mx-3">
+                                    <a href="service.html" class="nav-link dropdown-toggle d-flex align-items-center"
+                                        data-bs-toggle="dropdown" data-bs-auto-close="outside" tabindex="0">
+                                        <span class="me-2">Services</span>
+                                        <div class="nav-underline"></div>
+                                    </a>
+
+                                    <!-- use container-fluid here so it doesn't have Bootstrap's max-width -->
+                                    <div class="dropdown-menu bg-white border-0 rounded-0 rounded-bottom m-0 p-0 w-100"
+                                        style="margin-top: 0 !important;">
+                                        <div class="container-fluid py-4">
+                                            <div class="row">
+                                                <div class="col-md-3">
+                                                    <h6 class="text-dark mb-3"> <a href="mechanical.html" style="color: #000;" </a> Mechanical Engineering Services</h6>
+                                                    <a class="dropdown-item" href="2D 3D.html" style="font-size:15px;">Modeling & Drafting</a>
+                                                    <a class="dropdown-item" href="Cadconversation.html" style="font-size:15px;">CAD Conversion & Migration</a>
+                                                    <a class="dropdown-item" href="reverseeng.html" style="font-size:15px;">Reverse Engineering</a>
+                                                    <a class="dropdown-item" href="advancesimulation.html" style="font-size:15px;">Advanced Simulation & Design</a>
+                                                    <a class="dropdown-item" href="toolingandfixture.html" style="font-size:15px;">Tooling & Fixture Development</a>
+                                                    <a class="dropdown-item" href="pipedrafting.html" style="font-size:15px;">Piping Design & Drafting</a>
+                                                    <a class="dropdown-item" href="hvacdesign.html" style="font-size:15px;">HVAC Design and Engineering</a>
+                                                    <a class="dropdown-item" href="smartmanufacturing.html" style="font-size:15px;">Smart Manufacturing & IIoT</a>
+                                                    <a class="dropdown-item" href="3dprinting.html" style="font-size:15px;">3D Printing & Rapid Prototyping</a>
+                                                </div>
+                                                <div class="col-md-3">
+                                                    <h6 class="text-dark mb-3"> <a href="itservices.html" style="color: #000;">IT Services</a></h6>
+                                                    <a class="dropdown-item" href="frontend.html" style="font-size:15px;">Frontend Development</a>
+                                                    <a class="dropdown-item" href="backend.html" style="font-size:15px;">Backend Development</a>
+                                                    <a class="dropdown-item" href="mobileapp.html" style="font-size:15px;">Mobile App Development</a>
+                                                    <a class="dropdown-item" href="ecommerce.html" style="font-size:15px;">eCommerce & CMS</a>
+                                                    <a class="dropdown-item" href="uiux.html" style="font-size:15px;">UI/UX Design</a>
+                                                    <a class="dropdown-item" href="digitalmarketing.html" style="font-size:15px;">Digital Marketing</a>
+                                                    <a class="dropdown-item" href="clouddevops.html" style="font-size:15px;">Cloud & DevOps</a>
+                                                    <a class="dropdown-item" href="qualityassurance.html" style="font-size:15px;">Quality Assurance</a>
+                                                </div>
+                                                <!-- <div class="col-md-3">
+                                                    <h6 class="text-dark mb-3"> <a href="energy.html" style="color: #000;">Energy</a></h6>
+                                                    <a class="dropdown-item" href="#" style="font-size:15px;">Battery Engergy Storage System</a>
+                                                    <a class="dropdown-item" href="#" style="font-size:15px;">Green Hydrogen Power Electronics</a>
+                                                    <a class="dropdown-item" href="#" style="font-size:15px;">E-mobility Infra</a>
+                                                    <a class="dropdown-item" href="#" style="font-size:15px;">Microgrids</a>
+
+                                                </div> -->
+                                                <!-- <div class="col-md-3">
+                                                    <h6 class="text-dark mb-3"><a href="evsolutions.html" style="color: #000;">EV Solutions</a></h6>
+                                                    <a class="dropdown-item" href="#">Lithium Cell Welding Machine</a>
+                                                   
+                                                </div> -->
+                                                <div class="col-md-3">
+                                                    <h6 class="text-dark mb-3"><a href="shsdatastorage.html" style="color: #000;">Data storage/management</a></h6>
+                                                    <a class="dropdown-item" href="shsdatastorage.html">SHS storage & manage</a>
+                                                    
+                                                </div>
+                                                <div class="col-md-3">
+                                                    <h6 class="text-dark mb-3"><a href="buyquick.html" style="color: #000;">B2B Services</a></h6>
+                                                    <a class="dropdown-item" href="buyquick.html">Buyquick</a>
+                                                </div>
+                                                <!-- <div class="col-md-3">
+                                                    <h6 class="text-dark mb-3">Creative Services</h6>
+                                                    
+                                                </div> -->
+                                                <!-- <div class="col-md-3">
+                                                    <h6 class="text-dark mb-3">AI/Data analytics</h6>
+                                         
+                                                </div> -->
+                                                
+                                            </div>
+                                        </div>
+                                    </div>
                                 </div>
+                                <a href="project.html" class="nav-item nav-link position-relative mx-3">Projects<div
+                                        class="nav-underline"></div></a>
+                                <div class="nav-item dropdown position-relative mx-3" style="position:static !important;">
+                                    <a href="#" class="nav-link dropdown-toggle position-relative" id="ourBusinessDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                        Our Businesses
+                                        <div class="nav-underline"></div>
+                                    </a>
+                                    <ul class="dropdown-menu border-0 shadow" aria-labelledby="ourBusinessDropdown" style="position: absolute; left: 0; right: 0; top: 100%; min-width: 220px; margin-top:0; width:100vw; border-radius:0 0 8px 8px; z-index:1050;">
+                                        <div class="container py-3">
+                                            <li><a class="dropdown-item" href="buyquick.html">Buyquick</a></li>
+                                            <li><a class="dropdown-item" href="shsdatastorage.html">Data storage &amp; management</a></li>
+                                        </div>
+                                    </ul>
+                                </div>
+                                <style>
+                                    @media (min-width: 992px) {
+                                        .navbar .dropdown-menu[aria-labelledby="ourBusinessDropdown"] {
+                                            left: auto !important;
+                                            right: auto !important;
+                                            min-width: 220px !important;
+                                            width: auto !important;
+                                            top: 100% !important;
+                                            margin-top: 0 !important;
+                                            border-radius: 0 0 8px 8px !important;
+                                            z-index: 1050 !important;
+                                            /* Position just below the parent */
+                                            transform: translateY(0) !important;
+                                        }
+                                        .navbar .dropdown-menu[aria-labelledby="ourBusinessDropdown"] .container {
+                                            max-width: none;
+                                            margin: 0;
+                                            padding: 0;
+                                        }
+                                    }
+                                </style>
                             </div>
-                            <a href="contact.html" class="nav-item nav-link">Contact</a>
-                        </div>
-                        <div class="d-flex align-items-center flex-nowrap pt-xl-0">
-                            <button class="btn btn-primary btn-md-square mx-2" data-bs-toggle="modal" data-bs-target="#searchModal" style="display: none;"><i class="fas fa-search"></i></button>
-                            <a href="#" class="btn btn-primary rounded-pill text-white py-2 px-4 ms-2 flex-wrap flex-sm-shrink-0" style="display: none;">Start Investa</a>
                         </div>
                     </div>
-                </nav>
+
+                    <!-- Button -->
+                    <div class="me-5 d-none d-lg-block">
+                        <a href="contact.html"
+                            class="btn btn-warning rounded-pill py-2 px-4 me-lg-4 d-flex align-items-center">
+                            <span>Let's Connect</span>
+                            <i class="fas fa-arrow-right ms-3"></i>
+                        </a>
+                    </div>
+
+                </div>
+            </nav>
+        </div>
+    </div>
+
+    <!-- Offcanvas Mobile Menu -->
+    <div class="offcanvas offcanvas-end custom-offcanvas-menu" tabindex="-1" id="offcanvasNav" aria-labelledby="offcanvasNavLabel">
+        <div class="offcanvas-header border-0 pb-0">
+            <button type="button" class="btn-close ms-auto" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+        </div>
+        <div class="offcanvas-body px-0 pt-0">
+            <ul class="mobile-menu-list list-unstyled mb-0">
+                <li class="mobile-menu-item">
+                    <a href="about.html" class="mobile-menu-link w-100 d-flex align-items-center">About</a>
+                </li>
+                <li class="mobile-menu-item mobile-has-submenu">
+                    <button class="mobile-menu-link d-flex justify-content-between align-items-center w-100" type="button" aria-expanded="false" aria-controls="servicesMenu">
+                        <span>Services</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </button>
+                    <ul class="mobile-submenu collapse" id="servicesMenu">
+                        <li>
+                            <button class="mobile-submenu-link d-flex justify-content-between align-items-center w-100" type="button" aria-expanded="false" aria-controls="mechanicalSubmenu">
+                                <span>Mechanical Engineering Services</span>
+                                <i class="fas fa-chevron-down"></i>
+                            </button>
+                            <ul class="mobile-submenu collapse" id="mechanicalSubmenu">
+                                <li>
+                                    <a class="mobile-submenu-link" href="2D 3D.html">Modeling & Drafting</a>
+                                </li>
+                                <li>
+                                    <a class="mobile-submenu-link" href="Cadconversation.html">CAD Conversion & Migration</a>
+                                </li>
+                                <li>
+                                    <a class="mobile-submenu-link" href="reverseeng.html">Reverse Engineering</a>
+                                </li>
+                                <li>
+                                    <a class="mobile-submenu-link" href="advancesimulation.html">Advanced Simulation & Design</a>
+                                </li>
+                                <li>
+                                    <a class="mobile-submenu-link" href="toolingandfixture.html">Tooling & Fixture Development</a>
+                                </li>
+                                <li>
+                                    <a class="mobile-submenu-link" href="pipedrafting.html">Piping Design & Drafting</a>
+                                </li>
+                                <li>
+                                    <a class="mobile-submenu-link" href="hvacdesign.html">HVAC Design and Engineering</a>
+                                </li>
+                                <li>
+                                    <a class="mobile-submenu-link" href="smartmanufacturing.html">Smart Manufacturing & IIoT</a>
+                                </li>
+                                <li>
+                                    <a class="mobile-submenu-link" href="3dprinting.html">3D Printing & Rapid Prototyping</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li>
+                            <button class="mobile-submenu-link d-flex justify-content-between align-items-center w-100" type="button" aria-expanded="false" aria-controls="itSubmenu">
+                                <span>IT Services</span>
+                                <i class="fas fa-chevron-down"></i>
+                            </button>
+                            <ul class="mobile-submenu collapse" id="itSubmenu">
+                                <li>
+                                    <a class="mobile-submenu-link" href="frontend.html">Frontend Development</a>
+                                </li>
+                                <li>
+                                    <a class="mobile-submenu-link" href="backend.html">Backend Development</a>
+                                </li>
+                                <li>
+                                    <a class="mobile-submenu-link" href="mobileapp.html">Mobile App Development</a>
+                                </li>
+                                <li>
+                                    <a class="mobile-submenu-link" href="ecommerce.html">eCommerce & CMS</a>
+                                </li>
+                                <li>
+                                    <a class="mobile-submenu-link" href="uiux.html">UI/UX Design</a>
+                                </li>
+                                <li>
+                                    <a class="mobile-submenu-link" href="digitalmarketing.html">Digital Marketing</a>
+                                </li>
+                                <li>
+                                    <a class="mobile-submenu-link" href="clouddevops.html">Cloud & DevOps</a>
+                                </li>
+                                <li>
+                                    <a class="mobile-submenu-link" href="qualityassurance.html">Quality Assurance</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <!-- <li>
+                            <button class="mobile-submenu-link d-flex justify-content-between align-items-center w-100" type="button" aria-expanded="false" aria-controls="energySubmenu">
+                                <span>Energy</span>
+                                <i class="fas fa-chevron-down"></i>
+                            </button>
+                            <ul class="mobile-submenu collapse" id="energySubmenu">
+                               <li>
+                                    <a class="mobile-submenu-link" href="#">Battery Energy Storage System</a>
+                                </li>
+                                <li>
+                                    <a class="mobile-submenu-link" href="#">Green Hydrogen Power Electronics</a>
+                                </li>
+                                <li>
+                                    <a class="mobile-submenu-link" href="#">E-mobility Infra</a>
+                                </li>
+                                <li>
+                                    <a class="mobile-submenu-link" href="#">Microgrids</a>
+                                </li>
+                            </ul>
+                        </li> -->
+                        <!-- <li>
+                            <button class="mobile-submenu-link d-flex justify-content-between align-items-center w-100" type="button" aria-expanded="false" aria-controls="evSubmenu">
+                                <span>EV Solutions</span>
+                                <i class="fas fa-chevron-down"></i>
+                            </button>
+                            <ul class="mobile-submenu collapse" id="evSubmenu">
+                                <li>
+                                    <a class="mobile-submenu-link" href="#">Lithium Cell Welding Machine</a>
+                                </li>
+                            </ul>
+                        </li> -->
+                        <!-- <li>
+                            <button class="mobile-submenu-link d-flex justify-content-between align-items-center w-100" type="button" aria-expanded="false" aria-controls="b2bSubmenu">
+                                <span>B2B Services</span>
+                                <i class="fas fa-chevron-down"></i>
+                            </button>
+                            <ul class="mobile-submenu collapse" id="b2bSubmenu">
+                                <li>
+                                    <a class="mobile-submenu-link" href="buyquick.html">Buyquick</a>
+                                </li>
+                            </ul>
+                        </li> -->
+                        <!-- <li>
+                            <button class="mobile-submenu-link d-flex justify-content-between align-items-center w-100" type="button" aria-expanded="false" aria-controls="creativeSubmenu">
+                                <span>Creative Services</span>
+                                <i class="fas fa-chevron-down"></i>
+                            </button>
+                            <ul class="mobile-submenu collapse" id="creativeSubmenu">
+                                <li>
+                                    <a class="mobile-submenu-link" href="buyquick.html">Buyquick</a>
+                                </li>
+                            </ul>
+                        </li> -->
+                        <!-- <li>
+                            <button class="mobile-submenu-link d-flex justify-content-between align-items-center w-100" type="button" aria-expanded="false" aria-controls="aidataSubmenu">
+                                <span>AI/Data analytics</span>
+                                <i class="fas fa-chevron-down"></i>
+                            </button>
+                            <ul class="mobile-submenu collapse" id="aidataSubmenu">
+                                <li>
+                                    <a class="mobile-submenu-link" href="buyquick.html">Buyquick</a>
+                                </li>
+                            </ul>
+                        </li> -->
+                        <!-- <li>
+                            <button class="mobile-submenu-link d-flex justify-content-between align-items-center w-100" type="button" aria-expanded="false" aria-controls="datastorageSubmenu">
+                                <span>Data storage/management</span>
+                                <i class="fas fa-chevron-down"></i>
+                            </button>
+                            <ul class="mobile-submenu collapse" id="datastorageSubmenu">
+                                <li>
+                                    <a class="mobile-submenu-link" href="shsdatastorage.html">SHS storage & manage</a>
+                                </li>
+                            </ul>
+                        </li> -->
+                    </ul>
+                </li>
+                <script>
+                // Unified mobile submenu logic for all dropdowns (Services, Our Business, etc.)
+                document.addEventListener('DOMContentLoaded', function () {
+                    // Find all menu toggles (top-level and nested)
+                    var allToggles = document.querySelectorAll('.mobile-menu-link[type="button"], .mobile-submenu-link[type="button"]');
+                    allToggles.forEach(function (toggleBtn) {
+                        toggleBtn.addEventListener('click', function (e) {
+                            e.stopPropagation();
+                            var submenuId = toggleBtn.getAttribute('aria-controls');
+                            var submenu = document.getElementById(submenuId);
+                            var isOpen = submenu.classList.contains('show');
+                            // Close all sibling submenus at this level
+                            var parentUl = toggleBtn.closest('ul') || document.querySelector('.mobile-menu-list');
+                            Array.from(parentUl.children).forEach(function (li) {
+                                var btn = li.querySelector('button[aria-controls]');
+                                var ul = li.querySelector('ul.mobile-submenu');
+                                if (ul && ul !== submenu) {
+                                    ul.classList.remove('show');
+                                    ul.classList.add('collapse');
+                                    if (btn) {
+                                        btn.setAttribute('aria-expanded', 'false');
+                                        var icon = btn.querySelector('i.fas');
+                                        if (icon) {
+                                            icon.classList.remove('fa-chevron-up');
+                                            icon.classList.add('fa-chevron-down');
+                                        }
+                                    }
+                                }
+                            });
+                            // Toggle this submenu
+                            if (isOpen) {
+                                submenu.classList.remove('show');
+                                submenu.classList.add('collapse');
+                                toggleBtn.setAttribute('aria-expanded', 'false');
+                            } else {
+                                submenu.classList.add('show');
+                                submenu.classList.remove('collapse');
+                                toggleBtn.setAttribute('aria-expanded', 'true');
+                            }
+                            // Change arrow icon
+                            var icon = toggleBtn.querySelector('i.fas');
+                            if (icon) {
+                                if (!isOpen) {
+                                    icon.classList.remove('fa-chevron-down');
+                                    icon.classList.add('fa-chevron-up');
+                                } else {
+                                    icon.classList.remove('fa-chevron-up');
+                                    icon.classList.add('fa-chevron-down');
+                                }
+                            }
+                        });
+                    });
+
+                    // Optional: Close any open submenu if clicking outside
+                    document.addEventListener('click', function (e) {
+                        allToggles.forEach(function (toggleBtn) {
+                            var submenuId = toggleBtn.getAttribute('aria-controls');
+                            var submenu = document.getElementById(submenuId);
+                            var icon = toggleBtn.querySelector('i.fas');
+                            if (submenu && !submenu.contains(e.target) && !toggleBtn.contains(e.target)) {
+                                if (submenu.classList.contains('show')) {
+                                    submenu.classList.remove('show');
+                                    submenu.classList.add('collapse');
+                                    if (icon) {
+                                        icon.classList.remove('fa-chevron-up');
+                                        icon.classList.add('fa-chevron-down');
+                                    }
+                                    toggleBtn.setAttribute('aria-expanded', 'false');
+                                }
+                            }
+                        });
+                    });
+                });
+                </script>
+                <style>
+                /* Remove background and font changes for mobile submenu */
+                .mobile-submenu,
+                .mobile-menu-link,
+                .mobile-submenu-link {
+                    background: none !important;
+                    font-family: inherit !important;
+                    color: inherit !important;
+                    box-shadow: none !important;
+                }
+                .mobile-menu-link:active,
+                .mobile-menu-link:focus,
+                .mobile-menu-link:hover,
+                .mobile-submenu-link:active,
+                .mobile-submenu-link:focus,
+                .mobile-submenu-link:hover {
+                    background: none !important;
+                    color: inherit !important;
+                }
+                .mobile-submenu {
+                    padding-left: 0;
+                    margin-left: 1.5rem;
+                    border: none;
+                    list-style-type: none;
+                }
+                .mobile-submenu-link {
+                    border: none;
+                    background: none;
+                    width: 100%;
+                    text-align: left;
+                    padding: 0.5rem 0;
+                }
+                /* Remove bullet points from all nested submenus */
+                .mobile-submenu li {
+                    list-style-type: none;
+                }
+                </style>
+                <li class="mobile-menu-item">
+                    <a href="project.html" class="mobile-menu-link w-100 d-flex align-items-center">Projects</a>
+                </li>
+                <li class="mobile-menu-item mobile-has-submenu">
+                    <button class="mobile-menu-link w-100 d-flex align-items-center justify-content-between" type="button" id="mobile-business-toggle" aria-expanded="false" aria-controls="mobile-business-submenu">
+                        Our Business
+                        <i class="fas fa-chevron-down ms-2" id="mobile-business-arrow"></i>
+                    </button>
+                    <ul class="mobile-submenu collapse" id="mobile-business-submenu">
+                        
+                        <li>
+                            <a href="buyquick.html" class="mobile-submenu-link">Buyquick</a>
+                        </li>
+                        <li>
+                            <a href="shsdatastorage.html" class="mobile-submenu-link">Data storage & Management</a>
+                        </li>
+                        
+                    </ul>
+                </li>
+                <li class="mobile-menu-item">
+                    <a href="contact.html" 
+                        class="mobile-menu-link w-100 d-flex align-items-center"
+                        style="background: #fff700; border-radius: 18px; box-shadow: 0 0 4px #ffe066; padding: 1rem 1.5rem;">
+                        <span style="color: #222; font-weight: 400;">Let's Connect</span>
+                        <i class="fas fa-arrow-right ms-3" style="color: #222;"></i>
+                    </a>
+                </li>
+            </ul>
+            <div class="mobile-contact-box mt-4 px-4 py-3">
+                <div class="d-flex align-items-center mb-2">
+                    <div class="contact-icon bg-primary text-white rounded-circle d-flex align-items-center justify-content-center me-2" style="width:60px;height:35px;">
+                        <i class="fas fa-map-marker-alt fa-lg"></i>
+                    </div>
+                    <div class="contact-info">
+                        <div class="contact-label">Contact</div>
+                        <div class="contact-detail small">Shree hari group, Opp. Hotel Fortune Landmark, Ashram Road, Ahmedabad 380013, Gujarat, India</div>
+                    </div>
+                </div>
+                <div class="d-flex align-items-center">
+                    <div class="contact-icon bg-primary text-white rounded-circle d-flex align-items-center justify-content-center me-2" style="width:32px;height:32px;">
+                        <i class="fas fa-envelope"></i>
+                    </div>
+                    <div class="contact-info">
+                        <div class="contact-detail small">contact@shreeharigroupworld.com</div>
+                    </div>
+                </div>
             </div>
         </div>
-        <!-- Navbar & Hero End -->
+    </div>
+    <style>
+        .custom-offcanvas-menu {
+            max-width: 340px;
+            background: #fff;
+            border-radius: 0 0 0 0;
+            box-shadow: 0 0 24px 0 rgba(0,0,0,0.08);
+        }
+        .mobile-menu-list {
+            padding: 0;
+            margin: 0;
+        }
+        .mobile-menu-item {
+            border-bottom: 1px solid #f1f1f1;
+        }
+        .mobile-menu-link {
+            background: none;
+            border: none;
+            color: #222;
+            font-size: 1.05rem;
+            padding: 1rem 1.5rem;
+            text-align: left;
+            width: 100%;
+            transition: background 0.15s;
+            outline: none;
+        }
+        .mobile-menu-link:focus,
+        .mobile-menu-link:hover {
+            background: #f8f9fa;
+            color: #0d6efd;
+        }
+        .mobile-submenu {
+            padding-left: 0;
+            background: #f8f9fa;
+        }
+        .mobile-submenu-link {
+            display: block;
+            padding: 0.75rem 2.5rem;
+            color: #222;
+            text-decoration: none;
+            font-size: 1rem;
+            transition: background 0.15s, color 0.15s;
+        }
+        .mobile-submenu-link:focus,
+        .mobile-submenu-link:hover {
+            background: #e9ecef;
+            color: #0d6efd;
+        }
+        .mobile-contact-box {
+            background: #f8f9fa;
+            border-radius: 8px;
+        }
+        .contact-icon {
+            font-size: 1.1rem;
+        }
+        .contact-label {
+            font-weight: 600;
+            font-size: 1rem;
+        }
+        .contact-detail {
+            color: #555;
+        }
+    </style>
+
+    <!-- Navbar & Hero End -->
+
 
         <!-- Modal Search Start -->
         <div class="modal fade" id="searchModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
@@ -137,138 +646,1072 @@
     </div>
         <!-- Header End -->
 
-        <!-- Project Start -->
-        <div class="container-fluid project pt-5">
-            <div class="container pt-5">
-                <div class="text-center mx-auto pb-5 wow fadeInUp" data-wow-delay="0.1s" style="max-width: 800px;">
-                    <h4 class="text-primary">Our Projects</h4>
-                    <h1 class="display-4">Explore Our Latest Projects</h1>
-                </div>
-                <div class="project-carousel owl-carousel wow fadeInUp" data-wow-delay="0.1s">
-                    <div class="project-item h-100 wow fadeInUp" data-wow-delay="0.1s">
-                        <div class="project-img">
-                            <img src="img/projects-1.jpg" class="img-fluid w-100 rounded" alt="Image">
-                        </div>
-                        <div class="project-content bg-light rounded p-4">
-                            <div class="project-content-inner">
-                                <div class="project-icon mb-3"><i class="fas fa-chart-line fa-4x text-primary"></i></div>
-                                <p class="text-dark fs-5 mb-3">Business Growth</p>
-                                <a href="#" class="h4">Business Strategy And Investment Planning Growth Consulting</a>
-                                <div class="pt-4">
-                                    <a class="btn btn-light rounded-pill py-3 px-5" href="#">Read More</a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="project-item h-100 wow fadeInUp" data-wow-delay="0.3s">
-                        <div class="project-img">
-                            <img src="img/projects-1.jpg" class="img-fluid w-100 rounded" alt="Image">
-                        </div>
-                        <div class="project-content bg-light rounded p-4">
-                            <div class="project-content-inner">
-                                <div class="project-icon mb-3"><i class="fas fa-signal fa-4x text-primary"></i></div>
-                                <p class="text-dark fs-5 mb-3">Marketing Strategy</p>
-                                <a href="#" class="h4">Product Sailing Marketing Strategy For Improve Business</a>
-                                <div class="pt-4">
-                                    <a class="btn btn-light rounded-pill py-3 px-5" href="#">Read More</a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="project-item h-100">
-                        <div class="project-img">
-                            <img src="img/projects-1.jpg" class="img-fluid w-100 rounded" alt="Image">
-                        </div>
-                        <div class="project-content bg-light rounded p-4">
-                            <div class="project-content-inner">
-                                <div class="project-icon mb-3"><i class="fas fa-signal fa-4x text-primary"></i></div>
-                                <p class="text-dark fs-5 mb-3">Marketing Strategy</p>
-                                <a href="#" class="h4">Product Sailing Marketing Strategy For Improve Business</a>
-                                <div class="pt-4">
-                                    <a class="btn btn-light rounded-pill py-3 px-5" href="#">Read More</a>
-                                </div>
-                            </div>
+        <!-- Clients Start -->
+    <div class="container-fluid py-5 wow fadeInUp bg-light" data-wow-delay="0.1s"">
+        <div class=" container py-2">
+    <div class="section-title text-center mb-5">
+        <h1 class="display-4 text-dark mb-4">Our Reputed <span style="color: #0d6efd;">Customers</span></h1>
+        <div class="border-top border-primary w-25 mx-auto my-4"></div>
+    </div>
+
+    <div class="client-slider owl-carousel wow fadeInUp" data-wow-delay="0.3s">
+        <div class="client-logo">
+            <img src="img/C1.png" class="img-fluid grayscale" alt="Client Logo" data-bs-toggle="tooltip"
+                title="Client Name">
+        </div>
+        <div class="client-logo">
+            <img src="img/C2.png" class="img-fluid grayscale" alt="Client Logo" data-bs-toggle="tooltip"
+                title="Client Name">
+        </div>
+        <div class="client-logo">
+            <img src="img/C3.png" class="img-fluid grayscale" alt="Client Logo" data-bs-toggle="tooltip"
+                title="Client Name">
+        </div>
+        <div class="client-logo">
+            <img src="img/C4.png" class="img-fluid grayscale" alt="Client Logo" data-bs-toggle="tooltip"
+                title="Client Name">
+        </div>
+        <div class="client-logo">
+            <img src="img/C5.png" class="img-fluid grayscale" alt="Client Logo" data-bs-toggle="tooltip"
+                title="Client Name">
+        </div>
+        <div class="client-logo">
+            <img src="img/C6.png" class="img-fluid grayscale" alt="Client Logo" data-bs-toggle="tooltip"
+                title="Client Name">
+        </div>
+        <div class="client-logo">
+            <img src="img/C7.png" class="img-fluid grayscale" alt="Client Logo" data-bs-toggle="tooltip"
+                title="Client Name">
+        </div>
+        <div class="client-logo">
+            <img src="img/C8.png" class="img-fluid grayscale" alt="Client Logo" data-bs-toggle="tooltip"
+                title="Client Name">
+        </div>
+        <div class="client-logo">
+            <img src="img/C9.jpeg" class="img-fluid grayscale" alt="Client Logo" data-bs-toggle="tooltip"
+                title="Client Name">
+        </div>
+        <div class="client-logo">
+            <img src="img/C10.jpg" class="img-fluid grayscale" alt="Client Logo" data-bs-toggle="tooltip"
+                title="Client Name">
+        </div>
+    </div>
+</div>
+</div>
+
+<style>
+    .client-slider {
+        margin: 0 -15px;
+    }
+
+    .client-logo {
+        padding: 0 15px;
+        text-align: center;
+        transition: all 0.3s ease;
+        min-height: 200px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .client-logo img {
+        max-height: 200px;
+        width: auto;
+        opacity: 0.7;
+        transition: all 0.3s ease;
+    }
+</style>
+
+<script>
+    // Initialize Owl Carousel for client slider
+    document.addEventListener('DOMContentLoaded', function () {
+        // Ensure jQuery and Owl Carousel are loaded
+        if (typeof $ !== 'undefined' && typeof $.fn.owlCarousel === 'function') {
+            $('.client-slider').owlCarousel({
+                loop: true,
+                margin: 30,
+                nav: false,
+                dots: false,
+                autoplay: true,
+                autoplayTimeout: 3000,
+                autoplayHoverPause: true,
+                responsive: {
+                    0: { items: 2 },
+                    576: { items: 3 },
+                    768: { items: 4 },
+                    992: { items: 5 },
+                    1200: { items: 6 }
+                }
+            });
+        } else {
+            console.warn('jQuery or Owl Carousel is not loaded.');
+        }
+
+        // Initialize tooltips if Bootstrap's tooltip plugin is loaded
+        if (typeof $ !== 'undefined' && typeof $.fn.tooltip === 'function') {
+            $('[data-bs-toggle="tooltip"]').tooltip();
+        } else if (typeof bootstrap !== 'undefined' && typeof bootstrap.Tooltip === 'function') {
+            // For Bootstrap 5 with no jQuery
+            var tooltipTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="tooltip"]'));
+            tooltipTriggerList.forEach(function (tooltipTriggerEl) {
+                new bootstrap.Tooltip(tooltipTriggerEl);
+            });
+        } else {
+            // Tooltip plugin not available
+            // console.warn('Bootstrap Tooltip plugin is not loaded.');
+        }
+    });
+</script>
+</script>
+<!-- Clients End -->
+
+<section class="project-gallery-section py-5 bg-light">
+    <div class="container">
+        <h2 class="section-title text-center mb-4 display-5 fw-bold" style="color: #000;">At a Glimpse of Our <span style="color: #0d6efd;">Project</span></h2>
+        <div class="row g-4" id="projectGallery">
+            <!-- Project Card 1 -->
+            <div class="col-sm-6 col-lg-4">
+                <div class="project-card card border-0 shadow-sm h-100 position-relative overflow-hidden">
+                    <div class="project-image-wrapper">
+                        <img src="img/P1.png" class="card-img-top project-img" alt="Project 1" loading="lazy" onerror="this.onerror=null;this.src='img/no-image.png';">
+                        <div class="project-overlay d-flex flex-column justify-content-center align-items-center">
+                            <button 
+                                class="btn btn-primary btn-sm px-3" 
+                                onclick="openImageModal('img/P1.png', 'Prview')"
+                            >View Larger</button>
                         </div>
                     </div>
                 </div>
             </div>
-        </div>
-        <!-- Project End -->
-
-        <!-- FAQ Start -->
-        <div class="container-fluid faq pb-5">
-            <div class="container pb-5">
-                <div class="row g-5 align-items-center">
-                    <div class="col-lg-6 wow fadeInLeft" data-wow-delay="0.1s">
-                        <div class="pb-5">
-                            <h4 class="text-primary">FAQs</h4>
-                            <h1 class="display-4">Get the Answers to Common Questions</h1>
+            <!-- Project Card 2 -->
+            <div class="col-sm-6 col-lg-4">
+                <div class="project-card card border-0 shadow-sm h-100 position-relative overflow-hidden">
+                    <div class="project-image-wrapper">
+                        <img src="img/P2.png" class="card-img-top project-img" alt="Project 2" loading="lazy" onerror="this.onerror=null;this.src='img/no-image.png';">
+                        <div class="project-overlay d-flex flex-column justify-content-center align-items-center">
+                            <button 
+                                class="btn btn-primary btn-sm px-3" 
+                                onclick="openImageModal('img/p2.png', 'Prview')"
+                            >View Larger</button>
                         </div>
-                       <div class="accordion bg-light rounded p-4" id="accordionExample">
-                            <div class="accordion-item border-0 mb-4">
-                                <h2 class="accordion-header" id="headingOne">
-                                    <button class="accordion-button text-dark fs-5 fw-bold rounded-top" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseTOne">
-                                        What Does a Financial Advisor Do?
-                                    </button>
-                                </h2>
-                                <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
-                                    <div class="accordion-body my-2">
-                                        <h5>Dolor sit amet consectetur adipisicing elit.</h5>
-                                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ad nemo impedit, sapiente quis illo quia nulla atque maxime fuga minima ipsa quae cum consequatur, sit, delectus exercitationem odit officiis maiores! Neque, quidem corrupti modi architecto eos saepe incidunt dignissimos rerum.</p>
-                                    </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Project Card 3 -->
+            <div class="col-sm-6 col-lg-4">
+                <div class="project-card card border-0 shadow-sm h-100 position-relative overflow-hidden">
+                    <div class="project-image-wrapper">
+                        <img src="img/P3.jpg" class="card-img-top project-img" alt="Project 3" loading="lazy" onerror="this.onerror=null;this.src='img/no-image.png';">
+                        <div class="project-overlay d-flex flex-column justify-content-center align-items-center">
+                            <button 
+                                class="btn btn-primary btn-sm px-3" 
+                                onclick="openImageModal('img/P3.jpg', 'Prview')"
+                            >View Larger</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Project Card 4 -->
+            <div class="col-sm-6 col-lg-4">
+                <div class="project-card card border-0 shadow-sm h-100 position-relative overflow-hidden">
+                    <div class="project-image-wrapper">
+                        <img src="img/P4.jpg" class="card-img-top project-img" alt="Project 4" loading="lazy" onerror="this.onerror=null;this.src='img/no-image.png';">
+                        <div class="project-overlay d-flex flex-column justify-content-center align-items-center">
+                            <button 
+                                class="btn btn-primary btn-sm px-3" 
+                                onclick="openImageModal('img/P4.jpg', 'Prview')"
+                            >View Larger</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Project Card 5 -->
+            <div class="col-sm-6 col-lg-4">
+                <div class="project-card card border-0 shadow-sm h-100 position-relative overflow-hidden">
+                    <div class="project-image-wrapper">
+                        <img src="img/P5.jpg" class="card-img-top project-img" alt="Project 5" loading="lazy" onerror="this.onerror=null;this.src='img/no-image.png';">
+                        <div class="project-overlay d-flex flex-column justify-content-center align-items-center">
+                            <button 
+                                class="btn btn-primary btn-sm px-3" 
+                                onclick="openImageModal('img/P5.jpg', 'Prview')"
+                            >View Larger</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Project Card 6 -->
+            <div class="col-sm-6 col-lg-4">
+                <div class="project-card card border-0 shadow-sm h-100 position-relative overflow-hidden">
+                    <div class="project-image-wrapper">
+                        <img src="img/P6.jpg" class="card-img-top project-img" alt="Project 6" loading="lazy" onerror="this.onerror=null;this.src='img/no-image.png';">
+                        <div class="project-overlay d-flex flex-column justify-content-center align-items-center">
+                            <button 
+                                class="btn btn-primary btn-sm px-3" 
+                                onclick="openImageModal('img/p6.jpg', 'Prview')"
+                            >View Larger</button>
+                        </div>
+                    </div>
+                    <!-- card-body and h6 for project tile are removed as requested -->
+                </div>
+            </div>
+            <!-- Project Card 7 -->
+            <div class="col-sm-6 col-lg-4">
+                <div class="project-card card border-0 shadow-sm h-100 position-relative overflow-hidden">
+                    <div class="project-image-wrapper">
+                        <img src="img/P7.jpg" class="card-img-top project-img" alt="Project 6" loading="lazy" onerror="this.onerror=null;this.src='img/no-image.png';">
+                        <div class="project-overlay d-flex flex-column justify-content-center align-items-center">
+                            <button 
+                                class="btn btn-primary btn-sm px-3" 
+                                onclick="openImageModal('img/p7.jpg', 'Prview')"
+                            >View Larger</button>
+                        </div>
+                    </div>
+                    <!-- card-body and h6 for project tile are removed as requested -->
+                </div>
+            </div>
+            <!-- Project Card 8 -->
+            <div class="col-sm-6 col-lg-4">
+                <div class="project-card card border-0 shadow-sm h-100 position-relative overflow-hidden">
+                    <div class="project-image-wrapper">
+                        <img src="img/P8.jpg" class="card-img-top project-img" alt="Project 6" loading="lazy" onerror="this.onerror=null;this.src='img/no-image.png';">
+                        <div class="project-overlay d-flex flex-column justify-content-center align-items-center">
+                            <button 
+                                class="btn btn-primary btn-sm px-3" 
+                                onclick="openImageModal('img/p8.jpg', 'Prview')"
+                            >View Larger</button>
+                        </div>
+                    </div>
+                    <!-- card-body and h6 for project tile are removed as requested -->
+                </div>
+            </div>
+            <!-- Project Card 9 -->
+            <div class="col-sm-6 col-lg-4">
+                <div class="project-card card border-0 shadow-sm h-100 position-relative overflow-hidden">
+                    <div class="project-image-wrapper">
+                        <img src="img/P9.png" class="card-img-top project-img" alt="Project 6" loading="lazy" onerror="this.onerror=null;this.src='img/no-image.png';">
+                        <div class="project-overlay d-flex flex-column justify-content-center align-items-center">
+                            <button 
+                                class="btn btn-primary btn-sm px-3" 
+                                onclick="openImageModal('img/P9.png', 'Prview')"
+                            >View Larger</button>
+                        </div>
+                    </div>
+                    <!-- card-body and h6 for project tile are removed as requested -->
+                </div>
+            </div>
+            <!-- Project Card 10 -->
+            <div class="col-sm-6 col-lg-4">
+                <div class="project-card card border-0 shadow-sm h-100 position-relative overflow-hidden">
+                    <div class="project-image-wrapper">
+                        <img src="img/P10.png" class="card-img-top project-img" alt="Project 6" loading="lazy" onerror="this.onerror=null;this.src='img/no-image.png';">
+                        <div class="project-overlay d-flex flex-column justify-content-center align-items-center">
+                            <button 
+                                class="btn btn-primary btn-sm px-3" 
+                                onclick="openImageModal('img/P10.png', 'Prview')"
+                            >View Larger</button>
+                        </div>
+                    </div>
+                    <!-- card-body and h6 for project tile are removed as requested -->
+                </div>
+            </div>
+            <!-- Project Card 11 -->
+            <div class="col-sm-6 col-lg-4">
+                <div class="project-card card border-0 shadow-sm h-100 position-relative overflow-hidden">
+                    <div class="project-image-wrapper">
+                        <img src="img/P11.png" class="card-img-top project-img" alt="Project 6" loading="lazy" onerror="this.onerror=null;this.src='img/no-image.png';">
+                        <div class="project-overlay d-flex flex-column justify-content-center align-items-center">
+                            <button 
+                                class="btn btn-primary btn-sm px-3" 
+                                onclick="openImageModal('img/P11.jpg', 'Prview')"
+                            >View Larger</button>
+                        </div>
+                    </div>
+                    <!-- card-body and h6 for project tile are removed as requested -->
+                </div>
+            </div>
+           
+        </div>
+    </div>
+
+    <!-- Modal: Large Image Viewer -->
+    <div class="modal fade" id="imageModal" tabindex="-1" aria-labelledby="imageModalLabel" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered modal-lg">
+        <div class="modal-content" style="background: #222;">
+          <div class="modal-header border-0">
+            <h5 class="modal-title text-white" id="imageModalLabel"></h5>
+            <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close" style="filter:invert(1);opacity:.85"></button>
+          </div>
+          <div class="modal-body text-center position-relative" style="padding:0; overflow:hidden;">
+            <div class="zoom-controls position-absolute w-100 d-flex justify-content-end pe-3 pt-3" style="pointer-events: none;z-index:3;">
+                <button 
+                    id="zoomInBtn" 
+                    class="btn btn-light btn-sm me-2"
+                    style="pointer-events:auto;"
+                    title="Zoom In"
+                    tabindex="0"
+                    type="button"
+                >
+                    <span style="font-size:1.2rem;line-height:1">+</span>
+                </button>
+                <button 
+                    id="zoomOutBtn" 
+                    class="btn btn-light btn-sm"
+                    style="pointer-events:auto;"
+                    title="Zoom Out"
+                    tabindex="0"
+                    type="button"
+                >
+                    <span style="font-size:1.2rem;line-height:1">&minus;</span>
+                </button>
+            </div>
+            <!-- To allow translate to crop image rather than overflow, put img in a container div -->
+            <div id="modalImgContainer" style="display:flex;justify-content:center;align-items:center;overflow:hidden;width:100%;height:80vh;max-height:80vh;position:relative;">
+              <img id="modalProjectImg" src="" alt="" style="max-width: 100%; max-height: 100%; border-radius: 0.5rem; margin-bottom: 0; transition: transform .18s cubic-bezier(.4,.08,.21,1); cursor: grab; display:block;" onerror="this.onerror=null;this.src='img/no-image.png';">
+            </div>
+            <!-- Add space at the bottom of modal image for larger windows -->
+            <div class="d-none d-lg-block" style="height:30px;"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script>
+        // Function to open the modal with correct image and title, reset zoom and pan
+        function openImageModal(src, title) {
+            var modal = new bootstrap.Modal(document.getElementById('imageModal'));
+            var img = document.getElementById('modalProjectImg');
+            img.src = src;
+            img.alt = title;
+            document.getElementById('imageModalLabel').innerText = title;
+            // Reset zoom and pan to default when opened
+            img.style.transform = 'scale(1)';
+            img.setAttribute('data-zoom', '1');
+            img.setAttribute('data-pan-x', '0');
+            img.setAttribute('data-pan-y', '0');
+            img.style.cursor = 'grab';
+            modal.show();
+        }
+
+        // ZOOM BUTTONS AND PANNING LOGIC (DRAG TO MOVE)
+        document.addEventListener('DOMContentLoaded', function() {
+            var zoomInBtn = document.getElementById('zoomInBtn');
+            var zoomOutBtn = document.getElementById('zoomOutBtn');
+            var img = document.getElementById('modalProjectImg');
+            var imgContainer = document.getElementById('modalImgContainer');
+
+            // Initialize attributes if not set
+            if (!img.getAttribute('data-zoom')) img.setAttribute('data-zoom', '1');
+            if (!img.getAttribute('data-pan-x')) img.setAttribute('data-pan-x', '0');
+            if (!img.getAttribute('data-pan-y')) img.setAttribute('data-pan-y', '0');
+
+            var MIN_ZOOM = 1, MAX_ZOOM = 3, ZOOM_STEP = 0.2;
+
+            // Helper to update image transform with scaling and panning
+            function applyTransform() {
+                var z = parseFloat(img.getAttribute('data-zoom') || '1');
+                var x = parseFloat(img.getAttribute('data-pan-x') || '0');
+                var y = parseFloat(img.getAttribute('data-pan-y') || '0');
+                img.style.transform = 'scale(' + z + ') translate(' + x + 'px,' + y + 'px)';
+                // Only enable hand cursor if zoomed in
+                if (z > 1) img.style.cursor = 'grab';
+                else img.style.cursor = 'auto';
+            }
+
+            function setZoom(z) {
+                z = Math.max(MIN_ZOOM, Math.min(MAX_ZOOM, z));
+                img.setAttribute('data-zoom', z.toFixed(2));
+                // Reset pan if zooming to 1
+                if (z <= MIN_ZOOM + 0.001) {
+                    img.setAttribute('data-pan-x', '0');
+                    img.setAttribute('data-pan-y', '0');
+                } else {
+                    // If first time zooming in, keep pan positions
+                    var panX = parseFloat(img.getAttribute('data-pan-x')||'0');
+                    var panY = parseFloat(img.getAttribute('data-pan-y')||'0');
+                    // Clamp pan so image never gets dragged out of bounds
+                    clampPan(z, panX, panY);
+                }
+                zoomOutBtn.disabled = (z <= MIN_ZOOM + 0.001);
+                zoomInBtn.disabled = (z >= MAX_ZOOM - 0.001);
+                applyTransform();
+            }
+
+            // Clamp pan so image cannot be moved beyond its visible boundaries
+            // (no matter mouse, touch, or update, always clamp!)
+            function clampPan(zoom, panX, panY) {
+                var bounds = getPanBounds(zoom);
+                panX = Math.max(bounds.minX, Math.min(bounds.maxX, panX));
+                panY = Math.max(bounds.minY, Math.min(bounds.maxY, panY));
+                img.setAttribute('data-pan-x', panX);
+                img.setAttribute('data-pan-y', panY);
+                return {x: panX, y: panY};
+            }
+
+            // Calculate allowed pan at current zoom so image never exposes space outside itself in view
+            function getPanBounds(zoom) {
+                // Work with rendered sizes as they are after current display/layout
+                var container = imgContainer;
+                var imgRect = img.getBoundingClientRect();
+                var containerRect = container.getBoundingClientRect();
+
+                // Rendered size of image at zoom = 1 (because getBoundingClientRect includes scale transforms)
+                // We'll need the "natural" width and height of the image as displayed inside container at zoom=1
+                var baseW = img.naturalWidth, baseH = img.naturalHeight;
+                var aspectImg = baseW / baseH;
+                var contW = containerRect.width;
+                var contH = containerRect.height;
+                // Fit image into container and determine how it scales at zoom=1
+                var fittedW = contW, fittedH = contW / aspectImg;
+                if (fittedH > contH) {
+                    fittedH = contH;
+                    fittedW = contH * aspectImg;
+                }
+
+                // At current zoom, the image size is fittedW*zoom, fittedH*zoom
+                var zoomedW = fittedW * zoom;
+                var zoomedH = fittedH * zoom;
+
+                // The max pan is so that the container edge never shows space outside the image
+                // Amount of img visible beyond the container is split equally for left/right and top/bottom
+                var maxPanX = Math.max(0, (zoomedW - contW) / 2);
+                var maxPanY = Math.max(0, (zoomedH - contH) / 2);
+                return {
+                    minX: -maxPanX,
+                    maxX: maxPanX,
+                    minY: -maxPanY,
+                    maxY: maxPanY
+                };
+            }
+
+            // Pan variables for dragging moves
+            var isPanning = false, startX, startY, panX0, panY0;
+
+            function handlePointerDown(e) {
+                var z = parseFloat(img.getAttribute('data-zoom') || '1');
+                if (z === 1) return; // Don't pan if not zoomed
+                isPanning = true;
+                img.style.cursor = 'grabbing';
+                // support both mouse and touch
+                if (e.type.startsWith('touch')) {
+                    startX = e.touches[0].clientX;
+                    startY = e.touches[0].clientY;
+                } else {
+                    startX = e.clientX;
+                    startY = e.clientY;
+                    e.preventDefault();
+                }
+                panX0 = parseFloat(img.getAttribute('data-pan-x') || '0');
+                panY0 = parseFloat(img.getAttribute('data-pan-y') || '0');
+                document.addEventListener('mousemove', handlePointerMove);
+                document.addEventListener('mouseup', handlePointerUp);
+                document.addEventListener('touchmove', handlePointerMove, {passive:false});
+                document.addEventListener('touchend', handlePointerUp);
+                document.body.style.userSelect = 'none';
+            }
+
+            function handlePointerMove(e) {
+                if (!isPanning) return;
+                var z = parseFloat(img.getAttribute('data-zoom') || '1');
+                var moveX, moveY;
+                if (e.type.startsWith('touch')) {
+                    moveX = e.touches[0].clientX - startX;
+                    moveY = e.touches[0].clientY - startY;
+                    e.preventDefault();
+                } else {
+                    moveX = e.clientX - startX;
+                    moveY = e.clientY - startY;
+                }
+                // Clamp pan so image cannot go outside the window
+                var nextPanX = panX0 + moveX;
+                var nextPanY = panY0 + moveY;
+                var clamped = clampPan(z, nextPanX, nextPanY);
+                applyTransform();
+            }
+
+            function handlePointerUp(e) {
+                isPanning = false;
+                document.body.style.userSelect = '';
+                img.style.cursor = 'grab';
+                document.removeEventListener('mousemove', handlePointerMove);
+                document.removeEventListener('mouseup', handlePointerUp);
+                document.removeEventListener('touchmove', handlePointerMove);
+                document.removeEventListener('touchend', handlePointerUp);
+            }
+
+            if (zoomInBtn && zoomOutBtn && img) {
+                zoomInBtn.addEventListener('click', function(e) {
+                    e.stopPropagation();
+                    var z = parseFloat(img.getAttribute('data-zoom') || '1');
+                    setZoom(z + ZOOM_STEP);
+                });
+                zoomOutBtn.addEventListener('click', function(e) {
+                    e.stopPropagation();
+                    var z = parseFloat(img.getAttribute('data-zoom') || '1');
+                    setZoom(z - ZOOM_STEP);
+                });
+                // Panning logic
+                img.addEventListener('mousedown', handlePointerDown);
+                img.addEventListener('touchstart', handlePointerDown, {passive:false});
+                // Optional: double-click on image to reset zoom and pan
+                img.addEventListener('dblclick', function() {
+                    setZoom(1);
+                });
+                // On zoom, recalculate pan and apply
+                function resetZoomPan() {
+                    img.setAttribute('data-zoom', '1');
+                    img.setAttribute('data-pan-x', '0');
+                    img.setAttribute('data-pan-y', '0');
+                    applyTransform();
+                }
+                // When modal is shown, reset zoom and pan, also button states
+                document.getElementById('imageModal').addEventListener('show.bs.modal', function() {
+                    setTimeout(function(){
+                        resetZoomPan();
+                        zoomOutBtn.disabled = true;
+                        zoomInBtn.disabled = false;
+                    }, 20);
+                });
+
+                // Also clamp pan after image loaded in case new image ratio, newly resized, etc.
+                img.addEventListener('load', function() {
+                    var z = parseFloat(img.getAttribute('data-zoom') || '1');
+                    var panX = parseFloat(img.getAttribute('data-pan-x') || '0');
+                    var panY = parseFloat(img.getAttribute('data-pan-y') || '0');
+                    clampPan(z, panX, panY);
+                    applyTransform();
+                });
+                // And if user resizes window, also clamp
+                window.addEventListener('resize', function(){
+                    var z = parseFloat(img.getAttribute('data-zoom') || '1');
+                    var panX = parseFloat(img.getAttribute('data-pan-x') || '0');
+                    var panY = parseFloat(img.getAttribute('data-pan-y') || '0');
+                    clampPan(z, panX, panY);
+                    applyTransform();
+                });
+            }
+
+            // Initial transform
+            applyTransform();
+        });
+    </script>
+</section>
+
+<!-- Project Gallery Styles -->
+<style>
+    .project-gallery-section {
+        background: linear-gradient(135deg, #f8fafc 60%, #e2e5ec 100%);
+    }
+    .project-card {
+        transition: transform 0.18s, box-shadow 0.18s;
+    }
+    .project-card:hover {
+        transform: translateY(-8px) scale(1.03);
+        box-shadow: 0 8px 24px 0 rgba(13,110,253,0.10), 0 1.5px 6px 0 rgba(0,0,0,0.08);
+    }
+    .project-image-wrapper {
+        position: relative;
+        overflow: hidden;
+        border-radius: 1rem 1rem 0 0;
+    }
+    .project-img {
+        width: 100%;
+        height: 220px;
+        object-fit: cover;
+        transition: transform 0.3s;
+        border-radius: 1rem 1rem 0 0;
+        background: #e0e0e0;
+        display: block;
+    }
+    .project-card:hover .project-img {
+        transform: scale(1.07);
+    }
+    .project-overlay {
+        position: absolute;
+        inset: 0;
+        background: rgba(13,110,253,.76);
+        opacity: 0;
+        transition: opacity 0.22s;
+        z-index: 2;
+        border-radius: 1rem 1rem 0 0;
+        text-align: center;
+    }
+    .project-card:hover .project-overlay,
+    .project-card:focus-within .project-overlay {
+        opacity: 1;
+    }
+    .project-overlay h5 {
+        font-weight: 600;
+        letter-spacing: 0.5px;
+        margin-bottom: 0; /* Remove space below the title */
+    }
+    .project-overlay .btn {
+        margin-top: .25rem;
+        font-size: 0.95rem;
+    }
+    /* Modal image responsive on large window */
+    #modalImgContainer {
+        width:100%;
+        height:80vh;
+        max-height:80vh;
+        display:flex;
+        align-items:center;
+        justify-content:center;
+        overflow:hidden; /* this is crucial: crop image and prevent drag overflow! */
+        position:relative;
+        background:#111;
+    }
+    #modalProjectImg {
+        max-width: 100%;
+        max-height: 100%;
+        width: auto;
+        height: auto;
+        margin:auto;
+        background: #111;
+        display:block;
+        will-change: transform;
+    }
+    .modal-content {
+        border-radius: 1rem;
+    }
+    /* Zoom buttons style */
+    .zoom-controls .btn {
+        background: rgba(255,255,255,0.97);
+        color: #0d6efd;
+        border: none;
+        font-weight: bold;
+        box-shadow: 0 1px 6px rgba(0,0,0,0.08);
+        padding: 0.35rem 0.6rem;
+        border-radius: 50px;
+        margin-right: 0;
+        margin-left: 0;
+        transition: background 0.15s;
+    }
+    .zoom-controls .btn:active {
+        background: #e2e6ea;
+    }
+    .zoom-controls .btn:disabled {
+        opacity: 0.55;
+        cursor: default !important;
+    }
+    /* Add extra space below modal image in larger windows */
+    @media (min-width: 992px) {
+        #imageModal .modal-body {
+            padding-bottom: 2rem !important;
+        }
+        #imageModal #modalProjectImg {
+            margin-bottom: 1.5rem !important;
+        }
+    }
+</style>
+
+<!-- Project gallery End -->
+
+
+    <!-- Our Values Start -->
+    <div class="container-fluid py-5 wow fadeInUp" data-wow-delay="0.1s">
+        <div class="container py-2">
+            <div class="section-title text-center mb-5">
+                <h1 class="display-4 text-dark mb-4">Our <span style="color: #0d6efd;">Commitment </span>to <span
+                        style="color: #0d6efd;">Excellence</span></h1>
+                <div class="border-top border-primary w-25 mx-auto my-4"></div>
+            </div>
+            <div class="row g-4 justify-content-center">
+                <div class="col-lg-4 col-md-6">
+                    <div class="card border-0 shadow-sm h-100 text-center p-4 bg-white">
+                        <div class="icon-box bg-primary rounded-circle mx-auto mb-4"
+                            style="width: 80px; height: 80px; line-height: 80px;">
+                            <i class="fas fa-users fa-2x text-white"></i>
+                        </div>
+                        <h4 class="text-dark mb-3">Integrity</h4>
+                        <p class="text-muted">At Shree hari group, integrity guides everything we do. We prioritize
+                            honesty, transparency, and ethical practices in all our interactions. Our clients rely on us
+                            to deliver on our promises with sincerity and respect, building trust that lasts beyond the
+                            project.</p>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6">
+                    <div class="card border-0 shadow-sm h-100 text-center p-4 bg-white">
+                        <div class="icon-box bg-primary rounded-circle mx-auto mb-4"
+                            style="width: 80px; height: 80px; line-height: 80px;">
+                            <i class="fas fa-lightbulb fa-2x text-white"></i>
+                        </div>
+                        <h4 class="text-dark mb-3">Innovation</h4>
+                        <p class="text-muted">At Shree hari group, innovation isn't just about new technology—it's about
+                            creating smarter, faster, and more meaningful ways to solve real problems. We stay ahead of
+                            the curve to ensure our clients do too, blending forward-thinking strategy with cutting-edge
+                            development. From concept to execution, our innovative mindset drives everything we
+                            build—transforming ideas into impact.</p>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6">
+                    <div class="card border-0 shadow-sm h-100 text-center p-4 bg-white">
+                        <div class="icon-box bg-primary rounded-circle mx-auto mb-4"
+                            style="width: 80px; height: 80px; line-height: 80px;">
+                            <i class="fas fa-handshake fa-2x text-white"></i>
+                        </div>
+                        <h4 class="text-dark mb-3">Commitment</h4>
+                        <p class="text-muted">At Shree hari group, commitment means standing by our clients at every
+                            stage of their journey. We're dedicated to exceeding expectations—not just meeting
+                            deadlines. From first consultation to final deployment and beyond, our team is fully
+                            invested in your success. We don't just promise excellence—we commit to it, every single
+                            day.</p>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6">
+                    <div class="card border-0 shadow-sm h-100 text-center p-4 bg-white">
+                        <div class="icon-box bg-primary rounded-circle mx-auto mb-4"
+                            style="width: 80px; height: 80px; line-height: 80px;">
+                            <i class="fas fa-check-circle fa-2x text-white"></i>
+                        </div>
+                        <h4 class="text-dark mb-3">Proactive</h4>
+                        <p class="text-muted">At Shree hari group, we take initiative—not just instructions. We
+                            proactively identify risks, suggest improvements, and stay ahead of challenges to keep your
+                            project on track and aligned with your goals. With our team, you're not just getting a
+                            service provider—you're gaining a partner who's always thinking one step ahead for your
+                            success.</p>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6">
+                    <div class="card border-0 shadow-sm h-100 text-center p-4 bg-white">
+                        <div class="icon-box bg-primary rounded-circle mx-auto mb-4"
+                            style="width: 80px; height: 80px; line-height: 80px;">
+                            <i class="fas fa-users fa-2x text-white"></i>
+                        </div>
+                        <h4 class="text-dark mb-3">Collaboration</h4>
+                        <p class="text-muted">We work as partners with our clients, fostering open communication and
+                            teamwork. Together, we achieve more than we could individually.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Our Values End -->
+
+    <section class="unique-features-section py-5 bg-white">
+        <div class="container">
+            <div class="section-title text-center mb-5">
+                <h2 class="display-5 fw-bold" style="color:black;">Features That Make Us <span style="color:#0d6efd;">Unique</span></h2>
+                <div class="border-top border-primary w-25 mx-auto my-3"></div>
+            </div>
+            <div class="row g-4 justify-content-center">
+                <div class="col-md-6 col-lg-4">
+                    <div class="card border-0 shadow-sm h-100 text-center py-4 px-3">
+                        <div class="mb-3">
+                            <i class="fas fa-chart-line fa-2x text-primary"></i>
+                        </div>
+                        <h5 class="fw-bold mb-2" style="color:#0d6efd;">Improved Productivity Profile</h5>
+                        <p class="text-muted">Boosting efficiency and delivering more value in every project we undertake.</p>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4">
+                    <div class="card border-0 shadow-sm h-100 text-center py-4 px-3">
+                        <div class="mb-3">
+                            <i class="fas fa-award fa-2x text-primary"></i>
+                        </div>
+                        <h5 class="fw-bold mb-2" style="color:#0d6efd;">Improved Quality</h5>
+                        <p class="text-muted">We set higher standards to ensure the best results—and exceed expectations.</p>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4">
+                    <div class="card border-0 shadow-sm h-100 text-center py-4 px-3">
+                        <div class="mb-3">
+                            <i class="fas fa-tools fa-2x text-primary"></i>
+                        </div>
+                        <h5 class="fw-bold mb-2" style="color:#0d6efd;">Leverage Existing Tooling Investments</h5>
+                        <p class="text-muted">Maximizing your current resources to accelerate and optimize new projects.</p>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4">
+                    <div class="card border-0 shadow-sm h-100 text-center py-4 px-3">
+                        <div class="mb-3">
+                            <i class="fas fa-shield-alt fa-2x text-primary"></i>
+                        </div>
+                        <h5 class="fw-bold mb-2" style="color:#0d6efd;">Better Risk Management</h5>
+                        <p class="text-muted">We identify and mitigate risks early, ensuring predictable and stable results.</p>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4">
+                    <div class="card border-0 shadow-sm h-100 text-center py-4 px-3">
+                        <div class="mb-3">
+                            <i class="fas fa-clock fa-2x text-primary"></i>
+                        </div>
+                        <h5 class="fw-bold mb-2" style="color:#0d6efd;">On Time Delivery</h5>
+                        <p class="text-muted">Reliably meeting project deadlines—every time, without compromise.</p>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4">
+                    <div class="card border-0 shadow-sm h-100 text-center py-4 px-3">
+                        <div class="mb-3">
+                            <i class="fas fa-headset fa-2x text-primary"></i>
+                        </div>
+                        <h5 class="fw-bold mb-2" style="color:#0d6efd;">24×7 Support</h5>
+                        <p class="text-muted">Our dedicated support team is always available when you need us most.</p>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4">
+                    <div class="card border-0 shadow-sm h-100 text-center py-4 px-3">
+                        <div class="mb-3">
+                            <i class="fas fa-user-friends fa-2x text-primary"></i>
+                        </div>
+                        <h5 class="fw-bold mb-2" style="color:#0d6efd;">Client Centered Approach</h5>
+                        <p class="text-muted">Our solutions are crafted around your unique goals, challenges, and needs.</p>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4">
+                    <div class="card border-0 shadow-sm h-100 text-center py-4 px-3">
+                        <div class="mb-3">
+                            <i class="fas fa-lightbulb fa-2x text-primary"></i>
+                        </div>
+                        <h5 class="fw-bold mb-2" style="color:#0d6efd;">Latest Technology</h5>
+                        <p class="text-muted">We adopt and apply cutting-edge technologies to deliver modern, robust solutions.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+        <!-- Contact Start -->
+        <div class="container-fluid contact bg-light py-5">
+            <div class="container py-5">
+                <div class="row g-5">
+                    <div class="col-lg-6 wow fadeInLeft" data-wow-delay="0.1s">
+                        <div class="contact-item">
+                            <div class="pb-5">
+                                <h4 class="display-6 text-dark mb-1">Contact Us</h4>
+                                <h1 class="display-4 mb-4"><span style="color: #0d6efd;">Get In Touch With Us</span></h1>
+                            </div>
+                            <div class="d-flex align-items-center mb-4">
+                                <div class="bg-primary btn-lg-square rounded-circle p-4"><i
+                                        class="fa fa-home text-white"></i></div>
+                                <div class="ms-4">
+                                    <h4>Addresses</h4>
+                                    <p class="mb-0">Shree Hari Solutions, Opp. Hotel Fortune Landmark,
+                                        Ashram Road,
+                                        Ahmedabad 380013, Gujarat, India</p>
                                 </div>
                             </div>
-                            <div class="accordion-item border-0 mb-4">
-                                <h2 class="accordion-header" id="headingTwo">
-                                    <button class="accordion-button collapsed text-dark fs-5 fw-bold rounded-top" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
-                                        What industries do you specialize in? 
-                                    </button>
-                                </h2>
-                                <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#accordionExample">
-                                    <div class="accordion-body my-2">
-                                        <h5>Dolor sit amet consectetur adipisicing elit.</h5>
-                                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ad nemo impedit, sapiente quis illo quia nulla atque maxime fuga minima ipsa quae cum consequatur, sit, delectus exercitationem odit officiis maiores! Neque, quidem corrupti modi architecto eos saepe incidunt dignissimos rerum.</p>
-                                    </div>
+                            <div class="d-flex align-items-center mb-4">
+                                <div class="bg-primary btn-lg-square rounded-circle p-2"><i
+                                        class="fa fa-phone-alt text-white"></i></div>
+                                <div class="ms-4">
+                                    <h4>Mobile</h4>
+                                    <p class="mb-0"><a href="tel:+919998595357">+91 99985 95357</a></p>
                                 </div>
                             </div>
-                            <div class="accordion-item border-0 mb-4">
-                                <h2 class="accordion-header" id="headingThree">
-                                    <button class="accordion-button collapsed text-dark fs-5 fw-bold rounded-top" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
-                                        Can you guarantee for growth?
-                                    </button>
-                                </h2>
-                                <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#accordionExample">
-                                    <div class="accordion-body my-2">
-                                        <h5>Dolor sit amet consectetur adipisicing elit.</h5>
-                                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ad nemo impedit, sapiente quis illo quia nulla atque maxime fuga minima ipsa quae cum consequatur, sit, delectus exercitationem odit officiis maiores! Neque, quidem corrupti modi architecto eos saepe incidunt dignissimos rerum.</p>
-                                    </div>
+                            <div class="d-flex align-items-center mb-4">
+                                <div class="bg-primary btn-lg-square rounded-circle p-2"><i
+                                        class="fa fa-envelope-open text-white"></i></div>
+                                <div class="ms-4">
+                                    <h4>Email</h4>
+                                    <p class="mb-0"><a
+                                            href="mailto:contact@shreeharigroupworld.com">contact@shreeharigroupworld.com</a></p>
                                 </div>
                             </div>
-                            <div class="accordion-item border-0 mb-0">
-                                <h2 class="accordion-header" id="headingFour">
-                                    <button class="accordion-button collapsed text-dark fs-5 fw-bold rounded-top" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
-                                        What makes your business plans so special?
-                                    </button>
-                                </h2>
-                                <div id="collapseFour" class="accordion-collapse collapse" aria-labelledby="headingFour" data-bs-parent="#accordionExample">
-                                    <div class="accordion-body my-2">
-                                        <h5>Dolor sit amet consectetur adipisicing elit.</h5>
-                                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ad nemo impedit, sapiente quis illo quia nulla atque maxime fuga minima ipsa quae cum consequatur, sit, delectus exercitationem odit officiis maiores! Neque, quidem corrupti modi architecto eos saepe incidunt dignissimos rerum.</p>
-                                    </div>
-                                </div>
-                            </div>
-                       </div>
+                        </div>
                     </div>
                     <div class="col-lg-6 wow fadeInRight" data-wow-delay="0.3s">
-                        <div class="faq-img RotateMoveRight rounded">
-                            <img src="img/faq-img.jpg" class="img-fluid rounded w-100" alt="Image">
-                            <a class="faq-btn btn btn-primary rounded-pill text-white py-3 px-5" href="#">Read More Q & A <i class="fas fa-arrow-right ms-2"></i></a>
-                        </div>
+                        <form id="contactForm" action="https://formsubmit.co/contact@shreeharigroupworld.com" method="POST">
+                            <div class="row g-3">
+                                <div class="col-lg-12 col-xl-6">
+                                    <div class="form-floating">
+                                        <input type="text" class="form-control" id="fname" name="fname"
+                                            placeholder="First Name" required>
+                                        <label for="fname">First Name *</label>
+                                    </div>
+                                </div>
+                                <div class="col-lg-12 col-xl-6">
+                                    <div class="form-floating">
+                                        <input type="text" class="form-control" id="lname" name="lname"
+                                            placeholder="Last Name" required>
+                                        <label for="lname">Last Name *</label>
+                                    </div>
+                                </div>
+                                <div class="col-lg-12">
+                                    <div class="form-floating">
+                                        <input type="email" class="form-control" id="email" name="email"
+                                            placeholder="Your Email" required
+                                            pattern="[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$"
+                                            onchange="validateEmail(this)"
+                                            oninvalid="this.setCustomValidity('Please enter a valid email address (e.g., name@example.com)')"
+                                            oninput="this.setCustomValidity('')"
+                                            title="Please enter a valid email address (e.g., john@example.com)">
+                                        <label for="email">Your Email *</label>
+                                        <script>
+                                            function validateEmail(input) {
+                                                const email = input.value;
+                                                const parts = email.split('@');
+                                                if (parts.length === 2) {
+                                                    const domainParts = parts[1].split('.');
+                                                    if (domainParts.length < 2 || domainParts[domainParts.length - 1].length < 2) {
+                                                        input.setCustomValidity('Please enter a valid email with a proper domain (e.g., name@example.com)');
+                                                    } else {
+                                                        input.setCustomValidity('');
+                                                    }
+                                                } else {
+                                                    input.setCustomValidity('Please enter a valid email address (e.g., name@example.com)');
+                                                }
+                                            }
+                                        </script>
+                                    </div>
+                                </div>
+                                <div class="col-lg-12 col-xl-6">
+                                    <div class="form-floating">
+                                        <input type="tel" class="form-control" id="phone" name="phone" placeholder="Phone"
+                                            required pattern="[0-9]{10}" title="Please enter a valid 10-digit phone number"
+                                            onkeypress="return event.charCode >= 48 && event.charCode <= 57" maxlength="10">
+                                        <label for="phone">Your Phone (10 digits) *</label>
+                                    </div>
+                                </div>
+                                <div class="col-lg-12 col-xl-6">
+                                    <div class="form-floating">
+                                        <input type="text" class="form-control" id="companyname" name="companyname"
+                                            placeholder="Company Name">
+                                        <label for="companyname">Company Name</label>
+                                    </div>
+                                </div>
+                                <div class="col-12 col-xl-6">
+                                    <div class="form-floating">
+                                        <input type="text" class="form-control" id="Industry" name="Industry"
+                                            placeholder="Industry">
+                                        <label for="Industry">Industry</label>
+                                    </div>
+                                </div>
+                                <div class="col-12 col-xl-6">
+                                    <div class="form-floating">
+                                        <input type="text" class="form-control" id="JobTitle" name="JobTitle"
+                                            placeholder="Job Title">
+                                        <label for="JobTitle">Job Title</label>
+                                    </div>
+                                </div>
+                                <div class="col-12">
+                                    <div class="form-floating">
+                                        <select class="form-select" id="service" name="service" required>
+                                            <option value="" selected disabled>Select a service</option>
+                                            <option value="Mechanical Engineering Services">Mechanical Engineering Services
+                                            </option>
+                                            <option value="IT Services">IT Services</option>
+                                            <option value="Energy">Energy</option>
+                                            <option value="EV Solution">EV Solution</option>
+                                            <option value="B2B Business">B2B Business</option>
+                                            <option value="Creative Services">Creative Services</option>
+                                            <option value="AI/Data analytics">AI/Data analytics</option>
+                                            <option value="Data storage/management">Data storage/management</option>
+                                            <option value="Other">Other</option>
+                                        </select>
+                                        <label for="service">Service *</label>
+                                    </div>
+                                </div>
+                                <div class="col-12">
+                                    <div class="form-floating">
+                                        <textarea class="form-control" placeholder="Leave a message here" id="message"
+                                            name="message" style="height: 160px"></textarea>
+                                        <label for="message">Message</label>
+                                    </div>
+                                </div>
+                                <!-- <div class="col-12 mb-3">
+                                    <div class="g-recaptcha" data-sitekey="6LcXXXXXXXXXXXXXXXXXXXXX"></div>
+                                    <small class="form-text text-muted">Please complete the captcha to verify you're not a robot.</small>
+                                </div>
+                                <div class="col-12">
+                                    <script src="https://www.google.com/recaptcha/api.js" async defer></script>
+                                </div> -->
+                                <div class="col-12">
+                                    <div id="successMessage" class="alert alert-success alert-dismissible fade show"
+                                        role="alert" style="display: none;">
+                                        <strong>Thank you!</strong> Your message has been sent successfully. We'll get back
+                                        to you soon.
+                                        <button type="button" class="btn-close" data-bs-dismiss="alert"
+                                            aria-label="Close"></button>
+                                    </div>
+                                    <script>
+                                        // Show success message when redirected from form submission
+                                        document.addEventListener('DOMContentLoaded', function () {
+                                            // Check if URL contains success parameter
+                                            const urlParams = new URLSearchParams(window.location.search);
+                                            if (urlParams.has('success') || window.location.href.indexOf('?success') > -1) {
+                                                const successMessage = document.getElementById('successMessage');
+                                                if (successMessage) {
+                                                    // Show the success message
+                                                    successMessage.style.display = 'block';
+    
+                                                    // Move success message above first name and last name
+                                                    const formStart = document.querySelector('form .row');
+                                                    if (formStart) {
+                                                        formStart.prepend(successMessage);
+                                                    }
+    
+                                                    // Scroll to the message to ensure it's visible
+                                                    successMessage.scrollIntoView({ behavior: 'smooth', block: 'center' });
+    
+                                                    // Auto-hide success message after 5 seconds
+                                                    setTimeout(function () {
+                                                        try {
+                                                            const bsAlert = new bootstrap.Alert(successMessage);
+                                                            bsAlert.close();
+                                                        } catch (e) {
+                                                            // Fallback if bootstrap Alert isn't available
+                                                            successMessage.style.display = 'none';
+                                                        }
+                                                    }, 5000);
+                                                }
+                                            }
+    
+                                            // Also check for success in localStorage (in case query params are lost)
+                                            if (localStorage.getItem('formSubmitSuccess') === 'true') {
+                                                const successMessage = document.getElementById('successMessage');
+                                                if (successMessage) {
+                                                    successMessage.style.display = 'block';
+                                                    localStorage.removeItem('formSubmitSuccess');
+    
+                                                    // Move success message above first name and last name
+                                                    const formStart = document.querySelector('form .row');
+                                                    if (formStart) {
+                                                        formStart.prepend(successMessage);
+                                                    }
+    
+                                                    setTimeout(function () {
+                                                        try {
+                                                            const bsAlert = new bootstrap.Alert(successMessage);
+                                                            bsAlert.close();
+                                                        } catch (e) {
+                                                            successMessage.style.display = 'none';
+                                                        }
+                                                    }, 5000);
+                                                }
+                                            }
+                                        });
+    
+                                        // Add event listener to the form to set localStorage before submission
+                                        document.querySelector('form').addEventListener('submit', function () {
+                                            localStorage.setItem('formSubmitSuccess', 'true');
+                                        });
+                                    </script>
+                                </div>
+                                <div id="errorMessage" class="alert alert-danger alert-dismissible fade" role="alert"
+                                    style="display: none;">
+                                    <strong>Error!</strong> There was a problem submitting your form. Please try again
+                                    later.
+                                    <button type="button" class="btn-close" data-bs-dismiss="alert"
+                                        aria-label="Close"></button>
+                                </div>
+                                <button type="submit" class="btn btn-primary w-100 py-3" id="submitBtn">Send
+                                    Message</button>
+    
+                                <!-- Hidden inputs for FormSubmit.co configuration -->
+                                <input type="hidden" name="_subject" value="New contact form submission">
+                                <input type="hidden" name="_captcha" value="false">
+                                <input type="hidden" name="_next" value="http://127.0.0.1:5500/contact.html">
+                            </div>
                     </div>
+                    </form>
                 </div>
+                
             </div>
         </div>
-        <!-- FAQ End -->
+        </div>
+        <!-- Contact End -->
+
+    
+    
     <!-- WhatsApp chat button start -->
     <a href="https://wa.me/+919998595357?text=Hello, I am contacting you from your https://www.shreeharisolutions.in Website." class="whatsapp-rectangle"
         target="_blank">
@@ -277,7 +1720,7 @@
     </a>
     <!-- WhatsApp chat button end -->        
 
-        <!-- Footer Start -->
+    <!-- Footer Start -->
 
 <div class="container-fluid footer wow fadeIn" data-wow-delay="0.2s">
     <div class="container py-4">
@@ -303,7 +1746,6 @@
                     <span class="mb-2"><i class="fas fa-angle-right me-2"></i><a href="about.html">About Us</a></span>
                     <span class="mb-2"><i class="fas fa-angle-right me-2"></i><a href="project.html">Latest Projects</a></span>
                     <span class="mb-2"><i class="fas fa-angle-right me-2"></i><a href="blog.html">Our Blogs</a></span>
-                    <span class="mb-2"><i class="fas fa-angle-right me-2"></i><a href="#">Our Team</a></span>
                     <span class="mb-2"><i class="fas fa-angle-right me-2"></i><a href="contact.html">Contact Us</a></span>
                 </div>
             </div>
@@ -334,24 +1776,20 @@
 </div>
 <!-- Footer End -->
 
-        
-        <!-- Copyright Start -->
-        <div class="container-fluid copyright py-4">
-            <div class="container">
-                <div class="row g-4 align-items-center">
-                    <div class="col-md-6 text-center text-md-start mb-md-0">
-                        <span class="text-body"><a href="#" class="border-bottom text-primary"><i class="fas fa-copyright text-light me-2"></i>Your Site Name</a>, All right reserved.</span>
-                    </div>
-                    <div class="col-md-6 text-center text-md-end text-body">
-                        <!--/*** This template is free as long as you keep the below author’s credit link/attribution link/backlink. ***/-->
-                        <!--/*** If you'd like to use the template without the below author’s credit link/attribution link/backlink, ***/-->
-                        <!--/*** you can purchase the Credit Removal License from "https://htmlcodex.com/credit-removal". ***/-->
-                        Designed By <a class="border-bottom text-primary" href="https://htmlcodex.com">HTML Codex</a> Distributed By <a class="border-bottom text-primary" href="https://themewagon.com">ThemeWagon</a>
-                    </div>
+
+    <!-- Copyright Start -->
+    <div class="container-fluid copyright py-4">
+        <div class="container">
+            <div class="row g-4 align-items-center">
+                <div class="col-md-6 text-center text-md-start mb-md-0">
+                    <span class="text-body"><a href="index.html" class="border-bottom text-primary"><i
+                                class="fas fa-copyright text-light me-2"></i>Shree Hari Group</a>, All right
+                        reserved 2025.</span>
                 </div>
             </div>
         </div>
-        <!-- Copyright End -->
+    </div>
+    <!-- Copyright End -->
 
 
         <!-- Back to Top -->
